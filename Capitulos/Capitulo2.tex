@@ -1,0 +1,91 @@
+% Fundamentação Teórica
+\chapter{Fundamentação Teórica}
+
+Este é o primeiro capítulo da parte central do trabalho, isto é, o desenvolvimento, a parte mais extensa de todo o trabalho. Geralmente o desenvolvimento é dividido em capítulos, cada um com subseções e subseções, cujo tamanho e número de divisões variam em função da natureza do conteúdo do trabalho.
+
+Em geral, a parte de desenvolvimento é subdividida em quatro subpartes:
+\begin{itemize}
+	\item \textit{contextualização ou definição do problema} -- consiste em descrever a situação ou o contexto geral referente ao assunto em questão, devem constar informações atualizadas visando a proporcionar maior consistência ao trabalho;
+	\item \textit{referencial ou embasamento teórico} -- texto no qual se deve apresentar os aspectos teóricos, isto é, os conceitos utilizados e a definição dos mesmos; nesta parte faz-se a revisão de literatura sobre o assunto, resumindo-se os resultados de estudos feitos por outros autores, cujas obras citadas e consultadas devem constar nas referências;
+	\item \textit{metodologia do trabalho ou procedimentos metodológicos} -- deve constar o instrumental, os métodos e as técnicas aplicados para a elaboração do trabalho;
+	\item \textit{resultados} -- devem ser apresentados, de forma objetiva, precisa e clara, tanto os resultados positivos quanto os negativos que foram obtidos com o desenvolvimento do trabalho, sendo feita uma discussão que consiste na avaliação circunstanciada, na qual se estabelecem relações, deduções e generalizações.
+\end{itemize}
+
+É recomendável que o número total de páginas referente à parte de desenvolvimento não ultrapasse 60 (sessenta) páginas.
+
+\section{Cidades Inteligentes}
+
+
+\section{Plataformas de processamento em tempo real}
+\subsection{Apache Spark}
+
+Apache Spark \cite{Spark} é uma plataforma de computação em cluster (unidade lógica composta por um conjunto de computadores conectados entre si através da Rede, permitindo compartilhamento de recursos \cite{Cluster}), com suporte a consultas a banco de dados, processamento de stream e aprendizado de máquina. Tendo Java, Python e Scala como linguagens de programação suportadas.
+
+A sua arquitetura, conforme a Fig. \ref{fig:sparkStack}, é composta por uma pilha integrando os seguintes componentes, a serem explicados posteriormente: Spark SQL, Spark Streaming, MLib, GraphX, Spark Core e Administradores de Cluster (Yarn \cite{Yarn} e Apache Mesos \cite{Mesos}). Tal estrutura visa ser de fácil manutenção, teste, deploy, e permitir aumento de perfomance do núcleo impactando seus demais componentes.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Imagens/sparkStackImage.png}
+  \caption{Ilustração da arquitetura em pilha do Apache Spark}
+  {Fonte:} \cite{LearningSpark}
+  \label{fig:sparkStack}
+\end{figure}
+
+\subsubsection{Módulos do Apache Spark}
+
+O Spark Core é o principal módulo do Apache Spark, responsável principalmente pelo gerenciamento de memória,  tasks (conceito explicado em \ref{taskSection}) e tolerância a falha. Ainda nele, a abstração conhecida como  \abrv[RDD -- Resilient Distributed Dataset]{RDD (Resilient Distributed Dataset)} é definida, cujo papel é o de representar uma coleção de dados distribuídos e manipulados em paralelo. Os RDDs em Java são representados pela classe JavaRDD, criados através da classe JavaSparkContext (contexto da aplicação), que é instanciada recebendo como parâmetro um objeto SparkConf, contendo informações relacionadas ao nome da aplicação e o endereço em que ela será executada, pondendo ser local, ou, em cluster.
+
+Outro módulo é o Spark Streaming, o qual realiza o processamento de dados em stream. Os streams são representados por uma sequência de RDDs, conhecida como \abrv[DStream -- Discretized Stream]{DStream}. O contexto de um streaming (JavaStreamingContext) é criado usando as configurações da aplicação e o intervalo no qual cada DStream será definido. Após isso, tais streams são atribuídos a um objeto da classe JavaReceiverInputDStream.
+
+Além dos módulos detalhados nos parágrafos anteriores, é relevante mencionar o (i) Spark SQL, responsável por trabalhar com dados estruturados; o (ii) MLib, relacionado ao aprendizado de máquina, contendo algorítimos tais como o de classificação, regressão, "clusterização", filtragem colaborativa, avaliação de modelo e importação de dados; e o (ii) GraphX, que é composto por uma biblioteca para manipulação de grafos e computações paralelas. Por fim, o Spark também possui um administrador de cluster padrão, conhecido como Standalone Scheduler \cite{Spark}, tendo também suporte ao YARN e Apache Mesos.
+
+\subsection{Composição Interna do Apache Spark}
+\label{sparkInternalsSection}
+
+Nesta seção é explicada a composição interna do Apache Spark, expondo os componentes que permitem a execução distribuída de uma aplicação spark, tais como o Driver Program, Spark Context, Worker Node e Executor.
+Também são explicados os conceitos sobre as operações de Transformação e Ação, e os relativos a Job, Stage, Task e Partição RDD.
+
+\subsubsection{Modelo de execução das aplicações Spark}
+\label{sparkModelSection}
+
+O modelo de execução das aplicações Spark é definido pela relação composta por um driver, SparkContext, executors e tasks, conforme ilustrado na Fig. \ref{fig:sparkComponents}. Nessa interação, as aplicações Spark funcionam num Worker Node (qualquer nó capaz de de executar código de aplicação localmente ou num cluster) como uma espécie de Driver, o qual executa operações paralelas e define dados distribuídos sobre um cluster. Além disso, o driver é responsável por encapsular a função principal da aplicação e prover acesso ao Spark, utilizando o objeto da classe SparkContext. Tal objeto é usado também para representar uma conexão com um cluster e construir RDDs \cite{LearningSpark}. 
+
+Após a construção de um RDD, é possível executar operações sobre ele. Essas operações são realizadas por executors, processos administrados por uma aplicação Spark (cada aplicação tem os seus próprios executors); nos quais há espaços reservados para execução de tasks (conceito explicado na seção \ref{taskSection}). Há dois tipos de operações: (i) Ações (actions) e (ii) Transformações (transformations) \cite{Spark}. O primeiro tipo retorna um resultado ao driver após computações sobre um conjunto de dados de acordo com uma função. Sendo o segundo, responsável por gerar novos conjuntos de dados (RDDs) através, também, de funções especificadas \cite{LearningSpark}. 
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Imagens/sparkComponentsImage.png}
+  \caption{Componentes do Spark para execução distribuída}
+  {Fonte:} \cite{LearningSpark}
+  \label{fig:sparkComponents}
+\end{figure}
+
+\subsubsection{Job}
+\label{jobSection}
+
+A abstração do conceito de  job está relacionada com o de action. Mais especificamente, um job é o conjunto de estágios (stages) resultantes de uma
+determinada  action. Por exemplo, quando o método count() é invocado (para realizar a contagem de elementos dentro de um RDD), cria­-se um job composto por um ou mais estágios. Os jobs, por padrão, são escalonados para serem executados em ordem \abrv[FIFO -- First In, First Out]{FIFO (First In, First Out)}. Além disso, o scheduler do Spark é responsável por criar um plano de execução física, o qual é utilizado para calcular as RDDs necessárias para executar a ação invocada \cite{LearningSpark}, \cite{SparkInternals}.
+
+Em tal plano de execução física, defini­-se basicamente um grafo acíclico dirigido \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph)}, relacionando as dependências existentes entre os RDDs, numa espécie de linhagem de execução (lineage). Após isso, a partir da última RDD do último estágio, cada dependência é calculada, de trás para frente, para que posteriormente os RDDs dependentes possam ser calculados, até que todas as actions necessárias tenham terminado \cite{LearningSpark}, \cite{SparkInternals}.
+
+\subsubsection{Stage}
+\label{stageSection}
+
+A divisão de um job resulta no conceito de stage, ou seja, jobs são compostos por um ou mais stages, os quais têm  tasks a serem executadas. Nem sempre a relação entre  stages e RDDs será de 1:1. No mais simples dos casos, para cada RDD há um stage, sendo possível nos mais complexos haver mais de um stage gerado por um único RDD \cite{LearningSpark}, \cite{SparkInternals}.
+
+Por exemplo, havendo três RDDs no grafo RDD, não necessariamente haverão três stages. Um dos motivos para isso acontecer é quando ocorre pipelining, situação na qual é possível reduzir o número de  stages, calculando os valores de alguns  RDDs  utilizando unicamente informac?o?es de seus antecessores, sem movimentação de dados de outros RDDs \cite{LearningSpark}, \cite{SparkInternals}.
+
+Além da possibilidade do número de stages ser reduzido, o contrário acontece quando fronteiras entre  stages são definidas. Tal situação ocorre porque algumas transformações, como a reduceByKey (função de agregação por chaves), podem resultar em reparticionamento do conjunto de dados para a computação de alguma saída, exigindo dados de outros RDDs para a formação de um único RDD. Assim, em cada fronteira entre os  stages, tasks do estágio antecessor são responsáveis por escrever dados para o disco e buscar tasks no estágio sucessor, através da rede, resultando em um processo custoso, conhecido como shuffling \cite{LearningSpark}, \cite{SparkInternals}.
+
+O número de partições entre o estágio predecessor e sucessor podem ser diferentes, sendo possível customizá-lo, embora isso não seja recomendável. Tal aconselhamento é devido ao fato de que se o número for modificado para uma pequena quantidade de partições, tais podem sofrer com tasks overloaded (sobrecarregadas), do contrário, havendo partições em excesso, resultará em um alto número de shuffling entre elas \cite{LearningSpark}, \cite{SparkInternals}.
+
+Em resumo, shuffling sempre acontecerá quando for necessário obter dados de outras partições para computar um resultado, sendo esse um procedimento custoso devido ao número de operações de entrada e saída envolvendo: leitura/escrita em disco e transferência de dados através da rede. No entanto, se necessário, o Spark provê uma forma eficiente para reparticionamento, conhecida como coalesce(), a qual reduz o número de partições sem causar movimentação de dados \cite{LearningSpark}.
+
+\subsubsection{Task}
+\label{taskSection}
+
+A abstração do conceito task  está relacionada principalmente com stage, pois, uma vez que os estágios são definidos, tasks são criadas e enviadas para um scheduler interno. Além disso, tasks estão muito próximas da definição de partition, pelo fato de ser necessária a existe?ncia de uma task para cada partition, para executar as computações necessárias sobre ela \cite{LearningSpark}.
+
+Portanto, o número de tasks em um stage é definido pelo número de partições existentes no RDD antecessor. E, por outro lado, o número de partições em um determinado RDD é igual ao número de partições existentes no RDD do qual ele depende. No entanto, há exceções em caso de (i) coalescing, processo o qual permite criar um RDD com menos partições que seu antecessor; (ii) união, sendo o número de partições resultado da soma do número de partições predecessoras; (iii) produto cartesiano, produto dos predecessores \cite{LearningSpark}.
+
+Cada  task internamente é divida em algumas etapas, sendo elas: (i) carregamento dos dados de entrada, sejam eles provenientes de unidades de armazenamento (caso o RDD seja um RDD de entrada de dados), de um RDD existente (armazenado em memória cache), ou, de saídas de outro RDD (processo de shuffling), (ii) processamento da operação necessária para computação do RDD representado por ela, (iii) escrever a saída para o processo de shuffling, para um armazenamento externo ou para o driver (caso seja o RDD final de uma ação). Em resumo, uma  task é responsável por coletar os dados de entrada, processá-­los e, por fim, gerar uma saída \cite{LearningSpark}.

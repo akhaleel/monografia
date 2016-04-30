@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Monografia.aux
+A level-1 auxiliary file: Includes/Capa.aux
+A level-1 auxiliary file: Includes/FolhaRosto.aux
+A level-1 auxiliary file: Includes/FolhaAprovacao.aux
+A level-1 auxiliary file: Includes/Dedicatoria.aux
+A level-1 auxiliary file: Includes/Agradecimentos.aux
+A level-1 auxiliary file: Includes/Epigrafe.aux
+A level-1 auxiliary file: Includes/Resumo.aux
+A level-1 auxiliary file: Includes/Abstract.aux
+A level-1 auxiliary file: Capitulos/Introducao.aux
+A level-1 auxiliary file: Capitulos/Capitulo2.aux
+A level-1 auxiliary file: Capitulos/Capitulo3.aux
+A level-1 auxiliary file: Capitulos/Capitulo4.aux
+A level-1 auxiliary file: Capitulos/Capitulo5.aux
+A level-1 auxiliary file: Capitulos/Consideracoes.aux
+The style file: abnt-alf.bst
+A level-1 auxiliary file: Capitulos/ApendiceA.aux
+A level-1 auxiliary file: Capitulos/AnexoA.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Capitulos/Referencias.bib
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abnt-alf.bst versão 1.45.2.1           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 6 entries,
+            6480 wiz_defined-function locations,
+            1200 strings with 10372 characters,
+and the built_in function-call counts, 4749 in all, are:
+= -- 462
+> -- 153
+< -- 1
++ -- 104
+- -- 47
+* -- 306
+:= -- 717
+add.period$ -- 24
+call.type$ -- 6
+change.case$ -- 57
+chr.to.int$ -- 7
+cite$ -- 6
+duplicate$ -- 182
+empty$ -- 351
+format.name$ -- 223
+if$ -- 1105
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 103
+newline$ -- 37
+num.names$ -- 30
+pop$ -- 168
+preamble$ -- 1
+purify$ -- 22
+quote$ -- 0
+skip$ -- 272
+stack$ -- 1
+substring$ -- 158
+swap$ -- 73
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 38
+width$ -- 0
+write$ -- 93
