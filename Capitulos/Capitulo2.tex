@@ -17,11 +17,14 @@ Em geral, a parte de desenvolvimento é subdividida em quatro subpartes:
 
 
 \section{Plataformas de processamento em tempo real}
-\subsection{Apache Spark}
 
-Apache Spark \cite{Spark} é uma plataforma de computação em cluster (unidade lógica composta por um conjunto de computadores conectados entre si através da Rede, permitindo compartilhamento de recursos \cite{Cluster}), com suporte a consultas a banco de dados, processamento de stream e aprendizado de máquina. Tendo Java, Python e Scala como linguagens de programação suportadas.
+As plataformas de processamento em tempo real \abrv[RTC --­ Real­Time Computing){RTC (Real­Time Computing)}, compostas por hardware ou software, são sistemas responsáveis por emitir respostas a um dado evento dentro de um determinado deadline (limite de tempo). Sendo tal limite de tempo, normalmente na ordem de mile / micro­segundos [82, 84].
 
-A sua arquitetura, conforme a Fig. \ref{fig:sparkStack}, é composta por uma pilha integrando os seguintes componentes, a serem explicados posteriormente: Spark SQL, Spark Streaming, MLib, GraphX, Spark Core e Administradores de Cluster (Yarn \cite{Yarn} e Apache Mesos \cite{Mesos}). Tal estrutura visa ser de fácil manutenção, teste, deploy, e permitir aumento de perfomance do núcleo impactando seus demais componentes.
+\section{Apache Spark}
+
+Apache Spark \cite{Spark} é uma plataforma de computação em cluster (unidade lógica composta por um conjunto de computadores conectados entre si através da Rede, permitindo compartilhamento de recursos \cite{Techopedia}), com suporte a consultas a banco de dados, processamento de stream e aprendizado de máquina. Tendo Java, Python e Scala como linguagens de programação suportadas.
+
+A arquitetura do Spark, conforme a Fig. \ref{fig:sparkStack}, é composta por uma pilha integrando os seguintes componentes, a serem explicados posteriormente: Spark SQL, Spark Streaming, MLib, GraphX, Spark Core e Administradores de Cluster (Yarn \cite{Yarn} e Apache Mesos \cite{Mesos}). Tal estrutura visa ser de fácil manutenção, teste, deploy, e permitir aumento de perfomance do núcleo impactando seus demais componentes.
 
 \begin{figure}[htb]
   \centering
@@ -31,7 +34,7 @@ A sua arquitetura, conforme a Fig. \ref{fig:sparkStack}, é composta por uma pilh
   \label{fig:sparkStack}
 \end{figure}
 
-\subsubsection{Módulos do Apache Spark}
+\subsection{Módulos do Apache Spark}
 
 O Spark Core é o principal módulo do Apache Spark, responsável principalmente pelo gerenciamento de memória,  tasks (conceito explicado em \ref{taskSection}) e tolerância a falha. Ainda nele, a abstração conhecida como  \abrv[RDD -- Resilient Distributed Dataset]{RDD (Resilient Distributed Dataset)} é definida, cujo papel é o de representar uma coleção de dados distribuídos e manipulados em paralelo. Os RDDs em Java são representados pela classe JavaRDD, criados através da classe JavaSparkContext (contexto da aplicação), que é instanciada recebendo como parâmetro um objeto SparkConf, contendo informações relacionadas ao nome da aplicação e o endereço em que ela será executada, pondendo ser local, ou, em cluster.
 
@@ -66,7 +69,7 @@ Após a construção de um RDD, é possível executar operações sobre ele. Essas oper
 A abstração do conceito de  job está relacionada com o de action. Mais especificamente, um job é o conjunto de estágios (stages) resultantes de uma
 determinada  action. Por exemplo, quando o método count() é invocado (para realizar a contagem de elementos dentro de um RDD), cria­-se um job composto por um ou mais estágios. Os jobs, por padrão, são escalonados para serem executados em ordem \abrv[FIFO -- First In, First Out]{FIFO (First In, First Out)}. Além disso, o scheduler do Spark é responsável por criar um plano de execução física, o qual é utilizado para calcular as RDDs necessárias para executar a ação invocada \cite{LearningSpark}, \cite{SparkInternals}.
 
-Em tal plano de execução física, defini­-se basicamente um grafo acíclico dirigido \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph)}, relacionando as dependências existentes entre os RDDs, numa espécie de linhagem de execução (lineage). Após isso, a partir da última RDD do último estágio, cada dependência é calculada, de trás para frente, para que posteriormente os RDDs dependentes possam ser calculados, até que todas as actions necessárias tenham terminado \cite{LearningSpark}, \cite{SparkInternals}.
+Em tal plano de execução física, defini­-se basicamente um grafo acíclico dirigido \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})}, relacionando as dependências existentes entre os RDDs, numa espécie de linhagem de execução (lineage). Após isso, a partir da última RDD do último estágio, cada dependência é calculada, de trás para frente, para que posteriormente os RDDs dependentes possam ser calculados, até que todas as actions necessárias tenham terminado \cite{LearningSpark}, \cite{SparkInternals}.
 
 \subsubsection{Stage}
 \label{stageSection}
@@ -89,3 +92,70 @@ A abstração do conceito task  está relacionada principalmente com stage, pois, u
 Portanto, o número de tasks em um stage é definido pelo número de partições existentes no RDD antecessor. E, por outro lado, o número de partições em um determinado RDD é igual ao número de partições existentes no RDD do qual ele depende. No entanto, há exceções em caso de (i) coalescing, processo o qual permite criar um RDD com menos partições que seu antecessor; (ii) união, sendo o número de partições resultado da soma do número de partições predecessoras; (iii) produto cartesiano, produto dos predecessores \cite{LearningSpark}.
 
 Cada  task internamente é divida em algumas etapas, sendo elas: (i) carregamento dos dados de entrada, sejam eles provenientes de unidades de armazenamento (caso o RDD seja um RDD de entrada de dados), de um RDD existente (armazenado em memória cache), ou, de saídas de outro RDD (processo de shuffling), (ii) processamento da operação necessária para computação do RDD representado por ela, (iii) escrever a saída para o processo de shuffling, para um armazenamento externo ou para o driver (caso seja o RDD final de uma ação). Em resumo, uma  task é responsável por coletar os dados de entrada, processá-­los e, por fim, gerar uma saída \cite{LearningSpark}.
+
+\section{Apache Storm}
+
+Apache Storm \cite{Storm} é uma plataforma de computação em cluster, com suporte a processamento de stream  de dados em tempo real. O Storm requer pouca manutenção, é de fácil de administração e tem suporte a qualquer linguagem de programação (que leia e escreva fluxos de dados padronizados), posto que em seu núcleo é utilizado o Apache Thrift \cite{Thrift} (framework que permite o desenvolvimento de serviços multilinguagem) para definir e submeter topologias (conceito definido em \ref{topologySection}) \cite{Storm}.
+
+A arquitetura do Storm, conforme a Fig. \ref{fig:stormComponents}, é composta pelos seguintes componentes, a serem explicados posteriormente: Nimbus, ZooKeeper e Supervisor Node.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Imagens/stormComponentsImage.png}
+  \caption{Ilustração da arquitetura do Apache Storm}
+  {Fonte:} \cite{LearningStorm}
+  \label{fig:stormComponents}
+\end{figure}
+
+\subsection{Composição interna do Apache Storm}
+
+\subsubsection{Nimbus}
+\label{nimbusSection}
+
+Nimbus é o processo master executado num cluster Storm, tendo ele uma única instância e sendo responsável por distribuir o código da aplicação (job) para os nós workers (computadores que compõem o cluster), aos quais são atribuídas tasks (parte de um job). As tasks são monitoradas pelo Supervisor node, sendo reiniciadas em caso de falha e quando requisitado. Ainda, caso um Supervisor node falhe continuadamente, o job é atribuído para outro nó worker \cite{LearningStorm}, \cite{StormPython}. 
+
+O Nimbus utiliza um protocolo de comunicação sem estado (Stateless protocol), ou seja, cada requisição é tratada individualmente, sem relação com a anterior, não armazenando dados ou estado \cite{Techopedia}, sendo assim todos os seus dados são armazenados no ZooKeeper (definido em \ref{zookeeperSection}). Além disso ele é projetado para ser fail­-fast, ou seja, em caso de falha é rapidamente reiniciado, sem afetar as  tasks em execução nos nós  workers \cite{LearningStorm}, \cite{StormPython}.
+
+\subsubsection{Supervisor node}
+\label{supervisorSection}
+
+Cada Supervisor node é responsável pela administração de um determinado nó do cluster Storm; gerenciando o ciclo de vida de processos workers relacionados a execução das tasks (partes de uma topologia) atribuídas a ele próprio. Os workers quando em execução emitem "sinais de vida" (heartbeats), possibilitando o supervisor detectar e reiniciar caso não estejam respondendo. E, assim como o Nimbus, um Supervisor node é projetado para ser  fail­-fast \cite{LearningStorm}, \cite{StormPython}.
+
+\subsubsection{ZooKeeper}
+\label{zookeeperSection}
+
+O ZooKeeper Cluster \cite{ZooKeeper} é responsável por coordenar processos, informações compartilhadas, tasks submetidas ao Storm e estados associados ao cluster, num contexto distribuído e de forma confiável, sendo possível aumentar o nível de confiabilidade tendo mais de um servidor ZooKeeper. O ZooKeeper atua também como o intermediário da comunicação entre Nimbus e os Supervisor nodes, pois eles não se comunicam diretamente entre si, ambos também podem ser finalizados sem afetar o cluster, visto que todos os seus dados, são armazenados no ZooKeeper, como já mencionado anteriormente \cite{LearningStorm}, \cite{StormPython}.
+
+\subsubsection{Topologia}
+\label{topologySection}
+
+A topologia Storm, ilustrada na Fig. \ref{fig:stormTopology}, é uma abstração que define um grafo acíclico dirigido \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})}, utilizado para computações de streams. Cada nó desse grafo é responsável por executar algum processamento, enviando seu resultado para o próximo nó do fluxo. Após definida a topologia, ela pode ser executada localmente ou submetida a um cluster \cite{LearningStorm}, \cite{StormPython}.
+
+Stream é um dos componentes da topologia Storm, definido como uma sequência de tuplas independentes, fornecidas por um ou mais spout e processadas por um ou mais bolt. Cada stream tem o seu respectivo ID, que é utilizado pelos bolts para consumirem e produzirem as tuplas. As tuplas compõem uma unidade básica de dados, suportando os tipos de dados (serializáveis) no qual a topologia está sendo desenvolvida.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Imagens/stormTopologyImage.png}
+  \caption{Exemplo de uma topologia do Storm}
+  {Fonte:} \cite{LearningStorm}
+  \label{fig:stormTopology}
+\end{figure}
+
+\paragraph{Bolt.} Os bolts são unidades de processamento de dados (streams), sendo eles responsáveis por executar transformações simples sobre as tuplas, as quais são combinadas com outras formando complexas transformações. Também, eles podem ser inscritos para receberem informações tanto de outros bolts, quanto dos spouts, além de produzirem streams como saída \cite{LearningStorm}.
+
+Tais streams são declarados, emitidos para outro bolt e processados, respectivamente, pelos métodos declareStream, emit e execute. As tuplas não precisam ser processadas imediatamente quando chegam a um bolt, pois, talvez haja a necessidade de aguardar para executar alguma operação de junção (join) com outra tupla, por exemplo. Também, inúmeros métodos definidos pela interface Tuple podem recuperar meta­dados associados com a tupla recebida via execute \cite{LearningStorm}.
+
+Por exemplo, se um ID de mensagem está associado com uma tupla, o método execute deverá publicar um evento ack, ou, fail, para o bolt, caso contrário o Storm não tem como saber se uma tupla foi processada. Sendo assim, o bolt envia automaticamente uma mensagem de confirmação após o término da execução do método execute e, em caso de um evento de falha, é lançada uma exceção \cite{LearningStorm}.
+
+Além disso, num contexto distribuído, a topologia pode ser serializada e submetida, via Nimbus, para um cluster. No qual, será processada por worker nodes. Nesse contexto, o método prepare pode ser utilizado para assegurar que o bolt está, após a desserialização, configurado corretamente para executar as tuplas \cite{LearningStorm}, \cite{StormPython}.
+
+\paragraph{Spout.} Na topologia Storm um  Spout é o responsável pelo fornecimento de tuplas, as quais são lidas e escritas por ele utilizando uma fonte externa de dados \cite{LearningStorm}. 
+
+As tuplas emitidas por um  spout são rastreadas pelo Storm até terminarem o processamento, sendo emitida uma confirmação ao término dele. Tal procedimento somente ocorre se um ID de mensagem foi gerado na emissão da tupla e, caso esse ID tenha sido definido como nulo, o rastreamento não irá acontecer \cite{LearningStorm}.
+
+Outra opção é definir um  time­out a topologia, sendo dessa forma enviada uma mensagem de falha para o  spout,  caso a tupla não seja processada dentro do tempo estipulado. Sendo necessário, novamente, definir um ID de mensagem. O custo dessa confirmação do processamento ter sido executado com sucesso é a pequena perda de performance, que pode ser relevante em determinados contextos; sendo assim é possível ignorar a emissão de IDs de mensagens
+\cite{LearningStorm}.
+
+Os principais métodos de um spout são: o open(), executado quando o spout é inicializado, sendo nele definida a lógica para acesso a dados de fontes externas; o de declaração de stream (declareStream) e o de processamento de próxima tupla (nextTuple), que ocorre se houver confirmação de sucesso da tupla anterior (ack), sendo o método fail chamado pelo Storm caso isso não ocorra \cite{LearningStorm}.
+
+Por fim, nenhum dos métodos utilizados para a construção de um  spout devem ser bloqueante, pois o Storm executa todos os métodos numa mesma  thread. Além disso, todo  spout tem um buffer interno para o rastreamento dos status das tuplas emitidas, as quais são mantidas nele até uma confirmação de processamento concluído com sucesso (ack) ou falha (fail); não sendo inseridas novas tuplas (via nextTuple) no buffer quando ele esá cheio \cite{LearningStorm}.

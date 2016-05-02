@@ -14,29 +14,57 @@ Disponível em: <\url{http://hadoop.apache.org}>. Acesso em Abril 22, 2016.}
 \bibitem[{Apache Software Foundation} 2016]{Mesos}
 \abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016b}
 {{Apache Software Foundation}. \emph{{Apache Mesos}}. 2016.
-Disponível em: <\url{http://mesos.apache.org/}>. Acesso em Abril 23, 2016.}
+Disponível em: <\url{http://mesos.apache.org}>. Acesso em Abril 23, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Spark}
 \abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016c}
-{{Apache Software Foundation}. \emph{{Apache Spark: Yet Another Resource
-  Negotiator}}. 2016.
+{{Apache Software Foundation}. \emph{{Apache Spark}}. 2016.
 Disponível em: <\url{http://spark.apache.org}>. Acesso em Abril 22, 2016.}
+
+\bibitem[{Apache Software Foundation} 2016]{Storm}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016d}
+{{Apache Software Foundation}. \emph{{Apache Storm}}. 2016.
+Disponível em: <\url{http://storm.apache.org}>. Acesso em Abril 30, 2016.}
+
+\bibitem[{Apache Software Foundation} 2016]{Thrift}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016e}
+{{Apache Software Foundation}. \emph{{Apache Thrift}}. 2016.
+Disponível em: <\url{http://thrift.apache.org}>. Acesso em Abril 30, 2016.}
+
+\bibitem[{Apache Software Foundation} 2016]{ZooKeeper}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016f}
+{{Apache Software Foundation}. \emph{{Apache ZooKeeper}}. 2016.
+Disponível em: <\url{https://zookeeper.apache.org}>. Acesso em Abril 30, 2016.}
+
+\bibitem[Hart e Bhatnagar 2015]{StormPython}
+\abntrefinfo{Hart e Bhatnagar}{HART; BHATNAGAR}{2015}
+{HART, B.; BHATNAGAR, K. \emph{Building Python Real-Time Applications with
+  Storm}. 1st. ed. [S.l.]: Packt Publishing, 2015.}
+
+\bibitem[Jain e Nalya 2014]{LearningStorm}
+\abntrefinfo{Jain e Nalya}{JAIN; NALYA}{2014}
+{JAIN, A.; NALYA, A. \emph{Learning Storm}. 1st. ed. [S.l.]: Packt Publishing,
+  2014.}
 
 \bibitem[Karau et al. 2015]{LearningSpark}
 \abntrefinfo{Karau et al.}{KARAU et al.}{2015}
-{KARAU, H. et al. \emph{Learning Spark Lightning­-Fast Big Data Analysis}. 1st.
-  ed. [S.l.]: O'Reilly Media, 2015.}
+{KARAU, H. et al. \emph{Learning Spark}. 1st. ed. [S.l.]: O'Reilly Media,
+  2015.}
 
-\bibitem[{Techopedia} 2016]{Cluster}
+\bibitem[Ruohonen 2013]{GraphTeory}
+\abntrefinfo{Ruohonen}{RUOHONEN}{2013}
+{RUOHONEN, K. \emph{{Graph Teory}}. 2013.
+Disponível em: <\url{http://math.tut.fi/~ruohonen/GT_English.pdf}>. Acesso em
+  Maio 01, 2016.}
+
+\bibitem[{Techopedia} 2016]{Techopedia}
 \abntrefinfo{{Techopedia}}{{Techopedia}}{2016}
-{{Techopedia}. \emph{{Computer Cluster Definition}}. 2016.
-Disponível em:
-  <\url{https://www.techopedia.com/definition/6581/computer-cluster}>. Acesso
-  em Abril 23, 2016.}
+{{Techopedia}. 2016.
+Disponível em: <\url{https://www.techopedia.com}>. Acesso em Abril 23, 2016.}
 
-\bibitem[Xu, Ju e Ren 2016]{SparkInternals}
-\abntrefinfo{Xu, Ju e Ren}{XU; JU; REN}{2016}
-{XU, L.; JU, H.; REN, H. \emph{{Gitbook: SparkInternals}}. 2016.
+\bibitem[Xu, Ju e Ren 2015]{SparkInternals}
+\abntrefinfo{Xu, Ju e Ren}{XU; JU; REN}{2015}
+{XU, L.; JU, H.; REN, H. \emph{{Gitbook: SparkInternals}}. 2015.
 Disponível em: <\url{https://github.com/JerryLead/SparkInternals}>. Acesso em
   Abril 30, 2016.}
 
