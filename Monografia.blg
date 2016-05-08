@@ -27,6 +27,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Capitulos/Referencias.bib
+Warning--I didn't find a database entry for "chapter3"
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -37,44 +38,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 12 entries,
+You've used 28 entries,
             6480 wiz_defined-function locations,
-            1227 strings with 10878 characters,
-and the built_in function-call counts, 8638 in all, are:
-= -- 737
-> -- 279
-< -- 3
-+ -- 151
-- -- 87
-* -- 554
-:= -- 1248
-add.period$ -- 47
-call.type$ -- 12
-change.case$ -- 107
-chr.to.int$ -- 16
-cite$ -- 12
-duplicate$ -- 373
-empty$ -- 704
-format.name$ -- 409
-if$ -- 2033
-int.to.chr$ -- 5
+            1307 strings with 13196 characters,
+and the built_in function-call counts, 17896 in all, are:
+= -- 1339
+> -- 538
+< -- 7
++ -- 240
+- -- 172
+* -- 1116
+:= -- 2561
+add.period$ -- 107
+call.type$ -- 28
+change.case$ -- 223
+chr.to.int$ -- 36
+cite$ -- 28
+duplicate$ -- 822
+empty$ -- 1607
+format.name$ -- 801
+if$ -- 4217
+int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 209
-newline$ -- 65
-num.names$ -- 60
-pop$ -- 314
+missing$ -- 470
+newline$ -- 144
+num.names$ -- 140
+pop$ -- 667
 preamble$ -- 1
-purify$ -- 42
+purify$ -- 91
 quote$ -- 0
-skip$ -- 498
+skip$ -- 1072
 stack$ -- 1
-substring$ -- 270
-swap$ -- 149
-text.length$ -- 0
+substring$ -- 572
+swap$ -- 315
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 74
+while$ -- 170
 width$ -- 0
-write$ -- 178
+write$ -- 402
+(There was 1 warning)

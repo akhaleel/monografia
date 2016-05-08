@@ -5,36 +5,61 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.45.2.1 }
 
-\bibitem[{Apache Software Foundation} 2016]{Yarn}
+\bibitem[{Apache Software Foundation} 2016]{Flink}
 \abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016a}
+{{Apache Software Foundation}. \emph{Apache Flink}. 2016.
+Disponível em: <\url{http://flink.apache.org}>. Acesso em Maio 7, 2016.}
+
+\bibitem[{Apache Software Foundation} 2016]{Yarn}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016b}
 {{Apache Software Foundation}. \emph{{Apache Hadoop \abrv[YARN -- Yet Another
   Resource Negotiator]{YARN}}}. 2016.
 Disponível em: <\url{http://hadoop.apache.org}>. Acesso em Abril 22, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Mesos}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016b}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016c}
 {{Apache Software Foundation}. \emph{{Apache Mesos}}. 2016.
 Disponível em: <\url{http://mesos.apache.org}>. Acesso em Abril 23, 2016.}
 
+\bibitem[{Apache Software Foundation} 2016]{Samza}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016d}
+{{Apache Software Foundation}. \emph{{Apache Samza}}. 2016.
+Disponível em: <\url{http://samza.apache.org}>. Acesso em Maio 06, 2016.}
+
 \bibitem[{Apache Software Foundation} 2016]{Spark}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016c}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016e}
 {{Apache Software Foundation}. \emph{{Apache Spark}}. 2016.
 Disponível em: <\url{http://spark.apache.org}>. Acesso em Abril 22, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Storm}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016d}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016f}
 {{Apache Software Foundation}. \emph{{Apache Storm}}. 2016.
 Disponível em: <\url{http://storm.apache.org}>. Acesso em Abril 30, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Thrift}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016e}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016g}
 {{Apache Software Foundation}. \emph{{Apache Thrift}}. 2016.
 Disponível em: <\url{http://thrift.apache.org}>. Acesso em Abril 30, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{ZooKeeper}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016f}
-{{Apache Software Foundation}. \emph{{Apache ZooKeeper}}. 2016.
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016h}
+{{Apache Software Foundation}. \emph{Apache ZooKeeper}. 2016.
 Disponível em: <\url{https://zookeeper.apache.org}>. Acesso em Abril 30, 2016.}
+
+\bibitem[DataArtisans 2015]{FlinkOverView}
+\abntrefinfo{DataArtisans}{DATAARTISANS}{2015}
+{DATAARTISANS. \emph{Apache Flink Training - System Overview}. 2015.
+Disponível em: <\url{http://pt.slideshare.net}>. Acesso em Maio 7, 2016.}
+
+\bibitem[EsperTech 2016]{EsperTech}
+\abntrefinfo{EsperTech}{ESPERTECH}{2016}
+{ESPERTECH. 2016.
+Disponível em: <\url{http://www.espertech.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[{Google Scholar} 2016]{GoogleScholar}
+\abntrefinfo{{Google Scholar}}{{Google Scholar}}{2016}
+{{Google Scholar}. 2016.
+Disponível em: <\url{https://scholar.google.com}>. Acesso em Maio 7, 2016.}
 
 \bibitem[Hart e Bhatnagar 2015]{StormPython}
 \abntrefinfo{Hart e Bhatnagar}{HART; BHATNAGAR}{2015}
@@ -51,21 +76,84 @@ Disponível em: <\url{https://zookeeper.apache.org}>. Acesso em Abril 30, 2016.}
 {KARAU, H. et al. \emph{Learning Spark}. 1st. ed. [S.l.]: O'Reilly Media,
   2015.}
 
+\bibitem[Kleppmann 2015]{ConfluentArticle}
+\abntrefinfo{Kleppmann}{KLEPPMANN}{2015}
+{KLEPPMANN, M. \emph{{Stream processing, Event sourcing, Reactive, CEP? and
+  making sense of it all}}. 2015.
+Disponível em: <\url{http://www.confluent.io}>. Acesso em Maio 7, 2016.}
+
+\bibitem[Luckham 2006]{Complexevents}
+\abntrefinfo{Luckham}{LUCKHAM}{2006}
+{LUCKHAM, D. \emph{{What's the Difference Between ESP and CEP?}} 2006.
+Disponível em: <\url{http://www.complexevents.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[Narsude 2015]{Datatorrent}
+\abntrefinfo{Narsude}{NARSUDE}{2015}
+{NARSUDE, C. \emph{Real-Time Event Stream Processing ? What are your choices?}
+  2015.
+Disponível em: <\url{https://www.datatorrent.com}>. Acesso em Maio 5, 2016.}
+
 \bibitem[Ruohonen 2013]{GraphTeory}
 \abntrefinfo{Ruohonen}{RUOHONEN}{2013}
 {RUOHONEN, K. \emph{{Graph Teory}}. 2013.
 Disponível em: <\url{http://math.tut.fi/~ruohonen/GT_English.pdf}>. Acesso em
   Maio 01, 2016.}
 
+\bibitem[Sandu 2014]{VenturebeatArticle}
+\abntrefinfo{Sandu}{SANDU}{2014}
+{SANDU, D. \emph{{Without stream processing, there?s no big data and no
+  Internet of things}}. 2014.
+Disponível em: <\url{http://venturebeat.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[Shin e Ramanathan 1994]{RtcAsNewDiscipline}
+\abntrefinfo{Shin e Ramanathan}{SHIN; RAMANATHAN}{1994}
+{SHIN, K.~G.; RAMANATHAN, P. Real-time computing: A new discipline of computer
+  science and egineering.
+\emph{Procedings og the IEEE}, v.~82, n.~1, 1994.}
+
+\bibitem[{Siciliane, T.} 2015]{DzoneArticle}
+\abntrefinfo{{Siciliane, T.}}{{Siciliane, T.}}{2015}
+{{Siciliane, T.} \emph{{Streaming Big Data: Storm, Spark and Samza}}. 2015.
+Disponível em: <\url{https://dzone.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[Sommerville 2011]{Sommerville}
+\abntrefinfo{Sommerville}{SOMMERVILLE}{2011}
+{SOMMERVILLE, I. \emph{Engenharia de Software}. 9th. ed. [S.l.]: Pearson,
+  2011.}
+
+\bibitem[{Stack Over Flow} 2016]{StackOverFlow}
+\abntrefinfo{{Stack Over Flow}}{{Stack Over Flow}}{2016}
+{{Stack Over Flow}. 2016.
+Disponível em: <\url{https://http://stackoverflow.com}>. Acesso em Maio 7,
+  2016.}
+
 \bibitem[{Techopedia} 2016]{Techopedia}
 \abntrefinfo{{Techopedia}}{{Techopedia}}{2016}
 {{Techopedia}. 2016.
 Disponível em: <\url{https://www.techopedia.com}>. Acesso em Abril 23, 2016.}
+
+\bibitem[Treat 2015]{BravenewgeekArticle}
+\abntrefinfo{Treat}{TREAT}{2015}
+{TREAT, T. \emph{{Stream Processing and Probabilistic Methods: Data at Scale}}.
+  2015.
+Disponível em: <\url{http://bravenewgeek.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[WÄHNER 2014]{InfoQArticle}
+\abntrefinfo{WÄHNER}{WÄHNER}{2014}
+{WÄHNER, K. \emph{Real-Time Stream Processing as Game Changer in a Big Data
+  World with Hadoop and Data Warehouse}. 2014.
+Disponível em: <\url{http://www.infoq.com}>. Acesso em Maio 7, 2016.}
 
 \bibitem[Xu, Ju e Ren 2015]{SparkInternals}
 \abntrefinfo{Xu, Ju e Ren}{XU; JU; REN}{2015}
 {XU, L.; JU, H.; REN, H. \emph{{Gitbook: SparkInternals}}. 2015.
 Disponível em: <\url{https://github.com/JerryLead/SparkInternals}>. Acesso em
   Abril 30, 2016.}
+
+\bibitem[Zapletal 2015]{CakeSolutionsArticle}
+\abntrefinfo{Zapletal}{ZAPLETAL}{2015}
+{ZAPLETAL, P. \emph{{Introduction Into Distributed Real-Time Stream
+  Processing}}. 2015.
+Disponível em: <\url{http://www.cakesolutions.net}>. Acesso em Maio 7, 2016.}
 
 \end{thebibliography}

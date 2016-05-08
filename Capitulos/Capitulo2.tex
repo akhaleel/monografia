@@ -18,11 +18,132 @@ Em geral, a parte de desenvolvimento é subdividida em quatro subpartes:
 
 \section{Plataformas de processamento em tempo real}
 
-As plataformas de processamento em tempo real \abrv[RTC --­ Real­Time Computing){RTC (Real­Time Computing)}, compostas por hardware ou software, são sistemas responsáveis por emitir respostas a um dado evento dentro de um determinado deadline (limite de tempo). Sendo tal limite de tempo, normalmente na ordem de mile / micro­segundos [82, 84].
+Nessa seção, é introduzido o conceito de plataformas de processamento em tempo real. Em seguida, a subseção \ref{espSubsection} tratará sobre processamento de fluxo de eventos em tempo real, e a \ref{metodologyOfChoice} a respeito da metodologia utilizada para selecionar as ferramentas com as quais o trabalho do Cap. \ref{chapter3} será realizado.
+
+As plataformas de processamento em tempo real \abrv[RTC --­ Real­ Time Computing]{RTC (Real­ Time Computing)}, compostas por hardware ou software, são sistemas que tem como um dos principais requisitos emitir respostas a eventos de acordo com um determinado deadline (limite de tempo). Sendo assim, a corretude da computação não depende apenas da corretude lógica, mas também dos resultados serem produzidos de acordo com o deadline especificado \cite{RtcAsNewDiscipline}, \cite{Sommerville}.
+
+Normalmente, os resultados são obtidos através de processamentos realizados por um conjunto de tasks (tarefas) cooperativas, iniciadas por eventos do sistema. Os eventos são dependentes do ambiente no qual estão inseridos, podendo ocorrer periodicamente (de forma regular e previsível), ou, aperiodicamente (irregulares e imprevisíveis) \cite{RtcAsNewDiscipline}, \cite{Sommerville}.
+
+As tasks podem ter uma relação de interdependência e ao mesmo tempo nem todos os eventos que as originaram necessitarem de ser processados dentro de um deadline. Apesar disso, nenhuma task pode vir a comprometer o processamento de outra \cite{RtcAsNewDiscipline}.  
+
+Com isso, os deadlines podem ser classificados em hard, firm, ou, soft. No primeiro caso, respectivamente, as respostas a todos os eventos devem necessariamente ocorrer dentro do  deadline  definido; no segundo, deadlines esporadicamente não atendidos são aceitos; no terceiro, deadlines não alcançados são permitidos frequentemente \cite{RtcAsNewDiscipline}. Além desses categorias, há os sistemas com delay (atraso) introduzido entre o intervalo de tempo de estímulo e resposta, os quais são classificados como near real time (NRT), ou seja, são sistemas de processamento em "quase tempo real".
+
+Sendo assim, na categoria hard, é considerado como falha se o tempo estimado para um processamento não for atendido, e nas demais, a ocorrência disso resulta numa degradação (contínua de acordo com a quantidade de deadlines não atendidos) \cite{RtcAsNewDiscipline}, \cite{Sommerville}.
+
+Entende-se por falha quando o usuário não recebe algo esperado (por exemplo, deadline não atendido) devido a um erro de sistema. Sendo esse erro um estado errôneo resultante de um defeito (característica do sistema que pode resultar em erro). E, degradação, como decréscimo da qualidade (conceito subjetivo, de acordo com os requisitos da aplicação) do sistema \cite{Sommerville}.
+
+Por fim, é importante mencionar também que uma falha de sistema pode comprometer o requisito de Confiança e prejudicar um grande número de pessoas \cite{RtcAsNewDiscipline}, \cite{Sommerville}. Na Fig. \ref{fig:reliabilityDiagram} a seguir, são ilustradas as principais propriedades desse requisito:
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/reliabilityDiagram.png}
+  \caption{Principais propriedades de Confiança}
+  {Fonte:} \cite{Sommerville}
+  \label{fig:reliabilityDiagram}
+\end{figure}
+
+\subsection{Processamento de fluxo de eventos em tempo real}
+\label{espSubsection}
+
+Fluxo (ou stream) de eventos, basicamente, pode ser entendido como uma série de eventos em função do tempo \cite{Datatorrent}, \cite{Complexevents}. Dentro desse escopo, duas abordagens de processamento são importantes diferenciar: \abrv[ESP -- Event Stream Processing]{(i) ESP (Event Stream Processing, ou, Processamento de Fluxo de Eventos)} e \abrv[CEP -- Complex Event Processing]{(ii) CEP (Complex Event Processing, ou, Processamento Complexo de Eventos)}. A primeira, costuma-se focar principalmente com questões de baixo nível, relacionadas a como processar eventos em tempo real atendendo requisitos de escalabilidade, tolerância a falha, confiabilidade, etc \cite{ConfluentArticle}.
+
+Na segunda abordagem, os streams são utilizados para criar uma nuvem de eventos, parcialmente ordenados por tempo e causalidade, conceito conhecido como \abrv[POSET -- Partially ordered set of events]{POSET (Partially ordered set of events)} \cite{Complexevents}. Sendo assim, normalmente, visa-se trabalhar questões de alto nível, utilizando posets para a criação de padrões de eventos, envolvendo seus relacionamentos, estrutura interna, etc. Com esse conjunto de informações é possível compor eventos complexos, os quais podem ser consultados continuadamente \cite{ConfluentArticle}. 
+
+Portanto, nessa monografia, será utilizada a primeira abordagem (ESP) para processamento de eventos, por ser mais adequada ao objetivo proposto no Cap. \ref{chapter1}. Em ESPs, algumas plataformas processam os streams continuadamente conforme são recebidos pelo sistema; paradigma conhecido como One at time. Quando um evento é processado com sucesso, há a possibilidade de emitir uma notificação sobre isso, a qual é custosa por ser necessário rastreá-lo até o término de seu processamento \cite{Datatorrent}. 
+
+Outra alternativa, é a de realizar o processamento em micro-batchs (pequenos lotes) de eventos, tendo com uma das vantagens poder realizar operações em pequenos blocos de dados, em vez de individualmente, ao custo de introduzir um pequeno atraso no processo \cite{Datatorrent}.
+
+\subsection{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
+\label{metodologyOfChoice}
+
+Inicialmente, foi realizada uma pesquisa com a palavra chave "stream processing" e analisados os primeiros artigos (na ordem do resultado e que citavam mais de uma ferramenta) em busca de citações a ferramentas (open source) de processamento de streams em tempo real. Com base nesse resultado, os nomes das plataformas encontradas foram utilizados para buscar a quantidade de referências no Google Scholar (site para publicação de artigos acadêmicos) e Stack Over Flow (site para discussão de assuntos relacionados a desenvolvimento de software). Na Tab. \ref{tab:tableNumberOfMentions}, constam os resultados desse procedimento.
+
+A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle}. foi descartada do processo de escolha por ser um componente para CEP, normalmente integrado a ferramentas ESPs, fugindo do escopo desse trabalho \cite{EsperTech}. Sendo assim, continuando a análise, foram também consideradas as características das opções restantes, estudadas superficialmente nos parágrafos seguintes.
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\begin{table}[!htb]	
+	\center
+	{
+		\begin{tabular}{c|c|c|c|c}
+			\hline
+            {\bf Referência} & {\bf Spark Streaming} & {\bf Storm} & {\bf Flink} & {\bf Samza}\\
+			\hline
+			\cite{InfoQArticle} & 1 & 1 & 1 & 1\\
+			\cite{ConfluentArticle} & 1 & 0 & 0 & 1\\
+			\cite{DzoneArticle} & 1 & 1 & 0 & 1\\
+			\cite{Datatorrent} & 1 & 1 & 0 & 0\\
+			\cite{CakeSolutionsArticle} & 1 & 1 & 0 & 0\\			
+			\cite{VenturebeatArticle} & 1 & 1 & 0 & 0\\
+			\cite{BravenewgeekArticle} & 1 & 0 & 0 & 1\\
+			\cite{GoogleScholar} & 806 & 766 & 171 & 283\\
+			\cite{StackOverFlow} & 1541 & 538 & 567 & 87\\
+			\hline
+			{\bf Total de citações} & 2354 & 1311 & 739 & 374\\
+			\hline
+		\end{tabular}
+	}
+	% Título de tabelas sempre aparecem antes da tabela
+	\caption{Quantidade de citações a plataformas ESPs por referência}
+	\label{tab:tableNumberOfMentions}
+	{Fonte: Elaboração própria}	
+\end{table}
+
+\paragraph{Apache Spark Streaming.} Apache Spark Streaming é uma extensão do Spark para processamento de stream, em near real time. Além disso, o Spark possui outros módulos para consultas a banco de dados, grafos, e aprendizado de máquina \cite{Spark}. O processamento de stream é realizado em micro-batching pelo Spark Streaming (um de seus módulos), utilizando uma abstração conhecida como \abrv[DStream -- Discretized Stream]{DStream}, a qual é composta por uma sequências de \abrv[RDD -- Resilient Distributed Dataset]{RDDs (Resilient Distributed Dataset)}, ilustrada na Fig. \ref{fig:dstream}. RDDs abstraem uma coleção de dados distribuídos e manipulados em paralelo. No Spark, também é possível utilizar processamento em batch, independente do módulo que está sendo utilizado \cite{LearningSpark}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/dstreamImage.png}
+  \caption{Ilustração de um DStream}
+  {Fonte:} \cite{Spark}
+  \label{fig:dstream}
+\end{figure}
+
+\paragraph{Apache Storm.} Apache Storm é um plataforma para processamento de stream em tempo real. Ao contrário do Spark, tem "one at time" como modelo de processamento de dados. As streams são compostas por tuplas (unidade básica de dados, as quais processadas numa abstração conhecida como Topologia, ilustarda na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})} de spouts e bolts, respectivamente, resposáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
+
+\bigskip
+\bigskip
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Imagens/stormTopologyImage.png}
+  \caption{Exemplo de uma topologia do Storm}
+  {Fonte:} \cite{LearningStorm}
+  \label{fig:stormTopology}
+\end{figure}
+
+\paragraph{Apache Flink.} Apache Flink é um plataforma muito semelhante ao Spark. Com suporte a processamento de streams, os quais são definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em batch é realizado em cima de DataSets, semalhantes as RDDs do Spak. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração Sink é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/flinkProcessingImage.png}
+  \caption{Exemplo de fluxo de processamento no Flink}
+  {Fonte:} \cite{FlinkOverView}
+  \label{fig:flinkProcessingImage}
+\end{figure}
+
+\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de stream em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por offsets, ids), em vez de tupla, ou, DStream. Os streams são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por jobs responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em batch, o qual é realizado processando sequências de streams.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.6\textwidth]{Imagens/samzaPartitionsImage.png}
+  \caption{Exemplo de um stream particionado}
+  {Fonte:} \cite{Samza}
+  \label{fig:samzaPartitions}
+\end{figure}
+
+Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \cite{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
+
+Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superfecialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia dos demais com o conceito de topologia, interessante de ser estudado. Devido a isso, na seção seguinte o Spark e Storm são estudados mais aprofundamente.
 
 \section{Apache Spark}
 
-Apache Spark \cite{Spark} é uma plataforma de computação em cluster (unidade lógica composta por um conjunto de computadores conectados entre si através da Rede, permitindo compartilhamento de recursos \cite{Techopedia}), com suporte a consultas a banco de dados, processamento de stream e aprendizado de máquina. Tendo Java, Python e Scala como linguagens de programação suportadas.
+Apache Spark é uma plataforma de computação em cluster (unidade lógica composta por um conjunto de computadores conectados entre si através da Rede, permitindo compartilhamento de recursos \cite{Techopedia}), com suporte a consultas a banco de dados, processamento de streaming (em near real time), grafos, e aprendizado de máquina. Tendo Java, Python e Scala como linguagens de programação suportadas \cite{Spark}.
 
 A arquitetura do Spark, conforme a Fig. \ref{fig:sparkStack}, é composta por uma pilha integrando os seguintes componentes, a serem explicados posteriormente: Spark SQL, Spark Streaming, MLib, GraphX, Spark Core e Administradores de Cluster (Yarn \cite{Yarn} e Apache Mesos \cite{Mesos}). Tal estrutura visa ser de fácil manutenção, teste, deploy, e permitir aumento de perfomance do núcleo impactando seus demais componentes.
 
@@ -131,15 +252,7 @@ O ZooKeeper Cluster \cite{ZooKeeper} é responsável por coordenar processos, info
 
 A topologia Storm, ilustrada na Fig. \ref{fig:stormTopology}, é uma abstração que define um grafo acíclico dirigido \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})}, utilizado para computações de streams. Cada nó desse grafo é responsável por executar algum processamento, enviando seu resultado para o próximo nó do fluxo. Após definida a topologia, ela pode ser executada localmente ou submetida a um cluster \cite{LearningStorm}, \cite{StormPython}.
 
-Stream é um dos componentes da topologia Storm, definido como uma sequência de tuplas independentes, fornecidas por um ou mais spout e processadas por um ou mais bolt. Cada stream tem o seu respectivo ID, que é utilizado pelos bolts para consumirem e produzirem as tuplas. As tuplas compõem uma unidade básica de dados, suportando os tipos de dados (serializáveis) no qual a topologia está sendo desenvolvida.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.5\textwidth]{Imagens/stormTopologyImage.png}
-  \caption{Exemplo de uma topologia do Storm}
-  {Fonte:} \cite{LearningStorm}
-  \label{fig:stormTopology}
-\end{figure}
+Stream é um dos componentes da topologia Storm, definido como uma sequência de tuplas independentes e imutáveis, fornecidas por um ou mais spout e processadas por um ou mais bolt. Cada stream tem o seu respectivo ID, que é utilizado pelos bolts para consumirem e produzirem as tuplas. As tuplas compõem uma unidade básica de dados, suportando os tipos de dados (serializáveis) no qual a topologia está sendo desenvolvida.
 
 \paragraph{Bolt.} Os bolts são unidades de processamento de dados (streams), sendo eles responsáveis por executar transformações simples sobre as tuplas, as quais são combinadas com outras formando complexas transformações. Também, eles podem ser inscritos para receberem informações tanto de outros bolts, quanto dos spouts, além de produzirem streams como saída \cite{LearningStorm}.
 
