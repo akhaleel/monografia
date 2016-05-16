@@ -2,7 +2,27 @@
 \chapter{Introdução}
 \label{chapter1}
 
-A introdução é a parte inicial do texto e que possibilita uma visão geral de todo o trabalho, devendo constar a delimitação do assunto tratado, objetivos da pesquisa, motivação para o desenvolvimento da mesma e outros elementos necessários para situar o tema do trabalho.
+Hoje em dia, o crescimento populacional tem sido uma das fontes de stress sob a infraestrutura e recursos de uma cidade \cite{CiscoArticle}, fenômeno conhecido também como Tragédia dos comuns \cite{TragedyOfTheCommons}, no qual há um cenário de alta demanda por determinados recursos finitos, os quais explorados nessa escala se tornam escassos. Levando isso em consideração, Cidades Inteligentes, são aquelas que, principalmente, usam novas tecnologias para transformar seus sistemas e otimizar o uso de recursos finitos, melhorando a eficiência da economia, possibilitando desenvolvimento político, social, cultural e urbano \cite{AVisionOfSocialMedia}. 
+
+No contexto de Cidades Inteligentes, alguns objetos do nosso cotidiano têm a capacidade de serem conectados à Internet através de eletrônicos embarcados, sensores e software, formando a  Internet das Coisas \abrv[IoT -- Internet of Things]{IoT (Internet of Things)}. Em 2013, menos de 1\% desses dispositivos estavam conectados, sendo a previsão para 2020 de 212 bilhões. Quanto a pessoas conectadas à Internet, prevê-se 3.5 bilhões em 2017, sendo 64\% via dispositivos móveis \cite{CiscoArticle}.
+
+Tal volume de dados, dobrará a cada dois anos até 2020 \cite{EmcArticle2}, principalmente devido ao crescimento do uso da Internet, smartphones e Redes Sociais; a queda do custo de equipamento para criar, capturar, administrar, proteger e armazenar informação; migração da TV analógica para a digital; crescimento dos dados gerados por máquinas, incluindo imagens de câmeras de segurança e da informação sobre informação \cite{CiscoArticle}.
+
+Sendo assim, de acordo com essa expansão, chegar­-se-­á um patamar em que tudo o que é possível estar, estará conectado, ampliando o conceito de Internet das Coisas para o de Internet de Todas as Coisas, segundo a Cisco \cite{CiscoIoE}. Com essa quantidade de pessoas e dispositivos conectados, cerca de 44 trilhões de gigabytes serão gerados \cite{EmcArticle2}, os quais processados por sistemas inteligentes, ajudarão no surgimento de serviços de grande impacto no cotidiano de uma cidade \cite{CiscoArticle}.
+
+Portanto, umas das principais problemáticas abordadas por Cidades Inteligentes é a de processamento de grande volume dados, provenientes dos sensores instalados em tubulações de água, avenidas (para controle de congestionamentos), iluminações públicas; de câmeras de segurança; da análise de Redes Sociais, como o processamento de tweets (mensagem publicada ou trocada pelos utilizadores da rede social Twitter \cite{Tweet}), etc. 
+
+Analisando o conteúdo das Redes Socias, por exemplo, é possível explorar o nível de interação entre cidadãos e governos locais no âmbito digital (e-Participação). Sendo essa exploração algo importante por a população ser um componente fundamental das Cidades Inteligentes, que tem como função principal serví-la. Devido a isso, ambas as partes precisam ter uma comunicação ativa \cite{AVisionOfSocialMedia}. 
+
+Apesar dessa importância, poucos trabalhos tem sido direcionados a exploração do pontencial das Redes Sociais para as Cidades Inteligentes \cite{AVisionOfSocialMedia}, principalmente no que diz respeito a e-Participação \cite{DccArticle}. Além disso, os rankings de Cidades Inteligentes, normalmente, adotam critérios relacionados a transparência e existência de serviços eletrônicos, ignorando o uso de outras ferramentas para Governo Eletrônico, como as Redes Sociais \cite{AVisionOfSocialMedia}.
+
+\section{Objetivo}
+
+Tendo o que foi exposto anteriormente em consideração, essa monografia tem como objetivo desenvolver uma aplicação para realizar processamento de tweets, coletando métricas relacionadas a e-Participação, das cidades brasileiras ranqueadas, recentemente, como Cidades Inteligentes \cite{BrazilianSmartCitiesRanking}, exibindo essas informações numa  aplicação web contendo um mapa, buscando obter uma visão do nível de participação, no âmbito digital, entre o governo local e os cidadãos, comparando-a com o ranking mencionado.
+
+O processamento desses tweets, assim como de outros dados, pode ser feito usando, por exemplo, Processamento de Fluxo de Eventos (ESP - Event Stream Processing), processando enventos (acontecimentos do mundo real ou digital) na ordem em que eles chegam, ou, via Processamento Complexo de Eventos (CEP - Complex Event Processing), entendendo como esses eventos se relacionam, dentre outros aspectos, construindo padrões para identificá-los num fluxo de eventos \cite{Complexevents}.
+
+A escolha entre essas abordagens depende dos requisitos da aplicação. E, para o objetivo dessa monografia, a abordagem de ESP se mostrou mais adequada, pois os tweets serão processados em ordem. Então, a partir disso, foi desenvolvida uma metodologia para selecionar duas plataformas para ESP, sendo o Apache Spark e Storm escolhidas, principalmente, devido ao número de citações que ambas possuem em artigos e na comunidade de software. Ainda, esse trabalho também tem como proposta comparar as ferramentas citadas, tendo como estudo de caso a aplicação a ser desenvolvida.
 
 \section{Organização do trabalho}
 

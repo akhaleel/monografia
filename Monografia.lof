@@ -1,9 +1,10 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Principais propriedades de Confian\c ca}}{18}
-\contentsline {figure}{\numberline {2}{\ignorespaces Ilustra\c c\~ao de um DStream}}{20}
-\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo de uma topologia do Storm}}{21}
-\contentsline {figure}{\numberline {4}{\ignorespaces Exemplo de fluxo de processamento no Flink}}{21}
-\contentsline {figure}{\numberline {5}{\ignorespaces Exemplo de um stream particionado}}{22}
-\contentsline {figure}{\numberline {6}{\ignorespaces Ilustra\c c\~ao da arquitetura em pilha do Apache Spark}}{23}
-\contentsline {figure}{\numberline {7}{\ignorespaces Componentes do Spark para execu\c c\~ao distribu\IeC {\'\i }da}}{25}
-\contentsline {figure}{\numberline {8}{\ignorespaces Ilustra\c c\~ao da arquitetura do Apache Storm}}{27}
+\contentsline {figure}{\numberline {1}{\ignorespaces Cidade num inv\'olucro digital}}{19}
+\contentsline {figure}{\numberline {2}{\ignorespaces Principais propriedades de Confian\c ca}}{23}
+\contentsline {figure}{\numberline {3}{\ignorespaces Ilustra\c c\~ao da arquitetura em pilha do Apache Spark}}{24}
+\contentsline {figure}{\numberline {4}{\ignorespaces Componentes do Spark para execu\c c\~ao distribu\IeC {\'\i }da}}{26}
+\contentsline {figure}{\numberline {5}{\ignorespaces Ilustra\c c\~ao da arquitetura do Apache Storm}}{29}
+\contentsline {figure}{\numberline {6}{\ignorespaces Ilustra\c c\~ao de uma topologia do Storm}}{31}
+\contentsline {figure}{\numberline {7}{\ignorespaces Ilustra\c c\~ao de um DStream}}{35}
+\contentsline {figure}{\numberline {8}{\ignorespaces Ilustra\c c\~ao de um fluxo de processamento no Flink}}{35}
+\contentsline {figure}{\numberline {9}{\ignorespaces Ilustra\c c\~ao de um stream particionado no Samza}}{36}

@@ -1,26 +1,73 @@
 % Fundamentação Teórica
 \chapter{Fundamentação Teórica}
+\label{chapter2}
 
-Este é o primeiro capítulo da parte central do trabalho, isto é, o desenvolvimento, a parte mais extensa de todo o trabalho. Geralmente o desenvolvimento é dividido em capítulos, cada um com subseções e subseções, cujo tamanho e número de divisões variam em função da natureza do conteúdo do trabalho.
-
-Em geral, a parte de desenvolvimento é subdividida em quatro subpartes:
-\begin{itemize}
-	\item \textit{contextualização ou definição do problema} -- consiste em descrever a situação ou o contexto geral referente ao assunto em questão, devem constar informações atualizadas visando a proporcionar maior consistência ao trabalho;
-	\item \textit{referencial ou embasamento teórico} -- texto no qual se deve apresentar os aspectos teóricos, isto é, os conceitos utilizados e a definição dos mesmos; nesta parte faz-se a revisão de literatura sobre o assunto, resumindo-se os resultados de estudos feitos por outros autores, cujas obras citadas e consultadas devem constar nas referências;
-	\item \textit{metodologia do trabalho ou procedimentos metodológicos} -- deve constar o instrumental, os métodos e as técnicas aplicados para a elaboração do trabalho;
-	\item \textit{resultados} -- devem ser apresentados, de forma objetiva, precisa e clara, tanto os resultados positivos quanto os negativos que foram obtidos com o desenvolvimento do trabalho, sendo feita uma discussão que consiste na avaliação circunstanciada, na qual se estabelecem relações, deduções e generalizações.
-\end{itemize}
-
-É recomendável que o número total de páginas referente à parte de desenvolvimento não ultrapasse 60 (sessenta) páginas.
+Nesse capítulo, são apresentados os conceitos relacionados a essa monografia, os quais estão divididos nas seguintes seções: \ref{smartCities}, sobre a temática de Cidades Inteligentes; \ref{realTimePlatforms}, a respeito de Plataformas de processamento em tempo real; \ref{sparkSection} e \ref{stormSection}, sobre o Apache Spark e Storm, respectivamente. 
 
 \section{Cidades Inteligentes}
+\label{smartCities}
 
+Projeções da Organização das Nações Unidas \abrv[ONU --­ Organização das Nações Unidas]{(ONU)}, indicam que a população mundial urbana atual passará de 3.9 bilhões de pessoas para 6.3 bilhões em 2050, representando 66\% do total de habitantes, 9.54 bilhões \cite{OnuArticle}. Tal crescimento populacional tem tido consequências graves como a miséria; sendo pertencente a classe de problemas de solução não técnica, de acordo com o fenômeno conhecido por Tragédia dos Comuns, no qual uma alta demanda de recursos finitos (água, energia, alimentos, estradas, etc.) os tornam escassos \cite{TragedyOfTheCommons}.
+
+A ONU, por sua vez, indicam algumas estratégias políticas para lidar com esse problema, tais como: incentivo a migração interna; redistribuição espacial da população; expansão da infraestrutura; garantia de acesso a serviços e oportunidades de trabalho; uso de Tecnologias da Informação e Comunicação \abrv[TICs --­ Tecnologias da Informação e Comunicação]{(TICs)}, para melhoraria na entrega de serviços \cite{OnuArticle}, etc. Podendo nesse último ponto, por exemplo, haver exploração das TICs visando a implantação de iniciativas relacionadas a Cidades Inteligentes. 
+
+As Cidades Inteligentes são locais nos quais, principalmente, busca-se transformar os sistemas da cidade e otimizar o uso de seus recursos finitos, melhorando assim a eficiência da economia, possibilitando desenvolvimento político, social, cultural e urbano \cite{AVisionOfSocialMedia}. Apesar dessas possíveis transformações e otimizações, é importante salientar, novamente, que nenhuma abordagem técnica resolve por si só as problemáticas decorrentes do crescimento populacional \cite{TragedyOfTheCommons}.
+
+Uma das problemáticas que as Cidades Inteligentes ajudam a resolver é a de demanda por eficiência energética (decorrente das mudanças climáticas), que requer das cidades menos emissão de gás carbono, podendo isso ser obtido utilizando iluminação pública, com investimentos em prédios sustentáveis (energeticamente sustentável e com uso de áreas verdes), transportes públicos e ciclovias. Outro possibilidade, é o de desenvolvimento de serviços digitais capazes de ajudar os cidadãos com questões cotidianas, como achar um táxi, saber a localização de um ônibus, encontrar a rota com menos congestionamento de carros, reportar crimes, comunicar-se com o governo, etc.
+
+O problema relacionado a Cidades Inteligentes tratado por essa monografia, como já mencionado, insere-se no contexto de processamento de grande volume de dados, o qual é devido, principalmente a conexão de objetos conectados à Internet (contexto de IoT, conceito explicado em \ref{iotSection}), com previsão de existirem 212 bilhões até 2020. E, também, ao aumento do número de pessoas conectas (o que com o crescimento populacional tende a aumentar), prevendo-se 3.5 bilhões em 2017, sendo 64\% via dispositivos móveis \cite{CiscoArticle}.
+
+Ainda, mais especificamente, espera-se que a quantidade de dados existentes dobre a cada dois anos até 2020 \cite{EmcArticle2}. Outros fatores que tem contribuído para isso são: o crescimento do uso da Internet, smartphones e Redes Sociais; a queda do custo de equipamento para criar, capturar, administrar, proteger e armazenar informação; migração da TV analógica para a digital; crescimento dos dados gerados por máquinas, incluindo imagens de câmeras de segurança e da informação sobre informação \cite{CiscoArticle}.
+
+\subsection{Internet das Coisas}
+\label{iotSection}
+
+Considerando o exposto pela seção \ref{smartCities}, a expansão de pessoas e coisas conectadas à Internet, chegar­-se-­á um patamar em que tudo o que é possível estar, estará conectado, ampliando o conceito de Internet das Coisas para o de Internet de Todas as Coisas, segundo a Cisco \cite{CiscoIoE}. Em tal cenário, cerca de 44 trilhões de gigabytes serão gerados \cite{EmcArticle2}, os quais processados por sistemas inteligentes, ajudarão no surgimento de serviços de grande impacto no cotidiano de uma cidade \cite{CiscoArticle}.
+
+Principalmente, aqueles que monitoram e reportam continuadamente qualquer modificação que ocorra em um determinado cenário. Por exemplo, no contexto de saúde pública, é possível monitorar as condições do organismo de um paciente, notificando os médicos responsáveis caso a pessoa esteja em risco, através de uma rápida comunicação e resposta a tal acontecimento. Alguns dos sistemas semelhantes a esse são exemplificados na Fig. \ref{fig:iotImage}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/iotImage.png}
+  \caption{Cidade num invólucro digital}
+  {Fonte:} \cite{CiscoArticle}
+  \label{fig:iotImage}
+\end{figure}
+
+Na Fig. \ref{fig:iotImage}, organizações, pessoas e objetos estão conectados, criando um invólucro digital, composto por representações de serviços conectados a nuvem, tais como: o de um (i) Hospital Inteligente, conectado a dispositivos médicos inteligentes e a ambulâncias; (ii) Centro Digital de Controle e Comando Municipal, integrado a um sistema inteligente de segurança pública e armazenamento de dados; (iii) Sistema de Otimização de Fluxo de Tráfico, conectado a um sistema de estradas inteligentes agregadas a câmeras de controle de tráfico; (iv) Fábrica Inteligente, integrada a um sistema de otimização de logística e fábrica; (v) Administração de Energia Doméstica e (vi) Smart Grid (um novo modelo de Redes Elétricas \cite{IeeeArticle}) e (vii) Otimização de Rede de Comunicação.
+
+Tais serviços não serão estudados nesse trabalho, foram apenas referenciados visando demonstrar uma pequena parte da gama de possibilidades existentes em Cidades Inteligentes, Internet das Coisas, e a problemática relacionada ao processamento de dados.
+
+\subsection{Requisitos de uma aplicação de Cidade Inteligente}
+
+Ante a variedade de fontes de dados disponíveis, conforme mencionado na seção \ref{iotSection}, a capacidade de processar grandes volumes de dados pode ser um dos requisitos necessários a uma aplicação de Cidade Inteligente. Normalmente, duas métricas são utilizadas para analisar esse requisito: os valores de (i) throughput e (ii) latência. O primeiro termo se refere a taxa de processamento \cite{Techopedia} e, o segundo a variação do tempo entre um estímulo e resposta \cite{Techopedia}.
+
+Dependendo do contexto da aplicação, o valor da latência tem maior relevância sob o de throughput. Por exemplo, a latência talvez seja mais interessante de ser priorizada quando respostas a determinados eventos precisam ser no menor intervalo de tempo possível (menos de um segundo). Por outro lado, as aplicações que priorizam throughput, podem apenas necessitarem processar grandes volumes de dados dentro de um valor de latência aceitável (no máximo alguns segundos).
+
+Outro requisito importante, é o de tolerância a falhas (necessário quando a aplicação está inserida em ambientes distribuídos, ou, de incertezas), o qual permite o funcionamento do sistema mesmo que uma falha ocorra, o que pode ser obtido, por exemplo, por meio de replicação \cite{SistemasDistribuidos}. Além disso, pode existir a necessidade de antender o requisito de escalabilidade, através do qual é possível oferecer um serviço de alta qualidade conforme o aumento da demanda, adicionando novos recursos (escalabilidade horizontal), ou, melhorando os existentes (escalabilidade vertical) \cite{Sommerville}.
+
+Além disso, a aplicação pode precisar do requisito de processamento em tempo real, no qual há um limite de tempo pré-determinado para as respostas aos eventos do sistema \cite{Sommerville}. Por fim, é importante também avaliar as ferramentas que serão utilizadas no desenvolvimento da aplicação quanto ao suporte aos requisitos citados e as abstrações que elas dispõem.
+
+\subsection{e-Participação}
+
+Uma das temáticas abordadas em Cidades Inteligentes, é a de promover novos meios para a participação do cidadão com questões relaciondas a gestão da cidade \cite{AVisionOfSocialMedia}. Essa interação pode ser feita através de Redes Sociais, que são compostas por um conjunto de pessoas (ou, organizações), representando nós de uma rede, sendo a conexão entre eles conhecida como relacionamento \cite{DccArticle}. 
+
+Sendo assim, tal ambiente virtual, tem proporcionado um novo espaço para que os cidadãos possam participar de processos de consulta e deliberação (exame e dicussão de um assunto \cite{Priberam}), atuando com os governos como atores de processos de tomadas de decisão \cite{DccArticle}. Além das Redes Sociais, a participação pode ocorrer em outros ambientes virtuais, tais como aplicativos, wiki, fórum, blogs, dentre outros \cite{AnpocsArticle}, resumindo-se em e-participação, conceito inserido no de Governo Eletrônico. 
+
+O Governo Eletrônico é caracterizado pelo uso de TICs pelo governo público, buscando prover melhores serviços, informações e conhecimento ao cidadão; facitando o acesso ao processo político e incentivando a participação \cite{AnpocsArticle}. Ele pode ser dividido, principalmente, nos três campos seguintes: e-Administração, a respeito do funcionamento interno do poder público; e-Governo, no tocante a entrega e fornecimento de serviços e informações qualificadas aos cidadãos; e-Democracia, relacionada a ampliação da participação da sociedade na tomada de decisão, sendo a e-Participação uma subárea desse último \cite{AnpocsArticle}.
+
+A intenção da e-Participação é reforçar e renovar as interações entre o setor público, os políticos e cidadãos; tanto quanto possível no processo democrático \cite{AnpocsArticle}. Além disso, a e-Participação não pode ser avaliada somente por seus aspectos técnicos, mas também quanto a capacidade de incrementar a democracia \cite{AnpocsArticle}.
+
+Um dos desafios nessa área é avaliar as ferramentas apoiadas pelas TICs, quanto as formas de engajamento existentes, como informação, consulta, ou, participação ativa \cite{AnpocsArticle}. Ainda, segundo citação contida em \cite{AnpocsArticle}, a e-Participação é um conjunto de várias tecnologias, medidas sociais e políticas, havendo a necessidade de melhorar a compreensão das relações entre esses componentes e como suas respectivas práticas de avaliação podem ser aplicadas a e-Participção como um todo.
+
+Com isso, para que os processos que a envolvem sejam eficazes é importante considerar os ambientes online e off-line, ou seja, incrementando os métodos tradicionais (conferências, fóruns, conselhos, ouvidorias, audiências, consultas, reuniões, comitês, grupos de trabalho e mesas de negociação) com as possibilidades da e-Particição, estendendo-a ainda aos grupos desfavorecidos e desconectados \cite{AnpocsArticle}. Por fim, no parágrafo seguinte, são referenciados alguns dos diferentes níveis de e-Participação.   
+
+\paragraph{Níveis de e-Participação.} No nível e-Informação, há um canal unidirecional, visando apenas fornecer informações de interesse cívico; no de e-Consulta, a comunicação é biderecional, via coleta de opiniões e alternativas; no de e-Envolvimento busca-se garantir a compreensão e levar em consideração os anseios do cidadão; em e-Colaboração, a comunicação é bidirecional, e o cidadão participa ativamente no desenvolvimento de alternativas e indentificação de melhores soluções; por fim, no de e-Empoderamento, a influência, controle e elaboração de políticas pelo e para o público é viabilizada \cite{AnpocsArticle}. 
 
 \section{Plataformas de processamento em tempo real}
+\label{realTimePlatforms}
 
-Nessa seção, é introduzido o conceito de plataformas de processamento em tempo real. Em seguida, a subseção \ref{espSubsection} tratará sobre processamento de fluxo de eventos em tempo real, e a \ref{metodologyOfChoice} a respeito da metodologia utilizada para selecionar as ferramentas com as quais o trabalho do Cap. \ref{chapter3} será realizado.
-
-As plataformas de processamento em tempo real \abrv[RTC --­ Real­ Time Computing]{RTC (Real­ Time Computing)}, compostas por hardware ou software, são sistemas que tem como um dos principais requisitos emitir respostas a eventos de acordo com um determinado deadline (limite de tempo). Sendo assim, a corretude da computação não depende apenas da corretude lógica, mas também dos resultados serem produzidos de acordo com o deadline especificado \cite{RtcAsNewDiscipline}, \cite{Sommerville}.
+As plataformas de processamento em tempo real \abrv[RTC --­ Real­ Time Computing]{(RTC, Real­ Time Computing)}, compostas por hardware ou software, são sistemas que tem como um dos principais requisitos emitir respostas a eventos de acordo com um determinado deadline (limite de tempo). Sendo assim, a corretude da computação não depende apenas da corretude lógica, mas também dos resultados serem produzidos de acordo com o deadline especificado \cite{RtcAsNewDiscipline}, \cite{Sommerville}.
 
 Normalmente, os resultados são obtidos através de processamentos realizados por um conjunto de tasks (tarefas) cooperativas, iniciadas por eventos do sistema. Os eventos são dependentes do ambiente no qual estão inseridos, podendo ocorrer periodicamente (de forma regular e previsível), ou, aperiodicamente (irregulares e imprevisíveis) \cite{RtcAsNewDiscipline}, \cite{Sommerville}.
 
@@ -53,95 +100,8 @@ Portanto, nessa monografia, será utilizada a primeira abordagem (ESP) para proce
 
 Outra alternativa, é a de realizar o processamento em micro-batchs (pequenos lotes) de eventos, tendo com uma das vantagens poder realizar operações em pequenos blocos de dados, em vez de individualmente, ao custo de introduzir um pequeno atraso no processo \cite{Datatorrent}.
 
-\subsection{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
-\label{metodologyOfChoice}
-
-Inicialmente, foi realizada uma pesquisa com a palavra chave "stream processing" e analisados os primeiros artigos (na ordem do resultado e que citavam mais de uma ferramenta) em busca de citações a ferramentas (open source) de processamento de streams em tempo real. Com base nesse resultado, os nomes das plataformas encontradas foram utilizados para buscar a quantidade de referências no Google Scholar (site para publicação de artigos acadêmicos) e Stack Over Flow (site para discussão de assuntos relacionados a desenvolvimento de software). Na Tab. \ref{tab:tableNumberOfMentions}, constam os resultados desse procedimento.
-
-A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle}. foi descartada do processo de escolha por ser um componente para CEP, normalmente integrado a ferramentas ESPs, fugindo do escopo desse trabalho \cite{EsperTech}. Sendo assim, continuando a análise, foram também consideradas as características das opções restantes, estudadas superficialmente nos parágrafos seguintes.
-
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-
-\begin{table}[!htb]	
-	\center
-	{
-		\begin{tabular}{c|c|c|c|c}
-			\hline
-            {\bf Referência} & {\bf Spark Streaming} & {\bf Storm} & {\bf Flink} & {\bf Samza}\\
-			\hline
-			\cite{InfoQArticle} & 1 & 1 & 1 & 1\\
-			\cite{ConfluentArticle} & 1 & 0 & 0 & 1\\
-			\cite{DzoneArticle} & 1 & 1 & 0 & 1\\
-			\cite{Datatorrent} & 1 & 1 & 0 & 0\\
-			\cite{CakeSolutionsArticle} & 1 & 1 & 0 & 0\\			
-			\cite{VenturebeatArticle} & 1 & 1 & 0 & 0\\
-			\cite{BravenewgeekArticle} & 1 & 0 & 0 & 1\\
-			\cite{GoogleScholar} & 806 & 766 & 171 & 283\\
-			\cite{StackOverFlow} & 1541 & 538 & 567 & 87\\
-			\hline
-			{\bf Total de citações} & 2354 & 1311 & 739 & 374\\
-			\hline
-		\end{tabular}
-	}
-	% Título de tabelas sempre aparecem antes da tabela
-	\caption{Quantidade de citações a plataformas ESPs por referência}
-	\label{tab:tableNumberOfMentions}
-	{Fonte: Elaboração própria}	
-\end{table}
-
-\paragraph{Apache Spark Streaming.} Apache Spark Streaming é uma extensão do Spark para processamento de stream, em near real time. Além disso, o Spark possui outros módulos para consultas a banco de dados, grafos, e aprendizado de máquina \cite{Spark}. O processamento de stream é realizado em micro-batching pelo Spark Streaming (um de seus módulos), utilizando uma abstração conhecida como \abrv[DStream -- Discretized Stream]{DStream}, a qual é composta por uma sequências de \abrv[RDD -- Resilient Distributed Dataset]{RDDs (Resilient Distributed Dataset)}, ilustrada na Fig. \ref{fig:dstream}. RDDs abstraem uma coleção de dados distribuídos e manipulados em paralelo. No Spark, também é possível utilizar processamento em batch, independente do módulo que está sendo utilizado \cite{LearningSpark}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.8\textwidth]{Imagens/dstreamImage.png}
-  \caption{Ilustração de um DStream}
-  {Fonte:} \cite{Spark}
-  \label{fig:dstream}
-\end{figure}
-
-\paragraph{Apache Storm.} Apache Storm é um plataforma para processamento de stream em tempo real. Ao contrário do Spark, tem "one at time" como modelo de processamento de dados. As streams são compostas por tuplas (unidade básica de dados, as quais processadas numa abstração conhecida como Topologia, ilustarda na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})} de spouts e bolts, respectivamente, resposáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
-
-\bigskip
-\bigskip
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.5\textwidth]{Imagens/stormTopologyImage.png}
-  \caption{Exemplo de uma topologia do Storm}
-  {Fonte:} \cite{LearningStorm}
-  \label{fig:stormTopology}
-\end{figure}
-
-\paragraph{Apache Flink.} Apache Flink é um plataforma muito semelhante ao Spark. Com suporte a processamento de streams, os quais são definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em batch é realizado em cima de DataSets, semalhantes as RDDs do Spak. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração Sink é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.8\textwidth]{Imagens/flinkProcessingImage.png}
-  \caption{Exemplo de fluxo de processamento no Flink}
-  {Fonte:} \cite{FlinkOverView}
-  \label{fig:flinkProcessingImage}
-\end{figure}
-
-\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de stream em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por offsets, ids), em vez de tupla, ou, DStream. Os streams são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por jobs responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em batch, o qual é realizado processando sequências de streams.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.6\textwidth]{Imagens/samzaPartitionsImage.png}
-  \caption{Exemplo de um stream particionado}
-  {Fonte:} \cite{Samza}
-  \label{fig:samzaPartitions}
-\end{figure}
-
-Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \cite{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
-
-Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superfecialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia dos demais com o conceito de topologia, interessante de ser estudado. Devido a isso, na seção seguinte o Spark e Storm são estudados mais aprofundamente.
-
 \section{Apache Spark}
+\label{sparkSection}
 
 Apache Spark é uma plataforma de computação em cluster (unidade lógica composta por um conjunto de computadores conectados entre si através da Rede, permitindo compartilhamento de recursos \cite{Techopedia}), com suporte a consultas a banco de dados, processamento de streaming (em near real time), grafos, e aprendizado de máquina. Tendo Java, Python e Scala como linguagens de programação suportadas \cite{Spark}.
 
@@ -157,9 +117,9 @@ A arquitetura do Spark, conforme a Fig. \ref{fig:sparkStack}, é composta por uma
 
 \subsection{Módulos do Apache Spark}
 
-O Spark Core é o principal módulo do Apache Spark, responsável principalmente pelo gerenciamento de memória,  tasks (conceito explicado em \ref{taskSection}) e tolerância a falha. Ainda nele, a abstração conhecida como  \abrv[RDD -- Resilient Distributed Dataset]{RDD (Resilient Distributed Dataset)} é definida, cujo papel é o de representar uma coleção de dados distribuídos e manipulados em paralelo. Os RDDs em Java são representados pela classe JavaRDD, criados através da classe JavaSparkContext (contexto da aplicação), que é instanciada recebendo como parâmetro um objeto SparkConf, contendo informações relacionadas ao nome da aplicação e o endereço em que ela será executada, pondendo ser local, ou, em cluster.
+O Spark Core é o principal módulo do Apache Spark, responsável principalmente pelo gerenciamento de memória,  tasks (conceito explicado em \ref{taskSection}) e tolerância a falha. Ainda nele, a abstração conhecida como  RDD é definida, cujo papel é o de representar uma coleção de dados distribuídos e manipulados em paralelo. Os RDDs em Java são representados pela classe JavaRDD, criados através da classe JavaSparkContext (contexto da aplicação), que é instanciada recebendo como parâmetro um objeto SparkConf, contendo informações relacionadas ao nome da aplicação e o endereço em que ela será executada, pondendo ser local, ou, em cluster.
 
-Outro módulo é o Spark Streaming, o qual realiza o processamento de dados em stream. Os streams são representados por uma sequência de RDDs, conhecida como \abrv[DStream -- Discretized Stream]{DStream}. O contexto de um streaming (JavaStreamingContext) é criado usando as configurações da aplicação e o intervalo no qual cada DStream será definido. Após isso, tais streams são atribuídos a um objeto da classe JavaReceiverInputDStream.
+Outro módulo é o Spark Streaming, o qual realiza o processamento de dados em stream. Os streams são representados por uma sequência de RDDs, conhecida como DStream. O contexto de um streaming (JavaStreamingContext) é criado usando as configurações da aplicação e o intervalo no qual cada DStream será definido. Após isso, tais streams são atribuídos a um objeto da classe JavaReceiverInputDStream.
 
 Além dos módulos detalhados nos parágrafos anteriores, é relevante mencionar o (i) Spark SQL, responsável por trabalhar com dados estruturados; o (ii) MLib, relacionado ao aprendizado de máquina, contendo algorítimos tais como o de classificação, regressão, "clusterização", filtragem colaborativa, avaliação de modelo e importação de dados; e o (ii) GraphX, que é composto por uma biblioteca para manipulação de grafos e computações paralelas. Por fim, o Spark também possui um administrador de cluster padrão, conhecido como Standalone Scheduler \cite{Spark}, tendo também suporte ao YARN e Apache Mesos.
 
@@ -190,7 +150,7 @@ Após a construção de um RDD, é possível executar operações sobre ele. Essas oper
 A abstração do conceito de  job está relacionada com o de action. Mais especificamente, um job é o conjunto de estágios (stages) resultantes de uma
 determinada  action. Por exemplo, quando o método count() é invocado (para realizar a contagem de elementos dentro de um RDD), cria­-se um job composto por um ou mais estágios. Os jobs, por padrão, são escalonados para serem executados em ordem \abrv[FIFO -- First In, First Out]{FIFO (First In, First Out)}. Além disso, o scheduler do Spark é responsável por criar um plano de execução física, o qual é utilizado para calcular as RDDs necessárias para executar a ação invocada \cite{LearningSpark}, \cite{SparkInternals}.
 
-Em tal plano de execução física, defini­-se basicamente um grafo acíclico dirigido \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})}, relacionando as dependências existentes entre os RDDs, numa espécie de linhagem de execução (lineage). Após isso, a partir da última RDD do último estágio, cada dependência é calculada, de trás para frente, para que posteriormente os RDDs dependentes possam ser calculados, até que todas as actions necessárias tenham terminado \cite{LearningSpark}, \cite{SparkInternals}.
+Em tal plano de execução física, defini­-se basicamente um grafo acíclico dirigido (DAG), relacionando as dependências existentes entre os RDDs, numa espécie de linhagem de execução (lineage). Após isso, a partir da última RDD do último estágio, cada dependência é calculada, de trás para frente, para que posteriormente os RDDs dependentes possam ser calculados, até que todas as actions necessárias tenham terminado \cite{LearningSpark}, \cite{SparkInternals}.
 
 \subsubsection{Stage}
 \label{stageSection}
@@ -215,6 +175,7 @@ Portanto, o número de tasks em um stage é definido pelo número de partições exis
 Cada  task internamente é divida em algumas etapas, sendo elas: (i) carregamento dos dados de entrada, sejam eles provenientes de unidades de armazenamento (caso o RDD seja um RDD de entrada de dados), de um RDD existente (armazenado em memória cache), ou, de saídas de outro RDD (processo de shuffling), (ii) processamento da operação necessária para computação do RDD representado por ela, (iii) escrever a saída para o processo de shuffling, para um armazenamento externo ou para o driver (caso seja o RDD final de uma ação). Em resumo, uma  task é responsável por coletar os dados de entrada, processá-­los e, por fim, gerar uma saída \cite{LearningSpark}.
 
 \section{Apache Storm}
+\label{stormSection}
 
 Apache Storm \cite{Storm} é uma plataforma de computação em cluster, com suporte a processamento de stream  de dados em tempo real. O Storm requer pouca manutenção, é de fácil de administração e tem suporte a qualquer linguagem de programação (que leia e escreva fluxos de dados padronizados), posto que em seu núcleo é utilizado o Apache Thrift \cite{Thrift} (framework que permite o desenvolvimento de serviços multilinguagem) para definir e submeter topologias (conceito definido em \ref{topologySection}) \cite{Storm}.
 
@@ -229,6 +190,8 @@ A arquitetura do Storm, conforme a Fig. \ref{fig:stormComponents}, é composta pe
 \end{figure}
 
 \subsection{Composição interna do Apache Storm}
+
+Nesta seção é explicada a composição interna do Apache Storm, expondo os principais componentes que permitem a execução distribuída de uma topologia Storm, tais como o Nimbus, ZooKeeper e Supervisor nodes.
 
 \subsubsection{Nimbus}
 \label{nimbusSection}
@@ -250,9 +213,17 @@ O ZooKeeper Cluster \cite{ZooKeeper} é responsável por coordenar processos, info
 \subsubsection{Topologia}
 \label{topologySection}
 
-A topologia Storm, ilustrada na Fig. \ref{fig:stormTopology}, é uma abstração que define um grafo acíclico dirigido \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})}, utilizado para computações de streams. Cada nó desse grafo é responsável por executar algum processamento, enviando seu resultado para o próximo nó do fluxo. Após definida a topologia, ela pode ser executada localmente ou submetida a um cluster \cite{LearningStorm}, \cite{StormPython}.
+A topologia Storm, ilustrada na Fig. \ref{fig:stormTopology}, é uma abstração que define um grafo acíclico dirigido (DAG), utilizado para computações de streams. Cada nó desse grafo é responsável por executar algum processamento, enviando seu resultado para o próximo nó do fluxo. Após definida a topologia, ela pode ser executada localmente ou submetida a um cluster \cite{LearningStorm}, \cite{StormPython}.
 
 Stream é um dos componentes da topologia Storm, definido como uma sequência de tuplas independentes e imutáveis, fornecidas por um ou mais spout e processadas por um ou mais bolt. Cada stream tem o seu respectivo ID, que é utilizado pelos bolts para consumirem e produzirem as tuplas. As tuplas compõem uma unidade básica de dados, suportando os tipos de dados (serializáveis) no qual a topologia está sendo desenvolvida.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Imagens/stormTopologyImage.png}
+  \caption{Ilustração de uma topologia do Storm}
+  {Fonte:} \cite{LearningStorm}
+  \label{fig:stormTopology}
+\end{figure}
 
 \paragraph{Bolt.} Os bolts são unidades de processamento de dados (streams), sendo eles responsáveis por executar transformações simples sobre as tuplas, as quais são combinadas com outras formando complexas transformações. Também, eles podem ser inscritos para receberem informações tanto de outros bolts, quanto dos spouts, além de produzirem streams como saída \cite{LearningStorm}.
 

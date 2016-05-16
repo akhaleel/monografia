@@ -1,15 +1,14 @@
-\contentsline {abreviatura}{RTC --\discretionary {-}{}{} Real\discretionary {-}{}{} Time Computing}{17}
-\contentsline {abreviatura}{ESP -- Event Stream Processing}{18}
-\contentsline {abreviatura}{CEP -- Complex Event Processing}{18}
-\contentsline {abreviatura}{POSET -- Partially ordered set of events}{18}
-\contentsline {abreviatura}{DStream -- Discretized Stream}{20}
-\contentsline {abreviatura}{RDD -- Resilient Distributed Dataset}{20}
-\contentsline {abreviatura}{DAG -- Directed Acyclic Graph}{20}
-\contentsline {abreviatura}{RDD -- Resilient Distributed Dataset}{23}
-\contentsline {abreviatura}{DStream -- Discretized Stream}{23}
-\contentsline {abreviatura}{FIFO -- First In, First Out}{24}
-\contentsline {abreviatura}{DAG -- Directed Acyclic Graph}{25}
-\contentsline {abreviatura}{DAG -- Directed Acyclic Graph}{29}
-\contentsline {abreviatura}{UFRN -- Universidade Federal do Rio Grande do Norte}{34}
-\contentsline {abreviatura}{DIMAp -- Departamento de Inform\'atica e Matem\'atica Aplicada}{34}
-\contentsline {abreviatura}{YARN -- Yet Another Resource Negotiator}{37}
+\contentsline {abreviatura}{IoT -- Internet of Things}{14}
+\contentsline {abreviatura}{ONU --\discretionary {-}{}{} Organiza\c c\~ao das Na\c c\~oes Unidas}{17}
+\contentsline {abreviatura}{TICs --\discretionary {-}{}{} Tecnologias da Informa\c c\~ao e Comunica\c c\~ao}{17}
+\contentsline {abreviatura}{RTC --\discretionary {-}{}{} Real\discretionary {-}{}{} Time Computing}{22}
+\contentsline {abreviatura}{ESP -- Event Stream Processing}{23}
+\contentsline {abreviatura}{CEP -- Complex Event Processing}{23}
+\contentsline {abreviatura}{POSET -- Partially ordered set of events}{23}
+\contentsline {abreviatura}{FIFO -- First In, First Out}{27}
+\contentsline {abreviatura}{DStream -- Discretized Stream}{35}
+\contentsline {abreviatura}{RDD -- Resilient Distributed Dataset}{35}
+\contentsline {abreviatura}{DAG -- Directed Acyclic Graph}{36}
+\contentsline {abreviatura}{UFRN -- Universidade Federal do Rio Grande do Norte}{37}
+\contentsline {abreviatura}{DIMAp -- Departamento de Inform\'atica e Matem\'atica Aplicada}{37}
+\contentsline {abreviatura}{YARN -- Yet Another Resource Negotiator}{40}

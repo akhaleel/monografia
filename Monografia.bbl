@@ -46,10 +46,39 @@ Disponível em: <\url{http://thrift.apache.org}>. Acesso em Abril 30, 2016.}
 {{Apache Software Foundation}. \emph{Apache ZooKeeper}. 2016.
 Disponível em: <\url{https://zookeeper.apache.org}>. Acesso em Abril 30, 2016.}
 
+\bibitem[Cisco 2016]{CiscoIoE}
+\abntrefinfo{Cisco}{CISCO}{2016}
+{CISCO. \emph{Internet of Everything}. 2016.
+Disponível em: <\url{http://ioeassessment.cisco.com/pt-br}>. Acesso em Maio 07,
+  2016.}
+
+\bibitem[Clarke 2013]{CiscoArticle}
+\abntrefinfo{Clarke}{CLARKE}{2013}
+{CLARKE, R. \emph{Smart Cities and the Internet of Everything: The Foundation
+  for Delivering Next Generation CitizenServices}. 2013.
+Disponível em: <\url{http://www.cisco.com}>. Acesso em Maio 07, 2016.}
+
+\bibitem[{Connected Smartcities} 2015]{BrazilianSmartCitiesRanking}
+\abntrefinfo{{Connected Smartcities}}{{Connected Smartcities}}{2015}
+{{Connected Smartcities}. \emph{Ranking Connected Smartcities}. 2015.
+Disponível em: <\url{http://www.connectedsmartcities.com.br}>. Acesso em Maio
+  08, 2016.}
+
+\bibitem[Coulouris et al. 2013]{SistemasDistribuidos}
+\abntrefinfo{Coulouris et al.}{COULOURIS et al.}{2013}
+{COULOURIS, G. et al. \emph{Sistemas Distribuídos Conceitos e Projetos}. 5st.
+  ed. [S.l.]: Bookman, 2013.}
+
 \bibitem[DataArtisans 2015]{FlinkOverView}
 \abntrefinfo{DataArtisans}{DATAARTISANS}{2015}
 {DATAARTISANS. \emph{Apache Flink Training - System Overview}. 2015.
 Disponível em: <\url{http://pt.slideshare.net}>. Acesso em Maio 7, 2016.}
+
+\bibitem[EMC 2014]{EmcArticle2}
+\abntrefinfo{EMC}{EMC}{2014}
+{EMC. \emph{The Digital Universe of Opportunities: Rich Data and the Increasing
+  Value of the Internet of Things}. 2014.
+Disponível em: <\url{https://www.emc.com}>. Acesso em Maio 11, 2016.}
 
 \bibitem[EsperTech 2016]{EsperTech}
 \abntrefinfo{EsperTech}{ESPERTECH}{2016}
@@ -61,15 +90,37 @@ Disponível em: <\url{http://www.espertech.com}>. Acesso em Maio 7, 2016.}
 {{Google Scholar}. 2016.
 Disponível em: <\url{https://scholar.google.com}>. Acesso em Maio 7, 2016.}
 
+\bibitem[H. et al. 2016]{IeeeArticle}
+\abntrefinfo{H. et al.}{H. et al.}{2016}
+{H., M. et al. \emph{{Special section on smart grids: A hub of
+  interdisciplinary research}}. 2016.}
+
+\bibitem[Hardin 1968]{TragedyOfTheCommons}
+\abntrefinfo{Hardin}{HARDIN}{1968}
+{HARDIN, G. A vision of social media in the spanish smartest cities.
+\emph{Science}, v.~162, 1968.
+Disponível em: <\url{http://science.sciencemag.org}>. Acesso em Maio 08, 2016.}
+
 \bibitem[Hart e Bhatnagar 2015]{StormPython}
 \abntrefinfo{Hart e Bhatnagar}{HART; BHATNAGAR}{2015}
 {HART, B.; BHATNAGAR, K. \emph{Building Python Real-Time Applications with
   Storm}. 1st. ed. [S.l.]: Packt Publishing, 2015.}
 
+\bibitem[Infopedia 2016]{Tweet}
+\abntrefinfo{Infopedia}{INFOPEDIA}{2016}
+{INFOPEDIA. \emph{Tweet}. 2016.
+Disponível em: <\url{http://www.infopedia.pt}>. Acesso em Maio 08, 2016.}
+
 \bibitem[Jain e Nalya 2014]{LearningStorm}
 \abntrefinfo{Jain e Nalya}{JAIN; NALYA}{2014}
 {JAIN, A.; NALYA, A. \emph{Learning Storm}. 1st. ed. [S.l.]: Packt Publishing,
   2014.}
+
+\bibitem[Kang et al. 2015]{IoTArticle}
+\abntrefinfo{Kang et al.}{KANG et al.}{2015}
+{KANG, Y. et al. A study on the internet of things (iot) applications.
+\emph{International Journal of Software Engineering and Its Applications},
+  v.~9, n.~9, 2015.}
 
 \bibitem[Karau et al. 2015]{LearningSpark}
 \abntrefinfo{Karau et al.}{KARAU et al.}{2015}
@@ -87,11 +138,34 @@ Disponível em: <\url{http://www.confluent.io}>. Acesso em Maio 7, 2016.}
 {LUCKHAM, D. \emph{{What's the Difference Between ESP and CEP?}} 2006.
 Disponível em: <\url{http://www.complexevents.com}>. Acesso em Maio 7, 2016.}
 
+\bibitem[Maciel, Roque e Garcia 2009]{DccArticle}
+\abntrefinfo{Maciel, Roque e Garcia}{MACIEL; ROQUE; GARCIA}{2009}
+{MACIEL, C.; ROQUE, L.; GARCIA, A. \emph{Democratic Citizenship Community: a
+  social network to promote e-Deliberative process}. 2009.}
+
+\bibitem[MAGALHÃES 2015]{AnpocsArticle}
+\abntrefinfo{MAGALHÃES}{MAGALHÃES}{2015}
+{MAGALHÃES, L. \emph{Instâncias e mecanismos de participação em ambientes
+  virtuais: análise das experiências de participação política online em
+  políticas públicas}. 2015.
+39º Encontro Anual da Associação Nacional de Pós-Graduação e Pesquisa em
+  Ciências Sociais.}
+
 \bibitem[Narsude 2015]{Datatorrent}
 \abntrefinfo{Narsude}{NARSUDE}{2015}
 {NARSUDE, C. \emph{Real-Time Event Stream Processing ? What are your choices?}
   2015.
 Disponível em: <\url{https://www.datatorrent.com}>. Acesso em Maio 5, 2016.}
+
+\bibitem[ONU 2014]{OnuArticle}
+\abntrefinfo{ONU}{ONU}{2014}
+{ONU. \emph{World Urbanization Prospects The 2014 Revision}. 2014.
+Disponível em: <\url{http://esa.un.org}>. Acesso em Maio 10, 2016.}
+
+\bibitem[Priberam 2016]{Priberam}
+\abntrefinfo{Priberam}{PRIBERAM}{2016}
+{PRIBERAM. \emph{Definição de deliberação}. 2016.
+Disponível em: <\url{https://www.priberam.pt}>. Acesso em Maio 14, 2016.}
 
 \bibitem[Ruohonen 2013]{GraphTeory}
 \abntrefinfo{Ruohonen}{RUOHONEN}{2013}
@@ -104,6 +178,13 @@ Disponível em: <\url{http://math.tut.fi/~ruohonen/GT_English.pdf}>. Acesso em
 {SANDU, D. \emph{{Without stream processing, there?s no big data and no
   Internet of things}}. 2014.
 Disponível em: <\url{http://venturebeat.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[SAÉZ-MARTÍN, Rossario e Caba-Perez 2014]{AVisionOfSocialMedia}
+\abntrefinfo{SAÉZ-MARTÍN, Rossario e Caba-Perez}{SAÉZ-MARTÍN; ROSSARIO;
+  CABA-PEREZ}{2014}
+{SAÉZ-MARTÍN, A.; ROSSARIO, A. Haro-de; CABA-PEREZ, C. A vision of social media
+  in the spanish smartest cities.
+\emph{Transforming Government: People, Process and Policy}, v.~8, n.~4, 2014.}
 
 \bibitem[Shin e Ramanathan 1994]{RtcAsNewDiscipline}
 \abntrefinfo{Shin e Ramanathan}{SHIN; RAMANATHAN}{1994}

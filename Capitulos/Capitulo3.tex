@@ -2,61 +2,72 @@
 \chapter{Capítulo 3}
 \label{chapter3}
 
-Algumas regras devem ser observadas na redação da monografia:
-\begin{enumerate}
-	\item ser claro, preciso, direto, objetivo e conciso, utilizando frases curtas e evitando ordens inversas desnecessárias;
-	\item construir períodos com no máximo duas ou três linhas, bem como parágrafos com cinco linhas cheias, em média, e no máximo oito (ou seja, não construir parágrafos e períodos muito longos, pois isso cansa o(s) leitor(es) e pode fazer com que ele(s) percam a linha de raciocínio desenvolvida);
-	\item a simplicidade deve ser condição essencial do texto; a simplicidade do texto não implica necessariamente repetição de formas e frases desgastadas, uso exagerado de voz passiva (como \textit{será iniciado}, \textit{será realizado}), pobreza vocabular etc. Com palavras conhecidas de todos, é possível escrever de maneira original e criativa e produzir frases elegantes, variadas, fluentes e bem alinhavadas;
-	\item adotar como norma a ordem direta, por ser aquela que conduz mais facilmente o leitor à essência do texto, dispensando detalhes irrelevantes e indo diretamente ao que interessa, sem rodeios (verborragias);
-	\item não começar períodos ou parágrafos seguidos com a mesma palavra, nem usar repetidamente a mesma estrutura de frase;
-	\item desprezar as longas descrições e relatar o fato no menor número possível de palavras;
-	\item recorrer aos termos técnicos somente quando absolutamente indispensáveis e nesse caso colocar o seu significado entre parênteses (ou seja, não se deve admitir que todos os que lerão o trabalho já dispõem de algum conhecimento desenvolvido no mesmo);
-	\item dispensar palavras e formas empoladas ou rebuscadas, que tentem transmitir ao leitor mera idéia de erudição;
-	\item não perder de vista o universo vocabular do leitor, adotando a seguinte regra prática: \textit{nunca escrever o que não se diria};
-	\item termos coloquiais ou de gíria devem ser usados com \textit{extrema} parcimônia (ou mesmo nem serem utilizados) e apenas em casos muito especiais, para não darem ao leitor a idéia de vulgaridade e descaracterizar o trabalho;
-	\item ser rigoroso na escolha das palavras do texto, desconfiando dos sinônimos perfeitos ou de termos que sirvam para todas as ocasiões; em geral, há uma palavra para definir uma situação;
-	\item encadear o assunto de maneira suave e harmoniosa, evitando a criação de um texto onde os parágrafos se sucedem uns aos outros como compartimentos estanques, sem nenhuma fluência entre si;
-	\item ter um extremo cuidado durante a redação do texto, principalmente com relação às regras gramaticais e ortográficas da língua; geralmente todo o texto é escrito na forma impessoal do verbo, não se utilizando, portanto, de termos em primeira pessoa, seja do plural ou do singular.
-\end{enumerate}
+\section{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
+\label{metodologyOfChoice}
 
+Inicialmente, foi realizada uma pesquisa com a palavra chave "stream processing" e analisados os primeiros artigos (na ordem do resultado e que citavam mais de uma ferramenta) em busca de citações a ferramentas (open source) de processamento de streams em tempo real. Com base nesse resultado, os nomes das plataformas encontradas foram utilizados para buscar a quantidade de referências no Google Scholar (site para publicação de artigos acadêmicos) e Stack Over Flow (site para discussão de assuntos relacionados a desenvolvimento de software). Na Tab. \ref{tab:tableNumberOfMentions}, constam os resultados desse procedimento.
 
-\section{Seção 1}
+A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle}. foi descartada do processo de escolha por ser um componente para CEP, normalmente integrado a ferramentas ESPs, fugindo do escopo desse trabalho \cite{EsperTech}. Sendo assim, continuando a análise, foram também consideradas as características das opções restantes, estudadas superficialmente nos parágrafos seguintes.
 
-Teste de uma tabela:
-
-\begin{table}[htb]
-	% Título de tabelas sempre aparecem antes da tabela
-	\textsf{\caption{Tabela sem sentido}}
+\begin{table}[!htb]	
 	\center
 	{
-		\begin{tabular}{l|l}
+		\begin{tabular}{c|c|c|c|c}
 			\hline
-			Titulo Coluna 1   & Título Coluna 2\\
+            {\bf Referência} & {\bf Spark Streaming} & {\bf Storm} & {\bf Flink} & {\bf Samza}\\
 			\hline
-			X                 & Y\\
-			X                 & W\\
+			\cite{InfoQArticle} & 1 & 1 & 1 & 1\\
+			\cite{ConfluentArticle} & 1 & 0 & 0 & 1\\
+			\cite{DzoneArticle} & 1 & 1 & 0 & 1\\
+			\cite{Datatorrent} & 1 & 1 & 0 & 0\\
+			\cite{CakeSolutionsArticle} & 1 & 1 & 0 & 0\\			
+			\cite{VenturebeatArticle} & 1 & 1 & 0 & 0\\
+			\cite{BravenewgeekArticle} & 1 & 0 & 0 & 1\\
+			\cite{GoogleScholar} & 806 & 766 & 171 & 283\\
+			\cite{StackOverFlow} & 1541 & 538 & 567 & 87\\
+			\hline
+			{\bf Total de citações} & 2354 & 1311 & 739 & 374\\
 			\hline
 		\end{tabular}
 	}
-	\label{tab:TabelaSemSentido}
+	% Título de tabelas sempre aparecem antes da tabela
+	\caption{Quantidade de citações a plataformas ESPs por referência}
+	\label{tab:tableNumberOfMentions}
+	{Fonte: Elaboração própria}	
 \end{table}
 
+\paragraph{Apache Spark Streaming.} Apache Spark Streaming é uma extensão do Spark para processamento de stream, em near real time. Além disso, o Spark possui outros módulos para consultas a banco de dados, grafos, e aprendizado de máquina \cite{Spark}. O processamento de stream é realizado em micro-batching pelo Spark Streaming (um de seus módulos), utilizando uma abstração conhecida como \abrv[DStream -- Discretized Stream]{DStream}, a qual é composta por uma sequências de \abrv[RDD -- Resilient Distributed Dataset]{RDDs (Resilient Distributed Dataset)}, ilustrada na Fig. \ref{fig:dstream}. RDDs abstraem uma coleção de dados distribuídos e manipulados em paralelo. No Spark, também é possível utilizar processamento em batch, independente do módulo que está sendo utilizado \cite{LearningSpark}.
 
-\section{Seção 2}
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/dstreamImage.png}
+  \caption{Ilustração de um DStream}
+  {Fonte:} \cite{Spark}
+  \label{fig:dstream}
+\end{figure}
 
-Seção 2
+\paragraph{Apache Flink.} Apache Flink é um plataforma muito semelhante ao Spark. Com suporte a processamento de streams, os quais são definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em batch é realizado em cima de DataSets, semalhantes as RDDs do Spak. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração Sink é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
 
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/flinkProcessingImage.png}
+  \caption{Ilustração de um fluxo de processamento no Flink}
+  {Fonte:} \cite{FlinkOverView}
+  \label{fig:flinkProcessingImage}
+\end{figure}
 
-\subsection{Subseção 2.1}
+\paragraph{Apache Storm.} Apache Storm é um plataforma para processamento de stream em tempo real. Ao contrário do Spark, tem "one at time" como modelo de processamento de dados. As streams são compostas por tuplas (unidade básica de dados, as quais processadas numa abstração conhecida como Topologia, ilustrada na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})} de spouts e bolts, respectivamente, resposáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
 
-Referência à tabela definida no início: \ref{tab:TabelaSemSentido}
+\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de stream em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por offsets, ids), em vez de tupla, ou, DStream. Os streams são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por jobs responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em batch, o qual é realizado processando sequências de streams.
 
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.6\textwidth]{Imagens/samzaPartitionsImage.png}
+  \caption{Ilustração de um stream particionado no Samza}
+  {Fonte:} \cite{Samza}
+  \label{fig:samzaPartitions}
+\end{figure}
 
-\subsection{Subseção 2.2}
+Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \ref{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
 
-Subsection 2.2
-
-
-\section{Seção 3}
-
-Seção 3
+Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superfecialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no trabalho a ser apresentado nesse capítulo.
