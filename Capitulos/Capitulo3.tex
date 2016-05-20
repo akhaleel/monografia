@@ -1,5 +1,5 @@
 % Capítulo 3
-\chapter{Capítulo 3}
+\chapter{Definicação e execução do estudo de caso}
 \label{chapter3}
 
 \section{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
@@ -71,3 +71,70 @@ A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle}. 
 Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \ref{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
 
 Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superfecialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no trabalho a ser apresentado nesse capítulo.
+
+\section{Aplicações desenvolvidas para estudo de caso}
+
+Após a escolha das plataformas para processamento de eventos em tempo real, três aplicações foram desenvolvidas. A primeira, visa processar tweets para coletar métricas relacionadas a e-Participação; a segunda, processa streams de tweets e realiza processamento de linguagem natural para detectar o sentimento expresso neles; a terceira, exibe numa aplicação web um mapa contendo as informações coletadas nas duas anteriores.
+
+\sloppy
+\subsection{Aplicação para processamento de tweets e coleta de métricas relacionadas a e-Participação}
+
+O primeiro passo no desenvolvimento dessa aplicação, foi decidir as contas das quais os tweets seriam processados. Como, normalmente, as capitais dos estados tem maior concentração de pessoas, optou-se por fazer um levantamento dos perfis oficiais de suas respectivas prefeituras, para então posteriormente realizar o processamento dos tweets. Sendo assim, a Tab. \ref{tab:tweetAccounts} lista as contas relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros.
+
+Em seguida, foram escolhidas quais métricas dessas contas seriam possíveis e importantes de coletar, tendo como referência \cite{AVisionOfSocialMedia}. Sendo assim, selecionou-se as seguintes, respectivas ao Twitter: média do número de tweets, seguidores, retweets (compartilhamento de um determinado tweet), comentários realizados por usuários, réplicas a tweets e tempo de resposta. As métricas referentes ao número de usuários acompanhando as listas (junções de timelines) do perfil e o total delas existentes foram desconsideras, pois são relacionadas a contas diferentes das em questão.
+
+De acorco com \cite{AVisionOfSocialMedia}, através dessas métricas é possível obter indicadores relacionados ao nível e-Participação. Alguns dos indicadores propostos  pela \abrv[SNR -- Social Network Ratio]{SNR (Social Network Ratio)} para Redes Sociais são: Atividade, ou, audiência estimada; Tamanho, ou, esforço realizado pelo perfil para se comunicar; Visibilidade, ou, número total de menções ao perfil; Interação, ou, capacidade de impacto (viralização) da comunicação \cite{AVisionOfSocialMedia}.
+
+Portando, pode-se mapear a métrica média de seguidores ao indicador Atividade, e a de menções para o de Visibilidade; da mesma forma, as médias sobre tweets, réplicas por dia e tempo de resposta ao indicador Tamanho; por último, as médias de retweets e favoritos ao de Interação. A Fig. \ref{fig:twitterDataAnalysisClassDiagram} exibe o diagrama de classes da aplicação desenvolvida para o processamento de tweets e coleta dessas métricas.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/twitterDataAnalysisClassDiagram.png}
+  \caption{Diagrama de classes da aplicação desenvolvida para processamento e coleta de métricas relacionadas a e-Participação}
+	\begin{flushleft}{Fonte: Elaboração própria}\end{flushleft}
+  \label{fig:twitterDataAnalysisClassDiagram}
+\end{figure}
+
+\begin{table}[!htb]	
+	\center
+	{
+		\begin{tabular}{c|c|c}
+			\hline
+            {\bf Estado} & {\bf Capital} & {\bf Conta no Twitter}\\
+			\hline
+			Acre & Rio Branco & PrefRioBranco\\
+			Alagoas & Maceió & PrefMaceio\\
+			Amapá & Macapá & PMMacapa\\
+			Amazonas & Manaus & PrefManaus\\
+			Bahia & Salvador & agecomsalvador\\			
+			Brasília & Brasília & Gov\_DF\\
+			Ceará & Fortaleza & prefeiturapmf\\
+			Espírito Santo & Vitória & VitoriaOnLine\\
+			Goiás & Goiánia & PrefeituraGy\\
+			Maranhão & São Luís & PrefeituraSL\\
+			Mato Grosso & Cuiabá & prefeitura\_CBA\\
+			Mato Grosso do Sul & Campo Grande & cgnoticias\\
+			Minas Gerais & Belo Horizonte & prefeiturabh\\
+			Paraná & Curitiba & Curitiba\_PMC\\
+			Paraíba & João Pessoa & pmjponline\\
+			Pará & Belém & prefeiturabelem\\
+			Pernambuco & Recife & prefrecife\\
+			Piauí & Teresina & prefeitura\_the\\
+			Rio Grande do Norte & Natal & NatalPrefeitura\\
+			Rio Grande do Sul & Porto Alegre & Prefeitura\_POA\\
+			Rio de Janeiro & Rio de Janeiro & Prefeitura\_Rio\\
+			Rondônia & Porto Velho & prefeitura\_pvh\\
+			Roraima & Boa Vista & PrefeituraBV\\
+			Santa Catarina & Florianópolis & scflorianopolis\\
+			Sergipe & Aracaju & PrefeituraAracaju\\
+			São Paulo & São Paulo & prefsp\\
+			Tocantins & Palmas & cidadepalmasy\\
+			\hline
+		\end{tabular}
+	}
+	% Título de tabelas sempre aparecem antes da tabela
+	\caption{Contas do Twitter relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros}
+	\label{tab:tweetAccounts}
+	\begin{flushleft}{Fonte: Elaboração própria}\end{flushleft}
+\end{table}
+ 
