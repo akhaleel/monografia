@@ -27,22 +27,23 @@
 \contentsline {paragraph}{Spout.}{32}
 \contentsline {chapter}{\numberline {3}Definica\c c\~ao e execu\c c\~ao do estudo de caso}{34}
 \contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{34}
-\contentsline {paragraph}{Apache Spark Streaming.}{35}
+\contentsline {paragraph}{Apache Spark Streaming.}{34}
 \contentsline {paragraph}{Apache Flink.}{35}
 \contentsline {paragraph}{Apache Storm.}{35}
-\contentsline {paragraph}{Apache Samza.}{36}
-\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas para estudo de caso}{36}
+\contentsline {paragraph}{Apache Samza.}{35}
+\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas para estudo de caso}{37}
 \contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{37}
-\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{40}
-\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{40}
-\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{40}
-\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{41}
-\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{41}
-\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{41}
-\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{41}
-\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{41}
-\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{41}
-\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{42}
-\contentsline {chapter}{Refer\^encias}{43}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{46}
-\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{47}
+\contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao Web}{40}
+\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{42}
+\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{42}
+\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{42}
+\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{43}
+\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{43}
+\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{43}
+\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{43}
+\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{43}
+\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{43}
+\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{44}
+\contentsline {chapter}{Refer\^encias}{45}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{48}
+\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{49}

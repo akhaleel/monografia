@@ -5,44 +5,49 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.45.2.1 }
 
-\bibitem[{Apache Software Foundation} 2016]{Flink}
+\bibitem[{Apache Software Foundation} 2016]{ApacheCXF}
 \abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016a}
+{{Apache Software Foundation}. \emph{Apache CXF}. 2016.
+Disponível em: <\url{http://cxf.apache.org}>. Acesso em Maio 20, 2016.}
+
+\bibitem[{Apache Software Foundation} 2016]{Flink}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016b}
 {{Apache Software Foundation}. \emph{Apache Flink}. 2016.
 Disponível em: <\url{http://flink.apache.org}>. Acesso em Maio 7, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Yarn}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016b}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016c}
 {{Apache Software Foundation}. \emph{{Apache Hadoop \abrv[YARN -- Yet Another
   Resource Negotiator]{YARN}}}. 2016.
 Disponível em: <\url{http://hadoop.apache.org}>. Acesso em Abril 22, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Mesos}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016c}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016d}
 {{Apache Software Foundation}. \emph{{Apache Mesos}}. 2016.
 Disponível em: <\url{http://mesos.apache.org}>. Acesso em Abril 23, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Samza}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016d}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016e}
 {{Apache Software Foundation}. \emph{{Apache Samza}}. 2016.
 Disponível em: <\url{http://samza.apache.org}>. Acesso em Maio 06, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Spark}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016e}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016f}
 {{Apache Software Foundation}. \emph{{Apache Spark}}. 2016.
 Disponível em: <\url{http://spark.apache.org}>. Acesso em Abril 22, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Storm}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016f}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016g}
 {{Apache Software Foundation}. \emph{{Apache Storm}}. 2016.
 Disponível em: <\url{http://storm.apache.org}>. Acesso em Abril 30, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Thrift}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016g}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016h}
 {{Apache Software Foundation}. \emph{{Apache Thrift}}. 2016.
 Disponível em: <\url{http://thrift.apache.org}>. Acesso em Abril 30, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{ZooKeeper}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016h}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016i}
 {{Apache Software Foundation}. \emph{Apache ZooKeeper}. 2016.
 Disponível em: <\url{https://zookeeper.apache.org}>. Acesso em Abril 30, 2016.}
 
@@ -74,6 +79,12 @@ Disponível em: <\url{http://www.connectedsmartcities.com.br}>. Acesso em Maio
 {DATAARTISANS. \emph{Apache Flink Training - System Overview}. 2015.
 Disponível em: <\url{http://pt.slideshare.net}>. Acesso em Maio 7, 2016.}
 
+\bibitem[Dias 2016]{eParticipationMetrics}
+\abntrefinfo{Dias}{DIAS}{2016}
+{DIAS, F. \emph{Brazilian Smart Cities e-Participation Metrics based on
+  Twitter}. 2016.
+Disponível em: <\url{https://goo.gl/0I3Vgj}>. Acesso em Maio 20, 2016.}
+
 \bibitem[EMC 2014]{EmcArticle2}
 \abntrefinfo{EMC}{EMC}{2014}
 {EMC. \emph{The Digital Universe of Opportunities: Rich Data and the Increasing
@@ -84,6 +95,11 @@ Disponível em: <\url{https://www.emc.com}>. Acesso em Maio 11, 2016.}
 \abntrefinfo{EsperTech}{ESPERTECH}{2016}
 {ESPERTECH. 2016.
 Disponível em: <\url{http://www.espertech.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[{Google} 2016]{FusionTables}
+\abntrefinfo{{Google}}{{Google}}{2016}
+{{Google}. \emph{Google Fusion Tables}. 2016.
+Disponível em: <\url{http://tables.googlelabs.com}>. Acesso em Maio 20, 2016.}
 
 \bibitem[{Google Scholar} 2016]{GoogleScholar}
 \abntrefinfo{{Google Scholar}}{{Google Scholar}}{2016}
@@ -116,12 +132,6 @@ Disponível em: <\url{http://www.infopedia.pt}>. Acesso em Maio 08, 2016.}
 {JAIN, A.; NALYA, A. \emph{Learning Storm}. 1st. ed. [S.l.]: Packt Publishing,
   2014.}
 
-\bibitem[Kang et al. 2015]{IoTArticle}
-\abntrefinfo{Kang et al.}{KANG et al.}{2015}
-{KANG, Y. et al. A study on the internet of things (iot) applications.
-\emph{International Journal of Software Engineering and Its Applications},
-  v.~9, n.~9, 2015.}
-
 \bibitem[Karau et al. 2015]{LearningSpark}
 \abntrefinfo{Karau et al.}{KARAU et al.}{2015}
 {KARAU, H. et al. \emph{Learning Spark}. 1st. ed. [S.l.]: O'Reilly Media,
@@ -150,6 +160,11 @@ Disponível em: <\url{http://www.complexevents.com}>. Acesso em Maio 7, 2016.}
   políticas públicas}. 2015.
 39º Encontro Anual da Associação Nacional de Pós-Graduação e Pesquisa em
   Ciências Sociais.}
+
+\bibitem[{MongoDB} 2016]{Mongo}
+\abntrefinfo{{MongoDB}}{{MongoDB}}{2016}
+{{MongoDB}. 2016.
+Disponível em: <\url{https://www.mongodb.com}>. Acesso em Maio 20, 2016.}
 
 \bibitem[Narsude 2015]{Datatorrent}
 \abntrefinfo{Narsude}{NARSUDE}{2015}
@@ -218,6 +233,16 @@ Disponível em: <\url{https://www.techopedia.com}>. Acesso em Abril 23, 2016.}
 {TREAT, T. \emph{{Stream Processing and Probabilistic Methods: Data at Scale}}.
   2015.
 Disponível em: <\url{http://bravenewgeek.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[Twitter 2016]{TwitterDevelopers}
+\abntrefinfo{Twitter}{TWITTER}{2016}
+{TWITTER. \emph{Twitter Developers}. 2016.
+Disponível em: <\url{https://dev.twitter.com}>. Acesso em Maio 20, 2016.}
+
+\bibitem[Twitter4J 2016]{Twitter4J}
+\abntrefinfo{Twitter4J}{TWITTER4J}{2016}
+{TWITTER4J. 2016.
+Disponível em: <\url{http://twitter4j.org/}>. Acesso em Maio 20, 2016.}
 
 \bibitem[WÄHNER 2014]{InfoQArticle}
 \abntrefinfo{WÄHNER}{WÄHNER}{2014}

@@ -9,8 +9,47 @@ Inicialmente, foi realizada uma pesquisa com a palavra chave "stream processing"
 
 A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle}. foi descartada do processo de escolha por ser um componente para CEP, normalmente integrado a ferramentas ESPs, fugindo do escopo desse trabalho \cite{EsperTech}. Sendo assim, continuando a análise, foram também consideradas as características das opções restantes, estudadas superficialmente nos parágrafos seguintes.
 
+\paragraph{Apache Spark Streaming.} Apache Spark Streaming é uma extensão do Spark para processamento de stream, em near real time. Além disso, o Spark possui outros módulos para consultas a banco de dados, grafos, e aprendizado de máquina \cite{Spark}. O processamento de stream é realizado em micro-batching pelo Spark Streaming (um de seus módulos), utilizando uma abstração conhecida como \abrv[DStream -- Discretized Stream]{DStream}, a qual é composta por uma sequências de \abrv[RDD -- Resilient Distributed Dataset]{RDDs (Resilient Distributed Dataset)}, ilustrada na Fig. \ref{fig:dstream}. RDDs abstraem uma coleção de dados distribuídos e manipulados em paralelo. No Spark, também é possível utilizar processamento em batch, independente do módulo que está sendo utilizado \cite{LearningSpark}.
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/dstreamImage.png}
+  \caption{Ilustração de um DStream}
+  {\bf Fonte:} \cite{Spark}
+  \label{fig:dstream}
+\end{figure}
+
+\paragraph{Apache Flink.} Apache Flink é um plataforma muito semelhante ao Spark. Com suporte a processamento de streams, os quais são definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em batch é realizado em cima de DataSets, semalhantes as RDDs do Spak. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração Sink é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/flinkProcessingImage.png}
+  \caption{Ilustração de um fluxo de processamento no Flink}
+  {\bf Fonte:} \cite{FlinkOverView}
+  \label{fig:flinkProcessingImage}
+\end{figure}
+
+\paragraph{Apache Storm.} Apache Storm é um plataforma para processamento de stream em tempo real. Ao contrário do Spark, tem "one at time" como modelo de processamento de dados. As streams são compostas por tuplas (unidade básica de dados, as quais processadas numa abstração conhecida como Topologia, ilustrada na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})} de spouts e bolts, respectivamente, resposáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
+
+\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de stream em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por offsets, ids), em vez de tupla, ou, DStream. Os streams são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por jobs responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em batch, o qual é realizado processando sequências de streams.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.6\textwidth]{Imagens/samzaPartitionsImage.png}
+  \caption{Ilustração de um stream particionado no Samza}
+  {\bf Fonte:} \cite{Samza}
+  \label{fig:samzaPartitions}
+\end{figure}
+
+Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \ref{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
+
+Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superfecialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no trabalho a ser apresentado nesse capítulo.
+
 \begin{table}[!htb]	
 	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Quantidade de citações a plataformas ESPs por referência}
+	\label{tab:tableNumberOfMentions}
 	{
 		\begin{tabular}{c|c|c|c|c}
 			\hline
@@ -30,47 +69,8 @@ A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle}. 
 			\hline
 		\end{tabular}
 	}
-	% Título de tabelas sempre aparecem antes da tabela
-	\caption{Quantidade de citações a plataformas ESPs por referência}
-	\label{tab:tableNumberOfMentions}
-	{Fonte: Elaboração própria}	
+	\center{\bf Fonte:} Elaboração própria
 \end{table}
-
-\paragraph{Apache Spark Streaming.} Apache Spark Streaming é uma extensão do Spark para processamento de stream, em near real time. Além disso, o Spark possui outros módulos para consultas a banco de dados, grafos, e aprendizado de máquina \cite{Spark}. O processamento de stream é realizado em micro-batching pelo Spark Streaming (um de seus módulos), utilizando uma abstração conhecida como \abrv[DStream -- Discretized Stream]{DStream}, a qual é composta por uma sequências de \abrv[RDD -- Resilient Distributed Dataset]{RDDs (Resilient Distributed Dataset)}, ilustrada na Fig. \ref{fig:dstream}. RDDs abstraem uma coleção de dados distribuídos e manipulados em paralelo. No Spark, também é possível utilizar processamento em batch, independente do módulo que está sendo utilizado \cite{LearningSpark}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.8\textwidth]{Imagens/dstreamImage.png}
-  \caption{Ilustração de um DStream}
-  {Fonte:} \cite{Spark}
-  \label{fig:dstream}
-\end{figure}
-
-\paragraph{Apache Flink.} Apache Flink é um plataforma muito semelhante ao Spark. Com suporte a processamento de streams, os quais são definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em batch é realizado em cima de DataSets, semalhantes as RDDs do Spak. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração Sink é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.8\textwidth]{Imagens/flinkProcessingImage.png}
-  \caption{Ilustração de um fluxo de processamento no Flink}
-  {Fonte:} \cite{FlinkOverView}
-  \label{fig:flinkProcessingImage}
-\end{figure}
-
-\paragraph{Apache Storm.} Apache Storm é um plataforma para processamento de stream em tempo real. Ao contrário do Spark, tem "one at time" como modelo de processamento de dados. As streams são compostas por tuplas (unidade básica de dados, as quais processadas numa abstração conhecida como Topologia, ilustrada na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (Directed Acyclic Graph \cite{GraphTeory})} de spouts e bolts, respectivamente, resposáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
-
-\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de stream em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por offsets, ids), em vez de tupla, ou, DStream. Os streams são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por jobs responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em batch, o qual é realizado processando sequências de streams.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.6\textwidth]{Imagens/samzaPartitionsImage.png}
-  \caption{Ilustração de um stream particionado no Samza}
-  {Fonte:} \cite{Samza}
-  \label{fig:samzaPartitions}
-\end{figure}
-
-Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \ref{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
-
-Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superfecialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no trabalho a ser apresentado nesse capítulo.
 
 \section{Aplicações desenvolvidas para estudo de caso}
 
@@ -89,14 +89,48 @@ Portando, pode-se mapear a métrica média de seguidores ao indicador Atividade, e
 
 \begin{figure}[!htb]
   \centering
-    \includegraphics[width=1\textwidth]{Imagens/twitterDataAnalysisClassDiagram.png}
+    \includegraphics[width=1.2\textwidth, angle=90]{Imagens/twitterDataAnalysisClassDiagram.png}
   \caption{Diagrama de classes da aplicação desenvolvida para processamento e coleta de métricas relacionadas a e-Participação}
-	\begin{flushleft}{Fonte: Elaboração própria}\end{flushleft}
+	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
   \label{fig:twitterDataAnalysisClassDiagram}
+\end{figure}
+
+A aplicação exibida no diagrama de classes da Fig. \ref{fig:twitterDataAnalysisClassDiagram} foi desenvolvida na linguagem de programação Java, devido a sua praticidade de uso, utilizando o framework para Web services, Apache CXF \cite{ApacheCXF}, para expor dois de seus serviços através de uma REST API. O primeiro deles é exposto pela interface ITweetService, e o segundo pela ISparkService, pelos seguintes endpoints, respectivamente: "$\backslash$tweets" e "$\backslash$metrics", permitindo intregrá-la a aplicação web descrita na subseção \ref{webApp}. 
+
+A classe que implementa a interface ITweetService, é responsável por realizar a coleta dos 3.200 tweets mais recentes (se disponíveis) de cada conta, através do endpoint "statuses/user\_timeline". Tal quantidade é limitada pela API do Twitter, a qual pode ser alcançada por no máximo 180 requisições, num intervalo de 15 minutos, com autenticação via conta de usuário \cite{TwitterDevelopers}.
+
+Outro endpoint utilizado foi "search/tweets", para pesquisar as menções realizadas pelos cidadãos as contas das prefeituras. O limite de coleta é de 100 tweets coletados para cada requisição, sendo possível realizar 180 a cada 15 minutos. Os endpoints da API do Twitter foram acessados com o suporte da biblioteca Twitter4J \cite{Twitter4J}.
+
+Durante a coleta dos tweets, eles são mapeados para as seguintes classes do modelo da aplicação: UserInfo, que contém as informações respectivas ao usuário da conta (número de seguidores, tweets, localização, username e data de criação da conta), e TweetInfo, contendo as relacionadas ao tweet (data de criação, id do tweet de réplica e a qual usuário ele se refere, quantidade de retweets, favoritos, se é menção ou não, e o tempo de resposta calculado). Em seguida, os modelos são persistidos via a interface ITweetsDAO, a qual se comunica com o banco de dados não relacional MongoDB \cite{Mongo}.
+
+Os tweets coletados por essa aplicação são os mais recentes e anteriores a data 18/06/2016 (incluindo-a). Como essa coleta não foi realizada sob um stream de tweets, a interface ISparkService expõe o serviço responsável por realizar o processamento em batch desses tweets, coletando as métricas relacionadas a e-Participação. Sendo assim, cada métrica é recuperada do banco de dados e mepeadas para um RDD de doubles, quando números, ou, de strings, no caso da data.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=0.6\textwidth]{Imagens/sparkDiagramMapToDouble.png}
+  \caption{Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double}
+	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+  \label{fig:sparkDiagramMapToDoble.png}
+\end{figure}
+
+Sendo assim, após recuperar as métricas, é possível mapeá-las para um RDD de doubles, por meio do qual são obtidos os valores relacionados as suas respectivas médias, medianas, variâncias, máximos, mínimos e desvios padrões. As informações sobre datas, como strings, são mapeadas para o valor 1, representando a ocorrência de um tweet nesse dia; compondo uma sequência de pares, que permite obter e mapear as quantidades de tweets por dia a um RDD de doubles. Tais processos de mapeamentos são ilustrados nas Fig. \ref{fig:sparkDiagramMapToDoble.png} e Fig.  \ref{fig:sparkDiagramMapDateToDouble.png}.
+
+Por fim, a interface IFusionTable é utilizada para submeter os valores das métricas relacionadas e-Participação a uma Fusion Table \cite{eParticipationMetrics}, via a API do Google Fusion Tables (aplicação web experimental para visualização de dados, coleta e compartilhamento de tabelas \cite{FusionTables}). Os valores dessa tabela são utilizados para criar o mapa contido na aplicação web.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=0.7\textwidth]{Imagens/sparkDiagramMapDateToDouble.png}
+  \caption{Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequências em Double}
+	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+  \label{fig:sparkDiagramMapDateToDouble.png}
 \end{figure}
 
 \begin{table}[!htb]	
 	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Contas do Twitter relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros}
+	\bigskip
+	\label{tab:tweetAccounts}
 	{
 		\begin{tabular}{c|c|c}
 			\hline
@@ -132,9 +166,8 @@ Portando, pode-se mapear a métrica média de seguidores ao indicador Atividade, e
 			\hline
 		\end{tabular}
 	}
-	% Título de tabelas sempre aparecem antes da tabela
-	\caption{Contas do Twitter relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros}
-	\label{tab:tweetAccounts}
-	\begin{flushleft}{Fonte: Elaboração própria}\end{flushleft}
+		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
 \end{table}
  
+ \subsection{Aplicação Web}
+ \label{webApp}

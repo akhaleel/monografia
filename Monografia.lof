@@ -9,3 +9,5 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces Ilustra\c c\~ao de um fluxo de processamento no Flink}}{35}
 \contentsline {figure}{\numberline {9}{\ignorespaces Ilustra\c c\~ao de um stream particionado no Samza}}{36}
 \contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de classes da aplica\c c\~ao desenvolvida para processamento e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}}{38}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double}}{39}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequ\^encias em Double}}{40}
