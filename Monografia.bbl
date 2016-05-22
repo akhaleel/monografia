@@ -26,28 +26,33 @@ Disponível em: <\url{http://hadoop.apache.org}>. Acesso em Abril 22, 2016.}
 {{Apache Software Foundation}. \emph{{Apache Mesos}}. 2016.
 Disponível em: <\url{http://mesos.apache.org}>. Acesso em Abril 23, 2016.}
 
-\bibitem[{Apache Software Foundation} 2016]{Samza}
+\bibitem[{Apache Software Foundation} 2016]{OpenNlp}
 \abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016e}
+{{Apache Software Foundation}. \emph{Apache OpenNLP}. 2016.
+Disponível em: <\url{https://opennlp.apache.org}>. Acesso em Maio 21, 2016.}
+
+\bibitem[{Apache Software Foundation} 2016]{Samza}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016f}
 {{Apache Software Foundation}. \emph{{Apache Samza}}. 2016.
 Disponível em: <\url{http://samza.apache.org}>. Acesso em Maio 06, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Spark}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016f}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016g}
 {{Apache Software Foundation}. \emph{{Apache Spark}}. 2016.
 Disponível em: <\url{http://spark.apache.org}>. Acesso em Abril 22, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Storm}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016g}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016h}
 {{Apache Software Foundation}. \emph{{Apache Storm}}. 2016.
 Disponível em: <\url{http://storm.apache.org}>. Acesso em Abril 30, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{Thrift}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016h}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016i}
 {{Apache Software Foundation}. \emph{{Apache Thrift}}. 2016.
 Disponível em: <\url{http://thrift.apache.org}>. Acesso em Abril 30, 2016.}
 
 \bibitem[{Apache Software Foundation} 2016]{ZooKeeper}
-\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016i}
+\abntrefinfo{{Apache Software Foundation}}{{Apache Software Foundation}}{2016j}
 {{Apache Software Foundation}. \emph{Apache ZooKeeper}. 2016.
 Disponível em: <\url{https://zookeeper.apache.org}>. Acesso em Abril 30, 2016.}
 
@@ -80,10 +85,15 @@ Disponível em: <\url{http://www.connectedsmartcities.com.br}>. Acesso em Maio
 Disponível em: <\url{http://pt.slideshare.net}>. Acesso em Maio 7, 2016.}
 
 \bibitem[Dias 2016]{eParticipationMetrics}
-\abntrefinfo{Dias}{DIAS}{2016}
+\abntrefinfo{Dias}{DIAS}{2016a}
 {DIAS, F. \emph{Brazilian Smart Cities e-Participation Metrics based on
   Twitter}. 2016.
 Disponível em: <\url{https://goo.gl/0I3Vgj}>. Acesso em Maio 20, 2016.}
+
+\bibitem[Dias 2016]{GitRepository}
+\abntrefinfo{Dias}{DIAS}{2016b}
+{DIAS, F. \emph{Repositório no Git Hub}. 2016.
+Disponível em: <\url{https://github.com/fcas}>. Acesso em Maio 21, 2016.}
 
 \bibitem[EMC 2014]{EmcArticle2}
 \abntrefinfo{EMC}{EMC}{2014}
@@ -142,6 +152,13 @@ Disponível em: <\url{http://www.infopedia.pt}>. Acesso em Maio 08, 2016.}
 {KLEPPMANN, M. \emph{{Stream processing, Event sourcing, Reactive, CEP? and
   making sense of it all}}. 2015.
 Disponível em: <\url{http://www.confluent.io}>. Acesso em Maio 7, 2016.}
+
+\bibitem[Leskovec, Rajaraman e Ullman 2016]{DataMining}
+\abntrefinfo{Leskovec, Rajaraman e Ullman}{LESKOVEC; RAJARAMAN; ULLMAN}{2016}
+{LESKOVEC, J.; RAJARAMAN, A.; ULLMAN, J. \emph{Mining of Massive Datasets}.
+  2016.
+Disponível em: <\url{http://infolab.stanford.edu/~ullman}>. Acesso em Maio 21,
+  2016.}
 
 \bibitem[Luckham 2006]{Complexevents}
 \abntrefinfo{Luckham}{LUCKHAM}{2006}
@@ -211,6 +228,12 @@ Disponível em: <\url{http://venturebeat.com}>. Acesso em Maio 7, 2016.}
 \abntrefinfo{{Siciliane, T.}}{{Siciliane, T.}}{2015}
 {{Siciliane, T.} \emph{{Streaming Big Data: Storm, Spark and Samza}}. 2015.
 Disponível em: <\url{https://dzone.com}>. Acesso em Maio 7, 2016.}
+
+\bibitem[Silva et al. 2016]{Sentilex}
+\abntrefinfo{Silva et al.}{SILVA et al.}{2016}
+{SILVA, M. et al. \emph{SentiLex-PT 01}. 2016.
+Disponível em: <\url{http://dmir.inesc-id.pt/project/SentiLex-PT_01}>. Acesso
+  em Maio 21, 2016.}
 
 \bibitem[Sommerville 2011]{Sommerville}
 \abntrefinfo{Sommerville}{SOMMERVILLE}{2011}

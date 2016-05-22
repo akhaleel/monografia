@@ -74,10 +74,11 @@ Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de dif
 
 \section{Aplicações desenvolvidas para estudo de caso}
 
-Após a escolha das plataformas para processamento de eventos em tempo real, três aplicações foram desenvolvidas. A primeira, visa processar tweets para coletar métricas relacionadas a e-Participação; a segunda, processa streams de tweets e realiza processamento de linguagem natural para detectar o sentimento expresso neles; a terceira, exibe numa aplicação web um mapa contendo as informações coletadas nas duas anteriores.
+Após a escolha das plataformas para processamento de eventos em tempo real, quatro aplicações foram desenvolvidas. A explicada na subseção \ref{batchApp}, visa processar tweets para coletar métricas relacionadas a e-Participação; a da subseção \ref{sparkApp}, processa streams de tweets com o Spark Streaming e realiza processamento de linguagem natural para detectar o sentimento expresso neles; a referente a subseção \ref{stormApp}, realiza o mesmo procedimento, mas com o Storm; por fim, a da subseção \ref{webApp}, exibe numa aplicação web um mapa contendo as informações coletadas nas anteriores.
 
 \sloppy
 \subsection{Aplicação para processamento de tweets e coleta de métricas relacionadas a e-Participação}
+\label{batchApp}
 
 O primeiro passo no desenvolvimento dessa aplicação, foi decidir as contas das quais os tweets seriam processados. Como, normalmente, as capitais dos estados tem maior concentração de pessoas, optou-se por fazer um levantamento dos perfis oficiais de suas respectivas prefeituras, para então posteriormente realizar o processamento dos tweets. Sendo assim, a Tab. \ref{tab:tweetAccounts} lista as contas relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros.
 
@@ -110,20 +111,22 @@ Os tweets coletados por essa aplicação são os mais recentes e anteriores a data 
     \includegraphics[width=0.6\textwidth]{Imagens/sparkDiagramMapToDouble.png}
   \caption{Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double}
 	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
-  \label{fig:sparkDiagramMapToDoble.png}
+  \label{fig:sparkDiagramMapToDoble}
 \end{figure}
 
-Sendo assim, após recuperar as métricas, é possível mapeá-las para um RDD de doubles, por meio do qual são obtidos os valores relacionados as suas respectivas médias, medianas, variâncias, máximos, mínimos e desvios padrões. As informações sobre datas, como strings, são mapeadas para o valor 1, representando a ocorrência de um tweet nesse dia; compondo uma sequência de pares, que permite obter e mapear as quantidades de tweets por dia a um RDD de doubles. Tais processos de mapeamentos são ilustrados nas Fig. \ref{fig:sparkDiagramMapToDoble.png} e Fig.  \ref{fig:sparkDiagramMapDateToDouble.png}.
+Sendo assim, após recuperar as métricas, é possível mapeá-las para um RDD de doubles, por meio do qual são obtidos os valores relacionados as suas respectivas médias, medianas, variâncias, máximos, mínimos e desvios padrões. As informações sobre datas, como strings, são mapeadas para o valor 1, representando a ocorrência de um tweet nesse dia; compondo uma sequência de pares, que permite obter e mapear as quantidades de tweets por dia a um RDD de doubles. Tais processos de mapeamentos são ilustrados nas Fig. \ref{fig:sparkDiagramMapToDoble} e Fig.  \ref{fig:sparkDiagramMapDateToDouble}.
 
 Por fim, a interface IFusionTable é utilizada para submeter os valores das métricas relacionadas e-Participação a uma Fusion Table \cite{eParticipationMetrics}, via a API do Google Fusion Tables (aplicação web experimental para visualização de dados, coleta e compartilhamento de tabelas \cite{FusionTables}). Os valores dessa tabela são utilizados para criar o mapa contido na aplicação web.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=0.7\textwidth]{Imagens/sparkDiagramMapDateToDouble.png}
-  \caption{Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequências em Double}
+  \caption {Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequências em Double}
 	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
-  \label{fig:sparkDiagramMapDateToDouble.png}
+  \label{fig:sparkDiagramMapDateToDouble}
 \end{figure}
+
+O código dessa aplicação está disponível no repositório localizado em \cite{GitRepository}, sendo "twitter-data-analysis" o nome do projeto.
 
 \begin{table}[!htb]	
 	\center
@@ -168,6 +171,47 @@ Por fim, a interface IFusionTable é utilizada para submeter os valores das métri
 	}
 		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
 \end{table}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\subsection{Aplicação para processamento de stream de tweets, utilizando Spark Streaming}
+\label{sparkApp}
+
+A aplicação que utiliza o Spark Streaming, foi desenvolvida na linguagem de programação Java. No início de sua execução, é criado um contexto de stream no qual é definindo o cluster onde ela será executada e o intervalo de criação de cada RDD. Tais Resilient Distributed Datasets, são compostos ordenadamente em sequência, formando a abstração conhecida como DStream. No nosso caso, cada RDD é criado após  30000ms (mile segundos).
+
+O processo mencionado anteriormente, começa após a inicialização do contexto de stream, sendo os tweets coletados pela classe TwitterUtils (do próprio Spark Streaming). Durante a coleta dos streams de tweets (eventos), cada RDD é mapeado para a classe TweetInfo (do modelo da aplicação), através de uma transformação map. Na sequência, as ações forEachRDD e collect são executadas para inserir os tweets processados no banco de dados não relacional MongoDB, conforme ilustrado na Fig. \ref{fig:sparkDataAnalysisDiagram}.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/sparkDataAnalysisDiagram.png}
+  \caption{Fluxo do processamento de dados da aplicação utilizando o Spark Streaming}
+	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+  \label{fig:sparkDataAnalysisDiagram}
+\end{figure}
+
+A análise de sentimentos do conteúdo contido nos tweets ocorre durante a última parte do mapeamento, sendo antes disso realizados alguns processamentos para facilitar e viabilizar esse procedimento. Portanto, primeiramente, os textos contidos nos tweets são extraídos e formatados para minúsculo. Em seguida, todas as menções são identificadas pelo padrão em que ocorrem no Twitter (@displayname, nome exibido para os demais usuários da Rede Social) e removidas, assim como as referências a endereços de sites.
+
+No Twitter, quando um tweet é compartilhado ele é marcado com a notação "RT", abreviação de retweet, a qual também é removida do texto em processamento. Além disso, alguns símbolos são removidos, tais como: ., ., \!, \%, \#, etc. Sendo esse o conjunto de processamentos realizados para "limpar" inicialmente o texto, após o qual se inicia o processamento de linguagem natural.
+
+Com esse prósito, usou-se a biblioteca OpenNLP \cite{OpenNlp} para a tokenização dos tweets. Após a obtenção dos tokens, outros processamentos foram necesssários para melhorar o desempenho da fase seguinte, como a substituição das palavras normalmente abreviadas (vc - você, msm - mesmo, pq - porque, q - que, n - não, etc) e de expressões (sqn - só que não, kkk, hahaha, rsrsrs para situaões comumente engraçadas) por seus formatos formais, utilizando dicionários previamente construídos. Além disso, foram removidos os tokens contendo "stopwords" (palavras vazias), termo utilizado para as palavras comuns de um certo idioma \cite{DataMining}.
+
+Após a obtenção dos tokens, foram atribuídas a eles tags referentes as suas respectivas classes gramáticais, e, por fim, associadas uma part-of speech para cada tweet, usando os tokens e tags obtidos, finalizando a parte do processamento de linguagem natural. Indo então para a última etapa, que é a da análise de sentimentos, tendo como base para isso os adjetivos presentes em cada tweet.
+
+A análise de sentimentos foi realizada com o suporte do Sentilex (versão 1), que é um léxico de sentimentos para o Português, constituído de 6.321 lemas adjectivais (por convenção, na forma masculina singular) e 25.406 formas flexionadas, contendo como um de seus atributos a polaridade do adjectivo. As polaridade são classificadas em positivo (67\% de precisão), negativo (82\% de precisão), ou, neutro (45\% de precisão), possibilitando estimar o sentimento expresso por um determinado texto \cite{Sentilex}.
+
+Os sentimentos são estimados contabilizando as polaridades presentes em cada tweet e o sentimento expresso pelos emotions (se houver), assim sendo, por exemplo, o emotion "(:" incrementa 1 para a polaridade postiva, e 1 para a negativa caso seja ":(". Por fim, é realizada uma simples normatização com os somatórios das polaridades positivas e negatovas, seguindo o seguinte modelo:
+{\begin{center} score = ($\Sigma$ positivo - $\Sigma$ negativo) $\div$  ($\Sigma$ positivo + $\Sigma$ negativo)\end{center}}
+
+Caso o score seja menor do que zero, o tweet é classificado com polaridade negativa, se o seu complemento for maior do que 0.5, tem-se polaridade positiva e se igual a zero, neutra. Sendo assim, as informações sobre a polaridade (sentimento) do tweet, seu id e suas respectivas menções (recuperadas do tweet original) são armazenadas no banco de dados não relacional MongoDB. As polaridades são exibidas no mapa da aplicação web.
+
+O código dessa aplicação está disponível no repositório localizado em \cite{GitRepository}, sendo "spark-data-analysis" o nome do projeto.
+
+\subsection{Aplicação para processamento de stream de tweets, utilizando Storm}
+\label{stormApp}
  
- \subsection{Aplicação Web}
- \label{webApp}
+\subsection{Aplicação Web}
+\label{webApp}
+
