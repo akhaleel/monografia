@@ -95,6 +95,11 @@ Disponível em: <\url{https://goo.gl/0I3Vgj}>. Acesso em Maio 20, 2016.}
 {DIAS, F. \emph{Repositório no Git Hub}. 2016.
 Disponível em: <\url{https://github.com/fcas}>. Acesso em Maio 21, 2016.}
 
+\bibitem[{Django Software Foundation} 2016]{Django}
+\abntrefinfo{{Django Software Foundation}}{{Django Software Foundation}}{2016}
+{{Django Software Foundation}. \emph{Django}. 2016.
+Disponível em: <\url{https://www.djangoproject.com}>. Acesso em Maio 22, 2016.}
+
 \bibitem[EMC 2014]{EmcArticle2}
 \abntrefinfo{EMC}{EMC}{2014}
 {EMC. \emph{The Digital Universe of Opportunities: Rich Data and the Increasing
@@ -106,8 +111,13 @@ Disponível em: <\url{https://www.emc.com}>. Acesso em Maio 11, 2016.}
 {ESPERTECH. 2016.
 Disponível em: <\url{http://www.espertech.com}>. Acesso em Maio 7, 2016.}
 
+\bibitem[{Google} 2016]{GoogleDevelopers}
+\abntrefinfo{{Google}}{{Google}}{2016a}
+{{Google}. \emph{Google Developers}. 2016.
+Disponível em: <\url{https://developers.google.com}>. Acesso em Maio 22, 2016.}
+
 \bibitem[{Google} 2016]{FusionTables}
-\abntrefinfo{{Google}}{{Google}}{2016}
+\abntrefinfo{{Google}}{{Google}}{2016b}
 {{Google}. \emph{Google Fusion Tables}. 2016.
 Disponível em: <\url{http://tables.googlelabs.com}>. Acesso em Maio 20, 2016.}
 

@@ -8,8 +8,10 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces Ilustra\c c\~ao de um DStream}}{35}
 \contentsline {figure}{\numberline {8}{\ignorespaces Ilustra\c c\~ao de um fluxo de processamento no Flink}}{35}
 \contentsline {figure}{\numberline {9}{\ignorespaces Ilustra\c c\~ao de um stream particionado no Samza}}{36}
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de classes da aplica\c c\~ao desenvolvida para processamento e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}}{38}
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de classes da aplica\c c\~ao desenvolvida para processamento e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}}{39}
 \contentsline {figure}{\numberline {11}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double}}{40}
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequ\^encias em Double}}{40}
-\contentsline {figure}{\numberline {13}{\ignorespaces Fluxo do processamento de dados da aplica\c c\~ao utilizando o Spark Streaming}}{42}
-\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Spark Streaming}}{44}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequ\^encias em Double}}{41}
+\contentsline {figure}{\numberline {13}{\ignorespaces Fluxo do processamento de dados da aplica\c c\~ao utilizando o Spark Streaming}}{43}
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Spark Streaming}}{45}
+\contentsline {figure}{\numberline {15}{\ignorespaces Topologia da aplica\c c\~ao utilizando Storm}}{45}
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Storm}}{46}

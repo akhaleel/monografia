@@ -32,20 +32,20 @@
 \contentsline {paragraph}{Apache Storm.}{35}
 \contentsline {paragraph}{Apache Samza.}{35}
 \contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas para estudo de caso}{37}
-\contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{37}
-\contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{41}
-\contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{44}
-\contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao Web}{44}
-\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{45}
-\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{45}
-\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{45}
-\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{46}
-\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{46}
-\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{46}
-\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{46}
-\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{46}
-\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{46}
-\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{47}
-\contentsline {chapter}{Refer\^encias}{48}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{51}
-\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{52}
+\contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao web para visualiza\c c\~ao das m\'etricas relacionadas a e-Participa\c c\~ao}{37}
+\contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{38}
+\contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{41}
+\contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{44}
+\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{47}
+\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{47}
+\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{47}
+\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{48}
+\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{48}
+\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{48}
+\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{48}
+\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{48}
+\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{48}
+\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{49}
+\contentsline {chapter}{Refer\^encias}{50}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{54}
+\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{55}

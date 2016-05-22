@@ -74,7 +74,19 @@ Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de dif
 
 \section{Aplicações desenvolvidas para estudo de caso}
 
-Após a escolha das plataformas para processamento de eventos em tempo real, quatro aplicações foram desenvolvidas. A explicada na subseção \ref{batchApp}, visa processar tweets para coletar métricas relacionadas a e-Participação; a da subseção \ref{sparkApp}, processa streams de tweets com o Spark Streaming e realiza processamento de linguagem natural para detectar o sentimento expresso neles; a referente a subseção \ref{stormApp}, realiza o mesmo procedimento, mas com o Storm; por fim, a da subseção \ref{webApp}, exibe numa aplicação web um mapa contendo as informações coletadas nas anteriores.
+Após a escolha das plataformas para processamento de eventos em tempo real, quatro aplicações foram desenvolvidas. A explicada na subseção \ref{webApp}, exibe numa aplicação web um mapa contendo informações sobre as métricas de e-Participação. A subseção \ref{batchApp}, refere-se a aplicação responsável por processar tweets e coletar essas métricas; a da subseção \ref{sparkApp}, por sua vez, usa o Spark Streaming para realizar análise de sentimento de streams de tweets; a referente a subseção \ref{stormApp}, realiza o mesmo procedimento, mas com o Storm. 
+
+\sloppy
+\subsection{Aplicação web para visualização das métricas relacionadas a e-Participação}
+\label{webApp}
+
+A aplicação web foi desenvolvida utilizando o framework web Django \cite{Django}, devido a sua simplicidade. Há somente uma página, contruída usando HTML, JavaScript e CSS, na qual o mapa para a visualização das métricas é exibido. O mapa, por sua vez, é obtido com o suporte da API MapsJavaScript \cite{GoogleDevelopers} sendo nele sobrepostas camadas do Google Fusion Tables (aplicação web experimental para visualização de dados, coleta e compartilhamento de tabelas \cite{FusionTables}).
+
+As métricas podem ser escolhidas através de uma caixa de seleção (ComboBox), sendo assim, para cada Estado, se sua respectiva média for maior que a nacional a região dele no mapa é sobreposta com uma camada azul, se menor, vermelha. Ainda, clicando num Estado é possível visualizar um painel informativo com os valores das médias, medianas, mínimo, máximo, variância e desvio padrão, assim como a quantidade de tweets, seguidores, e o tempo de existência da conta.
+
+Além disso, há conexão via API com a aplicação responsável por realizar a coleta de tweets e processamento das métricas. O tempo necessário para o levantamento de todas essas informações é em torno de 1h30m, devido aos limites de requisições à API do Twitter, explicado na subseção \ref{batchApp}, e do Fusion Tables, limitado em 30 chamadas por minuto \cite{GoogleDevelopers}. Devido a isso, essa opção somente é habilitada no código quando necessário. 
+
+O código dessa aplicação está disponível no repositório localizado em \cite{GitRepository}, sendo "brazilian\_smart\_cities\_map" o nome do projeto.
 
 \sloppy
 \subsection{Aplicação para processamento de tweets e coleta de métricas relacionadas a e-Participação}
@@ -116,7 +128,7 @@ Os tweets coletados por essa aplicação são os mais recentes e anteriores a data 
 
 Sendo assim, após recuperar as métricas, é possível mapeá-las para um RDD de doubles, por meio do qual são obtidos os valores relacionados as suas respectivas médias, medianas, variâncias, máximos, mínimos e desvios padrões. As informações sobre datas, como strings, são mapeadas para o valor 1, representando a ocorrência de um tweet nesse dia; compondo uma sequência de pares, que permite obter e mapear as quantidades de tweets por dia a um RDD de doubles. Tais processos de mapeamentos são ilustrados nas Fig. \ref{fig:sparkDiagramMapToDoble} e Fig.  \ref{fig:sparkDiagramMapDateToDouble}.
 
-Por fim, a interface IFusionTable é utilizada para submeter os valores das métricas relacionadas e-Participação a uma Fusion Table \cite{eParticipationMetrics}, via a API do Google Fusion Tables (aplicação web experimental para visualização de dados, coleta e compartilhamento de tabelas \cite{FusionTables}). Os valores dessa tabela são utilizados para criar o mapa contido na aplicação web.
+Por fim, a interface IFusionTable é utilizada para submeter os valores das métricas relacionadas e-Participação a uma Fusion Table \cite{eParticipationMetrics}, via a API do Google Fusion Tables. Os valores dessa tabela são utilizados para criar o mapa contido na aplicação web.
 
 \begin{figure}[!htb]
   \centering
@@ -180,9 +192,9 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 \subsection{Aplicação para processamento de stream de tweets, utilizando Spark Streaming}
 \label{sparkApp}
 
-A aplicação que utiliza o Spark Streaming, foi desenvolvida na linguagem de programação Java. No início de sua execução, é criado um contexto de stream no qual é definindo o cluster onde ela será executada e o intervalo de criação de cada RDD. Tais Resilient Distributed Datasets, são compostos ordenadamente em sequência, formando a abstração conhecida como DStream. No nosso caso, cada RDD é criado após  30000ms (mile segundos).
+A aplicação que utiliza o Spark Streaming, foi desenvolvida na linguagem de programação Java. No início de sua execução, é criado um contexto de stream no qual é definindo o cluster onde ela será executada e o intervalo de criação de cada RDD. Tais Resilient Distributed Datasets, são compostos ordenadamente em sequência, formando a abstração conhecida como DStream. No nosso caso, cada RDD é criado após 30000ms; sendo compostos pelos tweets coletados filtrando os nomes das conta das prefeituras no Twitter, enumerados na classe KeyWords, ilustrada no diagrama da Fig. \ref{fig:sparkDataAnalysisClassDiagram}.
 
-O processo mencionado anteriormente, começa após a inicialização do contexto de stream, sendo os tweets coletados pela classe TwitterUtils (do próprio Spark Streaming). Durante a coleta dos streams de tweets (eventos), cada RDD é mapeado para a classe TweetInfo (do modelo da aplicação), através de uma transformação map. Na sequência, as ações forEachRDD e collect são executadas para inserir os tweets processados no banco de dados não relacional MongoDB, conforme ilustrado na Fig. \ref{fig:sparkDataAnalysisDiagram}.
+O processo mencionado anteriormente, executado pela classe SparkStreaming, começa após a inicialização do contexto de stream, sendo os tweets coletados pela classe TwitterUtils (do próprio Spark Streaming). Durante a coleta dos streams de tweets (eventos), cada RDD é mapeado para a classe TweetInfo (do modelo da aplicação), através de uma transformação map. Na sequência, as ações forEachRDD e collect são executadas para inserir os tweets processados no banco de dados não relacional MongoDB, conforme ilustrado na Fig. \ref{fig:sparkDataAnalysisDiagram}.
 
 \begin{figure}[!htb]
   \centering
@@ -219,7 +231,28 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 
 \subsection{Aplicação para processamento de stream de tweets, utilizando Storm}
 \label{stormApp}
- 
-\subsection{Aplicação Web}
-\label{webApp}
+
+A aplicação que utiliza o Storm para o processamento de stream de tweets, foi desenvolvida utilizando a linguagem de programação Java. Nela é construída uma topologia, ilustrada na Fig. \ref{fig:stormTopologyApp}, composta por um Spout (classe Twitter), responsável pela conexão ao Twitter e coleta dos tweets, tendo como filtro o nome das contas das prefeituras no Twitter, utilizando a biblioteca Twitter4J.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/stormTopologyApp.png}
+  \caption{Topologia da aplicação utilizando Storm}
+	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+  \label{fig:stormTopologyApp}
+\end{figure}
+
+Em sequência, há seis bolts, responsáveis pelo processamento (o mesmo realizado pela aplicação Spark) dos tweets coletados. O primeiro deles, classe TweetCleanerBolt, ilustrada na Fig. \ref{fig:stormApplicationClassDiagram}, remove as menções e urls contidas no tweet, após isso os simbolos existentes são removidos pelo bolt Symbols Cleaner.
+
+Após isso, a parte do processamento de linguagem natural é realizado pelos bolts Tokenizer e Tag. Na finalização do processo, o bol SentimentAnalyser calcula a polarização de cada tweet, emitindo-os para o bolt Persisting, responsável pelo armazená-los no banco de dados não relacional MongoDB. Vale ainda mencionar que os resultados de cada bolt são setados na classe TweetStream, do modelo da aplicação, o que foi necessário por nem todos os tipos de dados serem serializáveis, como o caso do UserMentionEntity, da biblioteca Twitter4J.
+
+O código dessa aplicação está disponível no repositório localizado em \cite{GitRepository}, sendo "storm-data-analysis" o nome do projeto
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=1.2\textwidth, angle=90]{Imagens/stormApplicationClassDiagram.png}
+  \caption{Diagrama de classes da aplicação utilizando o Storm}
+	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+  \label{fig:stormApplicationClassDiagram}
+\end{figure}
 
