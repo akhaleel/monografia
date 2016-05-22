@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  22 MAY 2016 00:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  22 MAY 2016 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,7 +636,15 @@ File: Imagens/sparkDataAnalysisDiagram.png Graphic file (type png)
 Package pdftex.def Info: Imagens/sparkDataAnalysisDiagram.png used on input lin
 e 189.
 (pdftex.def)             Requested size: 364.19667pt x 226.17938pt.
- [42 <./Imagens/sparkDataAnalysisDiagram.png>]) [43] [44]
+ [42 <./Imagens/sparkDataAnalysisDiagram.png>]
+<Imagens/sparkDataAnalysisClassDiagram.png, id=182, 773.89125pt x 377.15906pt>
+File: Imagens/sparkDataAnalysisClassDiagram.png Graphic file (type png)
+
+<use Imagens/sparkDataAnalysisClassDiagram.png>
+Package pdftex.def Info: Imagens/sparkDataAnalysisClassDiagram.png used on inpu
+t line 214.
+(pdftex.def)             Requested size: 364.19667pt x 177.49498pt.
+) [43] [44 <./Imagens/sparkDataAnalysisClassDiagram.png>]
 \openout2 = `Capitulos/Capitulo4.aux'.
 
  (./Capitulos/Capitulo4.tex
@@ -703,10 +711,10 @@ Anexo A.
 (./Capitulos/Consideracoes.aux) (./Capitulos/ApendiceA.aux)
 (./Capitulos/AnexoA.aux)) ) 
 Here is how much of TeX's memory you used:
- 5025 strings out of 493027
- 70329 string characters out of 6134069
- 149713 words of memory out of 5000000
- 8254 multiletter control sequences out of 15000+600000
+ 5031 strings out of 493027
+ 70580 string characters out of 6134069
+ 148723 words of memory out of 5000000
+ 8259 multiletter control sequences out of 15000+600000
  32317 words of font info for 89 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  38i,11n,26p,875b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -729,10 +737,10 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Monografia.pdf (53 pages, 1379676 bytes).
+Output written on Monografia.pdf (53 pages, 1418866 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
+ 280 PDF objects out of 1000 (max. 8388607)
  175 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

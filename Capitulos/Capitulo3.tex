@@ -202,12 +202,20 @@ Após a obtenção dos tokens, foram atribuídas a eles tags referentes as suas resp
 
 A análise de sentimentos foi realizada com o suporte do Sentilex (versão 1), que é um léxico de sentimentos para o Português, constituído de 6.321 lemas adjectivais (por convenção, na forma masculina singular) e 25.406 formas flexionadas, contendo como um de seus atributos a polaridade do adjectivo. As polaridade são classificadas em positivo (67\% de precisão), negativo (82\% de precisão), ou, neutro (45\% de precisão), possibilitando estimar o sentimento expresso por um determinado texto \cite{Sentilex}.
 
-Os sentimentos são estimados contabilizando as polaridades presentes em cada tweet e o sentimento expresso pelos emotions (se houver), assim sendo, por exemplo, o emotion "(:" incrementa 1 para a polaridade postiva, e 1 para a negativa caso seja ":(". Por fim, é realizada uma simples normatização com os somatórios das polaridades positivas e negatovas, seguindo o seguinte modelo:
+Os sentimentos são estimados contabilizando as polaridades presentes em cada tweet e o sentimento expresso pelos emotions (se houver), assim sendo, por exemplo, o emotion "(:" incrementa 1 para a polaridade postiva, e 1 para a negativa caso seja ":(". Também, considera-se a presença de advérbios de negação, os quais modificam o significado do verbo, adjetivo e de outros advérbios \cite{Priberam}, alterando consequentemente a polaridade. Por fim, é realizada uma simples normatização com os somatórios das polaridades positivas e negativas, seguindo o seguinte modelo:
 {\begin{center} score = ($\Sigma$ positivo - $\Sigma$ negativo) $\div$  ($\Sigma$ positivo + $\Sigma$ negativo)\end{center}}
 
 Caso o score seja menor do que zero, o tweet é classificado com polaridade negativa, se o seu complemento for maior do que 0.5, tem-se polaridade positiva e se igual a zero, neutra. Sendo assim, as informações sobre a polaridade (sentimento) do tweet, seu id e suas respectivas menções (recuperadas do tweet original) são armazenadas no banco de dados não relacional MongoDB. As polaridades são exibidas no mapa da aplicação web.
 
-O código dessa aplicação está disponível no repositório localizado em \cite{GitRepository}, sendo "spark-data-analysis" o nome do projeto.
+O código dessa aplicação está disponível no repositório localizado em \cite{GitRepository}, sendo "spark-data-analysis" o nome do projeto, e seu respectivo diagrama de classe é ilustrado na Fig. \ref{fig:sparkDataAnalysisClassDiagram}
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/sparkDataAnalysisClassDiagram.png}
+  \caption{Diagrama de classes da aplicação utilizando o Spark Streaming}
+	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+  \label{fig:sparkDataAnalysisClassDiagram}
+\end{figure}
 
 \subsection{Aplicação para processamento de stream de tweets, utilizando Storm}
 \label{stormApp}

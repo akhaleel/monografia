@@ -12,3 +12,4 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double}}{40}
 \contentsline {figure}{\numberline {12}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequ\^encias em Double}}{40}
 \contentsline {figure}{\numberline {13}{\ignorespaces Fluxo do processamento de dados da aplica\c c\~ao utilizando o Spark Streaming}}{42}
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Spark Streaming}}{44}
