@@ -36,16 +36,19 @@
 \contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{38}
 \contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{41}
 \contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{44}
-\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{47}
-\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{47}
-\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{47}
-\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{48}
-\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{48}
-\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{48}
-\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{48}
-\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{48}
-\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{48}
-\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{49}
-\contentsline {chapter}{Refer\^encias}{50}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{54}
-\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{55}
+\contentsline {section}{\numberline {3.3}Estudo de caso}{47}
+\contentsline {subsection}{\numberline {3.3.1}Processamento de grande volume de dados em tempo real}{47}
+\contentsline {subsection}{\numberline {3.3.2}Toler\^ancia a falhas}{47}
+\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{49}
+\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{49}
+\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{49}
+\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{50}
+\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{50}
+\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{50}
+\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{50}
+\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{50}
+\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{50}
+\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{51}
+\contentsline {chapter}{Refer\^encias}{52}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{56}
+\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{57}

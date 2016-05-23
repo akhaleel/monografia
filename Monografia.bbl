@@ -79,6 +79,11 @@ Disponível em: <\url{http://www.connectedsmartcities.com.br}>. Acesso em Maio
 {COULOURIS, G. et al. \emph{Sistemas Distribuídos Conceitos e Projetos}. 5st.
   ed. [S.l.]: Bookman, 2013.}
 
+\bibitem[Das 2016]{NrtPresentation}
+\abntrefinfo{Das}{DAS}{2016}
+{DAS, T. \emph{Large-scale near-real-time stream processing}. 2016.
+Disponível em: <\url{https://goo.gl/QSQ5uK}>. Acesso em Maio 22, 2016.}
+
 \bibitem[DataArtisans 2015]{FlinkOverView}
 \abntrefinfo{DataArtisans}{DATAARTISANS}{2015}
 {DATAARTISANS. \emph{Apache Flink Training - System Overview}. 2015.
@@ -288,6 +293,35 @@ Disponível em: <\url{http://www.infoq.com}>. Acesso em Maio 7, 2016.}
 {XU, L.; JU, H.; REN, H. \emph{{Gitbook: SparkInternals}}. 2015.
 Disponível em: <\url{https://github.com/JerryLead/SparkInternals}>. Acesso em
   Abril 30, 2016.}
+
+\bibitem[Zaharia et al. 2012]{DStream4}
+\abntrefinfo{Zaharia et al.}{ZAHARIA et al.}{2012a}
+{ZAHARIA, M. et al. \emph{Resilient Distributed Datasets: A Fault-Tolerant
+  Abstraction forIn-Memory Cluster Computing}. 2012.
+Disponível em:
+  <\url{http://www-bcf.usc.edu/~minlanyu/teach/csci599-fall12/papers}>. Acesso
+  em Maio 23, 2016.}
+
+\bibitem[Zaharia et al. 2012]{DStream2}
+\abntrefinfo{Zaharia et al.}{ZAHARIA et al.}{2012b}
+{ZAHARIA, M. et al. \emph{Discretized Streams: A Fault­ Tolerant Model for
+  Scalable Stream Processing}. 2012.
+Disponível em: <\url{http://www.eecs.berkeley.edu/Pubs/TechRpts/2012}>. Acesso
+  em Maio 22, 2016.}
+
+\bibitem[Zaharia et al. 2012]{DStream3}
+\abntrefinfo{Zaharia et al.}{ZAHARIA et al.}{2012c}
+{ZAHARIA, M. et al. \emph{Discretized Streams: An Efficient and Fault-Tolerant
+  Model forStream Processing on Large Clusters}. 2012.
+Disponível em: <\url{http://www.eecs.berkeley.edu/~haoyuan/papers}>. Acesso em
+  Maio 23, 2016.}
+
+\bibitem[Zaharia et al. 2013]{DStream}
+\abntrefinfo{Zaharia et al.}{ZAHARIA et al.}{2013}
+{ZAHARIA, M. et al. \emph{Discretized Streams: Fault­ Tolerant Streaming
+  Computation at Scale}. 2013.
+Disponível em: <\url{https://people.csail.mit.edu/matei/papers/2013}>. Acesso
+  em Maio 22, 2016.}
 
 \bibitem[Zapletal 2015]{CakeSolutionsArticle}
 \abntrefinfo{Zapletal}{ZAPLETAL}{2015}

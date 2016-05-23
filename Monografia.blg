@@ -27,6 +27,10 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Capitulos/Referencias.bib
+Repeated entry---line 138 of file Capitulos/Referencias.bib
+ : @misc{DStream3
+ :               ,
+I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -37,44 +41,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 53 entries,
+You've used 58 entries,
             6480 wiz_defined-function locations,
-            1424 strings with 16861 characters,
-and the built_in function-call counts, 33771 in all, are:
-= -- 2377
-> -- 1102
+            1449 strings with 18069 characters,
+and the built_in function-call counts, 37618 in all, are:
+= -- 2638
+> -- 1281
 < -- 13
-+ -- 447
-- -- 348
-* -- 2178
-:= -- 4783
-add.period$ -- 202
-call.type$ -- 53
-change.case$ -- 442
-chr.to.int$ -- 66
-cite$ -- 53
-duplicate$ -- 1537
-empty$ -- 3019
-format.name$ -- 1631
-if$ -- 7957
-int.to.chr$ -- 11
++ -- 518
+- -- 401
+* -- 2468
+:= -- 5315
+add.period$ -- 222
+call.type$ -- 58
+change.case$ -- 505
+chr.to.int$ -- 69
+cite$ -- 58
+duplicate$ -- 1684
+empty$ -- 3308
+format.name$ -- 1898
+if$ -- 8871
+int.to.chr$ -- 13
 int.to.str$ -- 0
-missing$ -- 882
-newline$ -- 267
-num.names$ -- 265
-pop$ -- 1235
+missing$ -- 966
+newline$ -- 292
+num.names$ -- 290
+pop$ -- 1356
 preamble$ -- 1
-purify$ -- 178
+purify$ -- 201
 quote$ -- 0
-skip$ -- 2012
+skip$ -- 2227
 stack$ -- 1
-substring$ -- 1045
-swap$ -- 588
+substring$ -- 1140
+swap$ -- 646
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 320
+while$ -- 350
 width$ -- 0
-write$ -- 753
+write$ -- 823
+(There was 1 error message)

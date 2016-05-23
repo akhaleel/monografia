@@ -256,3 +256,31 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
   \label{fig:stormApplicationClassDiagram}
 \end{figure}
 
+\section{Estudo de caso}
+\label{caseStudy}
+
+\subsection{Processamento de grande volume de dados em tempo real}
+
+Quanto ao requisito de processamento de grande volumes de dados, de acordo com a referência \cite{NrtPresentation}, o Apache Spark pode processar até 670k de registros por segundo e por nó, enquanto que o Storm 155k. Portanto, ambas as ferramentas são capazes de processar grande fluxo de dados.
+
+No entanto, elas se diferenciam no requisito de processamento em tempo real. O Spark tem latência de 0.5­2s \cite{DStream2}, e devido a esse delay de até alguns segundos, é considerado uma ferramenta de Near­ real­ time. O Storm, por outro lado, tem como latência de 1­100ms \cite{DStream}, \cite{DStream2}, sendo por isso um sistema com processamento em tempo real.
+
+Como já mencionado na fundamentação tórica, quanto menor o valor de latência, mais rápido se obtém resposta a um dado evento. Além disso, no quesito de processamento em tempo real, também é importante avaliar o valor de throughput, o qual no Spark é maior em comparação ao do Storm \cite{DStream}, favorecendo para o tempo de processamento ser menor.
+
+Como base no que foi dito anteriormente, nesse quesito o Spark é mais adequado as aplicações desenvolvidas, pois elas estão inseridas num contexto em que a propriedade de throughput tem maior relevância. Isso, devido a quantidade de tweets processados, tanto para análise de sentimento, como o módulo Spark Streaming, quanto para a obtenção das métricas relacionadas a e-Participação.
+
+\subsection{Tolerância a falhas}
+
+Discretized Streams (D­Streams) é um modelo de programação para processamento de streams distribuídas, utilizado pelo Spark Streaming, capaz de fornecer tolerância a falhas, através do método parallel recovery \cite{DStream3}. Nesse modelo, a tolerância a falhas é implementada através do conceito lineage, o que permite as informações serem recuperadas paralelamente \cite{DStream4}.
+
+O mecanismo de recuperação via lineage é definido por um grafo acíclico dirigido (DAG), por meio do qual RDDs e D­Streams rastreiam, ao nível das partições RDDs, suas respectivas dependências e operações realizadas sob elas \cite{DStream4}. Sendo assim, os RDDs e D­Streams conseguem "saber" como foram construídos. Podendo, consequentemente, cada nó do cluster reconstruí-­lo paralela e eficientemente em caso de falhas. Especificamente, o processo de recuperação é realizado computando novamente uma determinada partição RDD, re­executando as tasks  que a originaram \cite{DStream4}.
+
+Visando prevenir infinitas re­computações, também são realizados checkpoints num determinado espaço de tempo, com replicações assíncronas de RDDs. Tal procedimento não é necessário para todo o conjunto de dados, pois, como já mencionado, a recuperação executada por nós em paralelo é realizada com demasiada eficiência \cite{DStream4}.
+
+No Storm, a tolerância a falhas é aplicada a cada um de seus componentes. Por exemplo, se o worker falha, ele é reinicializado pelo Supervisor no próprio nó \cite{LearningStorm}. Caso o nó esteja indisposnível, ou, falhando continuadamente, suas tasks são então atribuídas a outro disponível no cluster, via Nimbus \cite{StormPython}. 
+
+O Nimbus e os supervisors, armazenam seus estados no Zookeeper, podendo ser reinicializados sem perdê-los em caso de falha \cite{LearningStorm}. Caso algum supervisor falhe, seus workers são reatribuídos pelo Nimbus a outro supervisor, no entanto, ficando impedido de receberem novas tuplas \cite{StormPython}.
+
+Por, o Nimbus, dentre suas atribuições, é responsável também por reinicializar as tasks caso uma delas venha a falhar, e se o mesmo acontecer com ele próprio, as tasks em execução não são afetadas, mas novas topologias são impedidas de serem submetidas ao cluster \cite{LearningStorm}, assim como reatribuições \cite{StormPython}.
+
+Como é possível perceber, o Storm utiliza o método de recuperação por replicação, reatribuindo determinado processamento a outro recurso. Nessa metodologia, são necessário no mínimo dois recursos de hardware, os quais não são suficientes para contingência caso ambos falhem \cite{DStream3}. Sendo assim, o modelo de recuperação de falhas do Spark atende melhor ao requisito de tolerância a falhas para aplicações que o priorize, com as desenvolvidas nessa monografia, tanto para o processamento em batch quanto para o de stream de tweets.
