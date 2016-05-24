@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  23 MAY 2016 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  24 MAY 2016 00:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,12 +660,12 @@ Package pdftex.def Info: Imagens/stormApplicationClassDiagram.png used on input
  line 253.
 (pdftex.def)             Requested size: 546.29153pt x 304.47963pt.
  [45 <./Imagens/sparkDataAnalysisClassDiagram.png> <./Imagens/stormTopologyApp.
-png>] [46 <./Imagens/stormApplicationClassDiagram.png>] [47]) [48]
+png>] [46 <./Imagens/stormApplicationClassDiagram.png>] [47] [48] [49]) [50]
 \openout2 = `Capitulos/Capitulo4.aux'.
 
  (./Capitulos/Capitulo4.tex
 Cap\'{\i }tulo 4.
-) [49
+) [51
 
 
 
@@ -674,7 +674,7 @@ Cap\'{\i }tulo 4.
 
  (./Capitulos/Capitulo5.tex
 Cap\'{\i }tulo 5.
-) [50
+) [52
 
 
 
@@ -683,7 +683,7 @@ Cap\'{\i }tulo 5.
 
  (./Capitulos/Consideracoes.tex
 Cap\'{\i }tulo 6.
-) [51
+) [53
 
 
 
@@ -692,16 +692,16 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [52
+) [54
 
 
-] [53]
-[54]) [55]
+] [55]
+[56]) [57]
 \openout2 = `Capitulos/ApendiceA.aux'.
 
  (./Capitulos/ApendiceA.tex
 Apendice A.
-) [56
+) [58
 
 
 ]
@@ -709,7 +709,7 @@ Apendice A.
 
  (./Capitulos/AnexoA.tex
 Anexo A.
-) [57
+) [59
 
 
 
@@ -727,10 +727,10 @@ Anexo A.
 (./Capitulos/Consideracoes.aux) (./Capitulos/ApendiceA.aux)
 (./Capitulos/AnexoA.aux)) ) 
 Here is how much of TeX's memory you used:
- 5080 strings out of 493027
- 71624 string characters out of 6134069
+ 5085 strings out of 493027
+ 71704 string characters out of 6134069
  150191 words of memory out of 5000000
- 8306 multiletter control sequences out of 15000+600000
+ 8311 multiletter control sequences out of 15000+600000
  32317 words of font info for 89 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  38i,11n,26p,875b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -753,10 +753,10 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Monografia.pdf (58 pages, 1492570 bytes).
+Output written on Monografia.pdf (60 pages, 1495951 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
+ 306 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

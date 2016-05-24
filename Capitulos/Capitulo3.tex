@@ -1,5 +1,5 @@
 % Capítulo 3
-\chapter{Definicação e execução do estudo de caso}
+\chapter{Aplicações desenvolvidas e estudo comparativo}
 \label{chapter3}
 
 \section{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
@@ -256,7 +256,7 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
   \label{fig:stormApplicationClassDiagram}
 \end{figure}
 
-\section{Estudo de caso}
+\section{Estudo comparativo}
 \label{caseStudy}
 
 \subsection{Processamento de grande volume de dados em tempo real}
@@ -275,12 +275,34 @@ Discretized Streams (D­Streams) é um modelo de programação para processamento de
 
 O mecanismo de recuperação via lineage é definido por um grafo acíclico dirigido (DAG), por meio do qual RDDs e D­Streams rastreiam, ao nível das partições RDDs, suas respectivas dependências e operações realizadas sob elas \cite{DStream4}. Sendo assim, os RDDs e D­Streams conseguem "saber" como foram construídos. Podendo, consequentemente, cada nó do cluster reconstruí-­lo paralela e eficientemente em caso de falhas. Especificamente, o processo de recuperação é realizado computando novamente uma determinada partição RDD, re­executando as tasks  que a originaram \cite{DStream4}.
 
-Visando prevenir infinitas re­computações, também são realizados checkpoints num determinado espaço de tempo, com replicações assíncronas de RDDs. Tal procedimento não é necessário para todo o conjunto de dados, pois, como já mencionado, a recuperação executada por nós em paralelo é realizada com demasiada eficiência \cite{DStream4}.
+Visando prevenir infinitas re­computações, também são realizados checkpoints num determinado espaço de tempo, com replicações assíncronas de RDDs. Tal procedimento não é necessário para todo o conjunto de dados, pois, como já mencionado, a recuperação executada por nós em paralelo é realizada com demasiada eficiência \cite{DStream4}. 
+
+Todo o processo descrito até aqui é confiável quando a fonte dos dados pode ser lida novamente, no caso do Spark Streaming é necessário haver alguma fonte externa para replicação dos dados \cite{Spark}. Além disso, se o Driver for finalizado, por manter o contexto da aplicação, todo o conteúdo em memória dos executors é perdido \cite{Spark}.  
 
 No Storm, a tolerância a falhas é aplicada a cada um de seus componentes. Por exemplo, se o worker falha, ele é reinicializado pelo Supervisor no próprio nó \cite{LearningStorm}. Caso o nó esteja indisposnível, ou, falhando continuadamente, suas tasks são então atribuídas a outro disponível no cluster, via Nimbus \cite{StormPython}. 
 
-O Nimbus e os supervisors, armazenam seus estados no Zookeeper, podendo ser reinicializados sem perdê-los em caso de falha \cite{LearningStorm}. Caso algum supervisor falhe, seus workers são reatribuídos pelo Nimbus a outro supervisor, no entanto, ficando impedido de receberem novas tuplas \cite{StormPython}.
+O Nimbus e os supervisors, armazenam seus estados no Zookeeper, podendo ser reinicializados sem perdê-los em caso de falha, se houver falha no Zookeeper, outro pode ser "eleito" para o seu lugar \cite{LearningStorm}. Caso algum supervisor falhe, seus workers são reatribuídos pelo Nimbus a outro supervisor, no entanto, ficando impedido de receberem novas tuplas \cite{StormPython}.
 
-Por, o Nimbus, dentre suas atribuições, é responsável também por reinicializar as tasks caso uma delas venha a falhar, e se o mesmo acontecer com ele próprio, as tasks em execução não são afetadas, mas novas topologias são impedidas de serem submetidas ao cluster \cite{LearningStorm}, assim como reatribuições \cite{StormPython}.
+Por sua vez, o Nimbus, dentre suas atribuições, é responsável também por reinicializar as tasks caso uma delas venha a falhar, e se o mesmo acontecer com ele próprio, as tasks em execução não são afetadas, mas novas topologias são impedidas de serem submetidas ao cluster \cite{LearningStorm}, assim como reatribuições \cite{StormPython}.
 
-Como é possível perceber, o Storm utiliza o método de recuperação por replicação, reatribuindo determinado processamento a outro recurso. Nessa metodologia, são necessário no mínimo dois recursos de hardware, os quais não são suficientes para contingência caso ambos falhem \cite{DStream3}. Sendo assim, o modelo de recuperação de falhas do Spark atende melhor ao requisito de tolerância a falhas para aplicações que o priorize, com as desenvolvidas nessa monografia, tanto para o processamento em batch quanto para o de stream de tweets.
+O modelo de recuperação de falhas do Spark pode ser uma boa escolha caso a aplicação permita perda de dados, em prol de eficiência \cite{DStream3}. Caso contrário, é necessário configurar uma fonte externa para replicação dos dados que estão sendo processados. Em contraste, a arquitetura do Storm, busca possibilitar que seus componentes falhem havendo pouco prejuízo para a aplicação, ainda assim a replicação pode adicionar mais uma camada de confiabilidade. 
+
+Levando em consideração o exposto acima, a aplicação desenvolvida para a coleta de métricas realiza processamento em batch, podendo ter acesso a fonte de dados para coletá-los novamente, em caso de falha. Além disso, a eficiência foi priorizada, não havendo prejuízo ao utilizar o Spark. Para aplicação que realiza análise de sentimentos, processamendo stream de tweets, é mais interessante o suporte a tolerância a falhas do Storm, principalmente devido ao seu longo tempo de execução.
+
+\subsubsection{Garantia de processamento}
+
+Em adição a subseção anterior, o Spark Streaming e Storm possuem formas diferentes de garantir o processamento de um evento. No Spark Streaminghá a garantia de que todo evento será processado exatamente uma vez (Exactly Once), sem perdas, ou, duplicadas, via parallel recovery, levando em consideração as observações já mencionadas \cite{Spark}.
+
+No Storm, por outro lado, não há suporte ao modelo "Exactly Once", mas sim aos "At Least Once" e "At Most Once". Em ordem, a primeira opção permite que o processamento seja realizado no mínimo uma vez, rastreando se o (a) evento (tupla) foi processado(a) ou não, através de seus IDs e mensagens "ack" (tupla processada), podendo haver duplicatas; o oposto ocorre na segunda alternativa, em que perdas são aceitadas processando os eventos no máximo uma vez \cite{Storm}. 
+
+A prosta do Spark Streaming, nesse aspecto, é mais interessante para o processamento de stream de tweets, por através do "Exactly Once" garantir que a informação será processada uma única vez.
+
+\subsection{Escalabilidade}
+
+Quanto ao requisito de escalabilidade, ambos suportam clusterização, portando são escaláveis horizontalmente, sendo o maior cluster Spark conhecido composto por 8.000 nós \cite{Spark}. E, embora não tenha sido encontradas fontes confiáveis divulgando informações sobre o maior cluster Storm existente, sabe­se que ele é capaz de processar um milhão de mensagens com tamanho de 100 byte, por segundo e por nó \cite{Storm}.
+
+\subsection{Modelo de programação}
+
+Conforme exposto no Cap. \ref{chapter2}, no Spark os RDDs são conjuntos de dados que podem ser manipulados de forma distribuída, sendo possível realizar operações sob eles, gerando novos RDDs, através de transformações, ou, computando-os por meio das ações. O módulo Streaming utiliza essa unidade como base da abstração DStream, conjunto de RDDs representando um stream. Tais conceitos do modelo de programação do Spark podem ser mais difíceis de abstrair, tendo uma classificação de baixo nível, se comparados ao do Storm.
+
+Por outro lado, numa perspectiva alto nível, o Storm propõe o conceito de topologia, composta por Bolts e Spouts. Os Spouts são responsáveis pela entrada dos streams (conjunto de tuplas) da aplicação, processados posteriormente pelos Bolts. Devido a essas abstrações, consequentemente, pode haver maior facilidade em programar utilizando o Storm do que o Spark.

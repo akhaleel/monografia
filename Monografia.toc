@@ -25,7 +25,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1.4}Topologia}{31}
 \contentsline {paragraph}{Bolt.}{31}
 \contentsline {paragraph}{Spout.}{32}
-\contentsline {chapter}{\numberline {3}Definica\c c\~ao e execu\c c\~ao do estudo de caso}{34}
+\contentsline {chapter}{\numberline {3}Aplica\c c\~oes desenvolvidas e estudo comparativo}{34}
 \contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{34}
 \contentsline {paragraph}{Apache Spark Streaming.}{34}
 \contentsline {paragraph}{Apache Flink.}{35}
@@ -36,19 +36,22 @@
 \contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{38}
 \contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{41}
 \contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{44}
-\contentsline {section}{\numberline {3.3}Estudo de caso}{47}
+\contentsline {section}{\numberline {3.3}Estudo comparativo}{47}
 \contentsline {subsection}{\numberline {3.3.1}Processamento de grande volume de dados em tempo real}{47}
 \contentsline {subsection}{\numberline {3.3.2}Toler\^ancia a falhas}{47}
-\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{49}
-\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{49}
-\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{49}
-\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{50}
-\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{50}
-\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{50}
-\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{50}
-\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{50}
-\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{50}
-\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{51}
-\contentsline {chapter}{Refer\^encias}{52}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{56}
-\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{57}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Garantia de processamento}{49}
+\contentsline {subsection}{\numberline {3.3.3}Escalabilidade}{49}
+\contentsline {subsection}{\numberline {3.3.4}Modelo de programa\c c\~ao}{50}
+\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{51}
+\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{51}
+\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{51}
+\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{52}
+\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{52}
+\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{52}
+\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{52}
+\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{52}
+\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{52}
+\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{53}
+\contentsline {chapter}{Refer\^encias}{54}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{58}
+\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{59}
