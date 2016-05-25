@@ -42,16 +42,16 @@
 \contentsline {subsubsection}{\numberline {3.3.2.1}Garantia de processamento}{49}
 \contentsline {subsection}{\numberline {3.3.3}Escalabilidade}{49}
 \contentsline {subsection}{\numberline {3.3.4}Modelo de programa\c c\~ao}{50}
-\contentsline {chapter}{\numberline {4}Cap\IeC {\'\i }tulo 4}{51}
-\contentsline {section}{\numberline {4.1}Se\c c\~ao 1}{51}
-\contentsline {section}{\numberline {4.2}Se\c c\~ao 2}{51}
-\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{52}
-\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{52}
-\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{52}
-\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{52}
-\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{52}
-\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{52}
-\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{53}
-\contentsline {chapter}{Refer\^encias}{54}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{58}
-\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{59}
+\contentsline {chapter}{\numberline {4}Resultados e Trabalhos Relacionados}{51}
+\contentsline {section}{\numberline {4.1}Resultados}{51}
+\contentsline {section}{\numberline {4.2}Trabalhos Relacionados}{51}
+\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{53}
+\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{53}
+\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{53}
+\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{53}
+\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{53}
+\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{53}
+\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{54}
+\contentsline {chapter}{Refer\^encias}{55}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{59}
+\contentsline {chapter}{Anexo{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro anexo}{60}
