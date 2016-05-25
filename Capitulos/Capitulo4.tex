@@ -8,9 +8,9 @@
 \begin{table}[!htb]
 	\center
 		% Título de tabelas sempre aparecem antes da tabela
-	\caption{Métricas relacionadas aos retweets dos perfis das prefeituras das capitais, referentes aos 3.200 tweets anteriores a 18/05/2016}
+	\caption{Métricas relacionadas ao número de retweets dos perfis das prefeituras das capitais, referentes aos 3.200 tweets anteriores a 18/05/2016}
 	\bigskip
-	\label{tab:results}
+	\label{tab:retweetsMetrics}
 	{
 		\begin{tabular}{c|c|c|c|c|c|c|c}
 			\hline
@@ -43,6 +43,92 @@
 			SE & Aracaju & 1.3246 & 1 & 0 & 14 & 1.8780 & 1.3704\\
 			SP & São Paulo & 5.2272 & 3 & 0 & 237 & 104.7239 & 10.2334\\
 			TO & Palmas & 1.3872 & 1 & 0 & 31 & 3.3871 & 1.8404\\
+		\end{tabular}
+	}
+		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+\end{table}
+
+\begin{table}[!htb]
+	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Métricas relacionadas ao número de favoritos dos perfis das prefeituras das capitais, referentes aos 3.200 tweets anteriores a 18/05/2016}
+	\bigskip
+	\label{tab:favoritesMetrics}
+	{
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+			\hline
+            {\bf UF} & {\bf Capital} & {\bf Média} & {\bf Med.} & {\bf Mín.} & {\bf Máx.} & {\bf Variância} & {\bf D. Padrão}\\
+			\hline
+			AC & Rio Branco & 0.1981 & 0 & 0 & 10 & 0.2872 & 0.5359\\
+			AL & Maceió & 0.8884 & 0 & 0 & 32 & 2.9797 & 1.72618\\
+			AP & Macapá & 3.3284 & 3 & 0 & 22 & 7.8843 & 2.8079\\
+			AM & Manaus & 1.0487 & 1 & 0 & 40 & 3.5744 & 1.8906\\
+			BA & Salvador & 0.0821 & 0 & 0 & 2 & 0.0916 & 0.3027\\		
+			DF & Brasília & 1.9681 & 1 & 0 & 504 & 160.0064 & 12.6493\\
+			CE & Fortaleza & 1.8134 & 1 & 0 & 22 & 2.6636 & 1.6320\\
+			ES & Vitória & 0.4421 & 0 & 0 & 15 & 0.6922 & 0.8320\\
+			GO & Goiánia & 1.9177 & 1 & 0 & 20 & 3.7246 & 1.9299\\
+			MA & São Luís & 16.3471 & 18 & 0 & 63 & 149.8610 & 12.2417\\
+			MT & Cuiabá & 0.1206 & 0 & 0 & 8 & 0.1629 & 0.4036\\
+			MS & Campo Grande & 0.0025 & 0 & 0 & 1 & 0.0024 & 0.0499\\
+			MG & Belo Horizonte & 3.4410 & 2 & 0 & 257 & 37.6513 & 6.1360\\
+			PR & Curitiba & 12.7833 & 1 & 0 & 443 & 698.3285 & 26.4259\\
+			PB & João Pessoa & 1.1934 & 1 & 0 & 37 & 4.0453 & 2.0113\\
+			PA & Belém & 0.5028 & 0 & 0 & 9 & 0.8356 & 0.9141\\
+			PE & Recife & 2.1312 & 1 & 0 & 39 & 8.2941 & 2.8799\\
+			PI & Teresina & 0.8487 & 0 & 0 & 12 & 1.5913 & 1.2614\\
+			RN & Natal & 2.6521 & 2 & 0 & 25 & 7.8230 & 2.7969\\
+			RS & Porto Alegre & 2.2115 & 0 & 0 & 117 & 37.0543 & 6.0872\\
+			RJ & Rio de Janeiro & 3.5790 & 2 & 0 & 2216 & 1543.9374 & 39.2929\\
+			RO & Porto Velho & 0.03245 & 0 & 0 & 9 & 0.09345 & 0.3057\\
+			RR & Boa Vista & 0.3943 & 0 & 0 & 9 & 0.6482 & 0.8051\\
+			SC & Florianópolis & 0.4428 & 0 & 0 & 22 & 1.1186 & 1.0576\\
+			SE & Aracaju & 1.1550 & 1 & 0 & 10 & 1.9697 & 1.4034\\
+			SP & São Paulo & 4.3504 & 0 & 0 & 213 & 101.2060 & 10.0601\\
+			TO & Palmas & 2.2001 & 1 & 0 & 40 & 7.5964 & 2.7561\\
+		\end{tabular}
+	}
+		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+\end{table}
+
+\begin{table}[!htb]
+	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Métricas relacionadas ao número de réplicas dos perfis das prefeituras das capitais, referentes aos 3.200 tweets anteriores a 18/05/2016}
+	\bigskip
+	\label{tab:inReplyMetrics}
+	{
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+			\hline
+            {\bf UF} & {\bf Capital} & {\bf Média} & {\bf Med.} & {\bf Mín.} & {\bf Máx.} & {\bf Variância} & {\bf D. Padrão}\\
+			\hline
+			AC & Rio Branco & 0.0046 & 0 & 0 & 1 & 0.0046 & 0.0683\\
+			AL & Maceió & 0.0800 & 0 & 0 & 1 & 0.0736 & 0.2712\\
+			AP & Macapá & 0.0884 & 0 & 0 & 1 & 0.0806 & 0.2839\\
+			AM & Manaus & 0.0228 & 0 & 0 & 1 & 0.0222 & 0.1493\\
+			BA & Salvador & 0 & 0 & 0 & 0 & 0 & 0\\		
+			DF & Brasília & 0.0218 & 0 & 0 & 1 & 0.0213 & 0.1462\\
+			CE & Fortaleza & 0.0099 & 0 & 0 & 1 & 0.0098 & 0.0994\\
+			ES & Vitória & 0.0356 & 0 & 0 & 1 & 0.0343 & 0.1853\\
+			GO & Goiánia & 0.0253 & 0 & 0 & 1 & 0.0246 & 0.1571\\
+			MA & São Luís & 0.0825 & 0 & 0 & 1 & 0.0756 & 0.2751\\
+			MT & Cuiabá & 0.01187 & 0 & 0 & 1 & 0.0117 & 0.1083\\
+			MS & Campo Grande & 0.0012 & 0 & 0 & 1 & 0.0012 & 0.0353\\
+			MG & Belo Horizonte & 0.0375 & 0 & 0 & 1 & 0.0361 & 0.1900\\
+			PR & Curitiba & 0.5395 & 1 & 0 & 1 & 0.2484 & 0.4984\\
+			PB & João Pessoa & 0.2106 & 0 & 0 & 1 & 0.1662 & 0.4077\\
+			PA & Belém & 0.0244 & 0 & 0 & 1 & 0.0238 & 0.1545\\
+			PE & Recife & 0.2525 & 0 & 0 & 1 & 0.1887 & 0.4344\\
+			PI & Teresina & 0.1337 & 0 & 0 & 1 & 0.1158 & 0.3404\\
+			RN & Natal & 0.0118 & 0 & 0 & 1 & 0.0117 & 0.1083\\
+			RS & Porto Alegre & 0.1231 & 0 & 0 & 1 & 0.1079 & 0.3285\\
+			RJ & Rio de Janeiro & 0.0315 & 0 & 0 & 1 & 0.0305 & 0.1748\\
+			RO & Porto Velho & 0 & 0 & 0 & 0 & 0 & 0\\
+			RR & Boa Vista & 0.0403 & 0 & 0 & 1 & 0.0386 & 0.1966\\
+			SC & Florianópolis & 0.0046 & 0 & 0 & 1 & 0.0046 & 0.0683\\
+			SE & Aracaju & 0.0015625 & 0 & 0 & 1 & 0.0015 & 0.0394\\
+			SP & São Paulo & 0.2719 & 0 & 0 & 1 & 0.1979 & 0.4449\\
+			TO & Palmas & 0.0878 & 0 & 0 & 1 & 0.0801 & 0.2831\\
 		\end{tabular}
 	}
 		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
