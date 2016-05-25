@@ -2,6 +2,8 @@
 \chapter{Aplicações desenvolvidas e estudo comparativo}
 \label{chapter3}
 
+Nesse capítulo, a seção \ref{metodologyOfChoice} se refere a metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real, utilizadas pelas aplicações desenvolvidas, explicadas na seção \ref{apps}. Por último, na seção \ref{caseStudy}, é realizado um estudo comparativo das ferramentas ESPs escolhidas anteriormente. 
+
 \section{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
 \label{metodologyOfChoice}
 
@@ -73,6 +75,7 @@ Sendo assim, como Flink e Samza são semelhantes ao Spark o único critério de dif
 \end{table}
 
 \section{Aplicações desenvolvidas para estudo de caso}
+\label{apps}
 
 Após a escolha das plataformas para processamento de eventos em tempo real, quatro aplicações foram desenvolvidas. A explicada na subseção \ref{webApp}, exibe numa aplicação web um mapa contendo informações sobre as métricas de e-Participação. A subseção \ref{batchApp}, refere-se a aplicação responsável por processar tweets e coletar essas métricas; a da subseção \ref{sparkApp}, por sua vez, usa o Spark Streaming para realizar análise de sentimento de streams de tweets; a referente a subseção \ref{stormApp}, realiza o mesmo procedimento, mas com o Storm. 
 
@@ -259,7 +262,10 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 \section{Estudo comparativo}
 \label{caseStudy}
 
+Nessa seção, é realizada uma análise comparativa entre o Apache Storm e Spark, sendo a subseção \ref{rtp} sobre o requisito de Processamento de grande volume de dados em tempo real, a \ref{faultTolerance} a respeito de Tolerância a falhas, a \ref{garantiesProcessing} sobre Garantias de processamento, a \ref{scalability} em relação a Escalabilidade e, por fim, a \ref{programmingModel} sobre o modelo de programação de ambas as ferramentas. 
+
 \subsection{Processamento de grande volume de dados em tempo real}
+\label{rtp}
 
 Quanto ao requisito de processamento de grande volumes de dados, de acordo com a referência \cite{NrtPresentation}, o Apache Spark pode processar até 670k de registros por segundo e por nó, enquanto que o Storm 155k. Portanto, ambas as ferramentas são capazes de processar grande fluxo de dados.
 
@@ -270,6 +276,7 @@ Como já mencionado na fundamentação tórica, quanto menor o valor de latência, ma
 Como base no que foi dito anteriormente, nesse quesito o Spark é mais adequado as aplicações desenvolvidas, pois elas estão inseridas num contexto em que a propriedade de throughput tem maior relevância. Isso, devido a quantidade de tweets processados, tanto para análise de sentimento, como o módulo Spark Streaming, quanto para a obtenção das métricas relacionadas a e-Participação.
 
 \subsection{Tolerância a falhas}
+\label{faultTolerance}
 
 Discretized Streams (D­Streams) é um modelo de programação para processamento de streams distribuídas, utilizado pelo Spark Streaming, capaz de fornecer tolerância a falhas, através do método parallel recovery \cite{DStream3}. Nesse modelo, a tolerância a falhas é implementada através do conceito lineage, o que permite as informações serem recuperadas paralelamente \cite{DStream4}.
 
@@ -290,6 +297,7 @@ O modelo de recuperação de falhas do Spark pode ser uma boa escolha caso a aplic
 Levando em consideração o exposto acima, a aplicação desenvolvida para a coleta de métricas realiza processamento em batch, podendo ter acesso a fonte de dados para coletá-los novamente, em caso de falha. Além disso, a eficiência foi priorizada, não havendo prejuízo ao utilizar o Spark. Para aplicação que realiza análise de sentimentos, processamendo stream de tweets, é mais interessante o suporte a tolerância a falhas do Storm, principalmente devido ao seu longo tempo de execução.
 
 \subsubsection{Garantia de processamento}
+\label{garantiesProcessing}
 
 Em adição a subseção anterior, o Spark Streaming e Storm possuem formas diferentes de garantir o processamento de um evento. No Spark Streaminghá a garantia de que todo evento será processado exatamente uma vez (Exactly Once), sem perdas, ou, duplicadas, via parallel recovery, levando em consideração as observações já mencionadas \cite{Spark}.
 
@@ -298,10 +306,12 @@ No Storm, por outro lado, não há suporte ao modelo "Exactly Once", mas sim aos "
 A prosta do Spark Streaming, nesse aspecto, é mais interessante para o processamento de stream de tweets, por através do "Exactly Once" garantir que a informação será processada uma única vez.
 
 \subsection{Escalabilidade}
+\label{scalability}
 
 Quanto ao requisito de escalabilidade, ambos suportam clusterização, portando são escaláveis horizontalmente, sendo o maior cluster Spark conhecido composto por 8.000 nós \cite{Spark}. E, embora não tenha sido encontradas fontes confiáveis divulgando informações sobre o maior cluster Storm existente, sabe­se que ele é capaz de processar um milhão de mensagens com tamanho de 100 byte, por segundo e por nó \cite{Storm}.
 
 \subsection{Modelo de programação}
+\label{programmingModel}
 
 Conforme exposto no Cap. \ref{chapter2}, no Spark os RDDs são conjuntos de dados que podem ser manipulados de forma distribuída, sendo possível realizar operações sob eles, gerando novos RDDs, através de transformações, ou, computando-os por meio das ações. O módulo Streaming utiliza essa unidade como base da abstração DStream, conjunto de RDDs representando um stream. Tais conceitos do modelo de programação do Spark podem ser mais difíceis de abstrair, tendo uma classificação de baixo nível, se comparados ao do Storm.
 

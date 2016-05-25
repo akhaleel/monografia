@@ -31,7 +31,7 @@
 \contentsline {paragraph}{Apache Flink.}{35}
 \contentsline {paragraph}{Apache Storm.}{35}
 \contentsline {paragraph}{Apache Samza.}{35}
-\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas para estudo de caso}{37}
+\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas para estudo de caso}{36}
 \contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao web para visualiza\c c\~ao das m\'etricas relacionadas a e-Participa\c c\~ao}{37}
 \contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{38}
 \contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{41}
