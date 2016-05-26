@@ -3,7 +3,58 @@
 
 \section{Resultados}
 
+A - tweets por dia
+B - retweets por dia
+C - favoritos
+D - réplicas
+E - tempo de resposta
+F - menções
+
 \sloppy
+
+\begin{table}[!htb]
+	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Colocação dos perfis das prefeituras das capitais, de acordo com suas respectivas métricas}
+	\bigskip
+	\label{tab:rankMetrics}
+	{
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+			\hline
+            {\bf UF} & {\bf Capital} & {\bf A} & {\bf B} & {\bf C} & {\bf D} & {\bf E} & {\bf F} & {\bf Pontuação} & {\bf Colocação}\\
+			\hline
+			AC & Rio Branco & 24 & 20 & 23 & 22 & 1 & 19 & 109 & 19\\
+			AL & Maceió & 12 & 19 & 17 & 10 & 19 & 18 & 88 & 15\\
+			AM & Manaus & 21 & 18 & 16 & 17 & 14 & 22 & 102 & 18\\
+			AP & Macapá & 14 & 3 & 6 & 7 & 13 & 12 & 49 & 5\\
+			BA & Salvador & 18 & 25 & 25 & 27 & 0 & 27 & 0 & 0\\	
+			CE & Fortaleza & 16 & 15 & 13 & 21 & 10 & 9 & 84 & 14\\
+			DF & Brasília & 10 & 10 & 11 & 18 & 3 & 13 & 65 & 10\\
+			ES & Vitória & 15 & 23 & 21 & 13 & 8 & 21 & 96 & 16\\
+			GO & Goiánia & 1 & 11 & 12 & 15 & 4 & 4 & 44 & 3\\
+			MA & São Luís & 6 & 1 & 1 & 9 & 11 & 8 & 29 & 1\\
+			MG & Belo Horizonte & 19 & 9 & 5 & 12 & 7 & 10 & 57 & 7\\
+			MS & Campo Grande & 20 & 26 & 27 & 25 & 5 & 26 & 129 & 22\\
+			MT & Cuiabá & 26 & 27 & 24 & 20 & 15 & 23 & 129 & 22\\
+			PA & Belém & 27 & 22 & 19 & 16 & 16 & 20 & 120 & 21\\		
+			PB & João Pessoa & 2 & 16 & 14 & 4 & 24 & 7 & 59 & 8\\
+			PE & Recife & 11 & 14 & 10 & 3 & 25 & 6 & 61 & 9\\
+			PI & Teresina & 13 & 6 & 18 & 5 & 17 & 16 & 68 & 12\\
+			PR & Curitiba & 8 & 2 & 2 & 1 & 21 & 2 & 29 & 1\\
+			RJ & Rio de Janeiro & 17 & 7 & 4 & 14 & 12 & 1 & 48 & 4\\
+			RN & Natal & 9 & 8 & 7 & 19 & 6 & 17 & 66 & 11\\
+			RR & Boa Vista & 24 & 24 & 22 & 0 & 22 & 24 & 116 & 20\\
+			RO & Porto Velho & 23 & 21 & 26 & 26 & 0 & 25 & 0 & 0\\
+			RS & Porto Alegre & 3 & 5 & 8 & 6 & 20 & 14 & 49 & 5\\
+			SC & Florianópolis & 25 & 17 & 20 & 23 & 9 & 5 & 99 & 17\\
+			SE & Aracaju & 7 & 13 & 15 & 24 & 2 & 15 & 76 & 13\\
+			SP & São Paulo & 5 & 4 & 3 & 2 & 23 & 3 & 32 & 2\\
+			TO & Palmas & 4 & 12 & 9 & 8 & 18 & 11 & 55 & 6\\
+		\end{tabular}
+	}
+		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+\end{table}
+
 
 \begin{table}[!htb]
 	\center
@@ -47,7 +98,6 @@
 	}
 		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
 \end{table}
-
 
 \begin{table}[!htb]
 	\center
@@ -124,7 +174,7 @@
 			RN & Natal & 2.6521 & 2 & 0 & 25 & 7.8230 & 2.7969\\
 			RS & Porto Alegre & 2.2115 & 0 & 0 & 117 & 37.0543 & 6.0872\\
 			RJ & Rio de Janeiro & 3.5790 & 2 & 0 & 2216 & 1543.9374 & 39.2929\\
-			RO & Porto Velho & 0.03245 & 0 & 0 & 9 & 0.09345 & 0.3057\\
+			RO & Porto Velho & 0.0324 & 0 & 0 & 9 & 0.0934 & 0.3057\\
 			RR & Boa Vista & 0.3943 & 0 & 0 & 9 & 0.6482 & 0.8051\\
 			SC & Florianópolis & 0.4428 & 0 & 0 & 22 & 1.1186 & 1.0576\\
 			SE & Aracaju & 1.1550 & 1 & 0 & 10 & 1.9697 & 1.4034\\
@@ -156,7 +206,7 @@
 			ES & Vitória & 0.0356 & 0 & 0 & 1 & 0.0343 & 0.1853\\
 			GO & Goiánia & 0.0253 & 0 & 0 & 1 & 0.0246 & 0.1571\\
 			MA & São Luís & 0.0825 & 0 & 0 & 1 & 0.0756 & 0.2751\\
-			MT & Cuiabá & 0.01187 & 0 & 0 & 1 & 0.0117 & 0.1083\\
+			MT & Cuiabá & 0.0118 & 0 & 0 & 1 & 0.0117 & 0.1083\\
 			MS & Campo Grande & 0.0012 & 0 & 0 & 1 & 0.0012 & 0.0353\\
 			MG & Belo Horizonte & 0.0375 & 0 & 0 & 1 & 0.0361 & 0.1900\\
 			PR & Curitiba & 0.5395 & 1 & 0 & 1 & 0.2484 & 0.4984\\
@@ -170,7 +220,7 @@
 			RO & Porto Velho & 0 & 0 & 0 & 0 & 0 & 0\\
 			RR & Boa Vista & 0.0403 & 0 & 0 & 1 & 0.0386 & 0.1966\\
 			SC & Florianópolis & 0.0046 & 0 & 0 & 1 & 0.0046 & 0.0683\\
-			SE & Aracaju & 0.0015625 & 0 & 0 & 1 & 0.0015 & 0.0394\\
+			SE & Aracaju & 0.0015 & 0 & 0 & 1 & 0.0015 & 0.0394\\
 			SP & São Paulo & 0.2719 & 0 & 0 & 1 & 0.1979 & 0.4449\\
 			TO & Palmas & 0.0878 & 0 & 0 & 1 & 0.0801 & 0.2831\\
 		\end{tabular}
@@ -189,31 +239,31 @@
 			\hline
             {\bf UF} & {\bf Capital} & {\bf Média} & {\bf Med.} & {\bf Mín.} & {\bf Máx.} & {\bf Variância} & {\bf D. Padrão}\\
 			\hline
-			AC & Rio Branco & 0 & 0 & 0 & 0 & 0 & 0\\
+			AC & Rio Branco & 0.0970 & 0 & 0 & 214 & 14.9066 & 3.8609\\
 			AL & Maceió & 47.8646 & 0 & 0 & 4360 & 86593.4688 & 294.2676\\
 			AP & Macapá & 10.5509 & 0 & 0 & 2341 & 12090.3230 & 109.9560\\
 			AM & Manaus & 16.3806 & 0 & 0 & 9501 & 64431.6201 & 253.8338\\
 			BA & Salvador & 0 & 0 & 0 & 0 & 0 & 0\\	
-			DF & Brasília & 0.0018 & 0 & 0 & 6 & 0.0112 & 0.1060\\
-			CE & Fortaleza & 0 & 0 & 0 & 0 & 0 & 0\\
+			DF & Brasília & 2.0675 & 0 & 0 & 1291 & 1593.4398 & 0.1060\\
+			CE & Fortaleza & 9.9012 & 0 & 0 & 5039 & 35491.4871 & 188.3918\\
 			ES & Vitória & 6.7112 & 0 & 0 & 9607 & 35471.7322 & 188.3394\\
 			GO & Goiánia & 2.5384 & 0 & 0 & 1108 & 1688.0865 & 41.0863\\
 			MA & São Luís & 10.0528 & 0 & 0 & 4334 & 14292.01 & 119.5491\\
 			MT & Cuiabá & 26.1856 & 0 & 0 & 35914 & 540769.2511 & 735.3701\\
-			MS & Campo Grande & 0 & 0 & 0 & 0 & 0 & 0\\
+			MS & Campo Grande & 2.7471 & 0 & 0 & 2905 & 7902.8722 & 88.8981\\
 			MG & Belo Horizonte & 3.9512 & 0 & 0 & 4522 & 8943.9869 & 94.5726\\
 			PR & Curitiba & 83.9431 & 0 & 0 & 25372 & 1141796.2367 & 1068.5486\\
 			PB & João Pessoa & 352.4075 & 0 & 0 & 27344 & 2726035.1595 & 1651.0709\\
-			PA & Belém & 0 & 0 & 0 & 0 & 0 & 0\\
+			PA & Belém & 27.1967 & 0 & 0 & 5443 & 83814.4537 & 289.5072\\
 			PE & Recife & 669.4376 & 0 & 0 & 72134 & 13843379.6277 & 3720.6692\\
 			PI & Teresina & 29.9327 & 0 & 0 & 4155 & 47570.1533 & 218.1058\\
-			RN & Natal & 0 & 0 & 0 & 0 & 0 & 0\\
+			RN & Natal & 3.40625 & 0 & 0 & 2752 & 4488.0193 & 66.9926\\
 			RS & Porto Alegre & 52.7303 & 0 & 0 & 11821 & 186125.3069 & 431.4224\\
 			RJ & Rio de Janeiro & 10.2378 & 0 & 0 & 7342 & 37814.4137 & 194.4592\\
 			RO & Porto Velho & 0 & 0 & 0 & 0 & 0 & 0\\
-			RR & Boa Vista & 0 & 0 & 0 & 0 & 0 & 0\\
-			SC & Florianópolis & 0 & 0 & 0 & 0 & 0 & 0\\
-			SE & Aracaju & 0 & 0 & 0 & 0 & 0 & 0\\
+			RR & Boa Vista & 120.8646 & 0 & 0 & 45988 & 2604294.3432 & 1613.7826\\
+			SC & Florianópolis & 6.7381 & 0 & 0 & 3989 & 17523.7701 & 132.3773\\
+			SE & Aracaju & 0.8018 & 0 & 0 & 1590 & 913.1263 & 30.2179\\
 			SP & São Paulo & 240.1481 & 0 & 0 & 11561 & 813833.7904 & 902.1273\\
 			TO & Palmas & 33.2355 & 0 & 0 & 52091 & 901583.5269 & 949.5175\\
 		\end{tabular}
