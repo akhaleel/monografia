@@ -3,56 +3,61 @@
 
 \section{Resultados}
 
-A - tweets por dia
-B - retweets por dia
-C - favoritos
-D - réplicas
-E - tempo de resposta
-F - menções
+As tabelas dessa seção contém as métricas coletadas pela aplicação responsável por isso, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas as demais. Nela, as cidades estão ranqueadas de acordo com cada métrica. A pontuação é o somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição, ou seja, o 27º lugar equivale a 27 pontos; consequemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos tweets coletados, conforme Tab. \ref{tab:inReplyMetrics}.
 
 \sloppy
-
 \begin{table}[!htb]
 	\center
 		% Título de tabelas sempre aparecem antes da tabela
 	\caption{Colocação dos perfis das prefeituras das capitais, de acordo com suas respectivas métricas}
+	\begin{threeparttable}
 	\bigskip
 	\label{tab:rankMetrics}
 	{
 		\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
 			\hline
-            {\bf UF} & {\bf Capital} & {\bf A} & {\bf B} & {\bf C} & {\bf D} & {\bf E} & {\bf F} & {\bf Pontuação} & {\bf Colocação}\\
+            {\bf UF} & {\bf Capital} & {\bf A \tnote{1}} & {\bf B \tnote{2}} & {\bf C \tnote{3}} & {\bf D \tnote{4}} & {\bf E \tnote{5}} & {\bf F \tnote{6}} & {\bf Pontos} & {\bf Colocação}\\
 			\hline
-			AC & Rio Branco & 24 & 20 & 23 & 22 & 1 & 19 & 109 & 19\\
-			AL & Maceió & 12 & 19 & 17 & 10 & 19 & 18 & 88 & 15\\
-			AM & Manaus & 21 & 18 & 16 & 17 & 14 & 22 & 102 & 18\\
-			AP & Macapá & 14 & 3 & 6 & 7 & 13 & 12 & 49 & 5\\
-			BA & Salvador & 18 & 25 & 25 & 27 & 0 & 27 & 0 & 0\\	
-			CE & Fortaleza & 16 & 15 & 13 & 21 & 10 & 9 & 84 & 14\\
-			DF & Brasília & 10 & 10 & 11 & 18 & 3 & 13 & 65 & 10\\
-			ES & Vitória & 15 & 23 & 21 & 13 & 8 & 21 & 96 & 16\\
-			GO & Goiánia & 1 & 11 & 12 & 15 & 4 & 4 & 44 & 3\\
-			MA & São Luís & 6 & 1 & 1 & 9 & 11 & 8 & 29 & 1\\
-			MG & Belo Horizonte & 19 & 9 & 5 & 12 & 7 & 10 & 57 & 7\\
-			MS & Campo Grande & 20 & 26 & 27 & 25 & 5 & 26 & 129 & 22\\
-			MT & Cuiabá & 26 & 27 & 24 & 20 & 15 & 23 & 129 & 22\\
-			PA & Belém & 27 & 22 & 19 & 16 & 16 & 20 & 120 & 21\\		
-			PB & João Pessoa & 2 & 16 & 14 & 4 & 24 & 7 & 59 & 8\\
-			PE & Recife & 11 & 14 & 10 & 3 & 25 & 6 & 61 & 9\\
-			PI & Teresina & 13 & 6 & 18 & 5 & 17 & 16 & 68 & 12\\
-			PR & Curitiba & 8 & 2 & 2 & 1 & 21 & 2 & 29 & 1\\
-			RJ & Rio de Janeiro & 17 & 7 & 4 & 14 & 12 & 1 & 48 & 4\\
-			RN & Natal & 9 & 8 & 7 & 19 & 6 & 17 & 66 & 11\\
-			RR & Boa Vista & 24 & 24 & 22 & 0 & 22 & 24 & 116 & 20\\
-			RO & Porto Velho & 23 & 21 & 26 & 26 & 0 & 25 & 0 & 0\\
-			RS & Porto Alegre & 3 & 5 & 8 & 6 & 20 & 14 & 49 & 5\\
-			SC & Florianópolis & 25 & 17 & 20 & 23 & 9 & 5 & 99 & 17\\
-			SE & Aracaju & 7 & 13 & 15 & 24 & 2 & 15 & 76 & 13\\
-			SP & São Paulo & 5 & 4 & 3 & 2 & 23 & 3 & 32 & 2\\
-			TO & Palmas & 4 & 12 & 9 & 8 & 18 & 11 & 55 & 6\\
+			AC & Rio Branco & 24º & 20º & 23º & 22º & 1º & 19º & 109 & 19º\\
+			AL & Maceió & 12º & 19º & 17º & 10º & 19º & 18º & 88 & 15º\\
+			AM & Manaus & 21º & 18º & 16º & 17º & 14º & 22º & 102 & 18º\\
+			AP & Macapá & 14º & 3º & 6º & 7º & 13º & 12º & 49 & 5º\\
+			BA & Salvador & 18º & 25º & 25º & 27º & - & 27º & - & -\\	
+			CE & Fortaleza & 16º & 15º & 13º & 21º & 10º & 9º & 84 & 14º\\
+			DF & Brasília & 10º & 10º & 11º & 18º & 3º & 13º & 65 & 10º\\
+			ES & Vitória & 15º & 23º & 21º & 13º & 8º & 21º & 96 & 16º\\
+			GO & Goiánia & 1º & 11º & 12º & 15º & 4º & 4º & 44 & 3º\\
+			MA & São Luís & 6º & 1º & 1º & 9º & 11º & 8º & 29 & 1º\\
+			MG & Belo Horizonte & 19º & 9º & 5º & 12º & 7º & 10º & 57 & 7º\\
+			MS & Campo Grande & 20º & 26º & 27º & 25º & 5º & 26º & 129 & 23º\\
+			MT & Cuiabá & 26º & 27º & 24º & 20º & 15º & 23º & 129 & 23º\\
+			PA & Belém & 27º & 22º & 19º & 16º & 16º & 20º & 120 & 21º\\		
+			PB & João Pessoa & 2º & 16º & 14º & 4º & 24º & 7º & 59 & 8º\\
+			PE & Recife & 11º & 14º & 10º & 3º & 25º & 6º & 61 & 9º\\
+			PI & Teresina & 13º & 6º & 18º & 5º & 17º & 16º & 68 & 12º\\
+			PR & Curitiba & 8º & 2º & 2º & 1º & 21º & 2º & 29 & 1º\\
+			RJ & Rio de Janeiro & 17º & 7º & 4º & 14º & 12º & 1º & 48 & 4º\\
+			RN & Natal & 9º & 8º & 7º & 19º & 6º & 17º & 66 & 11º\\
+			RR & Boa Vista & 24º & 24º & 22º & 11º & 22º & 24º & 127 & 22º\\
+			RO & Porto Velho & 23º & 21º & 26º & 26º & - & 25º & - & -\\
+			RS & Porto Alegre & 3º & 5º & 8º & 6º & 20º & 14º & 49 & 5º\\
+			SC & Florianópolis & 25º & 17º & 20º & 23º & 9º & 5º & 99 & 17º\\
+			SE & Aracaju & 7º & 13º & 15º & 24º & 2º & 15º & 76 & 13º\\
+			SP & São Paulo & 5º & 4º & 3º & 2º & 23º & 3º & 32 & 2º\\
+			TO & Palmas & 4º & 12º & 9º & 8º & 18º & 11º & 55 & 6º\\
+			\hline
 		\end{tabular}
+		\begin{tablenotes}
+            \item[1] Métrica de tweets por dia
+            \item[2] Métrica de retweets por dia
+            \item[3] Métrica de favoritos
+            \item[4] Métrica de réplicas
+            \item[5] Métrica de tempo de resposta
+            \item[6] Métrica de menções
+        \end{tablenotes}
 	}
 		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+		\end{threeparttable}
 \end{table}
 
 
