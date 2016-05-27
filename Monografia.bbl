@@ -56,6 +56,12 @@ Disponível em: <\url{http://thrift.apache.org}>. Acesso em Abril 30, 2016.}
 {{Apache Software Foundation}. \emph{Apache ZooKeeper}. 2016.
 Disponível em: <\url{https://zookeeper.apache.org}>. Acesso em Abril 30, 2016.}
 
+\bibitem[Bonsón et al. 2012]{LocaleGovernment}
+\abntrefinfo{Bonsón et al.}{BONSóN et al.}{2012}
+{BONSóN, E. et al. Local e-goverbment 2.0: Social media and corporate
+  transparency in municipalities.
+\emph{Government Information Quarterly}, v.~29, n.~2, 2012.}
+
 \bibitem[Cisco 2016]{CiscoIoE}
 \abntrefinfo{Cisco}{CISCO}{2016}
 {CISCO. \emph{Internet of Everything}. 2016.
@@ -197,6 +203,12 @@ Disponível em: <\url{http://www.complexevents.com}>. Acesso em Maio 7, 2016.}
 \abntrefinfo{{MongoDB}}{{MongoDB}}{2016}
 {{MongoDB}. 2016.
 Disponível em: <\url{https://www.mongodb.com}>. Acesso em Maio 20, 2016.}
+
+\bibitem[Morais 2015]{Survey}
+\abntrefinfo{Morais}{MORAIS}{2015}
+{MORAIS, T. \emph{Survey on Frameworks for Distributed Computing: Hadoop, Spark
+  and Storm}. 2015.
+Disponível em: <\url{https://www.emc.com}>. Acesso em Maio 11, 2016.}
 
 \bibitem[Narsude 2015]{Datatorrent}
 \abntrefinfo{Narsude}{NARSUDE}{2015}

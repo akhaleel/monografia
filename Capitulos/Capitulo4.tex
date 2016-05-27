@@ -1,14 +1,30 @@
 % Capítulo 4
-\chapter{Resultados e Trabalhos Relacionados}
+\chapter{Resultados}
 
-\section{Resultados}
+\subsection{Trabalhos relacionados}
 
-As tabelas dessa seção contém as métricas coletadas pela aplicação responsável por isso, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas as demais. Nela, as cidades estão ranqueadas de acordo com cada métrica. A pontuação é o somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição, ou seja, o 27º lugar equivale a 27 pontos; consequemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos tweets coletados, conforme Tab. \ref{tab:inReplyMetrics}.
+Em \cite{AVisionOfSocialMedia}, é desenvolvida uma análise das Cidades Inteligentes da Espanha, verificando se há nelas esforços para assegurar que os cidadãos tenham acesso as informações da cidade, podendo assim participar das problemáticas abordadas por seus respectivos governos.
+
+Visando alcançar esse objetivo, analisou-se descritivamente as principais Redes Sociais utilizadas nessas cidades, tendo como resultado Facebook e Twitter. Na sequência, foram definidas variáveis independentes (métricas das Redes Sociais), dependentes (Social Network Ratio) e de controle (tempo de existência do perfil da Rede Social e Produto Interno Bruto), realizando sob elas uma análise exploratória através de múltipla regressão linear.
+
+Por fim, o estudo exploratório foi utilizado para determinar se as Cidades Inteligentes da Espanha faziam ou não uso das Redes Sociais, focando o nível de interação entre os cidadãos e seus governos locais. Como resultado dessa pesquisa, concluiu-se que, embora essas cidades sejam classificadas como Inteligentes, é preciso haver maior e-Participação nas Redes Sociais, posto que, atualmente, esse é um dos principais meios pelos quais as pessoas tem se comunicado.
+
+Outro trabalho com a mesma temática, citado em \cite{LocaleGovernment}, realizou uma análise dos principais governos locais da União Européia, no quesito de e-Participação e dos fatores que a influencia. Com essa proposta, foram analisadas 75 cidades, representando 85\% da população Européia, sendo também levado em consideração o estilo de gestão dos governos locais.
+
+A metodologia de estudo analisou exploratoriamente as Redes Sociais Twitter, Facebook, LinkedIn, YouTube e blogs da Google (Blogger), contruindo um Índice de Sofisticação não Exaustivo, composto por variáveis binárias. A construção desse índice contém os respectivos indicadores de cada Rede Social. Em seguida foi realizada uma análise de regressão para identificar como o estilo de gestão do governo e a facilidade com que a sociedade adotam novas tecnologias influenciam no índice elaborado.
+
+Os resultados da pesquisa apontam que algumas das cidades analisadas, na época do estudo, estavam com iniciativas de e-Participação muito imaturas, além disso, que metade dos governos não possuiam presença nas Redes Sociais. Sendo, por outro lado, massiva a presença de cidadãos discutindo sobre a política local, entrega de serviços, e outros assuntos relacionados a cidade, havendo um isolamento de partes que deveriam se interagir. Por fim, concluiu-se também que o estilo de gestão dos governos locais não influenciam na adoção ou não das Redes Sociais, mas sim a facilidade com que a sociedade adota novas tecnologias. 
+
+Saindo do contexto de e-Participação, a referência \cite{Survey} realiza um comparação entre o Apache Storm e Spark, relacionando-se com a análise descritiva dessa monografia. Nela, o autor cita os casos de uso de cada uma delas, suas respectivas arquiteturas, comparando-as quanto ao modelo de processamento, latência, tolerância a falhas (especificamente, garantia de processamento), integração com processamento em batch e a diferentes linguagens.   
+ 
+\subsection{Resultados}
+
+As tabelas relacionadas as métricas coletadas pela aplicação responsável por isso, estão no apêndice desse trabalho, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas elas. Nela, as cidades estão classificadas de acordo com cada métrica, sendo os valores da coluna pontuação compostos pelo somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição da classificação, ou seja, o 27º lugar representa 27 pontos; consequemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos \textit{tweets} coletados, conforme Tab. \ref{tab:inReplyMetrics}.
 
 \begin{table}[!htb]
 	\center
 		% Título de tabelas sempre aparecem antes da tabela
-	\caption{Ranqueamento das cidades brasileiras como Cidades Inteligentes}
+	\caption{Classificação das cidades brasileiras como Cidades Inteligentes}
 	\bigskip
 	\label{tab:smartCitiesRanking}
 	{
@@ -20,7 +36,7 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			SP & São Paulo & 2º\\
 			MG & Belo Horizonte & 3º\\
 			DF & Brasília & 4º\\
-			PT & Curitiba & 5º\\
+			PR & Curitiba & 5º\\
 			ES & Vitória & 7º\\
 			SC & Florianópolis & 8º\\
 			RS & Porto Alegre & 9º\\
@@ -36,35 +52,14 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 	\center {\bf Fonte: }\cite{BrazilianSmartCitiesRanking}
 \end{table}
 
-\bigskip
-\bigskip
+Em paralelo a essa classificação, o Connected Smart Cities classificou algumas das cidades brasileiras como Cidades Inteligentes \cite{BrazilianSmartCitiesRanking}, levando em consideração 70 indicadores, sendo nenhum deles relacionados a e-Participação. A Tab. \ref{tab:smartCitiesRanking} contém somente a colocação das cidades analisadas por essa monografia. Como esperado, analisando ambas as classificações, nem todas as colocações são correspondentes.
 
-Em paralelo a esse ranque, o Connected Smart Cities elaborou um ranqueamento das cidades brasileiras como Cidades Inteligentes \cite{BrazilianSmartCitiesRanking}, levando em consideração 70 indicadores, nenhum deles relacionados a e-Participação. A Tab. \ref{tab:smartCitiesRanking} contém somente a colocação das cidades analisadas por essa monografia. Como esperado, analisando ambos os ranques, nem todas as colocações são correspondentes.
+Por exemplo, o Rio de Janeiro ocupa a primeira colocação na classificação das Cidades Inteligentes, enquanto que no quesito e-Participação, está em quarto lugar, observando-se essa diferença também em outras cidades. Em contraste, Goiânia, Porto Alegre, Recife, Fortaleza, João Pessoa, estão melhores classificadas quanto a e-Participação.
 
-Por exemplo, Rio de Janeiro ocupa a primeira colocação do ranque das Cidades Inteligentes, enquanto que no quesito e-Participação, está em quarto lugar, tendo classificações inferiores assim como outras cidades. Em contraste, Goiânia, Porto Alegre, Recife, Fortaleza, João Pessoa, estão melhores classificadas nesse quesito.
-
-São Paulo em ambos os casos se manteve na segunda colocação, como esperado por ser referência mundial em Governo Aberto \cite{OpenGovernmentPartnership}, e Curitiba, devido ao fato de ser exemplo de comunicação em Redes Sociais \cite{CuritibaUseCase}. Por outro lado, a colocação de empate da prefeitura de São Luís com a de Curitiba foi um resultado não esperado.
+São Paulo em ambos os casos se manteve na segunda colocação, como esperado por ser referência mundial em Governo Aberto \cite{OpenGovernmentPartnership}, e Curitiba, devido ao fato de ser exemplo de comunicação em Redes Sociais \cite{CuritibaUseCase}, favorecendo a e-Participação. Por outro lado, a colocação de empate da prefeitura de São Luís com a de Curitiba foi um resultado não esperado.
 
 A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa relacionado as métricas coletadas. Como já mencionado no Cap. \ref{chapter3}, para cada métrica (escolhida no menu seletor) é computada a média nacional, adicionando uma camada vermelha sobre a região com valor inferior a ela, e azul caso superior. Além disso, é possível obter informações detalhadas clicando em cima da região no mapa, conforme exibido na Fig. \ref{fig:webApllication2}. 
 
-\begin{figure}[!ht]
-  \centering
-    \includegraphics[width=1\textwidth]{Imagens/webApplication.png}
-  \caption{Ilustração da aplicação web desenvolvida}
-  {\bf Fonte:} Elaboração própria
-  \label{fig:webApllication}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering
-    \includegraphics[width=1\textwidth]{Imagens/webApplication2.png}
-  \caption{Ilustração do painel informativo da aplicação web}
-  {\bf Fonte:} Elaboração própria
-  \label{fig:webApllication2}
-\end{figure}
-
-
-\sloppy
 \begin{table}[!htb]
 	\center
 		% Título de tabelas sempre aparecem antes da tabela
@@ -118,4 +113,132 @@ A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa r
 		\end{threeparttable}
 \end{table}
 
-\section{Trabalhos Relacionados}
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/webApplication.png}
+  \caption{Ilustração da aplicação web desenvolvida}
+  {\bf Fonte:} Elaboração própria
+  \label{fig:webApllication}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/webApplication2.png}
+  \caption{Ilustração do painel informativo da aplicação web}
+  {\bf Fonte:} Elaboração própria
+  \label{fig:webApllication2}
+\end{figure}
+
+As aplicacações que realizaram o processamento de stream de \textit{tweets} em tempo real, foram executadas em dois dias (22/05 com Spark e 23/05 com Storm), durante o período de 12h, estando os resultados do primeiro dia na Tab.\ref{tab:sentimentsSpark}, e do segundo na Tab.\ref{tab:sentimentsStorm}.
+
+Com base nesses resultados, para cada polaridade foi calculada a média entre todas as cidades, utilizada para construir o mapa da aplicação web (Fig.\ref{fig:sentimentsSpark} e Fig.\ref{fig:sentimentsStorm}). Tal mapa, fornece uma visualização da polaridade dos sentimentos dos \textit{tweets} que mencionam os perfis do Twitter em análise.
+
+Com isso, é possível estimar a satisfação dos cidadãos com os acontecimentos da cidade. Além disso, observa-se nas tabelas mencionadas, que as cidades melhores classificadas pela primeira aplicação interagiram mais com suas respectivas prefeituras, reforçando os primeiros resultados encontrados. 
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/sentimentsSpark.png}
+  \caption{Ilustração das polaridades de sentimentos processada pelo Spark}
+  {\bf Fonte:} Elaboração própria
+  \label{fig:sentimentsSpark}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/sentimentsStorm.png}
+  \caption{Ilustração das polaridades de sentimentos processada pelo Storm}
+  {\bf Fonte:} Elaboração própria
+  \label{fig:sentimentsStorm}
+\end{figure}
+
+\sloppy
+
+\begin{table}[!htb]
+	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Polaridade dos sentimentos processados pelo Spark, referente ao dia 22/05/2016}
+	\bigskip
+	\label{tab:sentimentsSpark}
+	{
+		\begin{tabular}{c|c|c|c|c}
+			\hline
+            {\bf UF} & {\bf Capital} & {\bf Positiva} & {\bf Negativa} & {\bf Neutra}\\
+			\hline
+			AC & Rio Branco & 0 & 0 & 0\\
+			AL & Maceió & 0 & 0 & 2\\
+			AM & Manaus & 0 & 0 & 0\\
+			AP & Macapá & 0 & 0 & 0\\
+			BA & Salvador & 0 & 0 & 7\\	
+			CE & Fortaleza & 0 & 0 & 13\\
+			DF & Brasília & 0 & 0 & 14\\
+			ES & Vitória & 0 & 0 & 0\\
+			GO & Goiânia & 2 & 0 & 7\\
+			MA & São Luís & 3 & 1 & 27\\
+			MG & Belo Horizonte & 6 & 7 & 8\\
+			MS & Campo Grande & 1 & 0 & 0\\
+			MT & Cuiabá & 0 & 0 & 0\\
+			PA & Belém & 0 & 0 & 4\\		
+			PB & João Pessoa & 1 & 0 & 17\\
+			PE & Recife & 9 & 0 & 24\\
+			PI & Teresina & 0 & 0 & 13\\
+			PR & Curitiba & 12 & 13 & 51\\
+			RJ & Rio de Janeiro & 12 & 3 & 102\\
+			RN & Natal & 0 & 4 & 2\\
+			RO & Porto Velho & 0 & 0 & 0\\
+			RR & Boa Vista & 0 & 0 & 0\\
+			RS & Porto Alegre & 0 & 0 & 1\\
+			SC & Florianópolis & 2 & 1 & 33\\
+			SE & Aracaju & 0 & 0 & 1\\
+			SP & São Paulo & 38 & 9 & 119\\
+			TO & Palmas & 2 & 10 & 12\\
+		\end{tabular}
+	}
+	\begin{flushleft}{\bf Fonte: }{Elaboração própria}\end{flushleft}
+\end{table}
+
+\sloppy
+
+\begin{table}[!htb]
+	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Polaridade dos sentimentos processados pelo Storm, referente ao dia 22/05/2016}
+	\bigskip
+	\label{tab:sentimentsStorm}
+	{
+		\begin{tabular}{c|c|c|c|c}
+			\hline
+            {\bf UF} & {\bf Capital} & {\bf Positiva} & {\bf Negativa} & {\bf Neutra}\\
+			\hline
+			AC & Rio Branco & 0 & 1 & 1\\
+			AL & Maceió & 0 & 0 & 5\\
+			AM & Manaus & 0 & 0 & 9\\
+			AP & Macapá & 0 & 0 & 0\\
+			BA & Salvador & 0 & 0 & 7\\	
+			CE & Fortaleza & 0 & 0 & 36\\
+			DF & Brasília & 2 & 4 & 18\\
+			ES & Vitória & 0 & 0 & 0\\
+			GO & Goiânia & 13 & 9 & 102\\
+			MA & São Luís & 4 & 4 & 22\\
+			MG & Belo Horizonte & 3 & 4 & 22\\
+			MS & Campo Grande & 0 & 0 & 0\\
+			MT & Cuiabá & 0 & 0 & 0\\
+			PA & Belém & 0 & 1 & 15\\		
+			PB & João Pessoa & 1 & 4 & 35\\
+			PE & Recife & 4 & 1 & 34\\
+			PI & Teresina & 1 & 0 & 33\\
+			PR & Curitiba & 16 & 3 & 90\\
+			RJ & Rio de Janeiro & 9 & 1 & 91\\
+			RN & Natal & 2 & 3 & 29\\
+			RO & Porto Velho & 0 & 0 & 0\\
+			RR & Boa Vista & 0 & 0 & 0\\
+			RS & Porto Alegre & 1 & 3 & 13\\
+			SC & Florianópolis & 2 & 3 & 45\\
+			SE & Aracaju & 2 & 1 & 10\\
+			SP & São Paulo & 11 & 5 & 38\\
+			TO & Palmas & 3 & 3 & 11\\
+		\end{tabular}
+	}
+	\begin{flushleft}{\bf Fonte: }{Elaboração própria}\end{flushleft}
+\end{table}
+
+
