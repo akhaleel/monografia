@@ -5,6 +5,65 @@
 
 As tabelas dessa seção contém as métricas coletadas pela aplicação responsável por isso, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas as demais. Nela, as cidades estão ranqueadas de acordo com cada métrica. A pontuação é o somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição, ou seja, o 27º lugar equivale a 27 pontos; consequemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos tweets coletados, conforme Tab. \ref{tab:inReplyMetrics}.
 
+\begin{table}[!htb]
+	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Ranqueamento das cidades brasileiras como Cidades Inteligentes}
+	\bigskip
+	\label{tab:smartCitiesRanking}
+	{
+		\begin{tabular}{c|c|c}
+			\hline
+            {\bf UF} & {\bf Capital} & {\bf Colocação}\\
+			\hline
+			RJ & Rio de Janeiro & 1º\\
+			SP & São Paulo & 2º\\
+			MG & Belo Horizonte & 3º\\
+			DF & Brasília & 4º\\
+			PT & Curitiba & 5º\\
+			ES & Vitória & 7º\\
+			SC & Florianópolis & 8º\\
+			RS & Porto Alegre & 9º\\
+			PE & Recife & 10º\\
+			CE & Fortaleza & 18º\\
+			GO & Goiânia & 24º\\
+			PB & João Pessoa & 29º\\
+			BA & Salvador & 31º\\
+			SE & Aracaju & 33º\\
+			PI & Teresina & 35º\\			
+		\end{tabular}
+	}
+	\center {\bf Fonte: }\cite{BrazilianSmartCitiesRanking}
+\end{table}
+
+\bigskip
+\bigskip
+
+Em paralelo a esse ranque, o Connected Smart Cities elaborou um ranqueamento das cidades brasileiras como Cidades Inteligentes \cite{BrazilianSmartCitiesRanking}, levando em consideração 70 indicadores, nenhum deles relacionados a e-Participação. A Tab. \ref{tab:smartCitiesRanking} contém somente a colocação das cidades analisadas por essa monografia. Como esperado, analisando ambos os ranques, nem todas as colocações são correspondentes.
+
+Por exemplo, Rio de Janeiro ocupa a primeira colocação do ranque das Cidades Inteligentes, enquanto que no quesito e-Participação, está em quarto lugar, tendo classificações inferiores assim como outras cidades. Em contraste, Goiânia, Porto Alegre, Recife, Fortaleza, João Pessoa, estão melhores classificadas nesse quesito.
+
+São Paulo em ambos os casos se manteve na segunda colocação, como esperado por ser referência mundial em Governo Aberto \cite{OpenGovernmentPartnership}, e Curitiba, devido ao fato de ser exemplo de comunicação em Redes Sociais \cite{CuritibaUseCase}. Por outro lado, a colocação de empate da prefeitura de São Luís com a de Curitiba foi um resultado não esperado.
+
+A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa relacionado as métricas coletadas. Como já mencionado no Cap. \ref{chapter3}, para cada métrica (escolhida no menu seletor) é computada a média nacional, adicionando uma camada vermelha sobre a região com valor inferior a ela, e azul caso superior. Além disso, é possível obter informações detalhadas clicando em cima da região no mapa, conforme exibido na Fig. \ref{fig:webApllication2}. 
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/webApplication.png}
+  \caption{Ilustração da aplicação web desenvolvida}
+  {\bf Fonte:} Elaboração própria
+  \label{fig:webApllication}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/webApplication2.png}
+  \caption{Ilustração do painel informativo da aplicação web}
+  {\bf Fonte:} Elaboração própria
+  \label{fig:webApllication2}
+\end{figure}
+
+
 \sloppy
 \begin{table}[!htb]
 	\center
@@ -22,11 +81,11 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			AL & Maceió & 12º & 19º & 17º & 10º & 19º & 18º & 88 & 15º\\
 			AM & Manaus & 21º & 18º & 16º & 17º & 14º & 22º & 102 & 18º\\
 			AP & Macapá & 14º & 3º & 6º & 7º & 13º & 12º & 49 & 5º\\
-			BA & Salvador & 18º & 25º & 25º & 27º & - & 27º & - & -\\	
+			BA & Salvador & 18º & 25º & 25º & 27º & - & 27º & 122 & -\\	
 			CE & Fortaleza & 16º & 15º & 13º & 21º & 10º & 9º & 84 & 14º\\
 			DF & Brasília & 10º & 10º & 11º & 18º & 3º & 13º & 65 & 10º\\
 			ES & Vitória & 15º & 23º & 21º & 13º & 8º & 21º & 96 & 16º\\
-			GO & Goiánia & 1º & 11º & 12º & 15º & 4º & 4º & 44 & 3º\\
+			GO & Goiânia & 1º & 11º & 12º & 15º & 4º & 4º & 44 & 3º\\
 			MA & São Luís & 6º & 1º & 1º & 9º & 11º & 8º & 29 & 1º\\
 			MG & Belo Horizonte & 19º & 9º & 5º & 12º & 7º & 10º & 57 & 7º\\
 			MS & Campo Grande & 20º & 26º & 27º & 25º & 5º & 26º & 129 & 23º\\
@@ -39,13 +98,12 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			RJ & Rio de Janeiro & 17º & 7º & 4º & 14º & 12º & 1º & 48 & 4º\\
 			RN & Natal & 9º & 8º & 7º & 19º & 6º & 17º & 66 & 11º\\
 			RR & Boa Vista & 24º & 24º & 22º & 11º & 22º & 24º & 127 & 22º\\
-			RO & Porto Velho & 23º & 21º & 26º & 26º & - & 25º & - & -\\
+			RO & Porto Velho & 23º & 21º & 26º & 26º & - & 25º & 121 & -\\
 			RS & Porto Alegre & 3º & 5º & 8º & 6º & 20º & 14º & 49 & 5º\\
 			SC & Florianópolis & 25º & 17º & 20º & 23º & 9º & 5º & 99 & 17º\\
 			SE & Aracaju & 7º & 13º & 15º & 24º & 2º & 15º & 76 & 13º\\
 			SP & São Paulo & 5º & 4º & 3º & 2º & 23º & 3º & 32 & 2º\\
 			TO & Palmas & 4º & 12º & 9º & 8º & 18º & 11º & 55 & 6º\\
-			\hline
 		\end{tabular}
 		\begin{tablenotes}
             \item[1] Métrica de tweets por dia
@@ -80,7 +138,7 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			CE & Fortaleza & 8.1012 & 8 & 1 & 24 & 16.4454 & 4.0552\\	
 			DF & Brasília & 10.0946 & 10 & 1 & 63 & 31.2339 & 5.5887\\			
 			ES & Vitória & 8.6253 & 8 & 1 & 71 & 33.3448 & 5.7744\\
-			GO & Goiánia & 41.0000 & 39 & 1 & 104 & 684.2307 & 26.1578\\			
+			GO & Goiânia & 41.0000 & 39 & 1 & 104 & 684.2307 & 26.1578\\			
 			MA & São Luís & 15.6862 & 14 & 5 & 38 & 18.0192 & 4.2449\\
 			MG & Belo Horizonte & 7.5805 & 7 & 1 & 24 & 9.1297 & 3.0215\\
 			MS & Campo Grande & 7.2539 & 6 & 1 & 30 & 35.1735 & 5.9307\\			
@@ -123,7 +181,7 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			CE & Fortaleza & 0.7656 & 0 & 0 & 32 & 1.5338 & 1.2384\\		
 			DF & Brasília & 1.6449 & 1 & 0 & 329 & 63.2714 & 1.9681\\
 			ES & Vitória & 0.3018 & 0 & 0 & 23 & 0.7576 & 0.8704\\
-			GO & Goiánia & 1.6332 & 1 & 0 & 18 & 3.5193 & 1.8759\\		
+			GO & Goiânia & 1.6332 & 1 & 0 & 18 & 3.5193 & 1.8759\\		
 			MA & São Luís & 14.5868 & 15 & 0 & 47 & 147.1399 & 12.1301\\
 			MG & Belo Horizonte & 2.5498 & 1 & 0 & 308 & 53.3316 & 7.3028\\
 			MS & Campo Grande & 0.0784 & 0 & 0 & 3 & 0.0841 & 0.2901\\
@@ -166,7 +224,7 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			CE & Fortaleza & 1.8134 & 1 & 0 & 22 & 2.6636 & 1.6320\\	
 			DF & Brasília & 1.9681 & 1 & 0 & 504 & 160.0064 & 12.6493\\
 			ES & Vitória & 0.4421 & 0 & 0 & 15 & 0.6922 & 0.8320\\
-			GO & Goiánia & 1.9177 & 1 & 0 & 20 & 3.7246 & 1.9299\\
+			GO & Goiânia & 1.9177 & 1 & 0 & 20 & 3.7246 & 1.9299\\
 			MA & São Luís & 16.3471 & 18 & 0 & 63 & 149.8610 & 12.2417\\
 			MG & Belo Horizonte & 3.4410 & 2 & 0 & 257 & 37.6513 & 6.1360\\
 			MS & Campo Grande & 0.0025 & 0 & 0 & 1 & 0.0024 & 0.0499\\			
@@ -209,7 +267,7 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			CE & Fortaleza & 0.0099 & 0 & 0 & 1 & 0.0098 & 0.0994\\		
 			DF & Brasília & 0.0218 & 0 & 0 & 1 & 0.0213 & 0.1462\\		
 			ES & Vitória & 0.0356 & 0 & 0 & 1 & 0.0343 & 0.1853\\
-			GO & Goiánia & 0.0253 & 0 & 0 & 1 & 0.0246 & 0.1571\\
+			GO & Goiânia & 0.0253 & 0 & 0 & 1 & 0.0246 & 0.1571\\
 			MA & São Luís & 0.0825 & 0 & 0 & 1 & 0.0756 & 0.2751\\
 			MG & Belo Horizonte & 0.0375 & 0 & 0 & 1 & 0.0361 & 0.1900\\
 			MS & Campo Grande & 0.0012 & 0 & 0 & 1 & 0.0012 & 0.0353\\
@@ -252,7 +310,7 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			CE & Fortaleza & 9.9012 & 0 & 0 & 5039 & 35491.4871 & 188.3918\\
 			DF & Brasília & 2.0675 & 0 & 0 & 1291 & 1593.4398 & 0.1060\\			
 			ES & Vitória & 6.7112 & 0 & 0 & 9607 & 35471.7322 & 188.3394\\
-			GO & Goiánia & 2.5384 & 0 & 0 & 1108 & 1688.0865 & 41.0863\\			
+			GO & Goiânia & 2.5384 & 0 & 0 & 1108 & 1688.0865 & 41.0863\\			
 			MA & São Luís & 10.0528 & 0 & 0 & 4334 & 14292.01 & 119.5491\\
 			MG & Belo Horizonte & 3.9512 & 0 & 0 & 4522 & 8943.9869 & 94.5726\\
 			MS & Campo Grande & 2.7471 & 0 & 0 & 2905 & 7902.8722 & 88.8981\\			
@@ -295,7 +353,7 @@ As tabelas dessa seção contém as métricas coletadas pela aplicação responsável p
 			CE & Fortaleza & 47.7 & 49 & 67 & 26 & 148.6099 & 12.1905\\	
 			DF & Brasília & 35.8 & 40 & 16 & 50 & 123.7599 & 11.1247\\			
 			ES & Vitória & 4.8 & 4 & 1 & 12 & 10.9599 & 3.3105\\
-			GO & Goiánia & 85.4 & 76 & 24 & 154 & 1681.04 & 41\\		
+			GO & Goiânia & 85.4 & 76 & 24 & 154 & 1681.04 & 41\\		
 			MA & São Luís & 51.9 & 56 & 5 & 89 & 459.6899 & 21.4403\\
 			MG & Belo Horizonte & 42.3 & 43 & 7 & 66 & 256.81 & 16.0252\\
 			MS & Campo Grande & 0 & 0 & 0 & 0 & 0 & 0\\			
