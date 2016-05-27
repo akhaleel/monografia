@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  26 MAY 2016 21:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  26 MAY 2016 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -326,8 +326,7 @@ Package: threeparttable 2003/06/13  v 3.0
 (./Includes/Resumo.aux) (./Includes/Abstract.aux) (./Capitulos/Introducao.aux)
 (./Capitulos/Capitulo2.aux) (./Capitulos/Capitulo3.aux)
 (./Capitulos/Capitulo4.aux) (./Capitulos/Capitulo5.aux)
-(./Capitulos/Consideracoes.aux) (./Capitulos/ApendiceA.aux)
-(./Capitulos/AnexoA.aux))
+(./Capitulos/Consideracoes.aux) (./Capitulos/ApendiceA.aux))
 \openout1 = `Monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -683,18 +682,12 @@ File: Imagens/webApplication2.png Graphic file (type png)
 <use Imagens/webApplication2.png>
 Package pdftex.def Info: Imagens/webApplication2.png used on input line 60.
 (pdftex.def)             Requested size: 455.24411pt x 220.13853pt.
-
-Overfull \hbox (8.94287pt too wide) in paragraph at lines 301--334
- [] 
- []
-
-) [52 <./Imagens/webApplication.png>] [53 <./Imagens/webApplication2.png>]
-[54] [55] [56] [57] [58] [59] [60]
+) [52 <./Imagens/webApplication.png>] [53 <./Imagens/webApplication2.png>] [54]
 \openout2 = `Capitulos/Capitulo5.aux'.
 
  (./Capitulos/Capitulo5.tex
 Cap\'{\i }tulo 5.
-) [61
+) [55
 
 
 
@@ -703,7 +696,7 @@ Cap\'{\i }tulo 5.
 
  (./Capitulos/Consideracoes.tex
 Cap\'{\i }tulo 6.
-) [62
+) [56
 
 
 
@@ -712,28 +705,24 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [63
+) [57
 
 
-] [64]
-[65]) [66]
+] [58]
+[59]) [60]
 \openout2 = `Capitulos/ApendiceA.aux'.
 
  (./Capitulos/ApendiceA.tex
 Apendice A.
-) [67
+
+Overfull \hbox (8.94287pt too wide) in paragraph at lines 184--217
+ [] 
+ []
+
+) [61
 
 
-]
-\openout2 = `Capitulos/AnexoA.aux'.
-
- (./Capitulos/AnexoA.tex
-Anexo A.
-) [68
-
-
-
-]
+] [62] [63] [64] [65] [66]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -744,39 +733,39 @@ Anexo A.
 (./Includes/Resumo.aux) (./Includes/Abstract.aux) (./Capitulos/Introducao.aux)
 (./Capitulos/Capitulo2.aux) (./Capitulos/Capitulo3.aux)
 (./Capitulos/Capitulo4.aux) (./Capitulos/Capitulo5.aux)
-(./Capitulos/Consideracoes.aux) (./Capitulos/ApendiceA.aux)
-(./Capitulos/AnexoA.aux)) ) 
+(./Capitulos/Consideracoes.aux) (./Capitulos/ApendiceA.aux)) ) 
 Here is how much of TeX's memory you used:
- 5183 strings out of 493027
- 73542 string characters out of 6134069
- 262687 words of memory out of 5000000
- 8402 multiletter control sequences out of 15000+600000
+ 5175 strings out of 493027
+ 73391 string characters out of 6134069
+ 236288 words of memory out of 5000000
+ 8401 multiletter control sequences out of 15000+600000
  33093 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  38i,16n,26p,875b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/
-cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
--super/sfbx0800.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
-uper/sfbx1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-sup
-er/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super
-/sfbx1728.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/s
-fbx2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfb
-x2488.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1
-095.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc120
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Monografia.pdf (69 pages, 2441454 bytes).
+{/usr/local/texli
+ve/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/cm-super/sftt1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/cm-super/sfxc1728.pfb>
+Output written on Monografia.pdf (67 pages, 2440850 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
+ 334 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
