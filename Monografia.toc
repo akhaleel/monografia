@@ -2,55 +2,51 @@
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{15}
 \contentsline {section}{\numberline {1.1}Objetivo}{16}
 \contentsline {section}{\numberline {1.2}Organiza\c c\~ao do trabalho}{17}
-\contentsline {chapter}{\numberline {2}Fundamenta\c c\~ao Te\'orica}{18}
-\contentsline {section}{\numberline {2.1}Cidades Inteligentes}{18}
-\contentsline {subsection}{\numberline {2.1.1}Internet das Coisas}{19}
-\contentsline {subsection}{\numberline {2.1.2}Requisitos de uma aplica\c c\~ao de Cidade Inteligente}{20}
-\contentsline {subsection}{\numberline {2.1.3}e-Participa\c c\~ao}{21}
-\contentsline {paragraph}{N\IeC {\'\i }veis de e-Participa\c c\~ao.}{22}
-\contentsline {section}{\numberline {2.2}Plataformas de processamento em tempo real}{23}
-\contentsline {subsection}{\numberline {2.2.1}Processamento de fluxo de eventos em tempo real}{24}
-\contentsline {section}{\numberline {2.3}Apache Spark}{25}
-\contentsline {subsection}{\numberline {2.3.1}M\'odulos do Apache Spark}{26}
-\contentsline {subsection}{\numberline {2.3.2}Composi\c c\~ao Interna do Apache Spark}{26}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Modelo de execu\c c\~ao das aplica\c c\~oes Spark}{27}
-\contentsline {subsubsection}{\numberline {2.3.2.2}Job}{28}
-\contentsline {subsubsection}{\numberline {2.3.2.3}Stage}{28}
-\contentsline {subsubsection}{\numberline {2.3.2.4}Task}{29}
-\contentsline {section}{\numberline {2.4}Apache Storm}{30}
-\contentsline {subsection}{\numberline {2.4.1}Composi\c c\~ao interna do Apache Storm}{30}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Nimbus}{31}
-\contentsline {subsubsection}{\numberline {2.4.1.2}Supervisor node}{31}
-\contentsline {subsubsection}{\numberline {2.4.1.3}ZooKeeper}{31}
-\contentsline {subsubsection}{\numberline {2.4.1.4}Topologia}{32}
-\contentsline {paragraph}{Bolt.}{32}
-\contentsline {paragraph}{Spout.}{33}
-\contentsline {chapter}{\numberline {3}Aplica\c c\~oes desenvolvidas e estudo comparativo}{35}
-\contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{35}
-\contentsline {paragraph}{Apache Spark Streaming.}{35}
-\contentsline {paragraph}{Apache Flink.}{36}
-\contentsline {paragraph}{Apache Storm.}{36}
-\contentsline {paragraph}{Apache Samza.}{36}
-\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas para estudo de caso}{37}
-\contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao web para visualiza\c c\~ao das m\'etricas relacionadas a e-Participa\c c\~ao}{38}
-\contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{39}
-\contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{42}
-\contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{45}
-\contentsline {section}{\numberline {3.3}Estudo comparativo}{48}
-\contentsline {subsection}{\numberline {3.3.1}Processamento de grande volume de dados em tempo real}{48}
-\contentsline {subsection}{\numberline {3.3.2}Toler\^ancia a falhas}{48}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Garantia de processamento}{50}
-\contentsline {subsection}{\numberline {3.3.3}Escalabilidade}{50}
-\contentsline {subsection}{\numberline {3.3.4}Modelo de programa\c c\~ao}{51}
-\contentsline {chapter}{\numberline {4}Resultados}{52}
-\contentsline {subsection}{\numberline {4.0.1}Trabalhos relacionados}{52}
-\contentsline {subsection}{\numberline {4.0.2}Resultados}{53}
-\contentsline {chapter}{\numberline {5}Cap\IeC {\'\i }tulo 5}{60}
-\contentsline {section}{\numberline {5.1}Se\c c\~ao 1}{60}
-\contentsline {section}{\numberline {5.2}Se\c c\~ao 2}{60}
-\contentsline {subsection}{\numberline {5.2.1}Subse\c c\~ao 5.1}{60}
-\contentsline {subsection}{\numberline {5.2.2}Subse\c c\~ao 5.2}{60}
-\contentsline {section}{\numberline {5.3}Se\c c\~ao 3}{60}
-\contentsline {chapter}{\numberline {6}Considera\c c\~oes finais}{61}
-\contentsline {chapter}{Refer\^encias}{62}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{66}
+\contentsline {chapter}{\numberline {2}Fundamenta\c c\~ao Te\'orica}{19}
+\contentsline {section}{\numberline {2.1}Cidades Inteligentes}{19}
+\contentsline {subsection}{\numberline {2.1.1}Internet das Coisas}{20}
+\contentsline {subsection}{\numberline {2.1.2}Requisitos de uma aplica\c c\~ao de Cidade Inteligente}{21}
+\contentsline {subsection}{\numberline {2.1.3}e-Participa\c c\~ao}{22}
+\contentsline {paragraph}{N\IeC {\'\i }veis de e-Participa\c c\~ao.}{23}
+\contentsline {section}{\numberline {2.2}Plataformas de processamento em tempo real}{24}
+\contentsline {subsection}{\numberline {2.2.1}Processamento de fluxo de eventos em tempo real}{25}
+\contentsline {section}{\numberline {2.3}Apache Spark}{26}
+\contentsline {subsection}{\numberline {2.3.1}M\'odulos do Apache Spark}{27}
+\contentsline {subsection}{\numberline {2.3.2}Composi\c c\~ao Interna do Apache Spark}{27}
+\contentsline {subsubsection}{\numberline {2.3.2.1}Modelo de execu\c c\~ao das aplica\c c\~oes Spark}{28}
+\contentsline {subsubsection}{\numberline {2.3.2.2}Job}{29}
+\contentsline {subsubsection}{\numberline {2.3.2.3}Stage}{29}
+\contentsline {subsubsection}{\numberline {2.3.2.4}Task}{30}
+\contentsline {section}{\numberline {2.4}Apache Storm}{31}
+\contentsline {subsection}{\numberline {2.4.1}Composi\c c\~ao interna do Apache Storm}{31}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Nimbus}{32}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Supervisor node}{32}
+\contentsline {subsubsection}{\numberline {2.4.1.3}ZooKeeper}{32}
+\contentsline {subsubsection}{\numberline {2.4.1.4}Topologia}{33}
+\contentsline {paragraph}{Bolt.}{33}
+\contentsline {paragraph}{Spout.}{34}
+\contentsline {chapter}{\numberline {3}Aplica\c c\~oes desenvolvidas e estudo comparativo}{36}
+\contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{36}
+\contentsline {paragraph}{Apache Spark Streaming.}{36}
+\contentsline {paragraph}{Apache Flink.}{37}
+\contentsline {paragraph}{Apache Storm.}{37}
+\contentsline {paragraph}{Apache Samza.}{37}
+\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas}{38}
+\contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao web para visualiza\c c\~ao das m\'etricas relacionadas a e-Participa\c c\~ao}{39}
+\contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{40}
+\contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{43}
+\contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{46}
+\contentsline {section}{\numberline {3.3}Estudo comparativo}{49}
+\contentsline {subsection}{\numberline {3.3.1}Processamento de grande volume de dados em tempo real}{49}
+\contentsline {subsection}{\numberline {3.3.2}Toler\^ancia a falhas}{49}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Garantia de processamento}{51}
+\contentsline {subsection}{\numberline {3.3.3}Escalabilidade}{51}
+\contentsline {subsection}{\numberline {3.3.4}Modelo de programa\c c\~ao}{52}
+\contentsline {chapter}{\numberline {4}Resultados}{53}
+\contentsline {subsection}{\numberline {4.0.1}Trabalhos relacionados}{53}
+\contentsline {subsection}{\numberline {4.0.2}Resultados}{54}
+\contentsline {chapter}{\numberline {5}Conclus\~oes}{61}
+\contentsline {section}{\numberline {5.1}Limita\c c\~oes}{61}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{62}
+\contentsline {chapter}{Refer\^encias}{63}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{67}

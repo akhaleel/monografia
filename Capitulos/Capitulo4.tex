@@ -1,7 +1,11 @@
 % Capítulo 4
 \chapter{Resultados}
+\label{chapter4}
+
+Nesse capítulo, alguns trabalhos relacionados a essa monografia são mencionados na seção \ref{relatedStudies}, buscando mostrar o que tem sido feito e o diferencial desse trabalho. A seção \ref{results}, por sua vez, trata a respeito dos resultados obtidos.
 
 \subsection{Trabalhos relacionados}
+\label{relatedStudies}
 
 Em \cite{AVisionOfSocialMedia}, é desenvolvida uma análise das Cidades Inteligentes da Espanha, verificando se há nelas esforços para assegurar que os cidadãos tenham acesso as informações da cidade, podendo assim participar das problemáticas abordadas por seus respectivos governos.
 
@@ -15,11 +19,12 @@ A metodologia de estudo analisou exploratoriamente as Redes Sociais Twitter, Fac
 
 Os resultados da pesquisa apontam que algumas das cidades analisadas, na época do estudo, estavam com iniciativas de e-Participação muito imaturas, além disso, que metade dos governos não possuiam presença nas Redes Sociais. Sendo, por outro lado, massiva a presença de cidadãos discutindo sobre a política local, entrega de serviços, e outros assuntos relacionados a cidade, havendo um isolamento de partes que deveriam se interagir. Por fim, concluiu-se também que o estilo de gestão dos governos locais não influenciam na adoção ou não das Redes Sociais, mas sim a facilidade com que a sociedade adota novas tecnologias. 
 
-Saindo do contexto de e-Participação, a referência \cite{Survey} realiza um comparação entre o Apache Storm e Spark, relacionando-se com a análise descritiva dessa monografia. Nela, o autor cita os casos de uso de cada uma delas, suas respectivas arquiteturas, comparando-as quanto ao modelo de processamento, latência, tolerância a falhas (especificamente, garantia de processamento), integração com processamento em batch e a diferentes linguagens.   
+Saindo do contexto de e-Participação, a referência \cite{Survey} realiza um comparação entre o Apache Storm e Spark, relacionando-se com o estudo comparativo dessa monografia. Nela, o autor cita os casos de uso de cada uma delas, suas respectivas arquiteturas, comparando-as quanto ao modelo de processamento, latência, tolerância a falhas (especificamente, garantia de processamento), integração com processamento em batch e a diferentes linguagens.   
  
 \subsection{Resultados}
+\label{results}
 
-As tabelas relacionadas as métricas coletadas pela aplicação responsável por isso, estão no apêndice desse trabalho, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas elas. Nela, as cidades estão classificadas de acordo com cada métrica, sendo os valores da coluna pontuação compostos pelo somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição da classificação, ou seja, o 27º lugar representa 27 pontos; consequemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos \textit{tweets} coletados, conforme Tab. \ref{tab:inReplyMetrics}.
+As tabelas contendo as métricas coletadas sobre e-Participação, estão no apêndice desse trabalho, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas elas. Nela, as cidades estão classificadas de acordo com cada métrica, sendo os valores da coluna pontuação compostos pelo somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição da classificação, ou seja, o 27º lugar representa 27 pontos; consequemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos \textit{tweets} coletados, conforme Tab. \ref{tab:inReplyMetrics}.
 
 \begin{table}[!htb]
 	\center
@@ -113,7 +118,7 @@ A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa r
 		\end{threeparttable}
 \end{table}
 
-\begin{figure}[!ht]
+\begin{figure}[!hb]
   \centering
     \includegraphics[width=1\textwidth]{Imagens/webApplication.png}
   \caption{Ilustração da aplicação web desenvolvida}
@@ -121,7 +126,7 @@ A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa r
   \label{fig:webApllication}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[!hb]
   \centering
     \includegraphics[width=1\textwidth]{Imagens/webApplication2.png}
   \caption{Ilustração do painel informativo da aplicação web}
@@ -131,14 +136,16 @@ A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa r
 
 As aplicacações que realizaram o processamento de stream de \textit{tweets} em tempo real, foram executadas em dois dias (22/05 com Spark e 23/05 com Storm), durante o período de 12h, estando os resultados do primeiro dia na Tab.\ref{tab:sentimentsSpark}, e do segundo na Tab.\ref{tab:sentimentsStorm}.
 
-Com base nesses resultados, para cada polaridade foi calculada a média entre todas as cidades, utilizada para construir o mapa da aplicação web (Fig.\ref{fig:sentimentsSpark} e Fig.\ref{fig:sentimentsStorm}). Tal mapa, fornece uma visualização da polaridade dos sentimentos dos \textit{tweets} que mencionam os perfis do Twitter em análise.
+Com base nesses resultados, para cada polaridade foi calculada a média entre todas as cidades, utilizada para construir o mapa da aplicação web (Fig.\ref{fig:sentimentsSpark} e Fig.\ref{fig:sentimentsStorm}). No qual, pode-se visualizar a polaridade dos sentimentos dos \textit{tweets} que mencionam os perfis do Twitter em análise. Além disso, observa-se também nas tabelas mencionadas, que as cidades melhores classificadas pela primeira aplicação interagiram mais com suas respectivas prefeituras, reforçando os primeiros resultados encontrados. 
 
-Com isso, é possível estimar a satisfação dos cidadãos com os acontecimentos da cidade. Além disso, observa-se nas tabelas mencionadas, que as cidades melhores classificadas pela primeira aplicação interagiram mais com suas respectivas prefeituras, reforçando os primeiros resultados encontrados. 
+Quanto ao estudo comparativo entre o Storm e o Spark, podemos dizer que a primeira opção, respectivamente, para o caso de uso estudado, é melhor de ser utilizada como aplicação para processamento de streams de \textit{tweets}. Apesar do valor de \textit{throughput} do Spark ser superior, e dele fornecer um modelo de processamento de dados mais eficiente, a arquitetura de tolerância a falhas do Storm precisa ser priorizada, devido ao longo tempo de execução da aplicação.
+
+Por fim, com base nos resultados citados anteriormente, o trabalho realizado por essa monografia se diferencia dos trabalhos relacionados, por proporcionar aplicações para processamento de grande volume de dados, provenientes do Twitter, visando a coleta e visualização de métricas sobre e-Participação.
 
 \begin{figure}[!ht]
   \centering
     \includegraphics[width=1\textwidth]{Imagens/sentimentsSpark.png}
-  \caption{Ilustração das polaridades de sentimentos processada pelo Spark}
+  \caption{Ilustração das polaridades de sentimentos processadas pelo Spark}
   {\bf Fonte:} Elaboração própria
   \label{fig:sentimentsSpark}
 \end{figure}
@@ -146,7 +153,7 @@ Com isso, é possível estimar a satisfação dos cidadãos com os acontecimentos da 
 \begin{figure}[!ht]
   \centering
     \includegraphics[width=1\textwidth]{Imagens/sentimentsStorm.png}
-  \caption{Ilustração das polaridades de sentimentos processada pelo Storm}
+  \caption{Ilustração das polaridades de sentimentos processadas pelo Storm}
   {\bf Fonte:} Elaboração própria
   \label{fig:sentimentsStorm}
 \end{figure}
