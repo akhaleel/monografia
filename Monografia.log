@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  31 MAY 2016 00:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  31 MAY 2016 01:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,16 +627,15 @@ File: Imagens/sparkDiagramMapDateToDouble.png Graphic file (type png)
 Package pdftex.def Info: Imagens/sparkDiagramMapDateToDouble.png used on input 
 line 138.
 (pdftex.def)             Requested size: 318.66948pt x 137.6039pt.
-
-<Imagens/sparkDataAnalysisDiagram.png, id=179, 887.315pt x 551.05875pt>
+ [43 <./Imagens/sparkDiagramMapDateToDouble.png>]
+<Imagens/sparkDataAnalysisDiagram.png, id=183, 887.315pt x 551.05875pt>
 File: Imagens/sparkDataAnalysisDiagram.png Graphic file (type png)
 
 <use Imagens/sparkDataAnalysisDiagram.png>
 Package pdftex.def Info: Imagens/sparkDataAnalysisDiagram.png used on input lin
 e 204.
 (pdftex.def)             Requested size: 364.19667pt x 226.17938pt.
- [43 <./Imagens/sparkDiagramMapDateToDouble.png>] [44] [45 <./Imagens/sparkData
-AnalysisDiagram.png>]
+ [44] [45 <./Imagens/sparkDataAnalysisDiagram.png>]
 <Imagens/sparkDataAnalysisClassDiagram.png, id=191, 773.89125pt x 377.15906pt>
 File: Imagens/sparkDataAnalysisClassDiagram.png Graphic file (type png)
 
@@ -644,23 +643,23 @@ File: Imagens/sparkDataAnalysisClassDiagram.png Graphic file (type png)
 Package pdftex.def Info: Imagens/sparkDataAnalysisClassDiagram.png used on inpu
 t line 229.
 (pdftex.def)             Requested size: 364.19667pt x 177.49498pt.
-
-<Imagens/stormTopologyApp.png, id=192, 826.08624pt x 420.57124pt>
+ [46]
+<Imagens/stormTopologyApp.png, id=196, 826.08624pt x 420.57124pt>
 File: Imagens/stormTopologyApp.png Graphic file (type png)
 
 <use Imagens/stormTopologyApp.png>
 Package pdftex.def Info: Imagens/stormTopologyApp.png used on input line 242.
 (pdftex.def)             Requested size: 364.19667pt x 185.41771pt.
- [46]
-<Imagens/stormApplicationClassDiagram.png, id=197, 1023.825pt x 570.63188pt>
+ [47 <./Imagens/sparkDataAnalysisClassDiagram.png> <./Imagens/stormTopologyApp.
+png>]
+<Imagens/stormApplicationClassDiagram.png, id=202, 1023.825pt x 570.63188pt>
 File: Imagens/stormApplicationClassDiagram.png Graphic file (type png)
 
 <use Imagens/stormApplicationClassDiagram.png>
 Package pdftex.def Info: Imagens/stormApplicationClassDiagram.png used on input
  line 256.
 (pdftex.def)             Requested size: 546.29153pt x 304.47963pt.
- [47 <./Imagens/sparkDataAnalysisClassDiagram.png> <./Imagens/stormTopologyApp.
-png>] [48 <./Imagens/stormApplicationClassDiagram.png>] [49] [50] [51]) [52]
+ [48] [49 <./Imagens/stormApplicationClassDiagram.png>] [50] [51]) [52]
 \openout2 = `Capitulos/Capitulo4.aux'.
 
  (./Capitulos/Capitulo4.tex
@@ -741,13 +740,13 @@ Overfull \hbox (8.94287pt too wide) in paragraph at lines 184--217
 (./Capitulos/Capitulo4.aux) (./Capitulos/Capitulo5.aux)
 (./Capitulos/ApendiceA.aux)) ) 
 Here is how much of TeX's memory you used:
- 5198 strings out of 493027
- 73901 string characters out of 6134069
+ 5195 strings out of 493027
+ 73859 string characters out of 6134069
  236109 words of memory out of 5000000
- 8429 multiletter control sequences out of 15000+600000
+ 8426 multiletter control sequences out of 15000+600000
  33093 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 38i,16n,26p,875b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,26p,924b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
 ps/cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
@@ -767,7 +766,7 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Monografia.pdf (73 pages, 3140330 bytes).
+Output written on Monografia.pdf (73 pages, 3138475 bytes).
 PDF statistics:
  358 PDF objects out of 1000 (max. 8388607)
  220 compressed objects within 3 object streams
