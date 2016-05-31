@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {2.4}Apache Storm}{31}
 \contentsline {subsection}{\numberline {2.4.1}Composi\c c\~ao interna do Apache Storm}{31}
 \contentsline {subsubsection}{\numberline {2.4.1.1}Nimbus}{32}
-\contentsline {subsubsection}{\numberline {2.4.1.2}Supervisor node}{32}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Supervisor Node}{32}
 \contentsline {subsubsection}{\numberline {2.4.1.3}ZooKeeper}{32}
 \contentsline {subsubsection}{\numberline {2.4.1.4}Topologia}{33}
 \contentsline {paragraph}{Bolt.}{33}

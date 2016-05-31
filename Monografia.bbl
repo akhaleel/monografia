@@ -163,6 +163,11 @@ Disponível em: <\url{http://science.sciencemag.org}>. Acesso em Maio 08, 2016.}
 {KARAU, H. et al. \emph{Learning Spark}. 1st. ed. [S.l.]: O'Reilly Media,
   2015.}
 
+\bibitem[Killelea 2002]{WebPerformanceTuning}
+\abntrefinfo{Killelea}{KILLELEA}{2002}
+{KILLELEA, P. \emph{Web Performance Tuning}. 2st. ed. [S.l.]: O'Reilly Media,
+  2002.}
+
 \bibitem[Kleppmann 2015]{ConfluentArticle}
 \abntrefinfo{Kleppmann}{KLEPPMANN}{2015}
 {KLEPPMANN, M. \emph{{Stream processing, Event sourcing, Reactive, CEP? and

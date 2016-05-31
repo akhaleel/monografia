@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  27 MAY 2016 23:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  31 MAY 2016 00:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,33 +527,33 @@ Cap\'{\i }tulo 2.
 
 
 
-] <Imagens/iotImage.png, id=81, 1329.96875pt x 698.61pt>
+] [20] <Imagens/iotImage.png, id=84, 1329.96875pt x 698.61pt>
 File: Imagens/iotImage.png Graphic file (type png)
 
 <use Imagens/iotImage.png>
 Package pdftex.def Info: Imagens/iotImage.png used on input line 31.
 (pdftex.def)             Requested size: 455.24411pt x 239.1339pt.
- [20] [21 <./Imagens/iotImage.png>] [22] [23]
-[24] <Imagens/reliabilityDiagram.png, id=100, 855.195pt x 317.185pt>
+ [21 <./Imagens/iotImage.png>] [22] [23] [24]
+<Imagens/reliabilityDiagram.png, id=100, 855.195pt x 317.185pt>
 File: Imagens/reliabilityDiagram.png Graphic file (type png)
 
 <use Imagens/reliabilityDiagram.png>
-Package pdftex.def Info: Imagens/reliabilityDiagram.png used on input line 86.
+Package pdftex.def Info: Imagens/reliabilityDiagram.png used on input line 84.
 (pdftex.def)             Requested size: 455.24411pt x 168.8429pt.
  [25 <./Imagens/reliabilityDiagram.png>]
 <Imagens/sparkStackImage.png, id=105, 377.41pt x 193.72375pt>
 File: Imagens/sparkStackImage.png Graphic file (type png)
 
 <use Imagens/sparkStackImage.png>
-Package pdftex.def Info: Imagens/sparkStackImage.png used on input line 112.
+Package pdftex.def Info: Imagens/sparkStackImage.png used on input line 110.
 (pdftex.def)             Requested size: 227.62206pt x 116.83815pt.
  [26 <./Imagens/sparkStackImage.png>] [27]
 <Imagens/sparkComponentsImage.png, id=113, 533.995pt x 504.88625pt>
 File: Imagens/sparkComponentsImage.png Graphic file (type png)
 
 <use Imagens/sparkComponentsImage.png>
-Package pdftex.def Info: Imagens/sparkComponentsImage.png used on input line 14
-1.
+Package pdftex.def Info: Imagens/sparkComponentsImage.png used on input line 13
+8.
 (pdftex.def)             Requested size: 227.62206pt x 215.21709pt.
  [28 <./Imagens/sparkComponentsImage.png>] [29] [30]
 <Imagens/stormComponentsImage.png, id=125, 448.67625pt x 351.3125pt>
@@ -561,14 +561,14 @@ File: Imagens/stormComponentsImage.png Graphic file (type png)
 
 <use Imagens/stormComponentsImage.png>
 Package pdftex.def Info: Imagens/stormComponentsImage.png used on input line 18
-6.
+2.
 (pdftex.def)             Requested size: 227.62206pt x 178.22353pt.
  [31 <./Imagens/stormComponentsImage.png>] [32] <Imagens/stormTopologyImage.png
 , id=133, 441.65pt x 373.395pt>
 File: Imagens/stormTopologyImage.png Graphic file (type png)
 
 <use Imagens/stormTopologyImage.png>
-Package pdftex.def Info: Imagens/stormTopologyImage.png used on input line 222.
+Package pdftex.def Info: Imagens/stormTopologyImage.png used on input line 218.
 
 (pdftex.def)             Requested size: 227.62206pt x 192.44586pt.
  [33 <./Imagens/stormTopologyImage.png>])
@@ -741,13 +741,13 @@ Overfull \hbox (8.94287pt too wide) in paragraph at lines 184--217
 (./Capitulos/Capitulo4.aux) (./Capitulos/Capitulo5.aux)
 (./Capitulos/ApendiceA.aux)) ) 
 Here is how much of TeX's memory you used:
- 5192 strings out of 493027
- 73753 string characters out of 6134069
- 236053 words of memory out of 5000000
- 8423 multiletter control sequences out of 15000+600000
+ 5198 strings out of 493027
+ 73901 string characters out of 6134069
+ 236109 words of memory out of 5000000
+ 8429 multiletter control sequences out of 15000+600000
  33093 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 38i,16n,26p,875b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,26p,875b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
 ps/cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
@@ -767,7 +767,7 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Monografia.pdf (73 pages, 3132874 bytes).
+Output written on Monografia.pdf (73 pages, 3140330 bytes).
 PDF statistics:
  358 PDF objects out of 1000 (max. 8388607)
  220 compressed objects within 3 object streams
