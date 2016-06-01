@@ -2,24 +2,24 @@
 \chapter{Conclusões}
 \label{chapter5}
 
-Atualmente, a quantidade de pessoas e coisas conectadas à Internet, tem gerado dados massivamente, os quais processados podem ajudar a resolver importantes problemas enfrentados pela sociedade. Por exemplo, como demonstrado nesse trabalho, é possível utilizar ferramentas para processamento de grande volume de dados buscando obter uma visão do nível de e-Participação em Redes Sociais.
+Atualmente, a quantidade de pessoas e coisas conectadas à Internet tem gerado dados massivamente, os quais processados podem ajudar a resolver importantes problemas enfrentados pela sociedade. Por exemplo, como demonstrado nesse trabalho, é possível utilizar ferramentas para processamento de grande volume de dados buscando obter uma visão do nível de e-Participação em Redes Sociais.
 
 Embora indicadores sobre o nível de e-Participação sejam importantes, alguns estudos têm classificado determinadas cidades como Inteligentes, sem levá-los em consideração. O que é um problema, pois os cidadãos podem desempenhar relevantes contribuições com o governo local, objetivando o desenvolvimento da cidade e resolução de problemas ainda existentes. 
 
 Muitas prefeituras do Brasil, principalmente as afastadas das grandes metrópoles, de acordo com as métricas coletadas, tem feito pouco uso de seus perfis no Twitter, indicando um baixo nível de interação entre seus respectivos governos locais e cidadãos. Em contraste, as prefeituras com melhores classificações de e-Participação, encontram-se próximas as regiões litorâneas, com maior desenvolvimento econômico.
 
-Nos aspectos do desenvolvimento das aplicações, conclui-se que a ferramenta Spark é a melhor indicada para processamento de tweets em \textit{batch}, enquanto que o Storm é mais aconselhado para o processamento de stream de \textit{tweets}, principalmente devido a sua arquitetura de Tolerância a Falhas. 
+Nos aspectos do desenvolvimento das aplicações, conclui-se que a ferramenta Spark é a melhor indicada para processamento de \textit{tweets} em \textit{batch}, enquanto que o Storm é mais aconselhado para o processamento de stream de \textit{tweets}, principalmente devido a sua arquitetura de Tolerância a Falhas. 
 
 \section{Limitações}
 \label{limitations}
 
-Como uma das limitações desse trabalho, pode-se mencionar o limite da API do Twitter quanto ao número disponível de tweets do histórico dos perfis, de máximo 3.200. Apesar disso, dependendo da frequência de publicação, é possível acessar tweets dentro de um intervalo de tempo considerável, ou, todos existente na conta. Por exemplo, o tweet mais antigo coletado da prefeitura de Curitiba tem como data o dia 19/08/2015; e, todos os tweets da prefeitura de Salvador foram processados, no total de 1231.
+Como uma das limitações desse trabalho, pode-se mencionar o limite da API do Twitter quanto ao número disponível de \textit{tweets} do histórico dos perfis, de máximo 3.200. Apesar disso, dependendo da frequência de publicação, é possível acessar tweets dentro de um intervalo de tempo considerável, ou, todos existente na conta. Por exemplo, num perfil com alta frequência de publicações, como o da prefeitura de Curitiba, o \textit{tweet} mais antigo coletado tem como data o dia 19/08/2015; em contraste, numa conta pouca ativa, como a da prefeitura de Salvador, todos os \textit{tweets} foram processados, no total de 1231.
 
-Outra limitação foi a quantidade de tempo em que foi possível manter as aplicações responsáveis pelo processamento de stream de tweets em execução, devido a infraestrutura disponível. O ideial seria mantê-las executando pelo período de um mês, para coletar uma quantidade de dados mais siginificativa.
+Outra limitação foi a quantidade de tempo em que foi possível manter as aplicações responsáveis pelo processamento de \textit{stream} de \textit{tweets} em execução, devido a infraestrutura disponível. O ideial seria mantê-las executando pelo período de um mês, para coletar uma quantidade de dados mais siginificativa.
 
 \section{Trabalhos Futuros}
 \label{futureWorks}
 
-Como trabalho futuro, pretende-se continuar o desenvolvimento da aplicação responsável pela coleta de tweets e processamento de métricas relacionadas a e-Participação, agregando a ela técnicas de Inteligência Artificial para análise do conteúdo das mensagens. Tendo isso como propósito, pretende-se utilizar o módulo MLib do Spark.
+Como trabalho futuro, pretende-se continuar o desenvolvimento da aplicação responsável pela coleta de \textit{tweets} e processamento de métricas relacionadas a e-Participação, agregando a ela técnicas de Inteligência Artificial para análise do conteúdo das mensagens. Tendo isso como propósito, pretende-se utilizar o módulo MLib do Spark.
 
 Além disso, objetiva-se melhorar questões de usabilidade e interface da aplicação web desenvolvida. Também, buscar novas funcionalidades possíveis de serem agregadas a ela, realizando para isso uma Análise de Requisitos.
