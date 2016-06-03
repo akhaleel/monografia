@@ -25,6 +25,10 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Capitulos/Referencias.bib
+Illegal end of database file---line 589 of file Capitulos/Referencias.bib
+ :  Title = {Usando Redes Sociais para Suportar Iniciativas de Cidades Inteligentes},
+ :                                                                                   
+I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -76,3 +80,4 @@ warning$ -- 0
 while$ -- 374
 width$ -- 0
 write$ -- 882
+(There was 1 error message)

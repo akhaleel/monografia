@@ -239,3 +239,7 @@ Outra opção é definir um \textit{time­out} a topologia, sendo dessa forma enviad
 Os principais métodos de um \textit{spout} são: o open(), executado quando o \textit{spout} é inicializado, sendo nele definida a lógica para acesso a dados de fontes externas; o de declaração de \textit{stream} (declareStream) e o de processamento de próxima tupla (nextTuple), que ocorre se houver confirmação de sucesso da tupla anterior (ack), sendo o método fail chamado pelo Storm caso isso não ocorra \cite{LearningStorm}.
 
 Por fim, nenhum dos métodos utilizados para a construção de um  \textit{spout} devem ser bloqueantes, pois o Storm executa todos os métodos numa mesma \textit{thread}. Além disso, todo  \textit{spout} tem um \textit{buffer} interno para o rastreamento dos status das tuplas emitidas, as quais são mantidas nele até uma confirmação de processamento concluído com sucesso (ack) ou falha (fail); não sendo inseridas novas tuplas (via nextTuple) no \textit{buffer} quando ele esá cheio \cite{LearningStorm}.
+
+\section{Processamento de Linguagem Natural}
+
+\section{Aplicações Web}

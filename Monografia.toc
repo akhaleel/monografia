@@ -25,6 +25,8 @@
 \contentsline {subsubsection}{\numberline {2.4.1.4}Topologia}{33}
 \contentsline {paragraph}{Bolt.}{33}
 \contentsline {paragraph}{Spout.}{34}
+\contentsline {section}{\numberline {2.5}Processamento de Linguagem Natural}{35}
+\contentsline {section}{\numberline {2.6}Aplica\c c\~oes Web}{35}
 \contentsline {chapter}{\numberline {3}Aplica\c c\~oes desenvolvidas e estudo comparativo}{36}
 \contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{36}
 \contentsline {paragraph}{Apache Spark Streaming.}{36}
