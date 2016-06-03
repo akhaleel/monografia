@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  2 JUN 2016 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  3 JUN 2016 01:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,14 +482,14 @@ ns/Brasao-UFRN.jpg> <./Imagens/Logotipo-DIMAp.jpg>])
 (./Includes/Abstract.tex) [7
 
 
-] (./Monografia.lof)
+] (./Monografia.lof [8
+
+
+])
 \tf@lof=\write3
 \openout3 = `Monografia.lof'.
 
- [8
-
-
-] [9] (./Monografia.lot)
+ [9] (./Monografia.lot)
 \tf@lot=\write4
 \openout4 = `Monografia.lot'.
 
@@ -572,149 +572,155 @@ Package pdftex.def Info: Imagens/stormTopologyImage.png used on input line 218.
 
 (pdftex.def)             Requested size: 227.62206pt x 192.44586pt.
  [33 <./Imagens/stormTopologyImage.png>]
-[34]) [35]
+[34] <Imagens/pnl.png, id=141, 163.61125pt x 308.15125pt>
+File: Imagens/pnl.png Graphic file (type png)
+
+<use Imagens/pnl.png>
+Package pdftex.def Info: Imagens/pnl.png used on input line 252.
+(pdftex.def)             Requested size: 136.57462pt x 257.22778pt.
+) [35] [36 <./Imagens/pnl.png>]
 \openout2 = `Capitulos/Capitulo3.aux'.
 
  (./Capitulos/Capitulo3.tex
 Cap\'{\i }tulo 3.
-[36
+[37
 
 
 
-] <Imagens/dstreamImage.png, id=148, 603.25375pt x 88.33pt>
+] <Imagens/dstreamImage.png, id=153, 603.25375pt x 88.33pt>
 File: Imagens/dstreamImage.png Graphic file (type png)
 
 <use Imagens/dstreamImage.png>
 Package pdftex.def Info: Imagens/dstreamImage.png used on input line 18.
 (pdftex.def)             Requested size: 364.19667pt x 53.32591pt.
 
-<Imagens/flinkProcessingImage.png, id=149, 561.09625pt x 80.3pt>
+<Imagens/flinkProcessingImage.png, id=154, 561.09625pt x 80.3pt>
 File: Imagens/flinkProcessingImage.png Graphic file (type png)
 
 <use Imagens/flinkProcessingImage.png>
 Package pdftex.def Info: Imagens/flinkProcessingImage.png used on input line 28
 .
 (pdftex.def)             Requested size: 364.19667pt x 52.12085pt.
- [37 <./Imagens/dstreamImage.png> <./Imagens/flinkProcessingImage.png>]
-<Imagens/samzaPartitionsImage.png, id=155, 415.5525pt x 197.73875pt>
+ [38 <./Imagens/dstreamImage.png> <./Imagens/flinkProcessingImage.png>]
+<Imagens/samzaPartitionsImage.png, id=160, 415.5525pt x 197.73875pt>
 File: Imagens/samzaPartitionsImage.png Graphic file (type png)
 
 <use Imagens/samzaPartitionsImage.png>
 Package pdftex.def Info: Imagens/samzaPartitionsImage.png used on input line 40
 .
 (pdftex.def)             Requested size: 273.14923pt x 129.98297pt.
- [38 <./Imagens/samzaPartitionsImage.png>] [39]
-<Imagens/twitterDataAnalysisClassDiagram.png, id=163, 925.20656pt x 450.18187pt
+ [39 <./Imagens/samzaPartitionsImage.png>] [40]
+<Imagens/twitterDataAnalysisClassDiagram.png, id=168, 925.20656pt x 450.18187pt
 >
 File: Imagens/twitterDataAnalysisClassDiagram.png Graphic file (type png)
  <use Imagens/twitterDataAnalysisClassDiagram.png>
 Package pdftex.def Info: Imagens/twitterDataAnalysisClassDiagram.png used on in
 put line 108.
 (pdftex.def)             Requested size: 546.29153pt x 265.81108pt.
- [40] [41 <./Imagens/twitterDataAnalysisClassDiagram.png>]
-<Imagens/sparkDiagramMapToDouble.png, id=172, 504.88625pt x 104.39pt>
+ [41] [42 <./Imagens/twitterDataAnalysisClassDiagram.png>]
+<Imagens/sparkDiagramMapToDouble.png, id=178, 504.88625pt x 104.39pt>
 File: Imagens/sparkDiagramMapToDouble.png Graphic file (type png)
 
 <use Imagens/sparkDiagramMapToDouble.png>
 Package pdftex.def Info: Imagens/sparkDiagramMapToDouble.png used on input line
  126.
 (pdftex.def)             Requested size: 273.14923pt x 56.47647pt.
- [42 <./Imagens/sparkDiagramMapToDouble.png>]
-<Imagens/sparkDiagramMapDateToDouble.png, id=178, 662.475pt x 286.06876pt>
+ [43 <./Imagens/sparkDiagramMapToDouble.png>]
+<Imagens/sparkDiagramMapDateToDouble.png, id=183, 662.475pt x 286.06876pt>
 File: Imagens/sparkDiagramMapDateToDouble.png Graphic file (type png)
 
 <use Imagens/sparkDiagramMapDateToDouble.png>
 Package pdftex.def Info: Imagens/sparkDiagramMapDateToDouble.png used on input 
 line 138.
 (pdftex.def)             Requested size: 318.66948pt x 137.6039pt.
- [43 <./Imagens/sparkDiagramMapDateToDouble.png>]
-<Imagens/sparkDataAnalysisDiagram.png, id=183, 887.315pt x 551.05875pt>
+ [44 <./Imagens/sparkDiagramMapDateToDouble.png>]
+<Imagens/sparkDataAnalysisDiagram.png, id=188, 887.315pt x 551.05875pt>
 File: Imagens/sparkDataAnalysisDiagram.png Graphic file (type png)
 
 <use Imagens/sparkDataAnalysisDiagram.png>
 Package pdftex.def Info: Imagens/sparkDataAnalysisDiagram.png used on input lin
 e 204.
 (pdftex.def)             Requested size: 364.19667pt x 226.17938pt.
- [44] [45 <./Imagens/sparkDataAnalysisDiagram.png>]
-<Imagens/sparkDataAnalysisClassDiagram.png, id=191, 773.89125pt x 377.15906pt>
+ [45] [46 <./Imagens/sparkDataAnalysisDiagram.png>]
+<Imagens/sparkDataAnalysisClassDiagram.png, id=196, 773.89125pt x 377.15906pt>
 File: Imagens/sparkDataAnalysisClassDiagram.png Graphic file (type png)
 
 <use Imagens/sparkDataAnalysisClassDiagram.png>
 Package pdftex.def Info: Imagens/sparkDataAnalysisClassDiagram.png used on inpu
 t line 229.
 (pdftex.def)             Requested size: 364.19667pt x 177.49498pt.
- [46]
-<Imagens/stormTopologyApp.png, id=196, 826.08624pt x 420.57124pt>
+ [47]
+<Imagens/stormTopologyApp.png, id=201, 826.08624pt x 420.57124pt>
 File: Imagens/stormTopologyApp.png Graphic file (type png)
 
 <use Imagens/stormTopologyApp.png>
 Package pdftex.def Info: Imagens/stormTopologyApp.png used on input line 242.
 (pdftex.def)             Requested size: 364.19667pt x 185.41771pt.
- [47 <./Imagens/sparkDataAnalysisClassDiagram.png> <./Imagens/stormTopologyApp.
+ [48 <./Imagens/sparkDataAnalysisClassDiagram.png> <./Imagens/stormTopologyApp.
 png>]
-<Imagens/stormApplicationClassDiagram.png, id=202, 1023.825pt x 570.63188pt>
+<Imagens/stormApplicationClassDiagram.png, id=208, 1023.825pt x 570.63188pt>
 File: Imagens/stormApplicationClassDiagram.png Graphic file (type png)
 
 <use Imagens/stormApplicationClassDiagram.png>
 Package pdftex.def Info: Imagens/stormApplicationClassDiagram.png used on input
  line 256.
 (pdftex.def)             Requested size: 546.29153pt x 304.47963pt.
- [48] [49 <./Imagens/stormApplicationClassDiagram.png>] [50] [51]) [52]
+ [49] [50 <./Imagens/stormApplicationClassDiagram.png>] [51] [52]) [53]
 \openout2 = `Capitulos/Capitulo4.aux'.
 
  (./Capitulos/Capitulo4.tex
 Cap\'{\i }tulo 4.
-[53
+[54
 
 
 
-] [54] <Imagens/webApplication.png, id=229, 1922.18124pt x 931.48pt>
+] [55] <Imagens/webApplication.png, id=234, 1922.18124pt x 931.48pt>
 File: Imagens/webApplication.png Graphic file (type png)
 
 <use Imagens/webApplication.png>
 Package pdftex.def Info: Imagens/webApplication.png used on input line 123.
 (pdftex.def)             Requested size: 455.24411pt x 220.60341pt.
 
-<Imagens/webApplication2.png, id=230, 1924.18875pt x 930.47626pt>
+<Imagens/webApplication2.png, id=235, 1924.18875pt x 930.47626pt>
 File: Imagens/webApplication2.png Graphic file (type png)
 
 <use Imagens/webApplication2.png>
 Package pdftex.def Info: Imagens/webApplication2.png used on input line 131.
 (pdftex.def)             Requested size: 455.24411pt x 220.13853pt.
- [55] [56] [57 <./Imagens/webApplication.png> <./Imagens/webApplication2.png>]
-<Imagens/sentimentsSpark.png, id=243, 1922.18124pt x 886.31125pt>
+ [56] [57] [58 <./Imagens/webApplication.png> <./Imagens/webApplication2.png>]
+<Imagens/sentimentsSpark.png, id=248, 1922.18124pt x 886.31125pt>
 File: Imagens/sentimentsSpark.png Graphic file (type png)
 
 <use Imagens/sentimentsSpark.png>
 Package pdftex.def Info: Imagens/sentimentsSpark.png used on input line 147.
 (pdftex.def)             Requested size: 455.24411pt x 209.90605pt.
 
-<Imagens/sentimentsStorm.png, id=244, 1922.18124pt x 888.31876pt>
+<Imagens/sentimentsStorm.png, id=249, 1922.18124pt x 888.31876pt>
 File: Imagens/sentimentsStorm.png Graphic file (type png)
 
 <use Imagens/sentimentsStorm.png>
 Package pdftex.def Info: Imagens/sentimentsStorm.png used on input line 155.
 (pdftex.def)             Requested size: 455.24411pt x 210.38148pt.
-) [58 <./Imagens/sentimentsSpark.png> <./Imagens/sentimentsStorm.png>] [59] [60
+) [59 <./Imagens/sentimentsSpark.png> <./Imagens/sentimentsStorm.png>] [60] [61
 ]
 \openout2 = `Capitulos/Capitulo5.aux'.
 
  (./Capitulos/Capitulo5.tex
 Cap\'{\i }tulo 5.
-[61
+[62
 
 
 
-]) [62] (./Monografia.bbl
+]) [63] (./Monografia.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [63
+) [64
 
 
-] [64]
-[65]) [66]
+] [65]
+[66]) [67]
 \openout2 = `Capitulos/ApendiceA.aux'.
 
  (./Capitulos/ApendiceA.tex
@@ -724,10 +730,10 @@ Overfull \hbox (8.94287pt too wide) in paragraph at lines 184--217
  [] 
  []
 
-) [67
+) [68
 
 
-] [68] [69] [70] [71] [72]
+] [69] [70] [71] [72] [73]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -740,13 +746,13 @@ Overfull \hbox (8.94287pt too wide) in paragraph at lines 184--217
 (./Capitulos/Capitulo4.aux) (./Capitulos/Capitulo5.aux)
 (./Capitulos/ApendiceA.aux)) ) 
 Here is how much of TeX's memory you used:
- 5190 strings out of 493027
- 73772 string characters out of 6134069
- 236052 words of memory out of 5000000
- 8421 multiletter control sequences out of 15000+600000
+ 5201 strings out of 493027
+ 73945 string characters out of 6134069
+ 236139 words of memory out of 5000000
+ 8431 multiletter control sequences out of 15000+600000
  33093 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 38i,16n,26p,924b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,26p,924b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
 ps/cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
@@ -766,10 +772,10 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Monografia.pdf (73 pages, 3142009 bytes).
+Output written on Monografia.pdf (74 pages, 3178402 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
+ 363 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -153,6 +153,11 @@ Disponível em: <\url{http://science.sciencemag.org}>. Acesso em Maio 08, 2016.}
 {HART, B.; BHATNAGAR, K. \emph{Building Python Real-Time Applications with
   Storm}. 1st. ed. [S.l.]: Packt Publishing, 2015.}
 
+\bibitem[Indurkhya e Damerau 2010]{NplBook}
+\abntrefinfo{Indurkhya e Damerau}{INDURKHYA; DAMERAU}{2010}
+{INDURKHYA, N.; DAMERAU, F. \emph{Handbook of Natural Language Processing}.
+  2st. ed. [S.l.]: CRC Press, 2010.}
+
 \bibitem[Jain e Nalya 2014]{LearningStorm}
 \abntrefinfo{Jain e Nalya}{JAIN; NALYA}{2014}
 {JAIN, A.; NALYA, A. \emph{Learning Storm}. 1st. ed. [S.l.]: Packt Publishing,

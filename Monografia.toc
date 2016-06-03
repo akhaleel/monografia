@@ -27,28 +27,28 @@
 \contentsline {paragraph}{Spout.}{34}
 \contentsline {section}{\numberline {2.5}Processamento de Linguagem Natural}{35}
 \contentsline {section}{\numberline {2.6}Aplica\c c\~oes Web}{35}
-\contentsline {chapter}{\numberline {3}Aplica\c c\~oes desenvolvidas e estudo comparativo}{36}
-\contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{36}
-\contentsline {paragraph}{Apache Spark Streaming.}{36}
-\contentsline {paragraph}{Apache Flink.}{37}
-\contentsline {paragraph}{Apache Storm.}{37}
-\contentsline {paragraph}{Apache Samza.}{37}
-\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas}{38}
-\contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao web para visualiza\c c\~ao das m\'etricas relacionadas a e-Participa\c c\~ao}{39}
-\contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{40}
-\contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{43}
-\contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{46}
-\contentsline {section}{\numberline {3.3}Estudo comparativo}{48}
-\contentsline {subsection}{\numberline {3.3.1}Processamento de grande volume de dados em tempo real}{48}
-\contentsline {subsection}{\numberline {3.3.2}Toler\^ancia a Falhas}{50}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Garantia de processamento}{51}
-\contentsline {subsection}{\numberline {3.3.3}Escalabilidade}{52}
-\contentsline {subsection}{\numberline {3.3.4}Modelo de programa\c c\~ao}{52}
-\contentsline {chapter}{\numberline {4}Resultados}{53}
-\contentsline {subsection}{\numberline {4.0.1}Trabalhos relacionados}{53}
-\contentsline {subsection}{\numberline {4.0.2}Resultados}{54}
-\contentsline {chapter}{\numberline {5}Conclus\~oes}{61}
-\contentsline {section}{\numberline {5.1}Limita\c c\~oes}{61}
-\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{62}
-\contentsline {chapter}{Refer\^encias}{63}
-\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{67}
+\contentsline {chapter}{\numberline {3}Aplica\c c\~oes desenvolvidas e estudo comparativo}{37}
+\contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{37}
+\contentsline {paragraph}{Apache Spark Streaming.}{37}
+\contentsline {paragraph}{Apache Flink.}{38}
+\contentsline {paragraph}{Apache Storm.}{38}
+\contentsline {paragraph}{Apache Samza.}{38}
+\contentsline {section}{\numberline {3.2}Aplica\c c\~oes desenvolvidas}{39}
+\contentsline {subsection}{\numberline {3.2.1}Aplica\c c\~ao web para visualiza\c c\~ao das m\'etricas relacionadas a e-Participa\c c\~ao}{40}
+\contentsline {subsection}{\numberline {3.2.2}Aplica\c c\~ao para processamento de tweets e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}{41}
+\contentsline {subsection}{\numberline {3.2.3}Aplica\c c\~ao para processamento de stream de tweets, utilizando Spark Streaming}{44}
+\contentsline {subsection}{\numberline {3.2.4}Aplica\c c\~ao para processamento de stream de tweets, utilizando Storm}{47}
+\contentsline {section}{\numberline {3.3}Estudo comparativo}{49}
+\contentsline {subsection}{\numberline {3.3.1}Processamento de grande volume de dados em tempo real}{49}
+\contentsline {subsection}{\numberline {3.3.2}Toler\^ancia a Falhas}{51}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Garantia de processamento}{52}
+\contentsline {subsection}{\numberline {3.3.3}Escalabilidade}{53}
+\contentsline {subsection}{\numberline {3.3.4}Modelo de programa\c c\~ao}{53}
+\contentsline {chapter}{\numberline {4}Resultados}{54}
+\contentsline {subsection}{\numberline {4.0.1}Trabalhos relacionados}{54}
+\contentsline {subsection}{\numberline {4.0.2}Resultados}{55}
+\contentsline {chapter}{\numberline {5}Conclus\~oes}{62}
+\contentsline {section}{\numberline {5.1}Limita\c c\~oes}{62}
+\contentsline {section}{\numberline {5.2}Trabalhos Futuros}{63}
+\contentsline {chapter}{Refer\^encias}{64}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Primeiro ap\^endice}{68}

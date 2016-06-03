@@ -242,4 +242,16 @@ Por fim, nenhum dos métodos utilizados para a construção de um  \textit{spout} d
 
 \section{Processamento de Linguagem Natural}
 
+O Processamento de Linguagem Natural (NPL, \textit{Natural Processing Language}) pode ser definido como uma sequência de computações, divididas em estágios, objetivando entender o significado de determinado texto.  Tal atividade é demasiadamente complexa, por ser dependente do conjunto de caracteres (\textit{charsets}) sendo processados (relacionados com o idioma), do sistema de escrita, do domínio da aplicação, etc \cite{NplBook}. Devido a essa complexidade, divide-se normalmente nas seguintes fases (ilustradas na Fig. \ref{fig:nlpStages}): \textit{Tokenization}, \textit{Lexical analysis}, \textit{Syntactic analysis}, \textit{Semantic analysis} e \textit{Pragmatic analysis} \cite{NplBook}.
+
+Na fase \textit{Tokenization}, ocorre a extração das palavras que compõem o texto, realizada através da indentificação dos espaços existentes entre cada palavra. Nos idiomas derivados do Latim, como no caso do Português, tal estratégia pode ser aplicada, pois o sistema de escrita separa as palavras utilizando espaços entre elas (\textit{space-delimited}), sendo abordadas outras técnicas de extração para as linguagens não segmentadas \cite{NplBook}. Ainda nessa fase, ocorre a segmentação do texto, ou seja, a divisão dos períodos existentes, na qual precisam ser consideradas questões relacionadas a presença de pontuações e símbolos \cite{NplBook}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.3\textwidth]{Imagens/pnl.png}
+  \caption{Estágios de um Processamento de Linguagem Natural}
+  {\bf Fonte:} \cite{NplBook}
+  \label{fig:nlpStages}
+\end{figure}
+
 \section{Aplicações Web}
