@@ -25,7 +25,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Capitulos/Referencias.bib
-Illegal end of database file---line 589 of file Capitulos/Referencias.bib
+Illegal end of database file---line 581 of file Capitulos/Referencias.bib
  :  Title = {Usando Redes Sociais para Suportar Iniciativas de Cidades Inteligentes},
  :                                                                                   
 I'm skipping whatever remains of this entry
@@ -39,45 +39,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 62 entries,
+You've used 61 entries,
             6480 wiz_defined-function locations,
-            1468 strings with 18871 characters,
-and the built_in function-call counts, 40370 in all, are:
-= -- 2824
-> -- 1386
+            1464 strings with 18764 characters,
+and the built_in function-call counts, 39818 in all, are:
+= -- 2790
+> -- 1371
 < -- 17
-+ -- 556
-- -- 433
-* -- 2664
-:= -- 5696
-add.period$ -- 237
-call.type$ -- 62
-change.case$ -- 544
-chr.to.int$ -- 79
-cite$ -- 62
-duplicate$ -- 1815
-empty$ -- 3531
-format.name$ -- 2052
-if$ -- 9520
++ -- 551
+- -- 428
+* -- 2634
+:= -- 5617
+add.period$ -- 234
+call.type$ -- 61
+change.case$ -- 537
+chr.to.int$ -- 78
+cite$ -- 61
+duplicate$ -- 1789
+empty$ -- 3475
+format.name$ -- 2029
+if$ -- 9390
 int.to.chr$ -- 13
 int.to.str$ -- 0
-missing$ -- 1036
-newline$ -- 311
-num.names$ -- 310
-pop$ -- 1449
+missing$ -- 1020
+newline$ -- 306
+num.names$ -- 305
+pop$ -- 1424
 preamble$ -- 1
-purify$ -- 216
+purify$ -- 213
 quote$ -- 0
-skip$ -- 2378
+skip$ -- 2342
 stack$ -- 1
-substring$ -- 1214
-swap$ -- 700
+substring$ -- 1195
+swap$ -- 692
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 374
+while$ -- 368
 width$ -- 0
-write$ -- 882
+write$ -- 869
 (There was 1 error message)
