@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  3 JUN 2016 01:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.28)  3 JUN 2016 23:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -572,13 +572,13 @@ Package pdftex.def Info: Imagens/stormTopologyImage.png used on input line 218.
 
 (pdftex.def)             Requested size: 227.62206pt x 192.44586pt.
  [33 <./Imagens/stormTopologyImage.png>]
-[34] <Imagens/pnl.png, id=141, 163.61125pt x 308.15125pt>
+[34] [35] <Imagens/pnl.png, id=144, 163.61125pt x 308.15125pt>
 File: Imagens/pnl.png Graphic file (type png)
 
 <use Imagens/pnl.png>
-Package pdftex.def Info: Imagens/pnl.png used on input line 252.
+Package pdftex.def Info: Imagens/pnl.png used on input line 258.
 (pdftex.def)             Requested size: 136.57462pt x 257.22778pt.
-) [35] [36 <./Imagens/pnl.png>]
+) [36 <./Imagens/pnl.png>]
 \openout2 = `Capitulos/Capitulo3.aux'.
 
  (./Capitulos/Capitulo3.tex
@@ -746,13 +746,13 @@ Overfull \hbox (8.94287pt too wide) in paragraph at lines 184--217
 (./Capitulos/Capitulo4.aux) (./Capitulos/Capitulo5.aux)
 (./Capitulos/ApendiceA.aux)) ) 
 Here is how much of TeX's memory you used:
- 5201 strings out of 493027
- 73945 string characters out of 6134069
- 236139 words of memory out of 5000000
- 8431 multiletter control sequences out of 15000+600000
+ 5206 strings out of 493027
+ 74077 string characters out of 6134069
+ 236175 words of memory out of 5000000
+ 8436 multiletter control sequences out of 15000+600000
  33093 words of font info for 90 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 38i,16n,26p,924b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,26p,924b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
 ps/cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
@@ -772,7 +772,7 @@ fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Monografia.pdf (74 pages, 3178402 bytes).
+Output written on Monografia.pdf (74 pages, 3157210 bytes).
 PDF statistics:
  363 PDF objects out of 1000 (max. 8388607)
  222 compressed objects within 3 object streams

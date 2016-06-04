@@ -26,7 +26,7 @@
 \contentsline {paragraph}{Bolt.}{33}
 \contentsline {paragraph}{Spout.}{34}
 \contentsline {section}{\numberline {2.5}Processamento de Linguagem Natural}{35}
-\contentsline {section}{\numberline {2.6}Aplica\c c\~oes Web}{35}
+\contentsline {section}{\numberline {2.6}Aplica\c c\~oes Web}{36}
 \contentsline {chapter}{\numberline {3}Aplica\c c\~oes desenvolvidas e estudo comparativo}{37}
 \contentsline {section}{\numberline {3.1}Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}{37}
 \contentsline {paragraph}{Apache Spark Streaming.}{37}

@@ -25,10 +25,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Capitulos/Referencias.bib
-Illegal end of database file---line 589 of file Capitulos/Referencias.bib
- :  Title = {Usando Redes Sociais para Suportar Iniciativas de Cidades Inteligentes},
- :                                                                                   
-I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -39,45 +35,44 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 62 entries,
+You've used 63 entries,
             6480 wiz_defined-function locations,
-            1470 strings with 18859 characters,
-and the built_in function-call counts, 40636 in all, are:
-= -- 2855
-> -- 1404
+            1475 strings with 19002 characters,
+and the built_in function-call counts, 41139 in all, are:
+= -- 2880
+> -- 1419
 < -- 18
-+ -- 563
-- -- 438
-* -- 2692
-:= -- 5723
-add.period$ -- 238
-call.type$ -- 62
-change.case$ -- 548
-chr.to.int$ -- 82
-cite$ -- 62
-duplicate$ -- 1831
-empty$ -- 3538
-format.name$ -- 2076
-if$ -- 9588
++ -- 568
+- -- 443
+* -- 2722
+:= -- 5801
+add.period$ -- 241
+call.type$ -- 63
+change.case$ -- 555
+chr.to.int$ -- 83
+cite$ -- 63
+duplicate$ -- 1860
+empty$ -- 3583
+format.name$ -- 2099
+if$ -- 9699
 int.to.chr$ -- 13
 int.to.str$ -- 0
-missing$ -- 1041
-newline$ -- 310
-num.names$ -- 310
-pop$ -- 1453
+missing$ -- 1057
+newline$ -- 315
+num.names$ -- 315
+pop$ -- 1475
 preamble$ -- 1
-purify$ -- 217
+purify$ -- 220
 quote$ -- 0
-skip$ -- 2383
+skip$ -- 2413
 stack$ -- 1
-substring$ -- 1213
-swap$ -- 711
+substring$ -- 1230
+swap$ -- 718
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 374
+while$ -- 380
 width$ -- 0
-write$ -- 884
-(There was 1 error message)
+write$ -- 897
