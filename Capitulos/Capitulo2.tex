@@ -252,7 +252,6 @@ Continuando, a fase seguinte é a \textit{Syntactic analysis}, responsável pela d
 
 Ao final do estágio anteriormente mencionado, os resultados dele são utilizadas na fase \textit{Semantic analysis}. Nela, as palavras são analisadas buscando entender seus respectivos significados, corrigir expressões, sentenças, levando em consideração o contexto no qual estão inseridas \cite{NplBook}. Sendo assim, são realizadas traduções para uma meta-linguagagem, objetivando viabilizar essas analizes \cite{NplBook}. Por fim, o estágio \textit{Pragmatic analysis}, encontra-se como o último do fluxo de Processamento de Linguagem Natural, no qual acontece a análise das possíveis intenções expressas numa sentença \cite{NplBook}. 
 
-
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.3\textwidth]{Imagens/pnl.png}
@@ -261,4 +260,28 @@ Ao final do estágio anteriormente mencionado, os resultados dele são utilizadas 
   \label{fig:nlpStages}
 \end{figure}
 
-\section{Aplicações Web}
+\section{Aplicações Web e Web Services}
+
+A criação de Tim Berners-Lee, conhecida como \abrv[WWW -- World Wide Web]{\textit{World Wide Web} (WWW)}, inicialmente permitiu o compartilhamento de documentos científicos, via terminais \cite{WebApplicationArchitecture}. Isso foi possível, através de \textit{Web servers}, ou seja, computadores responsáveis por compartilhar recursos com os demais conectados à Internet \cite{WebApplicationArchitecture}. 
+
+Posteriormente, as páginas \textit{web} (\textit{Web Pages}) foram criadas, disponibilizando uma interface estática, construída em \abrv[HTML -- HyperText Markup]{HTML (\textit{HyperText Markup})}, para visualização dos documentos compartilhados através da Web \cite{WebApplicationArchitecture}. Após isso, houve também o surgimento dos Web Sites, definidos como uma coleção de \textit{web pages}, estruturadas, levando em consideração aspectos relacionados à estética e identidade (\textit{look and feel}), arquitetura do conteúdo, etc. \cite{WebApplicationArchitecture}.
+
+Apesar disso, mesmo com os \textit{web sites}, a informação continuava estática.  Com isso, as aplicações web surgiram para viabilizar conteúdos dinâmicos, contruídos através de parâmetros enviados pelo usuário \cite{WebApplicationArchitecture}. Tais parâmetros, são informados por meio de uma interface web de um navegador (cliente), que por sua vez é responsável por enviar requisições ao servidor, utilizando protocolos da Internet, como o \abrv[HTTP -- Hypertext Transfer Protocol]{HTTP (\textit{Hypertext Transfer Protocol})} \cite{WebApplicationArchitecture}. Os componentes mencionados, dentre outros, são ilustrados na Fig. \ref{fig:webAppArchitecture}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\textwidth]{Imagens/webAppArchitecture.png}
+  \caption{Arquitetura de uma Aplicação Web}
+  {\bf Fonte:} \cite{WebApplicationArchitectureGuide}
+  \label{fig:webAppArchitecture}
+\end{figure}
+
+Na Fig. \ref{fig:webAppArchitecture}, o lado do \textit{client} (cliente) é composto pelo navegador (\textit{browser}), que é responsável pela renderização da página HTML e comunicação com o \textit{Web Server}. Sendo a camada do Web Server, por sua vez, composta pelos componentes relacionados a Interface de Usuário e ao processamento dela (\textit{User Interface \abrv[UI -- User Interface]{(UI)} Components} e \textit{Process Components}). 
+
+As demais camadas são: \textit{Business}, contendo uma interface (\textit{Application Facade}) para acesso as regras de négocio da aplicação (\textit{Business Workflows}), componentes (\textit{Business Components}) e entidades (\textit{Business Entities}); \textit{Data}, fornecendo acesso componentes para acesso aos dados (\textit{Data Access Components}), utilitários (\textit{Data Helpers / Utilities}) e agentes de serviço (\textit{Service Agents}); \textit{Cross-Cutting}, compondo os serviços transversais relacionados a Segurança (\textit{Security}), Administração Operacional (\textit{Operational Management}) e Comunicação (\textit{Communication}). 
+
+Continuando, ainda há duas camadas, a do servidor de banco de dados (\textit{Database Server}) e a de serviços (\textit{Services}). Na de serviços, é possível expor os serviços da aplicação para outras existentes ou mesmo consumir delas, através de \textit{Web Services}. Os \textit{Web Services} são aplicações \textit{web} distribuídas onde o cliente é uma outra aplicação, existindo duas principais formas de implementá-las: (i) \abrv[REST -- Representational State Transfer]{Representational State Transfer (REST)} e (ii) [SOAP -- Simple Object Access Protocol]{\textit{Simple Object Access Protocol} (SOAP)} \cite{WebApplicationArchitectureGuide}.
+
+A primeira delas, REST, defini-se como um padrão arquitetural composto por verbos do protocolo HTTP (GET, POST, PUT e DELETE), através dos quais podem ser realizadas requisições aos serviços existentes, acessíveis via \textit{endpoints} \abrv[URI -- Uniform Resource Identifier]{(URIs, \textit{Uniform Resource Identifier})} \cite{WebApplicationArchitectureGuide}. A segunda, SOAP, disponibiliza uma WSDL (\textit{Web Services Definition Language}), especificando como determinado serviço deve acessado, expondo através dela informações como: nome do serviço, métodos disponíveis, e seus respectivos argumentos e tipos de dados.
+
+Utilizando SOAP, é necessário lidar com XML, formato no qual a WSDL é contruída, tendo como vantagem a possibilidade de utilizar outros protocolos além do HTTP \cite{WebApplicationArchitectureGuide}. Ao contrário do SOAP, REST tem a sua fundamentação no protocolo HTTP e devido a isso não mamtém estado, ou seja, as requisições precisam conter todas as informações necessárias para ser executada \cite{WebApplicationArchitectureGuide}. 

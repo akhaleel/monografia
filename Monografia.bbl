@@ -210,6 +210,11 @@ Disponível em: <\url{http://www.complexevents.com}>. Acesso em Maio 7, 2016.}
 39º Encontro Anual da Associação Nacional de Pós-Graduação e Pesquisa em
   Ciências Sociais.}
 
+\bibitem[Meier et al. 2009]{WebApplicationArchitectureGuide}
+\abntrefinfo{Meier et al.}{MEIER et al.}{2009}
+{MEIER, J. et al. \emph{Web Application Architecture Guide}. 2st. ed. [S.l.]:
+  Microsoft, 2009.}
+
 \bibitem[{MongoDB} 2016]{Mongo}
 \abntrefinfo{{MongoDB}}{{MongoDB}}{2016}
 {{MongoDB}. 2016.
@@ -280,6 +285,11 @@ Disponível em:
 {SHIN, K.~G.; RAMANATHAN, P. Real-time computing: A new discipline of computer
   science and egineering.
 \emph{Procedings og the IEEE}, v.~82, n.~1, 1994.}
+
+\bibitem[Shklar e Rosen 2011]{WebApplicationArchitecture}
+\abntrefinfo{Shklar e Rosen}{SHKLAR; ROSEN}{2011}
+{SHKLAR, L.; ROSEN, R. \emph{Web Application Architecture}. 1st. ed. [S.l.]:
+  John Wiley and Sons, 2011.}
 
 \bibitem[{Siciliane, T.} 2015]{DzoneArticle}
 \abntrefinfo{{Siciliane, T.}}{{Siciliane, T.}}{2015}
