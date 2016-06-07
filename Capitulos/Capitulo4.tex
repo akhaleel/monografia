@@ -13,9 +13,9 @@ Visando alcançar esse objetivo, primeiramente foram analisadas, descritivamente,
 
 Por fim, o estudo exploratório foi utilizado para determinar se as Cidades Inteligentes da Espanha faziam ou não uso das Redes Sociais, focando o nível de interação entre os cidadãos e seus governos locais. Como resultado dessa pesquisa, concluiu-se que, embora essas cidades sejam classificadas como Inteligentes, é preciso haver maior e-Participação nas Redes Sociais, posto que, atualmente, esse é um dos principais meios pelos quais as pessoas tem se comunicado.
 
-Outro trabalho com a mesma temática, citado em \cite{LocaleGovernment}, realizou uma análise dos principais governos locais da União Européia, no quesito de e-Participação e dos fatores que a influencia. Com essa proposta, foram analisadas 75 cidades, representando 85\% da população Européia, sendo também levado em consideração o estilo de gestão de suas respectivas autoridades.
+Outro trabalho com a mesma temática, citado em \cite{LocaleGovernment}, realizou uma análise dos principais governos locais da União Europeia, no quesito de e-Participação e dos fatores que a influencia. Com essa proposta, foram analisadas 75 cidades, representando 85\% da população Europeia, sendo também levado em consideração o estilo de gestão de suas respectivas autoridades.
 
-A metodologia de estudo analisou, exploratoriamente, as Redes Sociais Twitter, Facebook, LinkedIn, YouTube e blogs da Google (Blogger), contruindo um Índice de Sofisticação não Exaustivo, composto por variáveis binárias. A construção desse índice contém os respectivos indicadores de cada Rede Social. Em seguida foi realizada uma análise de regressão para identificar como o estilo de gestão do governo e a facilidade com que a sociedade adotam novas tecnologias influenciam no índice elaborado.
+A metodologia de estudo analisou, exploratoriamente, as Redes Sociais Twitter, Facebook, LinkedIn, YouTube e blogs da Google (Blogger), construindo um Índice de Sofisticação não Exaustivo, composto por variáveis binárias. A construção desse índice contém os respectivos indicadores de cada Rede Social. Em seguida foi realizada uma análise de regressão para identificar como o estilo de gestão do governo e a facilidade com que a sociedade adotam novas tecnologias influenciam no índice elaborado.
 
 Os resultados da pesquisa mostram que algumas das cidades analisadas (na época do estudo), estavam com iniciativas de e-Participação muito imaturas, além disso, que metade dos governos não tinham representação nas Redes Sociais. Sendo, por outro lado, massiva a presença de cidadãos nas Redes Sociais discutindo sobre a política local, entrega de serviços, e outros assuntos relacionados a cidade, havendo um isolamento de partes que deveriam interagir entre si. Por fim, concluiu-se também que o estilo de gestão dos governos locais não influenciam na adoção ou não das Redes Sociais, mas sim a facilidade com que a sociedade adota novas tecnologias. 
 
@@ -24,98 +24,110 @@ Saindo do contexto de e-Participação, a referência \cite{Survey} realiza um comp
 \subsection{Resultados}
 \label{results}
 
-As tabelas contendo as métricas processadas sobre e-Participação, estão no apêndice desse trabalho, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas elas. Nela, as cidades estão classificadas de acordo com cada métrica, sendo os valores da coluna pontuação compostos pelo somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição da classificação, ou seja, o 27º lugar representa 27 pontos; consequemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos \textit{tweets} coletados, conforme Tab. \ref{tab:inReplyMetrics}.
+As tabelas contendo os resultados das métricas coletadas sobre e-Participação, estão no apêndice desse trabalho, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas elas. Nela, as cidades estão classificadas de acordo com cada métrica, sendo os valores da coluna pontuação compostos pelo somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição da classificação, ou seja, o 27º lugar representa 27 pontos; consequentemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos \textit{tweets} coletados, conforme Tab. \ref{tab:inReplyMetrics}.
 
 \begin{table}[!htb]
-	\center
-		% Título de tabelas sempre aparecem antes da tabela
-	\caption{Classificação das cidades brasileiras como Cidades Inteligentes}
+	% Título de tabelas sempre aparecem antes da tabela
+	\centering
+	\begin{threeparttable}
+	\caption{Colocações \tnote{1} das Cidades Inteligentes brasileiras \tnote{2} em relação as de e-Participação}
+	\centering
 	\bigskip
 	\label{tab:smartCitiesRanking}
-	{
-		\begin{tabular}{c|c|c}
+		\begin{tabular}{c|c|c|c}
 			\hline
-            {\bf UF} & {\bf Capital} & {\bf Colocação}\\
+            {\bf UF} & {\bf Capital} & {\bf Cidades Inteligentes \tnote{3}} & {\bf e-Participação \tnote{4}}\\
 			\hline
-			RJ & Rio de Janeiro & 1º\\
-			SP & São Paulo & 2º\\
-			MG & Belo Horizonte & 3º\\
-			DF & Brasília & 4º\\
-			PR & Curitiba & 5º\\
-			ES & Vitória & 7º\\
-			SC & Florianópolis & 8º\\
-			RS & Porto Alegre & 9º\\
-			PE & Recife & 10º\\
-			CE & Fortaleza & 18º\\
-			GO & Goiânia & 24º\\
-			PB & João Pessoa & 29º\\
-			BA & Salvador & 31º\\
-			SE & Aracaju & 33º\\
-			PI & Teresina & 35º\\			
+			RJ & Rio de Janeiro & 1º & 6º\\
+			SP & São Paulo & 2º & 2º\\
+			MG & Belo Horizonte & 3º & 7º\\
+			DF & Brasília & 4º & 10º\\
+			PR & Curitiba & 5º & 1º\\
+			ES & Vitória & 7º & 16º\\
+			SC & Florianópolis & 8º & 18º\\
+			RS & Porto Alegre & 9º & 4º\\
+			PE & Recife & 10º & 7º\\
+			CE & Fortaleza & 18º & 13º\\
+			GO & Goiânia & 24º & 5º\\
+			PB & João Pessoa & 29º & 8º\\
+			BA & Salvador & 31º & -\\
+			SE & Aracaju & 33º & 14º\\
+			PI & Teresina & 35º & 13º\\	
+			\hline	
 		\end{tabular}
-	}
+		\begin{tablenotes}
+		    \item[1] As cidades ausentes não estão classificadas como Inteligentes ou não são capitais.
+		    \item[2] \textit{Ranking} geral composto por 50 cidades
+            	\item[3] Colocação como Cidade Inteligente
+            	\item[4] Colocação em e-Participação. O sinal de subtração indica desclassificação por ausência de umas das métricas analisadas.
+        \end{tablenotes}
+        	\end{threeparttable}
 	\center {\bf Fonte: }\cite{BrazilianSmartCitiesRanking}
 \end{table}
 
-Em paralelo a essa classificação, o Connected Smart Cities classificou algumas das cidades brasileiras como Cidades Inteligentes \cite{BrazilianSmartCitiesRanking}, levando em consideração 70 indicadores, sendo nenhum deles relacionados a e-Participação. A Tab. \ref{tab:smartCitiesRanking} contém somente a colocação das cidades analisadas por essa monografia. Como esperado, analisando ambas as classificações, nem todas as colocações são correspondentes.
+Visando comparar essa classificação, podemos citar o trabalho realizado pelo Connected Smart Cities, que classificou algumas das cidades brasileiras como Cidades Inteligentes \cite{BrazilianSmartCitiesRanking}, levando em consideração 70 indicadores, sendo nenhum deles relacionados a e-Participação. Com esse fim, foi construída a a Tab. \ref{tab:smartCitiesRanking}, contendo apenas a colocação das cidades analisadas por essa monografia. Como esperado, analisando ambas as classificações, nem todas as colocações são correspondentes.
 
-Por exemplo, o Rio de Janeiro ocupa a primeira colocação na classificação das Cidades Inteligentes, enquanto que no quesito e-Participação, está em quarto lugar, observando-se essa diferença também em outras cidades. Em contraste, Goiânia, Porto Alegre, Recife, Fortaleza, João Pessoa, estão melhores classificadas quanto a e-Participação.
+Por exemplo, o Rio de Janeiro ocupa a primeira colocação na classificação das Cidades Inteligentes, enquanto que no quesito e-Participação, está em sexto lugar, observando-se essa diferença também em outras cidades. Em contraste, Goiânia, Porto Alegre, Recife, Fortaleza, João Pessoa, estão melhores classificadas quanto a e-Participação.
 
-São Paulo em ambos os casos se manteve na segunda colocação, como esperado por ser referência mundial em Governo Aberto \cite{OpenGovernmentPartnership}, e Curitiba, devido ao fato de ser exemplo de comunicação em Redes Sociais \cite{CuritibaUseCase}, favorecendo a e-Participação. Por outro lado, a colocação de empate da prefeitura de São Luís com a de Curitiba foi um resultado não esperado.
+São Paulo em ambos os casos, coincidentemente, ficou em segundo lugar, obtendo boas colocações como esperado por ser referência mundial em Governo Aberto \cite{OpenGovernmentPartnership}, e Curitiba, devido ao fato de ser exemplo de comunicação em Redes Sociais \cite{CuritibaUseCase}, favorecendo a e-Participação. Por outro lado, a prefeitura de São Luís não aparece dentre as cinquenta cidades brasileiras classificadas como inteligente, mas em terceiro lugar quanto a e-Participação, sendo um resultado não esperado.
 
-A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa relacionado as métricas e polaridades de sentimentos processadas. Como já mencionado no Cap. \ref{chapter3}, para cada métrica (escolhida no menu seletor) é computada a média nacional, adicionando uma camada vermelha sobre a região com valor inferior a ela, e azul caso superior. Além disso, é possível obter informações detalhadas clicando em cima da região no mapa, conforme exibido na Fig. \ref{fig:webApllication2}. 
+A Fig. \ref{fig:webApllication}, ilustra a aplicação \textit{web} para exibição do mapa relacionado as métricas coletadas e polaridades de sentimentos processadas. Como já mencionado no Cap. \ref{chapter3}, para cada métrica (escolhida no menu seletor) é computada a média nacional, adicionando uma camada vermelha sobre a região com valor inferior a ela, e azul caso superior. Além disso, é possível obter informações detalhadas clicando em cima da região no mapa, conforme exibido na Fig. \ref{fig:webApllication2}. 
 
 \begin{table}[!htb]
 	\center
 		% Título de tabelas sempre aparecem antes da tabela
 	\caption{Colocação dos perfis das prefeituras das capitais, de acordo com suas respectivas métricas}
-	\begin{threeparttable}
 	\bigskip
 	\label{tab:rankMetrics}
 	{
-		\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+		\begin{threeparttable}
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
 			\hline
-            {\bf UF} & {\bf Capital} & {\bf A \tnote{1}} & {\bf B \tnote{2}} & {\bf C \tnote{3}} & {\bf D \tnote{4}} & {\bf E \tnote{5}} & {\bf F \tnote{6}} & {\bf Pontos} & {\bf Colocação}\\
+            {\bf UF} & {\bf Capital} & {\bf A \tnote{1}} & {\bf B \tnote{2}} & {\bf C \tnote{3}} & {\bf D \tnote{4}} & {\bf E \tnote{5}} & {\bf F \tnote{6}} & {\bf H \tnote{7}} & {\bf P \tnote{8}} & {\bf Colocação \tnote{9}}\\
 			\hline
-			AC & Rio Branco & 24º & 20º & 23º & 22º & 1º & 19º & 109 & 19º\\
-			AL & Maceió & 12º & 19º & 17º & 10º & 19º & 18º & 88 & 15º\\
-			AM & Manaus & 21º & 18º & 16º & 17º & 14º & 22º & 102 & 18º\\
-			AP & Macapá & 14º & 3º & 6º & 7º & 13º & 12º & 49 & 5º\\
-			BA & Salvador & 18º & 25º & 25º & 27º & - & 27º & 122 & -\\	
-			CE & Fortaleza & 16º & 15º & 13º & 21º & 10º & 9º & 84 & 14º\\
-			DF & Brasília & 10º & 10º & 11º & 18º & 3º & 13º & 65 & 10º\\
-			ES & Vitória & 15º & 23º & 21º & 13º & 8º & 21º & 96 & 16º\\
-			GO & Goiânia & 1º & 11º & 12º & 15º & 4º & 4º & 44 & 3º\\
-			MA & São Luís & 6º & 1º & 1º & 9º & 11º & 8º & 29 & 1º\\
-			MG & Belo Horizonte & 19º & 9º & 5º & 12º & 7º & 10º & 57 & 7º\\
-			MS & Campo Grande & 20º & 26º & 27º & 25º & 5º & 26º & 129 & 23º\\
-			MT & Cuiabá & 26º & 27º & 24º & 20º & 15º & 23º & 129 & 23º\\
-			PA & Belém & 27º & 22º & 19º & 16º & 16º & 20º & 120 & 21º\\		
-			PB & João Pessoa & 2º & 16º & 14º & 4º & 24º & 7º & 59 & 8º\\
-			PE & Recife & 11º & 14º & 10º & 3º & 25º & 6º & 61 & 9º\\
-			PI & Teresina & 13º & 6º & 18º & 5º & 17º & 16º & 68 & 12º\\
-			PR & Curitiba & 8º & 2º & 2º & 1º & 21º & 2º & 29 & 1º\\
-			RJ & Rio de Janeiro & 17º & 7º & 4º & 14º & 12º & 1º & 48 & 4º\\
-			RN & Natal & 9º & 8º & 7º & 19º & 6º & 17º & 66 & 11º\\
-			RO & Porto Velho & 23º & 21º & 26º & 26º & - & 25º & 121 & -\\
-			RR & Boa Vista & 24º & 24º & 22º & 11º & 22º & 24º & 127 & 22º\\
-			RS & Porto Alegre & 3º & 5º & 8º & 6º & 20º & 14º & 49 & 5º\\
-			SC & Florianópolis & 25º & 17º & 20º & 23º & 9º & 5º & 99 & 17º\\
-			SE & Aracaju & 7º & 13º & 15º & 24º & 2º & 15º & 76 & 13º\\
-			SP & São Paulo & 5º & 4º & 3º & 2º & 23º & 3º & 32 & 2º\\
-			TO & Palmas & 4º & 12º & 9º & 8º & 18º & 11º & 55 & 6º\\
+			AC & Rio Branco & 24º & 20º & 23º & 22º & 1º & 19º & 24º & 133 & 19º\\
+			AL & Maceió & 12º & 19º & 17º & 10º & 19º & 18º & 20º & 108 & 15º\\
+			AM & Manaus & 21º & 18º & 16º & 17º & 14º & 22º & 9º & 111 & 17º\\
+			AP & Macapá & 14º & 3º & 6º & 7º & 13º & 12º & 19º & 68 & 9º\\
+			BA & Salvador & 18º & 25º & 25º & 27º & - & 27º & 26º & 122 & -\\	
+			CE & Fortaleza & 16º & 15º & 13º & 21º & 10º & 9º & 5º & 89 & 13º\\
+			DF & Brasília & 10º & 10º & 11º & 18º & 3º & 13º & 4º & 69 & 10º\\
+			ES & Vitória & 15º & 23º & 21º & 13º & 8º & 21º & 12º & 108 & 16º\\
+			GO & Goiânia & 1º & 11º & 12º & 15º & 4º & 4º & 11º & 55 & 5º\\
+			MA & São Luís & 6º & 1º & 1º & 9º & 11º & 8º & 13º & 42 & 3º\\
+			MG & Belo Horizonte & 19º & 9º & 5º & 12º & 7º & 10º & 6º & 63 & 7º\\
+			MS & Campo Grande & 20º & 26º & 27º & 25º & 5º & 26º & 25º & 154 & 23º\\
+			MT & Cuiabá & 26º & 27º & 24º & 20º & 15º & 23º & 23º & 152 & 22º\\
+			PA & Belém & 27º & 22º & 19º & 16º & 16º & 20º & 15º & 135 & 20º\\		
+			PB & João Pessoa & 2º & 16º & 14º & 4º & 24º & 7º & 8º & 67 & 8º\\
+			PE & Recife & 11º & 14º & 10º & 3º & 25º & 6º & 2º & 63 & 7º\\
+			PI & Teresina & 13º & 6º & 18º & 5º & 17º & 16º & 21º & 89 & 13º\\
+			PR & Curitiba & 8º & 2º & 2º & 1º & 21º & 2º & 1º & 30 & 1º\\
+			RJ & Rio de Janeiro & 17º & 7º & 4º & 14º & 12º & 1º & 10º & 58 & 6º\\
+			RN & Natal & 9º & 8º & 7º & 19º & 6º & 17º & 18º & 84 & 12º\\
+			RO & Porto Velho & 23º & 21º & 26º & 26º & - & 25º & 27º & 121 & -\\
+			RR & Boa Vista & 24º & 24º & 22º & 11º & 22º & 24º & 22º & 149 & 21º\\
+			RS & Porto Alegre & 3º & 5º & 8º & 6º & 20º & 14º & 3º & 52 & 4º\\
+			SC & Florianópolis & 25º & 17º & 20º & 23º & 9º & 5º & 14º & 113 & 18º\\
+			SE & Aracaju & 7º & 13º & 15º & 24º & 2º & 15º & 17º & 93 & 14º\\
+			SP & São Paulo & 5º & 4º & 3º & 2º & 23º & 3º & 7º & 39 & 2º\\
+			TO & Palmas & 4º & 12º & 9º & 8º & 18º & 11º & 16º & 71 & 11º\\
+			\hline
 		\end{tabular}
 		\begin{tablenotes}
-            \item[1] Métrica de tweets por dia
-            \item[2] Métrica de retweets por dia
+            \item[1] Métrica de \textit{tweets} por dia
+            \item[2] Métrica de \textit{retweets} por dia
             \item[3] Métrica de favoritos
             \item[4] Métrica de réplicas
             \item[5] Métrica de tempo de resposta
             \item[6] Métrica de menções
+            \item[7] Métrica de Nº de seguidores
+            \item[8] Pontuação obtida pelo somatório das métricas
+            \item[9] Cidades desclassificas e métricas nulas são indicadas com o sinal de subtração.
         \end{tablenotes}
-	}
-		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
-		\end{threeparttable}
+     \end{threeparttable}
+     }
+		\center {\bf Fonte:} Elaboração própria
 \end{table}
 
 \begin{figure}[!hb]
@@ -134,13 +146,13 @@ A Fig. \ref{fig:webApllication}, ilustra a aplicação web para exibição do mapa r
   \label{fig:webApllication2}
 \end{figure}
 
-As aplicacações que realizaram o processamento de stream de \textit{tweets} em tempo real, foram executadas em dois dias (22/05 com Spark e 23/05 com Storm), durante o período de 12h, estando os resultados do primeiro dia na Tab.\ref{tab:sentimentsSpark}, e do segundo na Tab.\ref{tab:sentimentsStorm}.
+As aplicações que realizaram o processamento de stream de \textit{tweets} em tempo real, foram executadas em dois dias (22/05 com Spark e 23/05 com Storm), durante o período de 12h, estando os resultados do primeiro dia na Tab.\ref{tab:sentimentsSpark}, e do segundo na Tab.\ref{tab:sentimentsStorm}.
 
 Com base nesses resultados, para cada polaridade foi calculada a média entre todas as cidades, utilizada para construir o mapa da aplicação web (Fig.\ref{fig:sentimentsSpark} e Fig.\ref{fig:sentimentsStorm}). No qual, pode-se visualizar a polaridade dos sentimentos dos \textit{tweets} que mencionam os perfis do Twitter em análise. Além disso, observa-se também nas tabelas mencionadas, que as cidades melhores classificadas pela primeira aplicação interagiram mais com suas respectivas prefeituras, reforçando os primeiros resultados encontrados. 
 
-Quanto ao estudo comparativo entre o Storm e o Spark, podemos dizer que a primeira opção, respectivamente, para o caso de uso estudado, é melhor de ser utilizada como aplicação para processamento de \textit{streams} de \textit{tweets}. Apesar do valor de \textit{throughput} do Spark ser superior, e dele fornecer um modelo de processamento de dados mais eficiente, a arquitetura de Tolerância a Falhas do Storm precisa ser priorizada, devido ao longo tempo de execução da aplicação.
+Quanto ao estudo comparativo entre o Storm e o Spark, podemos dizer que a primeira opção, respectivamente, é melhor de ser utilizada como aplicação para processamento de \textit{streams} de \textit{tweets}. Apesar do valor de \textit{throughput} do Spark ser superior, e dele fornecer um modelo de processamento de dados mais eficiente, a arquitetura de Tolerância a Falhas do Storm precisa ser priorizada, devido ao longo tempo de execução da aplicação.
 
-Por fim, com base nos resultados citados anteriormente, o trabalho realizado por essa monografia se diferencia dos trabalhos relacionados, por proporcionar aplicações para processamento de grande volume de dados, provenientes do Twitter, visando obter métricas, processamento e visualização de métricas sobre e-Participação.
+Por fim, com base nos resultados citados anteriormente, o trabalho realizado por essa monografia se diferencia dos trabalhos relacionados, por proporcionar aplicações para processamento de grande volume de dados, provenientes do Twitter, visando obter métricas e visualização de métricas sobre e-Participação.
 
 \begin{figure}[!ht]
   \centering
@@ -198,6 +210,7 @@ Por fim, com base nos resultados citados anteriormente, o trabalho realizado por
 			SE & Aracaju & 0 & 0 & 1\\
 			SP & São Paulo & 38 & 9 & 119\\
 			TO & Palmas & 2 & 10 & 12\\
+			\hline
 		\end{tabular}
 	}
 	\center{\bf Fonte: }{Elaboração própria}
@@ -243,6 +256,7 @@ Por fim, com base nos resultados citados anteriormente, o trabalho realizado por
 			SE & Aracaju & 2 & 1 & 10\\
 			SP & São Paulo & 11 & 5 & 38\\
 			TO & Palmas & 3 & 3 & 11\\
+			\hline
 		\end{tabular}
 	}
 	\center{\bf Fonte: }{Elaboração própria}

@@ -21,7 +21,7 @@ A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle} f
   \label{fig:dstream}
 \end{figure}
 
-\paragraph{Apache Flink.} Apache Flink é um plataforma muito semelhante ao Spark. Com suporte a processamento de \textit{streams}, definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em \textit{batch} é realizado em cima de DataSets, semalhantes as RDDs do Spak. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração conhecida como Sink, é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
+\paragraph{Apache Flink.} Apache Flink é uma plataforma muito semelhante ao Spark. Com suporte a processamento de \textit{streams}, definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em \textit{batch} é realizado em cima de DataSets, semelhantes as RDDs do Spak. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração conhecida como Sink, é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
 
 \begin{figure}[htb]
   \centering
@@ -31,9 +31,9 @@ A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle} f
   \label{fig:flinkProcessingImage}
 \end{figure}
 
-\paragraph{Apache Storm.} Apache Storm é um plataforma para processamento de \textit{stream} em tempo real. Ao contrário do Spark, tem "\textit{One At Time}" como modelo de processamento de dados. As \textit{streams} são compostas por tuplas (unidade básica de dados, processadas numa abstração conhecida como Topologia, ilustrada na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (\textit{Directed Acyclic Graph} \cite{GraphTeory})} de \textit{spouts} e \textit{bolts}, respectivamente, resposáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
+\paragraph{Apache Storm.} Apache Storm é um plataforma para processamento de \textit{stream} em tempo real. Ao contrário do Spark, tem "\textit{One At Time}" como modelo de processamento de dados. As \textit{streams} são compostas por tuplas (unidade básica de dados, processadas numa abstração conhecida como Topologia, ilustrada na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (\textit{Directed Acyclic Graph} \cite{GraphTeory})} de \textit{spouts} e \textit{bolts}, respectivamente, responsáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
 
-\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de \textit{stream} em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por \textit{offsets}, ou, simplesmente\textit{ids}), em vez de tupla, ou, DStream. Os \textit{streams} são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por \textit{jobs} responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em \textit{batch}, realizado processando sequências de \textit{streams}.
+\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de \textit{stream} em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por \textit{offsets}, ou, simplesmente \textit{ids}), em vez de tupla, ou, DStream. Os \textit{streams} são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por \textit{jobs} responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em \textit{batch}, realizado processando sequências de \textit{streams}.
 
 \begin{figure}[htb]
   \centering
@@ -45,14 +45,14 @@ A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle} f
 
 Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \ref{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
 
-Além disso, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superfecialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no desenvolvimento das aplicações a serem apresentadas neste capítulo.
+Além disso, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superficialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no desenvolvimento das aplicações a serem apresentadas neste capítulo.
 
 \begin{table}[!htb]	
 	\center
 		% Título de tabelas sempre aparecem antes da tabela
-	\caption{Quantidade de citações a plataformas ESPs por referência}
+	\caption{Principais plataformas ESPs e suas respectivas quantidades de citações}
 	\label{tab:tableNumberOfMentions}
-	{
+	\scalebox{0.8}{
 		\begin{tabular}{c|c|c|c|c}
 			\hline
             {\bf Referência} & {\bf Spark Streaming} & {\bf Storm} & {\bf Flink} & {\bf Samza}\\
@@ -83,7 +83,7 @@ Após a escolha das plataformas para processamento de eventos em tempo real, quat
 \subsection{Aplicação web para visualização das métricas relacionadas a e-Participação}
 \label{webApp}
 
-A aplicação web foi desenvolvida utilizando o framework web Django \cite{Django}, unicamente devido a sua simplicidade. Nela, há somente uma página contruída usando HTML, JavaScript e CSS, na qual o mapa para a visualização das métricas e polaridades é exibido. O mapa, por sua vez, é obtido com o suporte da API MapsJavaScript \cite{GoogleDevelopers} sendo nele sobrepostas camadas do Google Fusion Tables (aplicação web experimental para visualização de dados, coleta e compartilhamento de tabelas \cite{FusionTables}).
+A aplicação web foi desenvolvida utilizando o framework web Django \cite{Django}, unicamente devido a sua simplicidade. Nela, há somente uma página construída usando HTML, JavaScript e CSS, na qual o mapa para a visualização das métricas e polaridades é exibido. O mapa, por sua vez, é obtido com o suporte da API MapsJavaScript \cite{GoogleDevelopers} sendo nele sobrepostas camadas do Google Fusion Tables (aplicação web experimental para visualização de dados, coleta e compartilhamento de tabelas \cite{FusionTables}).
 
 As métricas e polaridades podem ser escolhidas através de uma caixa de seleção (ComboBox), sendo assim, para cada Estado, se sua respectiva média for maior que a nacional a região dele no mapa é sobreposta com uma camada azul, se menor, vermelha. Ainda, clicando num Estado é possível visualizar um painel informativo com os valores das médias, medianas, mínimo, máximo, variância e desvio padrão, assim como a quantidade de tweets, seguidores, e o tempo de existência da conta.
 
@@ -97,11 +97,11 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 
 O primeiro passo no desenvolvimento dessa aplicação, foi decidir as contas (perfis) das quais os \textit{tweets} seriam processados. Como, normalmente, as capitais dos estados tem maior concentração de pessoas, optou-se por fazer um levantamento dos perfis oficiais de suas respectivas prefeituras, para então posteriormente realizar o processamento dos \textit{tweets}. Sendo assim, a Tab. \ref{tab:tweetAccounts} lista as contas relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros.
 
-Em seguida, foram escolhidas quais métricas dessas contas seriam possíveis e importantes de coletar, tendo como referência \cite{AVisionOfSocialMedia}. Sendo assim, selecionou-se os seguintes indicadores, respectivos ao Twitter: média do número de \textit{tweets}, seguidores, \textit{retweets} (compartilhamento de um determinado \textit{tweet}), comentários realizados por usuários, réplicas a \textit{tweets} e tempo de resposta. As métricas referentes ao número de usuários acompanhando as listas (junções de \textit{timelines}) dos perfis e o total delas existentes foram desconsideras, pois são relacionadas a contas diferentes das em questão.
+Em seguida, foram escolhidas quais métricas dessas contas seriam possíveis e importantes de coletar, tendo como referência \cite{AVisionOfSocialMedia}. Sendo assim, selecionou-se os seguintes indicadores respectivos ao Twitter: média do número de \textit{tweets}, seguidores, \textit{retweets} (compartilhamento de um determinado \textit{tweet}), comentários realizados por usuários, réplicas a \textit{tweets} e tempo de resposta. As métricas referentes ao número de usuários acompanhando as listas (junções de \textit{timelines}) dos perfis e o total delas existentes foram desconsideras, pois são relacionadas a contas diferentes das em questão.
 
-De acorco com \cite{AVisionOfSocialMedia}, através dessas métricas é possível obter indicadores relacionados ao nível e-Participação. Alguns dos indicadores propostos  pela \abrv[SNR -- Social Network Ratio]{SNR (\textit{Social Network Ratio})} para Redes Sociais são: Atividade, ou, audiência estimada; Tamanho, ou, esforço realizado pelo perfil para se comunicar; Visibilidade, ou, número total de menções ao perfil; Interação, ou, capacidade de impacto (viralização) da comunicação \cite{AVisionOfSocialMedia}.
+De acordo com \cite{AVisionOfSocialMedia}, através dessas métricas é possível obter indicadores relacionados a e-Participação. Alguns dos indicadores propostos  pela \abrv[SNR -- Social Network Ratio]{SNR (\textit{Social Network Ratio})} para Redes Sociais são: Atividade, ou, audiência estimada; Tamanho, ou, esforço realizado pelo perfil para se comunicar; Visibilidade, ou, número total de menções ao perfil; Interação, ou, capacidade de impacto (viralização) da comunicação \cite{AVisionOfSocialMedia}.
 
-Portando, pode-se mapear a métrica média de seguidores ao indicador Atividade, e a de menções para o de Visibilidade; da mesma forma, as médias sobre tweets, réplicas por dia e tempo de resposta ao indicador Tamanho; por último, as médias de retweets e favoritos ao de Interação. A Fig. \ref{fig:twitterDataAnalysisClassDiagram} exibe o diagrama de classes da aplicação desenvolvida para o processamento de tweets e coleta dessas métricas.
+Portando, pode-se mapear a métrica número de seguidores ao indicador Atividade; a média de menções realizadas para o de Visibilidade; o número de \textit{tweets}, réplicas por dia e médias relacionadas ao tempo de resposta ao indicador Tamanho; e por último, as médias de \textit{retweets} e favoritos ao de Interação. A Fig. \ref{fig:twitterDataAnalysisClassDiagram} exibe o diagrama de classes da aplicação desenvolvida para o processamento de \textit{tweets} e coleta dessas métricas.
 
 \begin{figure}[!htb]
   \centering
@@ -111,7 +111,7 @@ Portando, pode-se mapear a métrica média de seguidores ao indicador Atividade, e
   \label{fig:twitterDataAnalysisClassDiagram}
 \end{figure}
 
-A aplicação exibida no diagrama de classes da Fig. \ref{fig:twitterDataAnalysisClassDiagram} foi desenvolvida na linguagem de programação Java, devido a sua praticidade de uso, utilizando o framework para Web Services, Apache CXF \cite{ApacheCXF}, para expor dois de seus serviços através de uma REST API. O primeiro deles é exposto pela interface ITweetService, e o segundo pela ISparkService, pelos seguintes \textit{endpoints}, respectivamente: "$\backslash$tweets" e "$\backslash$metrics", permitindo intregrá-la a aplicação web descrita na subseção \ref{webApp}. 
+A aplicação exibida no diagrama de classes da Fig. \ref{fig:twitterDataAnalysisClassDiagram} foi desenvolvida na linguagem de programação Java, devido a sua praticidade de uso, utilizando o framework para Web Services, Apache CXF \cite{ApacheCXF}, para expor três de seus serviços através de uma REST API. O primeiro deles é exposto pela interface ITweetService, o segundo pela ISparkService, e o terceiro via ISentiments, pelos seguintes \textit{endpoints}, respectivamente: "$\backslash$tweets", "$\backslash$metrics" e "$\backslash$sentiments", permitindo intregrá-la a aplicação web descrita na subseção \ref{webApp}. 
 
 A classe que implementa a interface ITweetService, é responsável por realizar a coleta dos 3.200 \textit{tweets} mais recentes (se disponíveis) de cada conta, através do \textit{endpoint} "statuses/user\_timeline". Tal quantidade é limitada pela API do Twitter, a qual pode ser alcançada por no máximo 180 requisições, num intervalo de 15 minutos, com autenticação via conta de usuário \cite{TwitterDevelopers}.
 
@@ -119,7 +119,7 @@ Outro endpoint utilizado foi "search/tweets", para pesquisar as menções realizad
 
 Durante a coleta dos \textit{tweets}, eles são mapeados para as seguintes classes do modelo da aplicação: UserInfo, que contém as informações respectivas ao usuário da conta (número de seguidores, \textit{tweets}, localização, \textit{username} e data de criação da conta), e TweetInfo, contendo as relacionadas ao \textit{tweet} (data de criação, \textit{id} do \textit{tweet} de réplica e a qual usuário ele se refere, quantidade de \textit{retweets}, favoritos, se é menção ou não, e o tempo de resposta calculado). Em seguida, os modelos são persistidos via a interface ITweetsDAO, a qual se comunica com o banco de dados não relacional MongoDB \cite{Mongo}.
 
-Os \textit{tweets} coletados por essa aplicação são os mais recentes e anteriores a data 18/06/2016 (incluindo-a). Como essa coleta não foi realizada sob um \textit{stream} de \textit{tweets}, a interface ISparkService expõe o serviço responsável por realizar o processamento em \textit{batch} desses \textit{tweets}, coletando as métricas relacionadas a e-Participação. Sendo assim, cada métrica é recuperada do banco de dados e mepeadas para um RDD de \textit{doubles}, quando números, ou, de \textit{strings}, no caso da data.
+Os \textit{tweets} coletados por essa aplicação são os mais recentes e anteriores a data 18/06/2016 (incluindo-a). Como essa coleta não foi realizada sob um \textit{stream} de \textit{tweets}, a interface ISparkService expõe o serviço responsável por realizar o processamento em \textit{batch} desses \textit{tweets}, coletando as métricas relacionadas a e-Participação. Sendo assim, cada métrica é recuperada do banco de dados e mapeadas para um RDD de \textit{doubles}, quando números, ou, de \textit{strings}, no caso da data.
 
 \begin{figure}[!htb]
   \centering
@@ -131,7 +131,7 @@ Os \textit{tweets} coletados por essa aplicação são os mais recentes e anteriore
 
 Sendo assim, após recuperar as métricas, é possível mapeá-las para um RDD de \textit{doubles}, por meio do qual são obtidos os valores relacionados as suas respectivas médias, medianas, variâncias, máximos, mínimos e desvios padrões. As informações sobre datas, como \textit{strings}, são mapeadas para o valor 1, representando a ocorrência de um \textit{tweet} nesse dia; compondo uma sequência de pares, que permite obter e mapear as quantidades de \textit{tweets} por dia a um RDD de \textit{doubles}. Tais processos de mapeamentos são ilustrados nas Fig. \ref{fig:sparkDiagramMapToDoble} e Fig. \ref{fig:sparkDiagramMapDateToDouble}.
 
-Por fim, a interface IFusionTable é utilizada para submeter os valores das métricas relacionadas e-Participação a uma Fusion Table \cite{eParticipationMetrics}, via a API do Google Fusion Tables. Os valores dessa tabela são utilizados para criar o mapa contido na aplicação web.
+Por fim, a interface IFusionTable é utilizada para submeter os valores das métricas relacionadas e-Participação a uma Fusion Table \cite{eParticipationMetrics}, via a API do Google Fusion Tables; e também os relacionalidos as polaridades de sentimentos, processados pelas aplicações explicadas em \ref{sparkApp} e \ref{stormApp}. Os valores dessa tabela são utilizados para criar o mapa contido na aplicação web.
 
 \begin{figure}[!htb]
   \centering
@@ -162,7 +162,7 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 			Distrito Federal & Brasília & Gov\_DF\\
 			Ceará & Fortaleza & prefeiturapmf\\
 			Espírito Santo & Vitória & VitoriaOnLine\\
-			Goiás & Goiánia & PrefeituraGy\\
+			Goiás & Goiânia & PrefeituraGy\\
 			Maranhão & São Luís & PrefeituraSL\\
 			Mato Grosso & Cuiabá & prefeitura\_CBA\\
 			Mato Grosso do Sul & Campo Grande & cgnoticias\\
@@ -184,7 +184,7 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 			\hline
 		\end{tabular}
 	}
-		\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+		\center {\bf Fonte:} Elaboração própria
 \end{table}
 
 \bigskip
@@ -195,7 +195,7 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 \subsection{Aplicação para processamento de stream de tweets, utilizando Spark Streaming}
 \label{sparkApp}
 
-A aplicação que utiliza o Spark Streaming, foi desenvolvida na linguagem de programação Java. No início de sua execução, é criado um contexto de \textit{stream} no qual é definindo o \textit{cluster} onde ela será executada e o intervalo de criação de cada RDD. Tais Resilient Distributed Datasets, são compostos ordenadamente em sequência, formando a abstração conhecida como DStream. No nosso caso, cada RDD é criado após 30000ms; sendo compostos pelos \textit{tweets} coletados filtrando os nomes das conta das prefeituras no Twitter, enumerados na classe KeyWords, ilustrada no diagrama da Fig. \ref{fig:sparkDataAnalysisClassDiagram}.
+A aplicação que utiliza o Spark Streaming, foi desenvolvida na linguagem de programação Java. No início de sua execução, é criado um contexto de \textit{stream} no qual é definindo o \textit{cluster} onde ela será executada e o intervalo de criação de cada RDD. Tais Resilient Distributed Datasets, são compostos ordenadamente em sequência, formando a abstração conhecida como DStream. No nosso caso, cada RDD é criado após 30000ms; sendo compostos pelos \textit{tweets} coletados filtrando os nomes das contas das prefeituras no Twitter, enumerados na classe KeyWords, ilustrada no diagrama da Fig. \ref{fig:sparkDataAnalysisClassDiagram}.
 
 O processo mencionado anteriormente, executado pela classe SparkStreaming, começa após a inicialização do contexto de stream, sendo os \textit{tweets} coletados pela classe TwitterUtils (do próprio Spark Streaming). Durante a coleta dos \textit{streams} de \textit{tweets} (eventos), cada RDD é mapeado para a classe TweetInfo (do modelo da aplicação), através de uma transformação map. Na sequência, as ações forEachRDD e collect são executadas para inserir os \textit{tweets} processados no banco de dados não relacional MongoDB, conforme ilustrado na Fig. \ref{fig:sparkDataAnalysisDiagram}.
 
@@ -211,13 +211,13 @@ A análise das polaridades dos sentimentos do conteúdo contido nos tweets ocorre 
 
 No Twitter, quando um \textit{tweet} é compartilhado ele é marcado com a notação "RT", abreviação de \textit{retweet}, a qual também é removida do texto em processamento. Além disso, alguns símbolos são removidos, tais como: ., ., \!, \%, \#, etc. Sendo esse o conjunto de processamentos realizados para "limpar" inicialmente o texto, após o qual se inicia o Processamento de Linguagem Natural.
 
-Com esse prósito, usou-se a biblioteca OpenNLP \cite{OpenNlp} para a tokenização dos \textit{tweets}. Após a obtenção dos \textit{tokens}, outros processamentos foram necesssários para melhorar o desempenho da fase seguinte, como a substituição das palavras normalmente abreviadas (vc - você, msm - mesmo, pq - porque, q - que, n - não, etc) e de expressões (sqn - só que não, kkk, hahaha, rsrsrs, para situações comumente engraçadas) para seus respectivos formatos formais, utilizando dicionários previamente construídos. Além disso, foram removidos os \textit{tokens} contendo "\textit{stopwords}" (palavras vazias), termo utilizado para as palavras comuns de um certo idioma \cite{DataMining}.
+Com esse propósito, usou-se a biblioteca OpenNLP \cite{OpenNlp} para a tokenização dos \textit{tweets}. Após a obtenção dos \textit{tokens}, outros processamentos foram necesssários para melhorar o desempenho da fase seguinte, como a substituição das palavras normalmente abreviadas (vc - você, msm - mesmo, pq - porque, q - que, n - não, etc) e de expressões (sqn - só que não, kkk, hahaha, rsrsrs, para situações comumente engraçadas) para seus respectivos formatos formais, utilizando dicionários previamente construídos. Além disso, foram removidos os \textit{tokens} contendo "\textit{stopwords}" (palavras vazias), termo utilizado para as palavras comuns de um certo idioma \cite{DataMining}.
 
-Após a obtenção dos \textit{tokens}, foram atribuídas a eles \textit{tags} referentes as suas respectivas classes gramáticais, e, por fim, associadas a uma \textit{part-of-speech} para cada \textit{tweet}, usando os \textit{tokens} e \textit{tags} obtidas, finalizando a parte do Processamento de Linguagem Natural. Seguindo então, para a última etapa, que é a da análise de polaridade dos sentimentos, tendo como base para isso os adjetivos presentes em cada \textit{tweet}.
+Após a obtenção dos \textit{tokens}, foram atribuídas a eles \textit{tags} referentes as suas respectivas classes gramaticais, e, por fim, associadas a uma \textit{part-of-speech} para cada \textit{tweet}, usando os \textit{tokens} e \textit{tags} obtidas, finalizando a parte do Processamento de Linguagem Natural. Seguindo então, para a última etapa, que é a da análise de polaridade dos sentimentos, tendo como base para isso os adjetivos presentes em cada \textit{tweet}.
 
-A análise das polaridade dos sentimentos foi realizada com o suporte do Sentilex (versão 1), que é um léxico de sentimentos para o Português, constituído de 6.321 lemas adjectivais (por convenção, na forma masculina singular) e 25.406 formas flexionadas, contendo como um de seus atributos a polaridade do adjectivo. As polaridades são classificadas em positivo (67\% de precisão), negativo (82\% de precisão), ou, neutro (45\% de precisão), possibilitando estimar o sentimento expresso por um determinado texto \cite{Sentilex}.
+A análise das polaridades dos sentimentos foi realizada com o suporte do Sentilex (versão 1), que é um léxico de sentimentos para o Português, constituído de 6.321 lemas adjetivais (por convenção, na forma masculina singular) e 25.406 formas flexionadas, contendo como um de seus atributos a polaridade do adjetivo. As polaridades são classificadas em positivo (67\% de precisão), negativo (82\% de precisão), ou, neutro (45\% de precisão), possibilitando estimar o sentimento expresso por um determinado texto \cite{Sentilex}.
 
-Os sentimentos são estimados contabilizando as polaridades presentes em cada \textit{tweet} e o sentimento expresso pelos \textit{emotions} (se houver), assim sendo, por exemplo, o emotion "(:" incrementa 1 para a polaridade postiva, e 1 para a negativa caso seja ":(". Também, considera-se a presença de advérbios de negação, os quais modificam o significado do verbo, adjetivo e de outros advérbios \cite{Priberam}, alterando consequentemente a polaridade. Por fim, é realizada uma simples normatização com os somatórios das polaridades positivas e negativas, seguindo o seguinte modelo:
+Os sentimentos são estimados contabilizando as polaridades presentes em cada \textit{tweet} e o sentimento expresso pelos \textit{emotions} (se houver), assim sendo, por exemplo, o emotion "(:" incrementa 1 para a polaridade positiva, e 1 para a negativa caso seja ":(". Também, considera-se a presença de advérbios de negação, os quais modificam o significado do verbo, adjetivo e de outros advérbios \cite{Priberam}, alterando consequentemente a polaridade. Por fim, é realizada uma simples normatização com os somatórios das polaridades positivas e negativas, seguindo o seguinte modelo:
 {\begin{center} score = ($\Sigma$ positivo - $\Sigma$ negativo) $\div$  ($\Sigma$ positivo + $\Sigma$ negativo)\end{center}}
 
 Caso o \textit{score} seja menor do que zero, o \textit{tweet} é classificado com polaridade negativa, se o seu complemento for maior do que 0.5, tem-se polaridade positiva e se igual a zero, neutra. Sendo assim, as informações sobre a polaridade (sentimento) do \textit{tweet}, seu id e suas respectivas menções (recuperadas do \textit{tweet} original) são armazenadas no banco de dados não relacional MongoDB. As polaridades são exibidas no mapa da aplicação web.
@@ -245,7 +245,7 @@ A aplicação que utiliza o Storm para o processamento de \textit{stream} de \text
   \label{fig:stormTopologyApp}
 \end{figure}
 
-Em sequência, há seis \textit{bolts}, responsáveis pelo processamento (o mesmo realizado pela aplicação Spark) dos \textit{tweets} coletados. O primeiro deles, classe TweetCleanerBolt, ilustrada na Fig. \ref{fig:stormApplicationClassDiagram}, remove as menções e \textit{urls} contidas no \textit{tweet}, após isso os simbolos existentes são removidos pelo \textit{bolt} Symbols Cleaner.
+Em sequência, há seis \textit{bolts}, responsáveis pelo processamento (o mesmo realizado pela aplicação Spark) dos \textit{tweets} coletados. O primeiro deles, classe TweetCleanerBolt, ilustrada na Fig. \ref{fig:stormApplicationClassDiagram}, remove as menções e \textit{urls} contidas no \textit{tweet}, após isso os símbolos existentes são removidos pelo \textit{bolt} Symbols Cleaner.
 
 Continuando, a parte do Processamento de Linguagem Natural é realizado pelos \textit{bolts} Tokenizer e Tag. Na finalização do processo, o \textit{bolt} SentimentAnalyser calcula a polarização de cada \textit{tweet}, emitindo-os para o \textit{bolt} Persisting, responsável pelo armazená-los no banco de dados não relacional MongoDB. Vale ainda mencionar, que os resultados de cada bolt são setados na classe TweetStream, do modelo da aplicação, o que foi necessário devido ao fato de nem todos os tipos de dados serem serializáveis, como o caso do UserMentionEntity, da biblioteca Twitter4J.
 
@@ -264,10 +264,10 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 
 Nessa seção, é realizada uma análise comparativa entre o Apache Storm e Spark, sendo a subseção \ref{rtp} sobre o requisito de Processamento de grande volume de dados em Tempo Real, a \ref{faultTolerance} a respeito de Tolerância a Falhas, a \ref{garantiesProcessing} sobre Garantias de processamento, a \ref{scalability} em relação a Escalabilidade e, por fim, a \ref{programmingModel} sobre o Modelo de Programação de ambas as ferramentas. 
 
-\subsection{Processamento de grande volume de dados em tempo real}
+\subsection{Processamento de Grande Volume de Dados em Tempo Real}
 \label{rtp}
 
-Quanto ao requisito de Processamento de grande volumes de dados em Tempo Real, de acordo com a referência \cite{NrtPresentation}, o Apache Spark pode processar até 670k de registros por segundo e por nó, enquanto que o Storm 155k. Portanto, ambas as ferramentas são capazes de processar grande fluxo de dados.
+Quanto ao requisito de Processamento de Grandes Volumes de Dados em Tempo Real, de acordo com a referência \cite{NrtPresentation}, o Apache Spark pode processar até 670k de registros por segundo e por nó, enquanto que o Storm 155k. Portanto, ambas as ferramentas são capazes de processar grande fluxo de dados.
 
 No entanto, elas se diferenciam no requisito de processamento em tempo real. O Spark tem latência de 0.5­2s \cite{DStream2}, e devido a esse delay de até alguns segundos, é considerado uma ferramenta de \textit{Near­ Real­ Time}. O Storm, por outro lado, tem como latência de 1­100ms \cite{DStream}, \cite{DStream2}, sendo por isso um sistema com processamento em \textit{Real Time}.
 
@@ -282,11 +282,11 @@ Discretized Streams (D­Streams) é um modelo de programação para processamento de
 
 O mecanismo de recuperação via \textit{lineage} é definido por um grafo acíclico dirigido (DAG), por meio do qual RDDs e D­Streams rastreiam, ao nível das partições RDDs, suas respectivas dependências e operações realizadas sob elas \cite{DStream4}. Sendo assim, os RDDs e D­Streams conseguem "saber" como foram construídos. Podendo, consequentemente, cada nó do \textit{cluster} reconstruí-­lo paralela e eficientemente em caso de falhas. Especificamente, o processo de recuperação é realizado computando novamente uma determinada partição RDD, re­executando as \textit{tasks} que a originaram \cite{DStream4}.
 
-Visando prevenir infinitas re­computações, também são realizados \textit{checkpoints} num determinado espaço de tempo, com replicações assíncronas de RDDs. Tal procedimento, não é necessário para todo o conjunto de dados, pois, como já mencionado, a recuperação executada por nós em paralelo é realizada com demasiada eficiência \cite{DStream4}. 
+Visando prevenir infinitas re­-computações, também são realizados \textit{checkpoints} num determinado espaço de tempo, com replicações assíncronas de RDDs. Tal procedimento, não é necessário para todo o conjunto de dados, pois, como já mencionado, a recuperação executada por nós em paralelo é realizada com demasiada eficiência \cite{DStream4}. 
 
 Todo o processo descrito até aqui é confiável quando a fonte dos dados pode ser lida novamente, no caso do Spark Streaming, é necessário haver alguma fonte externa para replicação dos dados \cite{Spark}. Além disso, se o \textit{Driver} for finalizado, devido ao fato dele manter o contexto da aplicação, todo o conteúdo em memória dos \textit{executors} é perdido \cite{Spark}.  
 
-No Storm, a Tolerância a Falhas é aplicada a cada um de seus componentes. Por exemplo, se o \textit{worker} falha, ele é reinicializado pelo \textit{Supervisor} no próprio nó \cite{LearningStorm}. Caso o nó esteja indisposnível, ou, falhando continuadamente, suas \textit{tasks} são então atribuídas a outro disponível no \textit{cluster}, via Nimbus \cite{StormPython}. 
+No Storm, a Tolerância a Falhas é aplicada a cada um de seus componentes. Por exemplo, se o \textit{worker} falha, ele é reinicializado pelo \textit{Supervisor} no próprio nó \cite{LearningStorm}. Caso o nó esteja indisponível, ou, falhando continuadamente, suas \textit{tasks} são então atribuídas a outro disponível no \textit{cluster}, via Nimbus \cite{StormPython}. 
 
 O Nimbus e os \textit{supervisors}, armazenam seus estados no Zookeeper, podendo ser reinicializados sem perdê-los em caso de falha, se houver falha no Zookeeper, outra instância pode ser "eleita" para o lugar dele\cite{LearningStorm}. Caso algum \textit{supervisor} falhe, seus \textit{workers} são reatribuídos pelo Nimbus a outro \textit{supervisor}, no entanto, ficando impedido de receberem novas tuplas \cite{StormPython}.
 
@@ -303,12 +303,12 @@ Em adição a subseção anterior, o Spark Streaming e Storm possuem formas diferent
 
 No Storm, por outro lado, não há suporte ao modelo \textit{Exactly Once}, mas sim aos \textit{At Least Once} e \textit{At Most Once}. Em ordem, a primeira opção permite que o processamento seja realizado no mínimo uma vez, rastreando se o (a) evento (tupla) foi processado(a) ou não, através de seus \textit{IDs} e mensagens informando "\textit{ack}" (tupla processada), podendo haver duplicatas; o oposto ocorre na segunda alternativa, em que perdas são aceitas, processando os eventos no máximo uma vez \cite{Storm}. 
 
-A prosta do Spark Streaming, nesse aspecto, é mais interessante para o processamento de \textit{stream} de \textit{tweets}, por garantir que a informação será processada uma única vez, através do modelo \textit{Exactly Once}.
+A proposta do Spark Streaming, nesse aspecto, é mais interessante para o processamento de \textit{stream} de \textit{tweets}, por garantir que a informação será processada uma única vez, através do modelo \textit{Exactly Once}.
 
 \subsection{Escalabilidade}
 \label{scalability}
 
-Quanto ao requisito de escalabilidade, ambos suportam clusterização, portando são escaláveis horizontalmente, sendo o maior \textit{cluster} Spark conhecido composto por 8.000 nós \cite{Spark}. E, embora não tenha sido encontradas fontes confiáveis divulgando informações sobre o maior \textit{cluster} Storm existente, sabe­-se que ele é capaz de processar um milhão de mensagens com tamanho de 100 byte, por segundo e por nó \cite{Storm}.
+Quanto ao requisito de escalabilidade, ambos suportam clusterização, portando são escaláveis horizontalmente, sendo o maior \textit{cluster} Spark conhecido composto por 8.000 nós \cite{Spark}. E, embora não tenham sido encontradas fontes confiáveis divulgando informações sobre o maior \textit{cluster} Storm existente, sabe­-se que ele é capaz de processar um milhão de mensagens com tamanho de 100 byte, por segundo e por nó \cite{Storm}.
 
 \subsection{Modelo de programação}
 \label{programmingModel}
