@@ -11,15 +11,18 @@
 \contentsline {abreviatura}{POSET -- Partially ordered set of events}{27}
 \contentsline {abreviatura}{FIFO -- First In, First Out}{30}
 \contentsline {abreviatura}{POS -- Part-of-speeach}{37}
-\contentsline {abreviatura}{WWW -- World Wide Web}{38}
+\contentsline {abreviatura}{WWW -- World Wide Web}{37}
 \contentsline {abreviatura}{HTML -- HyperText Markup}{38}
 \contentsline {abreviatura}{HTTP -- Hypertext Transfer Protocol}{38}
 \contentsline {abreviatura}{UI -- User Interface}{38}
-\contentsline {abreviatura}{REST -- Representational State Transfer}{39}
-\contentsline {abreviatura}{URI -- Uniform Resource Identifier}{39}
+\contentsline {abreviatura}{REST -- Representational State Transfer}{40}
+\contentsline {abreviatura}{SOAP -- Simple Object Access Protocol}{40}
+\contentsline {abreviatura}{URI -- Uniform Resource Identifier}{40}
+\contentsline {abreviatura}{WSDL -- Web Services Definition Language}{40}
 \contentsline {abreviatura}{DStream -- Discretized Stream}{42}
 \contentsline {abreviatura}{RDD -- Resilient Distributed Dataset}{42}
 \contentsline {abreviatura}{DAG -- Directed Acyclic Graph}{42}
+\contentsline {abreviatura}{CSS -- Cascading Style Sheets}{44}
 \contentsline {abreviatura}{SNR -- Social Network Ratio}{45}
 \contentsline {abreviatura}{YARN -- Yet Another Resource Negotiator}{69}
 \contentsline {abreviatura}{UF -- Unidade Federativa}{74}
