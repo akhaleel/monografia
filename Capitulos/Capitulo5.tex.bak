@@ -12,7 +12,7 @@ Nos aspectos do desenvolvimento das aplicações, conclui-se que a ferramenta Spar
 
 Considerando o exposto nos parágrafos anteriores, os objetivos dessa monografia foram alcançados. Sendo assim, esse trabalho contribui com uma aplicação para processamento em \textit{batch} de \textit{tweets}, capaz de coletar e exibir, através de uma interface web, métricas relacionadas a e-Participação. Assim como, processamento de \textit{stream} de \textit{tweets} utilizando diferentes plataformas (indicando a mais adequada aos requisitos da aplicação), obtendo suas respectivas polaridades de sentimentos, exibidas também no mapa.
 
-Consequentemente, colaborando com uma visão sobre as situações das métricas relacionadas a e-Participação das capitais dos estados brasileiros. Possibilitando que gestores e cidadãos, saibam as condições de suas cidades quanto a um conceito e prática primordial para desenvolvimento de Cidades Inteligentes, permitindo ações direcionadas a m.
+Consequentemente, colaborando com uma visão sobre as situações das métricas relacionadas a e-Participação das capitais dos estados brasileiros. Possibilitando que gestores e cidadãos, saibam as condições de suas cidades quanto a um conceito e prática primordial para desenvolvimento de Cidades Inteligentes, permitindo ações de melhoria nesse sentido.
 
 \section{Limitações}
 \label{limitations}
@@ -28,4 +28,4 @@ Além disso, a análise de polaridade de sentimentos realizada pelas aplicações de
 
 Como trabalho futuro, pretende-se continuar o desenvolvimento da aplicação responsável pela coleta de \textit{tweets} e processamento de métricas relacionadas a e-Participação, agregando a ela técnicas de Inteligência Artificial para análise do conteúdo das mensagens. Tendo isso como propósito, pretende-se utilizar o módulo MLib do Spark.
 
-Além disso, objetiva-se melhorar questões de usabilidade e interface da aplicação web desenvolvida; documentar a API; desenvolver novos \textit{endpoints} e uma suíte de testes de \textit{software}. Também, buscar novas funcionalidades possíveis de serem agregadas a ela, realizando para isso uma Análise de Requisitos. Por fim, pretende-se ainda publicar um artigo sobre o trabalho já desenvolvido.
+Além disso, objetiva-se melhorar questões de usabilidade e interface da aplicação web desenvolvida; analisar as demais cidades do Brasil; documentar a API; desenvolver novos \textit{endpoints} e uma suíte de testes de \textit{software}. Também, buscar novas funcionalidades possíveis de serem agregadas a ela, realizando para isso uma Análise de Requisitos. Por fim, pretende-se ainda publicar um artigo sobre o trabalho já desenvolvido.
