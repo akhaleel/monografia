@@ -16,7 +16,7 @@
 \contentsline {figure}{\numberline {15}{\ignorespaces Fluxo do processamento de dados da aplica\c c\~ao utilizando o Spark Streaming}}{50}
 \contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Spark Streaming}}{52}
 \contentsline {figure}{\numberline {17}{\ignorespaces Topologia da aplica\c c\~ao utilizando Storm}}{52}
-\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Storm}}{54}
+\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Storm}}{53}
 \contentsline {figure}{\numberline {19}{\ignorespaces Ilustra\c c\~ao da aplica\c c\~ao web desenvolvida}}{61}
 \contentsline {figure}{\numberline {20}{\ignorespaces Ilustra\c c\~ao do painel informativo da aplica\c c\~ao web}}{61}
 \contentsline {figure}{\numberline {21}{\ignorespaces Ilustra\c c\~ao das polaridades de sentimentos processadas pelo Spark}}{63}
