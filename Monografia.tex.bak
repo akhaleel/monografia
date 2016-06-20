@@ -16,6 +16,7 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{booktabs, threeparttable}
+\usepackage[labelfont=bf]{caption} 
 %\usepackage{alg}
 %\usepackage{hyperref}
 

@@ -1,78 +1,8 @@
 % Capítulo 3
-\chapter{Aplicações desenvolvidas e estudo comparativo}
+\chapter{Aplicações desenvolvidas e revisão da literatura}
 \label{chapter3}
 
-Nesse capítulo, a seção \ref{metodologyOfChoice} se refere a metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real, utilizadas pelas aplicações desenvolvidas, explicadas na seção \ref{apps}. Por último, na seção \ref{caseStudy}, é realizado um estudo comparativo das ferramentas ESPs escolhidas anteriormente. 
-
-\section{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
-\label{metodologyOfChoice}
-
-Inicialmente, foi realizada uma pesquisa com a palavra chave "\textit{stream processing}" e analisados os primeiros artigos (na ordem do resultado e que citavam mais de uma ferramenta) em busca de citações a ferramentas (\textit{Open Source}) de processamento de \textit{streams} em tempo real. Com base nesse resultado, os nomes das plataformas encontradas foram utilizados para buscar a quantidade de referências no Google Scholar (site para publicação de artigos acadêmicos) e Stack Over Flow (site para discussão de assuntos relacionados a desenvolvimento de software). Na Tab. \ref{tab:tableNumberOfMentions}, constam os resultados desse procedimento.
-
-A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle} foi descartada do processo de escolha por ser um componente para CEP, normalmente integrado a ferramentas ESPs, fugindo do escopo desse trabalho \cite{EsperTech}. Sendo assim, continuando a análise, foram também consideradas as características das opções restantes, analisadas brevemente nos parágrafos seguintes.
-
-\paragraph{Apache Spark Streaming.} Apache Spark Streaming é um módulo do Spark para processamento de \textit{stream}, em \textit{Near Real Time}. Além disso, o Spark possui outros módulos para consultas a banco de dados, processamento de dados estruturados, grafos, e aprendizado de máquina \cite{Spark}. O processamento de \textit{stream} é realizado em \textit{micro-batching} pelo Spark Streaming, utilizando uma abstração conhecida como \abrv[DStream -- Discretized Stream]{DStream}, composta por uma sequências de \abrv[RDD -- Resilient Distributed Dataset]{RDDs (\textit{Resilient Distributed Dataset})}, ilustrada na Fig. \ref{fig:dstream}. RDDs abstraem uma coleção de dados distribuídos e manipulados em paralelo. No Spark, também é possível utilizar processamento em \textit{batch}, independente do módulo que está sendo utilizado \cite{LearningSpark}.
-
-\begin{figure}[!ht]
-  \centering
-    \includegraphics[width=0.8\textwidth]{Imagens/dstreamImage.png}
-  \caption{Ilustração de um DStream}
-  {\bf Fonte:} \cite{Spark}
-  \label{fig:dstream}
-\end{figure}
-
-\paragraph{Apache Flink.} Apache Flink é uma plataforma muito semelhante ao Spark. Com suporte a processamento de \textit{streams}, definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em \textit{batch} é realizado em cima de DataSets, semelhantes as RDDs do Spark. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração conhecida como Sink, é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.8\textwidth]{Imagens/flinkProcessingImage.png}
-  \caption{Ilustração de um fluxo de processamento no Flink}
-  {\bf Fonte:} \cite{FlinkOverView}
-  \label{fig:flinkProcessingImage}
-\end{figure}
-
-\paragraph{Apache Storm.} Apache Storm é uma plataforma para processamento de \textit{stream} em tempo real. Ao contrário do Spark, tem "\textit{One At Time}" como modelo de processamento de dados. As \textit{streams} são compostas por tuplas (unidade básica de dados, processadas numa abstração conhecida como Topologia, ilustrada na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (\textit{Directed Acyclic Graph} \cite{GraphTeory})} de \textit{spouts} e \textit{bolts}, respectivamente, responsáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
-
-\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de \textit{stream} em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por \textit{offsets}, ou, simplesmente \textit{ids}), em vez de tupla, ou, DStream. Os \textit{streams} são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por \textit{jobs} responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em \textit{batch}, realizado processando sequências de \textit{streams}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.6\textwidth]{Imagens/samzaPartitionsImage.png}
-  \caption{Ilustração de um stream particionado no Samza}
-  {\bf Fonte:} \cite{Samza}
-  \label{fig:samzaPartitions}
-\end{figure}
-
-Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \ref{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
-
-Além disso, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superficialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no desenvolvimento das aplicações a serem apresentadas neste capítulo.
-
-\begin{table}[!htb]	
-	\center
-		% Título de tabelas sempre aparecem antes da tabela
-	\caption{Principais plataformas ESPs e suas respectivas quantidades de citações}
-	\label{tab:tableNumberOfMentions}
-	\scalebox{0.8}{
-		\begin{tabular}{c|c|c|c|c}
-			\hline
-            {\bf Referência} & {\bf Spark Streaming} & {\bf Storm} & {\bf Flink} & {\bf Samza}\\
-			\hline
-			\cite{InfoQArticle} & 1 & 1 & 1 & 1\\
-			\cite{ConfluentArticle} & 1 & 0 & 0 & 1\\
-			\cite{DzoneArticle} & 1 & 1 & 0 & 1\\
-			\cite{Datatorrent} & 1 & 1 & 0 & 0\\
-			\cite{CakeSolutionsArticle} & 1 & 1 & 0 & 0\\			
-			\cite{VenturebeatArticle} & 1 & 1 & 0 & 0\\
-			\cite{BravenewgeekArticle} & 1 & 0 & 0 & 1\\
-			\cite{GoogleScholar} & 806 & 766 & 171 & 283\\
-			\cite{StackOverFlow} & 1541 & 538 & 567 & 87\\
-			\hline
-			{\bf Total de citações} & 2354 & 1311 & 739 & 374\\
-			\hline
-		\end{tabular}
-	}
-	\center{\bf Fonte:} Elaboração própria
-\end{table}
+Nesse capítulo, a seção \ref{apps} aborda as questões relacionadas as aplicações desenvolvidas. Em seguida, na seção \ref{literatureReview}, é realizada uma breve revisão da literatura sobre alguns requisitos importantes, relacionados as ferramentas ESPs escolhidas anteriormente. 
 
 \section{Aplicações desenvolvidas}
 \label{apps}
@@ -87,7 +17,7 @@ A aplicação web foi desenvolvida utilizando o framework web Django \cite{Django}
 
 As métricas e polaridades podem ser escolhidas através de uma caixa de seleção (ComboBox), sendo assim, para cada Estado, se sua respectiva média for maior que a nacional a região dele no mapa é sobreposta com uma camada azul, se menor, vermelha. Ainda, clicando num Estado é possível visualizar um painel informativo com os valores das médias, medianas, mínimo, máximo, variância e desvio padrão, assim como a quantidade de tweets, seguidores, e o tempo de existência da conta.
 
-Além disso, há conexão via API com a aplicação responsável por realizar a coleta de \textit{tweets} e processamento das métricas. O tempo necessário para o levantamento de todas essas informações é em torno de 1h30m, devido aos limites de requisições à API do Twitter, explicado na subseção \ref{batchApp}, e do Fusion Tables, limitado em 30 chamadas por minuto \cite{GoogleDevelopers}. Devido a isso, essa opção somente é habilitada no código quando necessário. 
+Além disso, há conexão via API com a aplicação responsável por realizar a coleta de \textit{tweets} e processamento das métricas. O tempo necessário para o levantamento de todas essas informações é em torno de 1h30m, devido aos limites de requisições à API do Twitter, explicado na subseção \ref{batchApp}, e do Fusion Tables, limitado em 30 chamadas por minuto \cite{GoogleDevelopers} (ou seja, a cada 30 chamadas a aplicação aguarda um intervalo de 1 minuto para realizar mais 30 requisições). Devido a isso, essa opção somente é habilitada no código quando necessário. 
 
 O código dessa aplicação está disponível no repositório localizado em \cite{GitRepository}, sendo "brazilian\_smart\_cities\_map" o nome do projeto.
 
@@ -105,9 +35,10 @@ Portando, pode-se mapear a métrica número de seguidores ao indicador Atividade; 
 
 \begin{figure}[!htb]
   \centering
+    \captionsetup{justification=centering}
     \includegraphics[width=1.2\textwidth, angle=90]{Imagens/twitterDataAnalysisClassDiagram.png}
   \caption{Diagrama de classes da aplicação desenvolvida para processamento e coleta de métricas relacionadas a e-Participação}
-	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+	{\bf Fonte:} Elaboração própria
   \label{fig:twitterDataAnalysisClassDiagram}
 \end{figure}
 
@@ -123,9 +54,10 @@ Os \textit{tweets} coletados por essa aplicação são os mais recentes e anteriore
 
 \begin{figure}[!htb]
   \centering
+  \captionsetup{justification=centering}
     \includegraphics[width=0.6\textwidth]{Imagens/sparkDiagramMapToDouble.png}
   \caption{Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double}
-	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+	{\bf Fonte:} Elaboração própria
   \label{fig:sparkDiagramMapToDoble}
 \end{figure}
 
@@ -135,9 +67,10 @@ Por fim, a interface IFusionTable é utilizada para submeter os valores das métri
 
 \begin{figure}[!htb]
   \centering
+  \captionsetup{justification=centering}
     \includegraphics[width=0.7\textwidth]{Imagens/sparkDiagramMapDateToDouble.png}
   \caption {Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequências em Double}
-	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+	{\bf Fonte:} Elaboração própria
   \label{fig:sparkDiagramMapDateToDouble}
 \end{figure}
 
@@ -146,42 +79,44 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 \begin{table}[!htb]	
 	\center
 		% Título de tabelas sempre aparecem antes da tabela
-	\caption{Contas do Twitter relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros}
+	\caption{Contas do Twitter relacionadas as prefeituras municipais das capitais dos vinte e sete estados brasileiros e quantidade de tweets processados para coleta das métricas relacionadas a e-Participação}
 	\bigskip
 	\label{tab:tweetAccounts}
 	{
-		\begin{tabular}{c|c|c}
+		\begin{tabular}{c|c|c|c}
 			\hline
-            {\bf Estado} & {\bf Capital} & {\bf Conta no Twitter}\\
+            {\bf Estado} & {\bf Capital} & {\bf Conta no Twitter} & {\bf Tweets processados}\\
 			\hline
-			Acre & Rio Branco & PrefRioBranco\\
-			Alagoas & Maceió & PrefMaceio\\
-			Amapá & Macapá & PMMacapa\\
-			Amazonas & Manaus & PrefManaus\\
-			Bahia & Salvador & agecomsalvador\\			
-			Distrito Federal & Brasília & Gov\_DF\\
-			Ceará & Fortaleza & prefeiturapmf\\
-			Espírito Santo & Vitória & VitoriaOnLine\\
-			Goiás & Goiânia & PrefeituraGy\\
-			Maranhão & São Luís & PrefeituraSL\\
-			Mato Grosso & Cuiabá & prefeitura\_CBA\\
-			Mato Grosso do Sul & Campo Grande & cgnoticias\\
-			Minas Gerais & Belo Horizonte & prefeiturabh\\
-			Paraná & Curitiba & Curitiba\_PMC\\
-			Paraíba & João Pessoa & pmjponline\\
-			Pará & Belém & prefeiturabelem\\
-			Pernambuco & Recife & prefrecife\\
-			Piauí & Teresina & prefeitura\_the\\
-			Rio Grande do Norte & Natal & NatalPrefeitura\\
-			Rio Grande do Sul & Porto Alegre & Prefeitura\_POA\\
-			Rio de Janeiro & Rio de Janeiro & Prefeitura\_Rio\\
-			Rondônia & Porto Velho & prefeitura\_pvh\\
-			Roraima & Boa Vista & PrefeituraBV\\
-			Santa Catarina & Florianópolis & scflorianopolis\\
-			Sergipe & Aracaju & PrefeituraAracaju\\
-			São Paulo & São Paulo & prefsp\\
-			Tocantins & Palmas & cidadepalmasy\\
-			\hline
+			Acre & Rio Branco & PrefRioBranco & 3265\\
+			Alagoas & Maceió & PrefMaceio & 3308\\
+			Amapá & Macapá & PMMacapa & 3618\\
+			Amazonas & Manaus & PrefManaus & 3230\\
+			Bahia & Salvador & agecomsalvador & 1231\\			
+			Distrito Federal & Brasília & Gov\_DF & 3559\\
+			Ceará & Fortaleza & prefeiturapmf & 3678\\
+			Espírito Santo & Vitória & VitoriaOnLine & 3249\\
+			Goiás & Goiânia & PrefeituraGy & 4053\\
+			Maranhão & São Luís & PrefeituraSL & 3720\\
+			Mato Grosso & Cuiabá & prefeitura\_CBA & 3211\\
+			Mato Grosso do Sul & Campo Grande & cgnoticias & 3200\\
+			Minas Gerais & Belo Horizonte & prefeiturabh & 3623\\
+			Paraná & Curitiba & Curitiba\_PMC & 4951\\
+			Paraíba & João Pessoa & pmjponline & 3677\\
+			Pará & Belém & prefeiturabelem & 1131\\
+			Pernambuco & Recife & prefrecife & 3725\\
+			Piauí & Teresina & prefeitura\_the & 3392\\
+			Rio Grande do Norte & Natal & NatalPrefeitura & 3360\\
+			Rio Grande do Sul & Porto Alegre & Prefeitura\_POA & 3529\\
+			Rio de Janeiro & Rio de Janeiro & Prefeitura\_Rio & 6387\\
+			Rondônia & Porto Velho & prefeitura\_pvh & 2805\\
+			Roraima & Boa Vista & PrefeituraBV & 3201\\
+			Santa Catarina & Florianópolis & scflorianopolis & 3448\\
+			Sergipe & Aracaju & PrefeituraAracaju & 3423\\
+			São Paulo & São Paulo & prefsp & 4330\\
+			Tocantins & Palmas & cidadepalmasy & 3574\\
+			\hline	
+              {\bf Total} & { } & { } & 93878\\			
+			\hline			 
 		\end{tabular}
 	}
 		\center {\bf Fonte:} Elaboração própria
@@ -201,9 +136,10 @@ O processo mencionado anteriormente, executado pela classe SparkStreaming, começ
 
 \begin{figure}[!htb]
   \centering
+  \captionsetup{justification=centering}
     \includegraphics[width=0.8\textwidth]{Imagens/sparkDataAnalysisDiagram.png}
   \caption{Fluxo do processamento de dados da aplicação utilizando o Spark Streaming}
-	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+	{\bf Fonte:} Elaboração própria
   \label{fig:sparkDataAnalysisDiagram}
 \end{figure}
 
@@ -230,9 +166,10 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 
 \begin{figure}[!htb]
   \centering
+  \captionsetup{justification=centering}
     \includegraphics[width=0.8\textwidth]{Imagens/sparkDataAnalysisClassDiagram.png}
   \caption{Diagrama de classes da aplicação utilizando o Spark Streaming}
-	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+	{\bf Fonte:} Elaboração própria
   \label{fig:sparkDataAnalysisClassDiagram}
 \end{figure}
 
@@ -243,9 +180,10 @@ A aplicação que utiliza o Storm para o processamento de \textit{stream} de \text
 
 \begin{figure}[!htb]
   \centering
+  \captionsetup{justification=centering}
     \includegraphics[width=0.8\textwidth]{Imagens/stormTopologyApp.png}
   \caption{Topologia da aplicação utilizando Storm}
-	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+	{\bf Fonte:} Elaboração própria
   \label{fig:stormTopologyApp}
 \end{figure}
 
@@ -257,16 +195,17 @@ O código dessa aplicação está disponível no repositório localizado em \cite{GitR
 
 \begin{figure}[!htb]
   \centering
+  \captionsetup{justification=centering}
     \includegraphics[width=1\textwidth]{Imagens/stormApplicationClassDiagram.png}
   \caption{Diagrama de classes da aplicação utilizando o Storm}
-	\begin{flushleft}{\bf Fonte:} Elaboração própria\end{flushleft}
+	{\bf Fonte:} Elaboração própria
   \label{fig:stormApplicationClassDiagram}
 \end{figure}
 
-\section{Estudo comparativo}
-\label{caseStudy}
+\section{Revisão da Literatura}
+\label{literatureReview}
 
-Nessa seção, é realizada uma análise comparativa entre o Apache Storm e Spark, sendo a subseção \ref{rtp} sobre o requisito de Processamento de grande volume de dados em Tempo Real, a \ref{faultTolerance} a respeito de Tolerância a Falhas, a \ref{garantiesProcessing} sobre Garantias de processamento, a \ref{scalability} em relação a Escalabilidade e, por fim, a \ref{programmingModel} sobre o Modelo de Programação de ambas as ferramentas. 
+Nessa seção, é realizada uma breve revisão da literatura sobre o Apache Spark e Storm, objetivando compará-los sobre alguns requisitos, sendo a subseção \ref{rtp} sobre o requisito de Processamento de grande volume de dados em Tempo Real, a \ref{faultTolerance} a respeito de Tolerância a Falhas, a \ref{garantiesProcessing} sobre Garantias de processamento, a \ref{scalability} em relação a Escalabilidade e, por fim, a \ref{programmingModel} sobre o Modelo de Programação de ambas as ferramentas. 
 
 \subsection{Processamento de Grande Volume de Dados em Tempo Real}
 \label{rtp}

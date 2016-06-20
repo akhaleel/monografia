@@ -2,7 +2,7 @@
 \chapter{Fundamentação Teórica}
 \label{chapter2}
 
-Nesse capítulo, são apresentados os conceitos relacionados a essa monografia, os quais estão divididos nas seguintes seções: \ref{smartCities}, sobre a temática de Cidades Inteligentes; \ref{realTimePlatforms}, a respeito de Plataformas de processamento em tempo real; \ref{sparkSection} e \ref{stormSection}, sobre o Apache Spark e Storm, respectivamente. 
+Nesse capítulo, são apresentados os conceitos relacionados a essa monografia, os quais estão divididos nas seguintes seções: \ref{smartCities}, sobre a temática de Cidades Inteligentes; \ref{realTimePlatforms}, a respeito de Plataformas de processamento em tempo real; \ref{metodologyOfChoice} sobre a metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real, utilizadas pelas aplicações desenvolvidas, explicadas na seção \ref{apps}, \ref{sparkSection} e \ref{stormSection}, sobre o Apache Spark e Storm, respectivamente. 
 
 \section{Cidades Inteligentes}
 \label{smartCities}
@@ -15,32 +15,13 @@ As Cidades Inteligentes, são locais nos quais, principalmente, busca-se transfor
 
 Uma das problemáticas amenizadas pelas Cidades Inteligentes, é a da demanda por eficiência energética (decorrente das mudanças climáticas), a qual requer das cidades menos emissão de gás carbono, o que pode ser obtido, por exemplo, utilizando iluminações públicas mais eficientes, com investimentos em prédios sustentáveis (energeticamente sustentável e com uso de áreas verdes), transportes públicos e ciclovias. Outra possibilidade, é a de desenvolvimento de serviços digitais capazes de ajudar os cidadãos com questões cotidianas, como a chamar um táxi, saber a localização de um ônibus, encontrar a rota com menos congestionamento de carros, reportar crimes, comunicar-se com o governo, etc \cite{CiscoArticle}.
 
-O problema relacionado a Cidades Inteligentes tratado por essa monografia, como já mencionado, insere-se no contexto de processamento de grande volume de dados, decorrente, principalmente, devido ao aumento de objetos conectados à Internet (relacionados ao conceito de IoT - \textit{Internet of Things}, explicado em \ref{iotSection}), com previsão de existirem 212 bilhões até 2020. E, também, ao crescimento do número de pessoas conectas (o que com o crescimento populacional tende a aumentar), prevendo-se 3.5 bilhões em 2017, sendo 64\% via dispositivos móveis \cite{CiscoArticle}.
+O problema relacionado a Cidades Inteligentes tratado por essa monografia, como já mencionado, insere-se no contexto de processamento de grande volume de dados, decorrente, principalmente, devido ao aumento de objetos conectados à Internet \cite{EmcArticle2}, com previsão de existirem 212 bilhões até 2020. E, também, ao crescimento do número de pessoas conectas (o que com o crescimento populacional tende a aumentar), prevendo-se 3.5 bilhões em 2017, sendo 64\% via dispositivos móveis \cite{CiscoArticle}.
 
-Ainda, mais especificamente, espera-se que a quantidade de dados existentes dobre a cada dois anos até 2020 \cite{EmcArticle2}. Além desses fatores, outros têm contribuído para essa expansão, tais como: o crescimento do uso da Internet, \textit{smartphones} e Redes Sociais; a queda do custo de equipamento para criar, capturar, administrar, proteger e armazenar informação; migração da TV analógica para a digital; crescimento dos dados gerados por máquinas, incluindo imagens de câmeras de segurança e da informação sobre informação \cite{CiscoArticle}.
-
-\subsection{Internet das Coisas}
-\label{iotSection}
-
-Considerando o exposto pela seção \ref{smartCities}, a expansão do número de pessoas e coisas conectadas à Internet, chegar­-se-­á um patamar em que tudo o que é possível estar, estará conectado, ampliando o conceito de Internet das Coisas para o de Internet de Todas as Coisas, segundo a Cisco \cite{CiscoIoE}. Em tal cenário, cerca de 44 trilhões de \textit{gigabytes} serão gerados \cite{EmcArticle2}, os quais processados por sistemas inteligentes, ajudarão no surgimento de serviços de grande impacto no cotidiano de uma cidade \cite{CiscoArticle}.
-
-Principalmente, aqueles que monitoram e reportam continuadamente qualquer modificação que ocorra em um determinado cenário. Por exemplo, no contexto de saúde pública, é possível monitorar as condições do organismo de um paciente, notificando os médicos responsáveis caso a pessoa esteja em risco, através de uma rápida comunicação e resposta a tal acontecimento. Alguns dos sistemas semelhantes a esse são exemplificados na Fig. \ref{fig:iotImage}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=1\textwidth]{Imagens/iotImage.png}
-  \caption{Cidade num invólucro digital}
-  {\bf Fonte:} \cite{CiscoArticle}
-  \label{fig:iotImage}
-\end{figure}
-
-Na Fig. \ref{fig:iotImage}, organizações, pessoas e objetos estão conectados, criando um invólucro digital, composto por representações de serviços conectados a nuvem, tais como: o de um (i) Hospital Inteligente, conectado a dispositivos médicos inteligentes e a ambulâncias; (ii) Centro Digital de Controle e Comando Municipal, integrado a um sistema inteligente de segurança pública e armazenamento de dados; (iii) Sistema de Otimização de Fluxo de Tráfico, conectado a um sistema de estradas inteligentes agregadas a câmeras de controle de tráfico; (iv) Fábrica Inteligente, integrada a um sistema de otimização de logística e fábrica; (v) Administração de Energia Doméstica e (vi) \textit{Smart Grid} (um novo modelo de Redes Elétricas \cite{IeeeArticle}) e (vii) Otimização de Rede de Comunicação.
-
-Tais serviços não serão estudados nesse trabalho, foram apenas referenciados visando demonstrar uma pequena parte da gama de possibilidades existentes em Cidades Inteligentes, Internet das Coisas, e a problemática relacionada ao processamento de dados.
+Ainda, mais especificamente, espera-se que a quantidade de dados existentes dobre a cada dois anos até 2020 \cite{EmcArticle2}. Além desses fatores, outros têm contribuído para essa expansão, tais como: o crescimento do uso da Internet, \textit{smartphones} e Redes Sociais; a queda do custo de equipamento para criar, capturar, administrar, proteger e armazenar informação; migração da TV analógica para a digital; crescimento dos dados gerados por máquinas, incluindo imagens de câmeras de segurança e da informação sobre informação \cite{CiscoArticle}. Em tal cenário, cerca de 44 trilhões de \textit{gigabytes} serão gerados \cite{EmcArticle2}, os quais processados por sistemas inteligentes, ajudarão no surgimento de serviços de grande impacto no cotidiano de uma cidade inteligentes, ajudarão no surgimento de serviços de grande impacto no cotidiano de uma cidade \cite{CiscoArticle}.
 
 \subsection{Requisitos de uma aplicação de Cidade Inteligente}
 
-Devido a grande quantidade de dados existentes, conforme mencionado na seção \ref{iotSection}, a capacidade de processar grandes volumes de dados pode ser um dos requisitos necessários a uma aplicação de Cidade Inteligente. Nesse contexto, por exemplo, pode ser importante observar duas métricas: o valor de (i) throughput e  o de (ii) latência, sendo o primeiro termo referente a taxa de processamento e, o segundo, a variação do tempo entre um estímulo e resposta \cite{WebPerformanceTuning}.
+Devido a grande quantidade de dados existentes, conforme já mencionado anteriormente, a capacidade de processar grandes volumes de dados pode ser um dos requisitos necessários a uma aplicação de Cidade Inteligente. Nesse contexto, por exemplo, pode ser importante observar duas métricas: o valor de (i) throughput e  o de (ii) latência, sendo o primeiro termo referente a taxa de processamento e, o segundo, a variação do tempo entre um estímulo e resposta \cite{WebPerformanceTuning}.
 
 Dependendo dos requisitos da aplicação, a latência talvez seja mais interessante de ser priorizada quando respostas a determinados eventos precisam ser no menor intervalo de tempo possível (menos de um segundo). Por outro lado, o valor de throughput, pode ser mais adequado se a aplicação necessitar processar grandes volumes de dados dentro de um valor de latência aceitável (no máximo alguns segundos) \cite{Survey}.
 
@@ -101,6 +82,76 @@ Na segunda abordagem, os \textit{streams} são utilizados para criar uma nuvem de
 Portanto, nessa monografia, será utilizada a primeira abordagem (ESP) para processamento de eventos, por ser mais adequada ao objetivo proposto na seção \ref{objective}. Em ESPs, algumas plataformas processam os \textit{streams} continuadamente conforme são recebidos pelo sistema; paradigma conhecido como \textit{One at Time}. Quando um evento é processado com sucesso, há a possibilidade de emitir uma notificação sobre isso, a qual é custosa devido ao fato de ser necessário rastreá-lo até o término de seu processamento \cite{Datatorrent}. 
 
 Outra alternativa, é a de realizar o processamento em \textit{micro-batchs} (pequenos lotes) de eventos, tendo com uma das vantagens poder realizar operações em pequenos blocos de dados, em vez de individualmente, ao custo de introduzir um pequeno atraso no processo \cite{Datatorrent}. Dito isso, a seção \ref{sparkSection} abordará os conceitos envolvendo o Apache Spark, que além de fornecer processamento em \textit{batch} (lotes), possui nativamente um módulo para \textit{micro-batchs}, conhecido como Spark Streaming; e a seção \ref{stormSection} os relacionados ao Apache Storm, que realiza processamento em \textit{stream} (\textit{One at Time}).
+
+\section{Metodologia de escolha das plataformas para processamento de fluxo de eventos em tempo real}
+\label{metodologyOfChoice}
+
+Inicialmente, foi realizada uma pesquisa com a palavra chave "\textit{stream processing}" e analisados os primeiros artigos (na ordem do resultado e que citavam mais de uma ferramenta) em busca de citações a ferramentas (\textit{Open Source}) de processamento de \textit{streams} em tempo real. Com base nesse resultado, os nomes das plataformas encontradas foram utilizados para buscar a quantidade de referências no Google Scholar (site para publicação de artigos acadêmicos) e Stack Over Flow (site para discussão de assuntos relacionados a desenvolvimento de software). Na Tab. \ref{tab:tableNumberOfMentions}, constam os resultados desse procedimento.
+
+A plataforma Esper mencionada em \cite{InfoQArticle} e \cite{ConfluentArticle} foi descartada do processo de escolha por ser um componente para CEP, normalmente integrado a ferramentas ESPs, fugindo do escopo desse trabalho \cite{EsperTech}. Sendo assim, continuando a análise, foram também consideradas as características das opções restantes, analisadas brevemente nos parágrafos seguintes.
+
+\paragraph{Apache Spark Streaming.} Apache Spark Streaming é um módulo do Spark para processamento de \textit{stream}, em \textit{Near Real Time}. Além disso, o Spark possui outros módulos para consultas a banco de dados, processamento de dados estruturados, grafos, e aprendizado de máquina \cite{Spark}. O processamento de \textit{stream} é realizado em \textit{micro-batching} pelo Spark Streaming, utilizando uma abstração conhecida como \abrv[DStream -- Discretized Stream]{DStream}, composta por uma sequências de \abrv[RDD -- Resilient Distributed Dataset]{RDDs (\textit{Resilient Distributed Dataset})}, ilustrada na Fig. \ref{fig:dstream}. RDDs abstraem uma coleção de dados distribuídos e manipulados em paralelo. No Spark, também é possível utilizar processamento em \textit{batch}, independente do módulo que está sendo utilizado \cite{LearningSpark}.
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/dstreamImage.png}
+  \caption{Ilustração de um DStream}
+  {\bf Fonte:} \cite{Spark}
+  \label{fig:dstream}
+\end{figure}
+
+\paragraph{Apache Flink.} Apache Flink é uma plataforma muito semelhante ao Spark. Com suporte a processamento de \textit{streams}, definidos por uma abstração conhecida como DataStream, ilustrada na Fig. \ref{fig:flinkProcessingImage}. O processamento em \textit{batch} é realizado em cima de DataSets, semelhantes as RDDs do Spark. Da mesma forma como o DStream é definido como uma série de RDDS, o DataStream é composto por uma sequência de DataSets. A abstração conhecida como Sink, é utilizada para armazenar e retornar DataSets. Há suporte também para CEP, processamento em grafos, aprendizado de máquina e consulta a banco de dados \cite{Flink}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Imagens/flinkProcessingImage.png}
+  \caption{Ilustração de um fluxo de processamento no Flink}
+  {\bf Fonte:} \cite{FlinkOverView}
+  \label{fig:flinkProcessingImage}
+\end{figure}
+
+\paragraph{Apache Storm.} Apache Storm é uma plataforma para processamento de \textit{stream} em tempo real. Ao contrário do Spark, tem "\textit{One At Time}" como modelo de processamento de dados. As \textit{streams} são compostas por tuplas (unidade básica de dados, processadas numa abstração conhecida como Topologia, ilustrada na Fig. \ref{fig:stormTopology}, composta por um \abrv[DAG -- Directed Acyclic Graph]{DAG (\textit{Directed Acyclic Graph} \cite{GraphTeory})} de \textit{spouts} e \textit{bolts}, respectivamente, responsáveis por emitir streams de dados e processá-los \cite{LearningStorm}. 
+
+\paragraph{Apache Samza.} Apache Samza é outra plataforma para processamento de \textit{stream} em tempo real, utilizando como abstração base o conceito de mensagem (identificadas por \textit{offsets}, ou, simplesmente \textit{ids}), em vez de tupla, ou, DStream. Os \textit{streams} são separados em partições contendo mensagens ordenadas (acessadas apenas no modo de leitura), sendo processados por \textit{jobs} responsáveis por ler e emir fluxos. Assim como o Spark, há suporte para processamento em \textit{batch}, realizado processando sequências de \textit{streams}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.6\textwidth]{Imagens/samzaPartitionsImage.png}
+  \caption{Ilustração de um stream particionado no Samza}
+  {\bf Fonte:} \cite{Samza}
+  \label{fig:samzaPartitions}
+\end{figure}
+
+Após essas breves descrições das plataformas para processamento de eventos em tempo real e da análise realizada do número de citações, o Spark Streaming e Storm foram escolhidas como ferramentas para o trabalho desenvolvido no Cap. \ref{chapter3}. Isso, porque ambas possuem maior número de citações nas fontes pesquisadas, e consequentemente, comunidades maiores, o que pode favorecer melhor documentação, suporte e continuidade desses projetos. 
+
+Além disso, como Flink e Samza são semelhantes ao Spark o único critério de diferenciação, superficialmente, é o tamanho da comunidade e a popularidade que o Spark tem. No demais, o Storm se diferencia com o conceito de topologia, interessante de ser estudado. Devido a isso, o Spark e Storm foram aprofundados no Cap. \ref{chapter2} e utilizados no desenvolvimento das aplicações a serem apresentadas neste capítulo.
+
+\begin{table}[!htb]	
+	\center
+		% Título de tabelas sempre aparecem antes da tabela
+	\caption{Principais plataformas ESPs e suas respectivas quantidades de citações}
+	\label{tab:tableNumberOfMentions}
+	\scalebox{0.8}{
+		\begin{tabular}{c|c|c|c|c}
+			\hline
+            {\bf Referência} & {\bf Spark Streaming} & {\bf Storm} & {\bf Flink} & {\bf Samza}\\
+			\hline
+			\cite{InfoQArticle} & 1 & 1 & 1 & 1\\
+			\cite{ConfluentArticle} & 1 & 0 & 0 & 1\\
+			\cite{DzoneArticle} & 1 & 1 & 0 & 1\\
+			\cite{Datatorrent} & 1 & 1 & 0 & 0\\
+			\cite{CakeSolutionsArticle} & 1 & 1 & 0 & 0\\			
+			\cite{VenturebeatArticle} & 1 & 1 & 0 & 0\\
+			\cite{BravenewgeekArticle} & 1 & 0 & 0 & 1\\
+			\cite{GoogleScholar} & 806 & 766 & 171 & 283\\
+			\cite{StackOverFlow} & 1541 & 538 & 567 & 87\\
+			\hline
+			{\bf Total de citações} & 2354 & 1311 & 739 & 374\\
+			\hline
+		\end{tabular}
+	}
+	\center{\bf Fonte:} Elaboração própria
+\end{table}
 
 \section{Apache Spark}
 \label{sparkSection}

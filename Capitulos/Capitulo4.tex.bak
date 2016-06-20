@@ -21,10 +21,10 @@ Os resultados da pesquisa mostram que algumas das cidades analisadas (na época d
 
 Saindo do contexto de e-Participação, a referência \cite{Survey} realiza uma comparação entre o Apache Storm e Spark, relacionando-se com o estudo comparativo dessa monografia. Nela, o autor cita os casos de uso de cada uma delas, suas respectivas arquiteturas, comparando-as quanto ao modelo de processamento, latência, tolerância a falhas (especificamente, garantia de processamento), integração com processamento em \textit{batch} e a diferentes linguagens.   
  
-\subsection{Resultados}
+\subsection{Análise dos Resultados}
 \label{results}
 
-As tabelas contendo os resultados das métricas coletadas sobre e-Participação, estão no apêndice desse trabalho, sendo a Tab. \ref{tab:rankMetrics} um resumo de todas elas. Nela, as cidades estão classificadas de acordo com cada métrica, sendo os valores da coluna pontuação compostos pelo somatório dos pontos de todas as métricas. Os pontos são equivalentes a posição da classificação, ou seja, o 27º lugar representa 27 pontos; consequentemente, quanto menos pontos, melhor a colocação final. As cidades Porto Velho (RO) e Salvador (BH) foram desclassificadas por não terem informações sobre a métrica "tempo de resposta", indicando que não houve réplicas nos \textit{tweets} coletados, conforme Tab. \ref{tab:inReplyMetrics}.
+As tabelas contendo os resultados das métricas coletadas sobre e-Participação, estão no apêndice desse trabalho, sendo o gráfico exibido na Fig. \ref{fig:CityPontuations} um resumo de todas elas. Nele, a cada métrica é atribuída uma pontuação, equivalente a classificação contida na Tab. \ref{tab:rankMetrics}, ou seja, o 27º lugar representa 27 pontos; consequentemente, quanto menos pontos, melhor a pontuação final. A pontuação final é composta pelo somatório dos pontos de todas as métricas. 
 
 \begin{table}[!htb]
 	% Título de tabelas sempre aparecem antes da tabela
@@ -73,62 +73,13 @@ São Paulo em ambos os casos, coincidentemente, ficou em segundo lugar, obtendo b
 
 A Fig. \ref{fig:webApllication}, ilustra a aplicação \textit{web} para exibição do mapa relacionado as métricas coletadas e polaridades de sentimentos processadas. Como já mencionado no Cap. \ref{chapter3}, para cada métrica (escolhida no menu seletor) é computada a média nacional, adicionando uma camada vermelha sobre a região com valor inferior a ela, e azul caso superior. Além disso, é possível obter informações detalhadas clicando em cima da região no mapa, conforme exibido na Fig. \ref{fig:webApllication2}. 
 
-\begin{table}[!htb]
-	\center
-		% Título de tabelas sempre aparecem antes da tabela
-	\caption{Colocação dos perfis das prefeituras das capitais, de acordo com suas respectivas métricas}
-	\bigskip
-	\label{tab:rankMetrics}
-	{
-		\begin{threeparttable}
-		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
-			\hline
-            {\bf UF} & {\bf Capital} & {\bf A \tnote{1}} & {\bf B \tnote{2}} & {\bf C \tnote{3}} & {\bf D \tnote{4}} & {\bf E \tnote{5}} & {\bf F \tnote{6}} & {\bf H \tnote{7}} & {\bf P \tnote{8}} & {\bf Colocação \tnote{9}}\\
-			\hline
-			AC & Rio Branco & 24º & 20º & 23º & 22º & 1º & 19º & 24º & 133 & 19º\\
-			AL & Maceió & 12º & 19º & 17º & 10º & 19º & 18º & 20º & 108 & 15º\\
-			AM & Manaus & 21º & 18º & 16º & 17º & 14º & 22º & 9º & 111 & 17º\\
-			AP & Macapá & 14º & 3º & 6º & 7º & 13º & 12º & 19º & 68 & 9º\\
-			BA & Salvador & 18º & 25º & 25º & - & - & 27º & 26º & 121 & -\\	
-			CE & Fortaleza & 16º & 15º & 13º & 21º & 10º & 9º & 5º & 89 & 13º\\
-			DF & Brasília & 10º & 10º & 11º & 18º & 3º & 13º & 4º & 69 & 10º\\
-			ES & Vitória & 15º & 23º & 21º & 13º & 8º & 21º & 12º & 108 & 16º\\
-			GO & Goiânia & 1º & 11º & 12º & 15º & 4º & 4º & 11º & 55 & 5º\\
-			MA & São Luís & 6º & 1º & 1º & 9º & 11º & 8º & 13º & 42 & 3º\\
-			MG & Belo Horizonte & 19º & 9º & 5º & 12º & 7º & 10º & 6º & 63 & 7º\\
-			MS & Campo Grande & 20º & 26º & 27º & 25º & 5º & 26º & 25º & 154 & 23º\\
-			MT & Cuiabá & 26º & 27º & 24º & 20º & 15º & 23º & 23º & 152 & 22º\\
-			PA & Belém & 27º & 22º & 19º & 16º & 16º & 20º & 15º & 135 & 20º\\		
-			PB & João Pessoa & 2º & 16º & 14º & 4º & 24º & 7º & 8º & 67 & 8º\\
-			PE & Recife & 11º & 14º & 10º & 3º & 25º & 6º & 2º & 63 & 7º\\
-			PI & Teresina & 13º & 6º & 18º & 5º & 17º & 16º & 21º & 89 & 13º\\
-			PR & Curitiba & 8º & 2º & 2º & 1º & 21º & 2º & 1º & 30 & 1º\\
-			RJ & Rio de Janeiro & 17º & 7º & 4º & 14º & 12º & 1º & 10º & 58 & 6º\\
-			RN & Natal & 9º & 8º & 7º & 19º & 6º & 17º & 18º & 84 & 12º\\
-			RO & Porto Velho & 23º & 21º & 26º & - & - & 25º & 27º & 122 & -\\
-			RR & Boa Vista & 24º & 24º & 22º & 11º & 22º & 24º & 22º & 149 & 21º\\
-			RS & Porto Alegre & 3º & 5º & 8º & 6º & 20º & 14º & 3º & 52 & 4º\\
-			SC & Florianópolis & 25º & 17º & 20º & 23º & 9º & 5º & 14º & 113 & 18º\\
-			SE & Aracaju & 7º & 13º & 15º & 24º & 2º & 15º & 17º & 93 & 14º\\
-			SP & São Paulo & 5º & 4º & 3º & 2º & 23º & 3º & 7º & 39 & 2º\\
-			TO & Palmas & 4º & 12º & 9º & 8º & 18º & 11º & 16º & 71 & 11º\\
-			\hline
-		\end{tabular}
-		\begin{tablenotes}
-            \item[1] Métrica de \textit{tweets} por dia
-            \item[2] Métrica de \textit{retweets} por dia
-            \item[3] Métrica de favoritos
-            \item[4] Métrica de réplicas
-            \item[5] Métrica de tempo de resposta
-            \item[6] Métrica de menções
-            \item[7] Métrica de Nº de seguidores
-            \item[8] Pontuação obtida pelo somatório das métricas
-            \item[9] Cidades desclassificas e métricas nulas são indicadas com o sinal de subtração.
-        \end{tablenotes}
-     \end{threeparttable}
-     }
-		\center {\bf Fonte:} Elaboração própria
-\end{table}
+\begin{figure}[!hb]
+  \centering
+    \includegraphics[width=1\textwidth]{Imagens/CityPontuations.png}
+  \caption{Gráfico das pontuações das métricas analisadas}
+  {\bf Fonte:} Elaboração própria
+  \label{fig:CityPontuations}
+\end{figure}
 
 \begin{figure}[!hb]
   \centering
@@ -146,9 +97,9 @@ A Fig. \ref{fig:webApllication}, ilustra a aplicação \textit{web} para exibição 
   \label{fig:webApllication2}
 \end{figure}
 
-As aplicações que realizaram o processamento de stream de \textit{tweets} em tempo real, foram executadas em dois dias (22/05 com Spark e 23/05 com Storm), durante o período de 12h, estando os resultados do primeiro dia na Tab.\ref{tab:sentimentsSpark}, e do segundo na Tab.\ref{tab:sentimentsStorm}.
+As aplicações que realizaram o processamento de stream de \textit{tweets} em tempo real, foram executadas em dois dias (22/05 com Spark e 23/05 com Storm), durante o período de 12h, filtrando-oss utilizando os nomes das contas das prefeituras em análise, sendo no primero dia capturados 657 tweets, e no segundo 938; estando os resultados do processamento do primeiro dia na Tab.\ref{tab:sentimentsSpark}, e do segundo na Tab.\ref{tab:sentimentsStorm}. Vale ainda salientar que as execuções em dias diferentes ocorreram apenas devido a uma questão de pouca infraestrutura disponível para executá-las paralelamente. Portanto, não houve intenção de comparação dos resultados obtidos por cada aplicação.
 
-Com base nesses resultados, para cada polaridade foi calculada a média entre todas as cidades, utilizada para construir o mapa da aplicação web (Fig.\ref{fig:sentimentsSpark} e Fig.\ref{fig:sentimentsStorm}). No qual, pode-se visualizar a polaridade dos sentimentos dos \textit{tweets} que mencionam os perfis do Twitter em análise. Além disso, observa-se também nas tabelas mencionadas, que as cidades melhores classificadas pela primeira aplicação interagiram mais com suas respectivas prefeituras, reforçando os primeiros resultados encontrados. 
+Com base nos resultados obtidos, para cada polaridade foi calculada a média entre todas as cidades, utilizada para construir o mapa da aplicação web (Fig.\ref{fig:sentimentsSpark} e Fig.\ref{fig:sentimentsStorm}). No qual, pode-se visualizar a polaridade dos sentimentos dos \textit{tweets} que mencionam os perfis do Twitter em análise. Além disso, observa-se também nas tabelas mencionadas, que as cidades melhores classificadas pela primeira aplicação (relacionada as métricas de e-Participação) interagiram mais com suas respectivas prefeituras, reforçando os primeiros resultados encontrados. 
 
 Quanto ao estudo comparativo entre o Storm e o Spark, podemos dizer que a primeira opção, respectivamente, é melhor de ser utilizada como aplicação para processamento de \textit{streams} de \textit{tweets}. Apesar do valor de \textit{throughput} do Spark ser superior, e dele fornecer um modelo de processamento de dados mais eficiente, a arquitetura de Tolerância a Falhas do Storm precisa ser priorizada, devido ao longo tempo de execução da aplicação.
 

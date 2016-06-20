@@ -1,23 +1,23 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Cidade num inv\'olucro digital}}{22}
-\contentsline {figure}{\numberline {2}{\ignorespaces Principais propriedades de Confian\c ca}}{26}
-\contentsline {figure}{\numberline {3}{\ignorespaces Ilustra\c c\~ao da arquitetura em pilha do Apache Spark}}{28}
-\contentsline {figure}{\numberline {4}{\ignorespaces Componentes do Spark para execu\c c\~ao distribu\IeC {\'\i }da}}{30}
-\contentsline {figure}{\numberline {5}{\ignorespaces Ilustra\c c\~ao da arquitetura do Apache Storm}}{33}
-\contentsline {figure}{\numberline {6}{\ignorespaces Ilustra\c c\~ao de uma topologia do Storm}}{35}
-\contentsline {figure}{\numberline {7}{\ignorespaces Est\'agios de um Processamento de Linguagem Natural}}{38}
-\contentsline {figure}{\numberline {8}{\ignorespaces Arquitetura de uma Aplica\c c\~ao Web}}{39}
-\contentsline {figure}{\numberline {9}{\ignorespaces Ilustra\c c\~ao de um DStream}}{42}
-\contentsline {figure}{\numberline {10}{\ignorespaces Ilustra\c c\~ao de um fluxo de processamento no Flink}}{42}
-\contentsline {figure}{\numberline {11}{\ignorespaces Ilustra\c c\~ao de um stream particionado no Samza}}{43}
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de classes da aplica\c c\~ao desenvolvida para processamento e coleta de m\'etricas relacionadas a e-Participa\c c\~ao}}{46}
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double}}{47}
-\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequ\^encias em Double}}{48}
-\contentsline {figure}{\numberline {15}{\ignorespaces Fluxo do processamento de dados da aplica\c c\~ao utilizando o Spark Streaming}}{50}
-\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Spark Streaming}}{52}
-\contentsline {figure}{\numberline {17}{\ignorespaces Topologia da aplica\c c\~ao utilizando Storm}}{52}
-\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Storm}}{53}
-\contentsline {figure}{\numberline {19}{\ignorespaces Ilustra\c c\~ao da aplica\c c\~ao web desenvolvida}}{61}
-\contentsline {figure}{\numberline {20}{\ignorespaces Ilustra\c c\~ao do painel informativo da aplica\c c\~ao web}}{61}
-\contentsline {figure}{\numberline {21}{\ignorespaces Ilustra\c c\~ao das polaridades de sentimentos processadas pelo Spark}}{63}
-\contentsline {figure}{\numberline {22}{\ignorespaces Ilustra\c c\~ao das polaridades de sentimentos processadas pelo Storm}}{64}
+\contentsline {figure}{\numberline {1}{\ignorespaces Principais propriedades de Confian\c ca\relax }}{26}
+\contentsline {figure}{\numberline {2}{\ignorespaces Ilustra\c c\~ao de um DStream\relax }}{28}
+\contentsline {figure}{\numberline {3}{\ignorespaces Ilustra\c c\~ao de um fluxo de processamento no Flink\relax }}{29}
+\contentsline {figure}{\numberline {4}{\ignorespaces Ilustra\c c\~ao de um stream particionado no Samza\relax }}{29}
+\contentsline {figure}{\numberline {5}{\ignorespaces Ilustra\c c\~ao da arquitetura em pilha do Apache Spark\relax }}{30}
+\contentsline {figure}{\numberline {6}{\ignorespaces Componentes do Spark para execu\c c\~ao distribu\IeC {\'\i }da\relax }}{32}
+\contentsline {figure}{\numberline {7}{\ignorespaces Ilustra\c c\~ao da arquitetura do Apache Storm\relax }}{35}
+\contentsline {figure}{\numberline {8}{\ignorespaces Ilustra\c c\~ao de uma topologia do Storm\relax }}{37}
+\contentsline {figure}{\numberline {9}{\ignorespaces Est\'agios de um Processamento de Linguagem Natural\relax }}{40}
+\contentsline {figure}{\numberline {10}{\ignorespaces Arquitetura de uma Aplica\c c\~ao Web\relax }}{41}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de classes da aplica\c c\~ao desenvolvida para processamento e coleta de m\'etricas relacionadas a e-Participa\c c\~ao\relax }}{46}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Long para Double\relax }}{47}
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama do mapeamento entre um Resilient Distributed Dataset de Datas para suas respectivas frequ\^encias em Double\relax }}{47}
+\contentsline {figure}{\numberline {14}{\ignorespaces Fluxo do processamento de dados da aplica\c c\~ao utilizando o Spark Streaming\relax }}{49}
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Spark Streaming\relax }}{51}
+\contentsline {figure}{\numberline {16}{\ignorespaces Topologia da aplica\c c\~ao utilizando Storm\relax }}{52}
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama de classes da aplica\c c\~ao utilizando o Storm\relax }}{52}
+\contentsline {figure}{\numberline {18}{\ignorespaces Gr\'afico das pontua\c c\~oes das m\'etricas analisadas\relax }}{60}
+\contentsline {figure}{\numberline {19}{\ignorespaces Ilustra\c c\~ao da aplica\c c\~ao web desenvolvida\relax }}{60}
+\contentsline {figure}{\numberline {20}{\ignorespaces Ilustra\c c\~ao do painel informativo da aplica\c c\~ao web\relax }}{61}
+\contentsline {figure}{\numberline {21}{\ignorespaces Ilustra\c c\~ao das polaridades de sentimentos processadas pelo Spark\relax }}{62}
+\contentsline {figure}{\numberline {22}{\ignorespaces Ilustra\c c\~ao das polaridades de sentimentos processadas pelo Storm\relax }}{62}
