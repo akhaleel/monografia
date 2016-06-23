@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.2}Motiva\c c\~ao}{18}
 \contentsline {section}{\numberline {1.3}Objetivo}{19}
 \contentsline {section}{\numberline {1.4}Metodologia}{20}
-\contentsline {section}{\numberline {1.5}Organiza\c c\~ao do trabalho}{20}
+\contentsline {section}{\numberline {1.5}Organiza\c c\~ao do Trabalho}{20}
 \contentsline {chapter}{\numberline {2}Fundamenta\c c\~ao Te\'orica}{21}
 \contentsline {section}{\numberline {2.1}Cidades Inteligentes}{21}
 \contentsline {subsection}{\numberline {2.1.1}Requisitos de uma aplica\c c\~ao de Cidade Inteligente}{22}
@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Escalabilidade}{55}
 \contentsline {subsection}{\numberline {3.2.4}Modelo de programa\c c\~ao}{56}
 \contentsline {chapter}{\numberline {4}Resultados}{57}
-\contentsline {subsection}{\numberline {4.0.1}Trabalhos relacionados}{57}
+\contentsline {subsection}{\numberline {4.0.1}Trabalhos Relacionados}{57}
 \contentsline {subsection}{\numberline {4.0.2}An\'alise dos Resultados}{58}
 \contentsline {chapter}{\numberline {5}Conclus\~oes}{65}
 \contentsline {section}{\numberline {5.1}Limita\c c\~oes}{66}
